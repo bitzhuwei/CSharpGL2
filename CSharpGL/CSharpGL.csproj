@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{115AB8F1-A732-4FAD-8F16-F8C9E4DA02A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpGL</RootNamespace>
+    <AssemblyName>CSharpGL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Maths\glm_camera.cs" />
+    <Compile Include="Maths\glm_inverse.cs" />
+    <Compile Include="Maths\glm_trigonometric.cs" />
+    <Compile Include="Maths\glm_vec.cs" />
+    <Compile Include="Maths\mat2.cs" />
+    <Compile Include="Maths\mat3.cs" />
+    <Compile Include="Maths\mat4.cs" />
+    <Compile Include="Maths\mat4Helper.cs" />
+    <Compile Include="Maths\vec2.cs" />
+    <Compile Include="Maths\vec3.cs" />
+    <Compile Include="Maths\vec4.cs" />
+    <Compile Include="Maths\vecHelper.cs" />
+    <Compile Include="GLObjects\Cameras\ArcBallRotator.cs" />
+    <Compile Include="GLObjects\Cameras\Camera.cs" />
+    <Compile Include="GLObjects\Cameras\Camera2Matrix.cs" />
+    <Compile Include="GLObjects\Cameras\CameraHelper.cs" />
+    <Compile Include="GLObjects\Cameras\CameraType.cs" />
+    <Compile Include="GLObjects\Cameras\IBoundingBox.cs" />
+    <Compile Include="GLObjects\Cameras\IBoundingBoxHelper.cs" />
+    <Compile Include="GLObjects\Cameras\ICamera.cs" />
+    <Compile Include="GLObjects\Cameras\ICameraRotator.cs" />
+    <Compile Include="GLObjects\Cameras\IOrthoCamera.cs" />
+    <Compile Include="GLObjects\Cameras\IOrthoViewCamera.cs" />
+    <Compile Include="GLObjects\Cameras\IPerspectiveCamera.cs" />
+    <Compile Include="GLObjects\Cameras\IPerspectiveViewCamera.cs" />
+    <Compile Include="GLObjects\Cameras\IViewCamera.cs" />
+    <Compile Include="GLObjects\Cameras\LegacyBoundingBox.cs" />
+    <Compile Include="GLObjects\Cameras\MouseWheelHelper.cs" />
+    <Compile Include="GLObjects\Cameras\SatelliteRotator.cs" />
+    <Compile Include="GLObjects\Cameras\ViewTypes.cs" />
+    <Compile Include="GLObjects\IRenderable.cs" />
+    <Compile Include="GLObjects\RenderContexts\DIBSection.cs" />
+    <Compile Include="GLObjects\RenderContexts\FBORenderContext.cs" />
+    <Compile Include="GLObjects\RenderContexts\GLVersion.cs" />
+    <Compile Include="GLObjects\RenderContexts\HiddenWindowRenderContext.cs" />
+    <Compile Include="GLObjects\RenderContexts\RenderContext.cs" />
+    <Compile Include="GLObjects\RenderContexts\VersionAttribute.cs" />
+    <Compile Include="GLObjects\RendererBase.cs" />
+    <Compile Include="GLObjects\Shaders\Shader.cs" />
+    <Compile Include="GLObjects\Shaders\ShaderCompilationException.cs" />
+    <Compile Include="GLObjects\Shaders\ShaderProgram.cs" />
+    <Compile Include="GLObjects\Textures\sampler1D.cs" />
+    <Compile Include="GLObjects\Textures\sampler2D.cs" />
+    <Compile Include="GLObjects\Textures\sampler3D.cs" />
+    <Compile Include="GLObjects\VertexBuffers\BufferPointer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\IndexBuffer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\IndexBufferBase.cs" />
+    <Compile Include="GLObjects\VertexBuffers\IndexBufferPointer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\IndexBufferPointerBase.cs" />
+    <Compile Include="GLObjects\VertexBuffers\PropertyBuffer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\PropertyBufferPointer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\VertexArrayObject.cs" />
+    <Compile Include="GLObjects\VertexBuffers\VertexBuffer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\ZeroIndexBuffer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\ZeroIndexBufferPointer.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\BeginTransformFeedbackPrimitiveMode.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\BlendFunc.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\Buffer.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\DebugMessageControlParams.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\DEBUGPROCParams.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\DrawMode.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\GetTarget.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\GetTexImage.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\Hint.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\MapBufferAccess.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\MemoryBarrierFlags.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\PatchParameterName.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\PolygonMode.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\PrimitiveMode.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\ShadeModel.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\TexImage2D.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\TexStorage1DTarget.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\TexStorage2DTarget.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\TexStorage3DTarget.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\TexSubImage2D.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\TransformFeedbackBufferTarget.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\TransformFeedbackTarget.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\UniformType.cs" />
+    <Compile Include="OpenGLAPI\GL.cs" />
+    <Compile Include="OpenGLAPI\GLU_Consts.cs" />
+    <Compile Include="OpenGLAPI\GLU_Functions.cs" />
+    <Compile Include="OpenGLAPI\GL_Consts.cs" />
+    <Compile Include="OpenGLAPI\GL_Extensions.cs" />
+    <Compile Include="OpenGLAPI\GL_Functions.cs" />
+    <Compile Include="OpenGLAPI\GL_Wrappers.cs" />
+    <Compile Include="OpenGLAPI\Win32API\BITMAPINFO.cs" />
+    <Compile Include="OpenGLAPI\Win32API\ClassStyles.cs" />
+    <Compile Include="OpenGLAPI\Win32API\Delegates.cs" />
+    <Compile Include="OpenGLAPI\Win32API\GLYPHMETRICSFLOAT.cs" />
+    <Compile Include="OpenGLAPI\Win32API\PIXELFORMATDESCRIPTOR.cs" />
+    <Compile Include="OpenGLAPI\Win32API\POINTFLOAT.cs" />
+    <Compile Include="OpenGLAPI\Win32API\SetWindowPosFlags.cs" />
+    <Compile Include="OpenGLAPI\Win32API\Win32.cs" />
+    <Compile Include="OpenGLAPI\Win32API\WindowStyles.cs" />
+    <Compile Include="OpenGLAPI\Win32API\WindowStylesEx.cs" />
+    <Compile Include="OpenGLAPI\Win32API\WNDCLASSEX.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ArrayHelper.cs" />
+    <Compile Include="Utilities\ByteArrayHelper.cs" />
+    <Compile Include="Utilities\CurrentOS.cs" />
+    <Compile Include="Utilities\DumpTreeToText.cs" />
+    <Compile Include="Utilities\FloatHelper.cs" />
+    <Compile Include="Utilities\FullDictionary.cs" />
+    <Compile Include="Utilities\ITreeNode.cs" />
+    <Compile Include="Utilities\KMP.cs" />
+    <Compile Include="Utilities\ManifestResourceLoader.cs" />
+    <Compile Include="Utilities\OpenFolderHelper.cs" />
+    <Compile Include="Utilities\StructHelper.cs" />
+    <Compile Include="Utilities\UnmanagedArray.cs" />
+    <Compile Include="Utilities\UnmanagedArrayFastAccessHelper.cs" />
+    <Compile Include="Utilities\UnmanagedArrayHelper.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="GLObjects\VertexBuffers\BufferPointers.cd" />
+    <None Include="GLObjects\VertexBuffers\VertexBuffers.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Maths\readme.txt" />
+    <Content Include="GLObjects\readme.txt" />
+    <Content Include="OpenGLAPI\readme.txt" />
+    <Content Include="Utilities\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
