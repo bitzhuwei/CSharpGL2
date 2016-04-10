@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.Textures
+namespace CSharpGL
 {
     /// <summary>
     /// 2D纹理

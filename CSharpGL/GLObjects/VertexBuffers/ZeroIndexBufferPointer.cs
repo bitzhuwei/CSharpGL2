@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 没有显式索引时的渲染方法。
     /// </summary>
-    public sealed class ZeroIndexBufferPointer : IndexBufferPointerBase
+    public sealed class ZeroIndexBufferPointer : IndexBufferPtrBase
     {
         /// <summary>
         /// 没有显式索引时的渲染方法。

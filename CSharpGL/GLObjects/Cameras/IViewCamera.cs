@@ -1,7 +1,7 @@
 ﻿
 using GLM;
 using System.ComponentModel;
-namespace CSharpGL.Objects.Cameras
+namespace CSharpGL
 {
     /// <summary>
     /// Use this for view matrix.

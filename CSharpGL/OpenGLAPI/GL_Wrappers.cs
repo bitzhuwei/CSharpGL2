@@ -1,5 +1,4 @@
-﻿using CSharpGL.Enumerations;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -1164,10 +1163,10 @@ namespace CSharpGL
             if (proc != null)
             {
                 proc(
-                    (Enumerations.DebugSource)source,
-                    (Enumerations.DebugType)type,
+                    (DebugSource)source,
+                    (DebugType)type,
                     id,
-                    (Enumerations.DebugSeverity)severity,
+                    (DebugSeverity)severity,
                     length,
                     message,
                     userParam);
@@ -1175,10 +1174,10 @@ namespace CSharpGL
         }
 
         public delegate void DebugProc(
-            CSharpGL.Enumerations.DebugSource source,
-            CSharpGL.Enumerations.DebugType type,
+            CSharpGL.DebugSource source,
+            CSharpGL.DebugType type,
             uint id,
-            CSharpGL.Enumerations.DebugSeverity severity,
+            CSharpGL.DebugSeverity severity,
             int length,
             StringBuilder message,
             IntPtr userParam);
@@ -1193,9 +1192,9 @@ namespace CSharpGL
         /// <param name="ids"></param>
         /// <param name="enabled"></param>
         public static void DebugMessageControl(
-            CSharpGL.Enumerations.DebugMessageControlSource source,
-            CSharpGL.Enumerations.DebugMessageControlType type,
-            CSharpGL.Enumerations.DebugMessageControlSeverity severity,
+            CSharpGL.DebugMessageControlSource source,
+            CSharpGL.DebugMessageControlType type,
+            CSharpGL.DebugMessageControlSeverity severity,
             int count,
             int[] ids,
             bool enabled)
@@ -1213,10 +1212,10 @@ namespace CSharpGL
         /// <param name="length">用-1即可。</param>
         /// <param name="buf"></param>
         public static void DebugMessageInsert(
-            CSharpGL.Enumerations.DebugSource source,
-            CSharpGL.Enumerations.DebugType type,
+            CSharpGL.DebugSource source,
+            CSharpGL.DebugType type,
             uint id,
-            CSharpGL.Enumerations.DebugSeverity severity,
+            CSharpGL.DebugSeverity severity,
             int length,
             StringBuilder buf)
         {
@@ -1352,6 +1351,53 @@ namespace CSharpGL
 
         #endregion Blend
 
+        #region TexEnv
+
+        /// <summary>
+        /// Set texture environment parameters.
+        /// </summary>
+        /// <param name="target">Specifies a texture environment. Must be OpenGL.TEXTURE_ENV.</param>
+        /// <param name="pname">Specifies the symbolic name of a single-valued texture environment parameter. Must be OpenGL.TEXTURE_ENV_MODE.</param>
+        /// <param name="param">Specifies a single symbolic constant, one of OpenGL.MODULATE, OpenGL.DECAL, OpenGL.BLEND, or OpenGL.REPLACE.</param>
+        public static void TexEnv(uint target, uint pname, float param)
+        {
+            TexEnvf(target, pname, param);
+        }
+
+        /// <summary>
+        /// Set texture environment parameters.
+        /// </summary>
+        /// <param name="target">Specifies a texture environment. Must be OpenGL.TEXTURE_ENV.</param>
+        /// <param name="pname">Specifies the symbolic name of a texture environment parameter. Accepted values are OpenGL.TEXTURE_ENV_MODE and OpenGL.TEXTURE_ENV_COLOR.</param>
+        /// <param name="parameters">Specifies a pointer to a parameter array that contains either a single symbolic constant or an RGBA color.</param>
+        public static void TexEnv(uint target, uint pname, float[] parameters)
+        {
+            TexEnvfv(target, pname, parameters);
+        }
+
+        /// <summary>
+        /// Set texture environment parameters.
+        /// </summary>
+        /// <param name="target">Specifies a texture environment. Must be OpenGL.TEXTURE_ENV.</param>
+        /// <param name="pname">Specifies the symbolic name of a single-valued texture environment parameter. Must be OpenGL.TEXTURE_ENV_MODE.</param>
+        /// <param name="param">Specifies a single symbolic constant, one of OpenGL.MODULATE, OpenGL.DECAL, OpenGL.BLEND, or OpenGL.REPLACE.</param>
+        public static void TexEnv(uint target, uint pname, int param)
+        {
+            TexEnvi(target, pname, param);
+        }
+
+        /// <summary>
+        /// Set texture environment parameters.
+        /// </summary>
+        /// <param name="target">Specifies a texture environment. Must be OpenGL.TEXTURE_ENV.</param>
+        /// <param name="pname">Specifies the symbolic name of a texture environment parameter. Accepted values are OpenGL.TEXTURE_ENV_MODE and OpenGL.TEXTURE_ENV_COLOR.</param>
+        /// <param name="parameters">Specifies a pointer to a parameter array that contains either a single symbolic constant or an RGBA color.</param>
+        public static void TexEnv(uint target, uint pname, int[] parameters)
+        {
+            TexGeniv(target, pname, parameters);
+        }
+
+        #endregion TexEnv
 
         /// <summary>
         /// Return a string	describing the current GL connection.

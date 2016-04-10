@@ -1,11 +1,10 @@
-﻿using CSharpGL.Objects.Cameras;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects
+namespace CSharpGL
 {
     /// <summary>
     /// 渲染一个元素。

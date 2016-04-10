@@ -41,6 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="readme.txt" />
+    <Compile Include="GLObjects\ModernRendering\CodeShader.cs" />
+    <Compile Include="GLObjects\ModernRendering\GLSwitch.cs" />
+    <Compile Include="GLObjects\ModernRendering\IUpload2GPU.cs" />
+    <Compile Include="GLObjects\ModernRendering\ModernRenderer.cs" />
+    <Compile Include="GLObjects\ModernRendering\PropertyNameMap.cs" />
+    <Compile Include="GLObjects\ModernRendering\UniformNameMap.cs" />
+    <Compile Include="GLObjects\ModernRendering\UniformVariableBase.cs" />
     <Compile Include="Maths\glm_camera.cs" />
     <Compile Include="Maths\glm_inverse.cs" />
     <Compile Include="Maths\glm_trigonometric.cs" />
@@ -72,12 +80,6 @@
     <Compile Include="GLObjects\Cameras\SatelliteRotator.cs" />
     <Compile Include="GLObjects\Cameras\ViewTypes.cs" />
     <Compile Include="GLObjects\IRenderable.cs" />
-    <Compile Include="GLObjects\RenderContexts\DIBSection.cs" />
-    <Compile Include="GLObjects\RenderContexts\FBORenderContext.cs" />
-    <Compile Include="GLObjects\RenderContexts\GLVersion.cs" />
-    <Compile Include="GLObjects\RenderContexts\HiddenWindowRenderContext.cs" />
-    <Compile Include="GLObjects\RenderContexts\RenderContext.cs" />
-    <Compile Include="GLObjects\RenderContexts\VersionAttribute.cs" />
     <Compile Include="GLObjects\RendererBase.cs" />
     <Compile Include="GLObjects\Shaders\Shader.cs" />
     <Compile Include="GLObjects\Shaders\ShaderCompilationException.cs" />
@@ -85,17 +87,18 @@
     <Compile Include="GLObjects\Textures\sampler1D.cs" />
     <Compile Include="GLObjects\Textures\sampler2D.cs" />
     <Compile Include="GLObjects\Textures\sampler3D.cs" />
-    <Compile Include="GLObjects\VertexBuffers\BufferPointer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\BufferPtr.cs" />
     <Compile Include="GLObjects\VertexBuffers\IndexBuffer.cs" />
     <Compile Include="GLObjects\VertexBuffers\IndexBufferBase.cs" />
-    <Compile Include="GLObjects\VertexBuffers\IndexBufferPointer.cs" />
-    <Compile Include="GLObjects\VertexBuffers\IndexBufferPointerBase.cs" />
+    <Compile Include="GLObjects\VertexBuffers\IndexBufferPtr.cs" />
+    <Compile Include="GLObjects\VertexBuffers\IndexBufferPtrBase.cs" />
     <Compile Include="GLObjects\VertexBuffers\PropertyBuffer.cs" />
-    <Compile Include="GLObjects\VertexBuffers\PropertyBufferPointer.cs" />
+    <Compile Include="GLObjects\VertexBuffers\PropertyBufferPtr.cs" />
     <Compile Include="GLObjects\VertexBuffers\VertexArrayObject.cs" />
     <Compile Include="GLObjects\VertexBuffers\VertexBuffer.cs" />
     <Compile Include="GLObjects\VertexBuffers\ZeroIndexBuffer.cs" />
     <Compile Include="GLObjects\VertexBuffers\ZeroIndexBufferPointer.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\ActiveTextureIndex.cs" />
     <Compile Include="OpenGLAPI\Enumerations\BeginTransformFeedbackPrimitiveMode.cs" />
     <Compile Include="OpenGLAPI\Enumerations\BlendFunc.cs" />
     <Compile Include="OpenGLAPI\Enumerations\Buffer.cs" />

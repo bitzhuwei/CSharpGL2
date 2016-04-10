@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 用于存储索引的VBO。

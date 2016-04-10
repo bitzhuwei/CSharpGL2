@@ -1,4 +1,4 @@
-﻿namespace CSharpGL.Objects.Cameras
+﻿namespace CSharpGL
 {
     /// <summary>
     /// Use this for perspective/ortho view matrix.

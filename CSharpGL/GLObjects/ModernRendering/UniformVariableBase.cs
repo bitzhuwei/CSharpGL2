@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects
+namespace CSharpGL
 {
     /// <summary>
     /// shader中的一个uniform变量。
@@ -41,6 +41,8 @@ namespace CSharpGL.Objects
         /// <param name="program"></param>
         public abstract void SetUniform(ShaderProgram program);
 
+        public virtual void ResetUniform(ShaderProgram program) { }
+
         public override string ToString()
         {
             return string.Format("{0}: {1}", this.VarName, this.GetValue());
@@ -59,6 +61,62 @@ namespace CSharpGL.Objects
         }
     }
 
+
+    public struct samplerValue
+    {
+        public uint name;
+        public ActiveTextureIndex index;
+
+        public samplerValue(uint name, ActiveTextureIndex index)
+        {
+            this.name = name;
+            this.index = index;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("name:{0} index:{1}", name, index);
+        }
+    }
+    public class UniformSampler2D : UniformVariableBase
+    {
+
+        /// <summary>
+        /// 用字段减少复制，提升效率。
+        /// </summary>
+        public samplerValue Value;
+
+        public UniformSampler2D(string varName) : base(varName) { }
+
+        public override void SetUniform(ShaderProgram program)
+        {
+            GL.ActiveTexture((uint)Value.index);
+            GL.Enable(GL.GL_TEXTURE_2D);
+            GL.BindTexture(GL.GL_TEXTURE_2D, Value.name);
+            program.SetUniform(VarName, (int)((uint)Value.index - GL.GL_TEXTURE0));
+        }
+
+        public override void ResetUniform(ShaderProgram program)
+        {
+            GL.BindTexture(GL.GL_TEXTURE_2D, 0);
+        }
+
+        internal override void SetValue(ValueType value)
+        {
+            if (value.GetType() != typeof(samplerValue))
+            {
+                throw new ArgumentException(string.Format("[{0}] not match [{1}]'s value.",
+                    value.GetType().Name, this.GetType().Name));
+            }
+
+            this.Value = (samplerValue)value;
+        }
+
+        public override ValueType GetValue()
+        {
+            return Value;
+        }
+    }
     public class UniformFloat : UniformVariableBase
     {
 

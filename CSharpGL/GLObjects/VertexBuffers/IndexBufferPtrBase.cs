@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 索引buffer渲染器的基类。
     /// </summary>
-    public abstract class IndexBufferPointerBase : BufferPointer
+    public abstract class IndexBufferPtrBase : BufferPtr
     {
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace CSharpGL.Objects.VertexBuffers
         /// </summary>
         /// <param name="mode"></param>
         /// <param name="bufferID"></param>
-        internal IndexBufferPointerBase(DrawMode mode, uint bufferID)
+        internal IndexBufferPtrBase(DrawMode mode, uint bufferID)
             : base(bufferID)
         {
             this.Mode = mode;

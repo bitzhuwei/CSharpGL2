@@ -2,10 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-namespace CSharpGL.Objects.Cameras
-{
+using System.Text;namespace CSharpGL{
     /// <summary>
     /// TODO:摄像机的perspective和ortho视角，是否应该同时变化？
     /// </summary>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects
+namespace CSharpGL
 {
     /// <summary>
     /// 用OpenGL初始化和渲染一个元素。

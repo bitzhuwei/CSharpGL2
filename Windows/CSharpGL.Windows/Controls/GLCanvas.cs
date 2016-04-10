@@ -8,9 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using CSharpGL.Objects;
 using System.ComponentModel.Design;
-using CSharpGL.Objects.RenderContexts;
 using System.Diagnostics;
 
 namespace CSharpGL.Windows

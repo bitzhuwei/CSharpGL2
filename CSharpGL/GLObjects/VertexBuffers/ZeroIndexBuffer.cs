@@ -1,11 +1,10 @@
-﻿using CSharpGL.Objects.VertexBuffers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 没有显式的索引。等价于索引数组的值为[0,1,2,2,3,4,5,6,7,8,9...]
@@ -40,7 +39,7 @@ namespace CSharpGL.Objects.VertexBuffers
             return null;
         }
 
-        protected override BufferPointer CreateRenderer()
+        protected override BufferPtr CreateRenderer()
         {
             ZeroIndexBufferPointer renderer = new ZeroIndexBufferPointer(
                  this.Mode, this.FirstVertex, this.VertexCount);

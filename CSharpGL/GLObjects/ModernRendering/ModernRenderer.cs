@@ -1,14 +1,11 @@
-﻿using CSharpGL.Objects;
-using CSharpGL.Objects.VertexBuffers;
+﻿using CSharpGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using bitzhuwei.CompilerBase;
-using CSharpGL.GLSLCompiler;
 
-namespace CSharpGL.Objects
+namespace CSharpGL
 {
     /// <summary>
     /// 试验版的Renderer，使用modern OpenGL
@@ -21,9 +18,16 @@ namespace CSharpGL.Objects
 
         // 数据结构
         protected VertexArrayObject vertexArrayObject;
-        protected BufferPointer[] propertyBufferPointers;
-        protected IndexBufferPointerBase indexBufferPointer;
+        protected BufferPtr[] propertyBufferPointers;
+        protected IndexBufferPtrBase indexBufferPointer;
         protected UniformVariableBase[] uniformVariables;
+        //protected UniformVariableBase[] uniformSamplers;
+        private List<GLSwitch> switchList = new List<GLSwitch>();
+
+        public IList<GLSwitch> SwitchList
+        {
+            get { return switchList; }
+        }
 
         /// <summary>
         /// 从模型到buffer的pointer
@@ -103,6 +107,11 @@ namespace CSharpGL.Objects
                 item.SetUniform(program);
             }
 
+            foreach (var item in switchList)
+            {
+                item.On();
+            }
+
             int[] originalPolygonMode = new int[1];
             GL.GetInteger(GetTarget.PolygonMode, originalPolygonMode);
 
@@ -118,7 +127,7 @@ namespace CSharpGL.Objects
 
                 this.vertexArrayObject = vertexArrayObject;
             }
-            else
+            //else
             {
                 this.vertexArrayObject.Render(e, program);
             }
@@ -126,6 +135,16 @@ namespace CSharpGL.Objects
             GL.Disable(GL.GL_PRIMITIVE_RESTART);
 
             GL.PolygonMode(PolygonModeFaces.FrontAndBack, (PolygonModes)(originalPolygonMode[0]));
+
+            foreach (var item in switchList)
+            {
+                item.Off();
+            }
+
+            foreach (var item in this.uniformVariables)
+            {
+                item.ResetUniform(program);
+            }
 
             // 解绑shader
             program.Unbind();
@@ -140,15 +159,12 @@ namespace CSharpGL.Objects
             program.Create(vertexShaderCode, fragmentShaderCode, geometryShaderCode, null);
             this.shaderProgram = program;
 
-            // init all uniform variables
-            this.uniformVariables = GetAllUniformVariables(this.allShaderCodes);
-
             // init property buffer objects' renderer
-            var propertyBufferRenderers = new BufferPointer[propertyNameMap.Count()];
+            var propertyBufferRenderers = new BufferPtr[propertyNameMap.Count()];
             int index = 0;
             foreach (var item in propertyNameMap)
             {
-                BufferPointer bufferRenderer = this.model.GetBufferRenderer(
+                BufferPtr bufferRenderer = this.model.GetBufferRenderer(
                 item.NameInIConvert2BufferRenderer, item.VarNameInShader);
                 if (bufferRenderer == null) { throw new Exception(); }
                 propertyBufferRenderers[index++] = bufferRenderer;
@@ -164,7 +180,7 @@ namespace CSharpGL.Objects
             //this.uniformNameMap = null;
 
             {
-                IndexBufferPointer renderer = this.indexBufferPointer as IndexBufferPointer;
+                IndexBufferPtr renderer = this.indexBufferPointer as IndexBufferPtr;
                 if (renderer != null)
                 {
                     this.elementCount = renderer.ElementCount;
@@ -180,68 +196,7 @@ namespace CSharpGL.Objects
 
         }
 
-        private UniformVariableBase[] GetAllUniformVariables(CodeShader[] allShaderCodes)
-        {
-            List<UniformVariableBase> result = new List<UniformVariableBase>();
-            foreach (var shaderCode in allShaderCodes)
-            {
-                var lexi = new LexicalAnalyzerGLSLCompiler(shaderCode.SourceCode);
-                TokenList<EnumTokenTypeGLSLCompiler> tokenList = lexi.Analyze();
-                var uniformVarTokens = new List<Token<EnumTokenTypeGLSLCompiler>>();
-                uniformVarTokens.Add(new Token<EnumTokenTypeGLSLCompiler>() { TokenType = EnumTokenTypeGLSLCompiler.identifier, Detail = "uniform", });
-                uniformVarTokens.Add(new Token<EnumTokenTypeGLSLCompiler>() { TokenType = EnumTokenTypeGLSLCompiler.identifier, Detail = "", });
-                uniformVarTokens.Add(new Token<EnumTokenTypeGLSLCompiler>() { TokenType = EnumTokenTypeGLSLCompiler.identifier, Detail = "", });
-                int index = -3;
-                while (index < tokenList.Count)
-                {
-                    index = tokenList.KMP(uniformVarTokens, index + 3, new UniformTokensComparer());
-                    if (index >= 0)
-                    {
-                        UniformVariableBase uniformVar = GetUniformVar(tokenList, index);
-                        result.Add(uniformVar);
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
 
-            return result.Distinct().ToArray();
-        }
-
-        private UniformVariableBase GetUniformVar(TokenList<EnumTokenTypeGLSLCompiler> tokenList, int index)
-        {
-            UniformVariableBase uniformVar = null;
-            string varType = tokenList[index + 1].Detail;
-            if (varType == "float")
-            { uniformVar = new UniformFloat(tokenList[index + 2].Detail); }
-            else if (varType == "vec2")
-            { uniformVar = new UniformVec2(tokenList[index + 2].Detail); }
-            else if (varType == "vec3")
-            { uniformVar = new UniformVec3(tokenList[index + 2].Detail); }
-            else if (varType == "vec4")
-            { uniformVar = new UniformVec4(tokenList[index + 2].Detail); }
-            else if (varType == "mat2")
-            { uniformVar = new UniformMat2(tokenList[index + 2].Detail); }
-            else if (varType == "mat3")
-            { uniformVar = new UniformMat3(tokenList[index + 2].Detail); }
-            else if (varType == "mat4")
-            { uniformVar = new UniformMat4(tokenList[index + 2].Detail); }
-            else
-            { throw new NotImplementedException(); }
-
-            return uniformVar;
-        }
-
-        class UniformTokensComparer : IComparer<Token<EnumTokenTypeGLSLCompiler>>
-        {
-
-            int IComparer<Token<EnumTokenTypeGLSLCompiler>>.Compare(Token<EnumTokenTypeGLSLCompiler> x, Token<EnumTokenTypeGLSLCompiler> y)
-            {
-                return (x.TokenType == y.TokenType && x.Detail.Contains(y.Detail)) ? 0 : 1;
-            }
-        }
         private void FillShaderCodes(CodeShader[] allShaderCodes, ref string vertexShaderCode, ref string geometryShaderCode, ref string fragmentShaderCode)
         {
             bool vertexShaderFilled = false, geometryShaderFilled = false, fragmentShaderFilled = false;
@@ -290,7 +245,7 @@ namespace CSharpGL.Objects
         public void DecreaseVertexCount()
         {
             {
-                IndexBufferPointer renderer = this.indexBufferPointer as IndexBufferPointer;
+                IndexBufferPtr renderer = this.indexBufferPointer as IndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.ElementCount > 0)
@@ -316,7 +271,7 @@ namespace CSharpGL.Objects
         public void IncreaseVertexCount()
         {
             {
-                IndexBufferPointer renderer = this.indexBufferPointer as IndexBufferPointer;
+                IndexBufferPtr renderer = this.indexBufferPointer as IndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.ElementCount < this.elementCount)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 顶点的属性数组。描述顶点的位置或颜色或UV等各种属性。
@@ -54,14 +54,14 @@ namespace CSharpGL.Objects.VertexBuffers
         /// </summary>
         public int DataSize { get; private set; }
 
-        protected override BufferPointer CreateRenderer()
+        protected override BufferPtr CreateRenderer()
         {
             uint[] buffers = new uint[1];
             GL.GenBuffers(1, buffers);
             GL.BindBuffer(GL.GL_ARRAY_BUFFER, buffers[0]);
             GL.BufferData(GL.GL_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
 
-            PropertyBufferPointer renderer = new PropertyBufferPointer(
+            PropertyBufferPtr renderer = new PropertyBufferPtr(
                 this.VarNameInVertexShader, buffers[0], this.DataSize, this.DataType);
 
             return renderer;

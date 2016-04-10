@@ -3,7 +3,7 @@ using System;
 using System.Drawing;
 
 
-namespace CSharpGL.Objects.Cameras
+namespace CSharpGL
 {
     /// <summary>
     /// Rotates a camera on a sphere, whose center is camera's Target.

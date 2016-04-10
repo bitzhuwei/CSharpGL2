@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.Cameras
+namespace CSharpGL
 {
     /// <summary>
     /// 用鼠标旋转模型。

@@ -1,11 +1,11 @@
-﻿using CSharpGL.Objects;
+﻿using CSharpGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 顶点缓存（VBO）
@@ -172,15 +172,15 @@ namespace CSharpGL.Objects.VertexBuffers
         /// 获取一个可渲染此VBO的渲染器。
         /// </summary>
         /// <returns></returns>
-        protected abstract BufferPointer CreateRenderer();
+        protected abstract BufferPtr CreateRenderer();
 
-        private BufferPointer renderer = null;
+        private BufferPtr renderer = null;
 
         /// <summary>
         /// 获取一个可渲染此VBO的渲染器。
         /// </summary>
         /// <returns></returns>
-        public BufferPointer GetRenderer()
+        public BufferPtr GetRenderer()
         {
             if (renderer == null)
             {

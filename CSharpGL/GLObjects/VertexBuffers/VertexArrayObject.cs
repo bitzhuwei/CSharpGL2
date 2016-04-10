@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 一个vertex array object。（即VAO）
@@ -12,8 +12,8 @@ namespace CSharpGL.Objects.VertexBuffers
     /// </summary>
     public sealed class VertexArrayObject : IDisposable
     {
-        private BufferPointer[] bufferRenderers;
-        private IndexBufferPointerBase indexBufferRenderer;
+        private BufferPtr[] bufferRenderers;
+        private IndexBufferPtrBase indexBufferRenderer;
 
         /// <summary>
         /// 此VAO的ID，由OpenGL给出。
@@ -25,7 +25,7 @@ namespace CSharpGL.Objects.VertexBuffers
         /// <para>VAO是用来管理VBO的。可以进一步减少DrawCall。</para>
         /// </summary>
         /// <param name="propertyBufferRenderers">给出此VAO要管理的所有VBO。</param>
-        public VertexArrayObject(IndexBufferPointerBase indexBufferRenderer, params BufferPointer[] propertyBufferRenderers)
+        public VertexArrayObject(IndexBufferPtrBase indexBufferRenderer, params BufferPtr[] propertyBufferRenderers)
         {
             if (indexBufferRenderer == null)
             {

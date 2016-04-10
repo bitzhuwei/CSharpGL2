@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects
+namespace CSharpGL
 {
     [Serializable]
     public class ShaderCompilationException : Exception

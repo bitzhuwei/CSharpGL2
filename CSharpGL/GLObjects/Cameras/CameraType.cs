@@ -1,4 +1,4 @@
-﻿namespace CSharpGL.Objects.Cameras
+﻿namespace CSharpGL
 {
     /// <summary>
     /// 摄像机透视类型

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace CSharpGL.Objects.Cameras
+namespace CSharpGL
 {
     /// <summary>
     /// 摄像机。

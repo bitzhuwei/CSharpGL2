@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Objects.VertexBuffers
+namespace CSharpGL
 {
     /// <summary>
     /// 索引buffer。索引指定了<see cref="PropertyBuffer"/>里各个顶点的渲染顺序。
@@ -79,14 +79,14 @@ namespace CSharpGL.Objects.VertexBuffers
         //    return result;
         //}
 
-        protected override BufferPointer CreateRenderer()
+        protected override BufferPtr CreateRenderer()
         {
             uint[] buffers = new uint[1];
             GL.GenBuffers(1, buffers);
             GL.BindBuffer(GL.GL_ELEMENT_ARRAY_BUFFER, buffers[0]);
             GL.BufferData(GL.GL_ELEMENT_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
 
-            IndexBufferPointer renderer = new IndexBufferPointer(
+            IndexBufferPtr renderer = new IndexBufferPtr(
                  buffers[0], this.Mode, this.ElementCount, this.Type);
 
             return renderer;
