@@ -118,6 +118,17 @@ namespace GLM
             return !(lhs == rhs);
         }
 
+        public override bool Equals(object obj)
+        {
+            vec2 p = (vec2)obj;
+            return (this == p);
+        }
+
+        public override int GetHashCode()
+        {
+            return string.Format("{0},{1}", x, y).GetHashCode();
+        }
+
         public float[] to_array()
         {
             return new[] { x, y };
