@@ -18,70 +18,21 @@ namespace CSharpGL
     public class PropertyNameMap : IEnumerable<PropertyNameMap.NamePair>
     {
         List<string> namesInShader = new List<string>();
-        List<string> namesInIConvert2BufferRenderer = new List<string>();
+        List<string> namesInIBufferable = new List<string>();
 
-        //public string GetNameInIConvert2BufferRenderer(string nameInShader)
-        //{
-        //    string result = null;
-        //    int index = this.namesInShader.IndexOf(nameInShader);
-        //    if (index < 0)
-        //    {
-        //        result = nameInShader;
-        //    }
-        //    else
-        //    {
-        //        result = this.namesInIConvert2BufferRenderer[index];
-        //    }
-
-        //    return result;
-        //}
-
-        //public string this[string nameInShader]
-        //{
-        //    get
-        //    {
-        //        string result = null;
-        //        int index = this.namesInShader.IndexOf(nameInShader);
-        //        if (index < 0)
-        //        {
-        //            result = nameInShader;
-        //        }
-        //        else
-        //        {
-        //            result = this.namesInIConvert2BufferRenderer[index];
-        //        }
-
-        //        return result;
-        //    }
-        //}
-
-        public void Add(string nameInShader, string nameInIConvert2BufferRenderer)
+        public void Add(string nameInShader, string nameInIBufferable)
         {
             this.namesInShader.Add(nameInShader);
-            this.namesInIConvert2BufferRenderer.Add(nameInIConvert2BufferRenderer);
+            this.namesInIBufferable.Add(nameInIBufferable);
         }
-
-        //const string strDumperType = "DumperType";
-        ///// <summary>
-        ///// Type's fullname
-        ///// </summary>
-        //public string DumperType { get; set; }
-
-        //const string strRendererType = "RendererType";
-        ///// <summary>
-        ///// type's fullname
-        ///// </summary>
-        //public string RendererType { get; set; }
 
         public XElement ToXElement()
         {
             XElement result = new XElement(typeof(PropertyNameMap).Name,
-                //new XAttribute(strDumperType, DumperType),
-                //new XAttribute(strRendererType, RendererType),
                 from nameInShader in this.namesInShader
-                join nameInIConvert2BufferRenderer in this.namesInIConvert2BufferRenderer
-                on this.namesInShader.IndexOf(nameInShader) equals this.namesInIConvert2BufferRenderer.IndexOf(nameInIConvert2BufferRenderer)
-                select new NamePair(nameInShader, nameInIConvert2BufferRenderer).ToXElement()
+                join nameInIBufferable in this.namesInIBufferable
+                on this.namesInShader.IndexOf(nameInShader) equals this.namesInIBufferable.IndexOf(nameInIBufferable)
+                select new NamePair(nameInShader, nameInIBufferable).ToXElement()
                 );
 
             return result;
@@ -92,14 +43,12 @@ namespace CSharpGL
             if (xElement.Name != typeof(PropertyNameMap).Name) { throw new Exception(); }
 
             PropertyNameMap result = new PropertyNameMap();
-            //result.DumperType = xElement.Attribute(strDumperType).Value;
-            //result.RendererType = xElement.Attribute(strRendererType).Value;
 
             foreach (var item in xElement.Elements(typeof(NamePair).Name))
             {
                 var pair = NamePair.Parse(item);
                 result.namesInShader.Add(pair.VarNameInShader);
-                result.namesInIConvert2BufferRenderer.Add(pair.NameInIConvert2BufferRenderer);
+                result.namesInIBufferable.Add(pair.nameInIBufferable);
             }
 
             return result;
@@ -108,10 +57,10 @@ namespace CSharpGL
         public IEnumerator<NamePair> GetEnumerator()
         {
             List<string> namesInShader = this.namesInShader;
-            List<string> namesInIConvert2BufferRenderer = this.namesInIConvert2BufferRenderer;
+            List<string> namesInIBufferable = this.namesInIBufferable;
             for (int i = 0; i < namesInShader.Count; i++)
             {
-                yield return new NamePair(namesInShader[i], namesInIConvert2BufferRenderer[i]);
+                yield return new NamePair(namesInShader[i], namesInIBufferable[i]);
             }
         }
 
@@ -125,20 +74,20 @@ namespace CSharpGL
             const string strVarNameInShader = "VarNameInShader";
             public string VarNameInShader { get; set; }
 
-            const string strNameInIConvert2BufferRenderer = "NameInIConvert2BufferRenderer";
-            public string NameInIConvert2BufferRenderer { get; set; }
+            const string strNameInIBufferable = "NameInIBufferable";
+            public string nameInIBufferable { get; set; }
 
-            public NamePair(string nameInShader, string nameInIConvert2BufferRenderer)
+            public NamePair(string nameInShader, string nameInIBufferable)
             {
                 this.VarNameInShader = nameInShader;
-                this.NameInIConvert2BufferRenderer = nameInIConvert2BufferRenderer;
+                this.nameInIBufferable = nameInIBufferable;
             }
 
             public XElement ToXElement()
             {
                 return new XElement(typeof(NamePair).Name,
                     new XAttribute(strVarNameInShader, VarNameInShader),
-                    new XAttribute(strNameInIConvert2BufferRenderer, NameInIConvert2BufferRenderer));
+                    new XAttribute(strNameInIBufferable, nameInIBufferable));
             }
 
             public static NamePair Parse(XElement xElement)
@@ -148,14 +97,14 @@ namespace CSharpGL
 
                 NamePair result = new NamePair(
                     xElement.Attribute(strVarNameInShader).Value,
-                    xElement.Attribute(strNameInIConvert2BufferRenderer).Value);
+                    xElement.Attribute(strNameInIBufferable).Value);
 
                 return result;
             }
 
             public override string ToString()
             {
-                return string.Format("shader [{0}] -> model [{1}]", VarNameInShader, NameInIConvert2BufferRenderer);
+                return string.Format("shader [{0}] -> model [{1}]", VarNameInShader, nameInIBufferable);
             }
         }
     }

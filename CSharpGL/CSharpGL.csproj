@@ -49,7 +49,6 @@
     <Compile Include="OpenGLObjects\ModernRendering\ShaderCode.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\UniformNameMap.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\UniformVariableBase.cs" />
-    <None Include="OpenGLObjects\Shaders\ShaderProgram.cs.backup" />
     <Compile Include="Maths\glm_camera.cs" />
     <Compile Include="Maths\glm_inverse.cs" />
     <Compile Include="Maths\glm_trigonometric.cs" />

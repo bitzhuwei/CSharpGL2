@@ -18,30 +18,14 @@ namespace CSharpGL
     public class UniformNameMap : IEnumerable<UniformNameMap.NamePair>
     {
         List<string> namesInShader = new List<string>();
-        List<string> namesInIConvert2BufferRenderer = new List<string>();
-
-        //public string GetNameInIConvert2BufferRenderer(string nameInShader)
-        //{
-        //    string result = null;
-        //    int index = this.namesInShader.IndexOf(nameInShader);
-        //    if (index < 0)
-        //    {
-        //        result = nameInShader;
-        //    }
-        //    else
-        //    {
-        //        result = this.namesInIConvert2BufferRenderer[index];
-        //    }
-
-        //    return result;
-        //}
+        List<string> namesInIBufferable = new List<string>();
 
         public string this[string nameInModel]
         {
             get
             {
                 string result = null;
-                int index = this.namesInIConvert2BufferRenderer.IndexOf(nameInModel);
+                int index = this.namesInIBufferable.IndexOf(nameInModel);
                 if (index < 0)
                 {
                     result = nameInModel;
@@ -55,34 +39,19 @@ namespace CSharpGL
             }
         }
 
-        public void Add(string nameInIConvert2BufferRenderer, string nameInShader)
+        public void Add(string nameInIBufferable, string nameInShader)
         {
-            this.namesInIConvert2BufferRenderer.Add(nameInIConvert2BufferRenderer);
+            this.namesInIBufferable.Add(nameInIBufferable);
             this.namesInShader.Add(nameInShader);
         }
-
-        //const string strRendererType = "RendererType";
-        ///// <summary>
-        ///// type's fullname
-        ///// </summary>
-        //public string RendererType { get; set; }
-
-        //const string strDumperType = "DumperType";
-        ///// <summary>
-        ///// Type's fullname
-        ///// </summary>
-        //public string DumperType { get; set; }
-
 
         public XElement ToXElement()
         {
             XElement result = new XElement(typeof(UniformNameMap).Name,
-                //new XAttribute(strRendererType, RendererType),
-                //new XAttribute(strDumperType, DumperType),
-                from nameInIConvert2BufferRenderer in this.namesInIConvert2BufferRenderer
+                from nameInIBufferable in this.namesInIBufferable
                 join nameInShader in this.namesInShader
-                on this.namesInIConvert2BufferRenderer.IndexOf(nameInIConvert2BufferRenderer) equals this.namesInShader.IndexOf(nameInShader)
-                select new NamePair(nameInIConvert2BufferRenderer, nameInShader).ToXElement()
+                on this.namesInIBufferable.IndexOf(nameInIBufferable) equals this.namesInShader.IndexOf(nameInShader)
+                select new NamePair(nameInIBufferable, nameInShader).ToXElement()
                 );
 
             return result;
@@ -93,13 +62,11 @@ namespace CSharpGL
             if (xElement.Name != typeof(UniformNameMap).Name) { throw new Exception(); }
 
             UniformNameMap result = new UniformNameMap();
-            //result.RendererType = xElement.Attribute(strRendererType).Value;
-            //result.DumperType = xElement.Attribute(strDumperType).Value;
 
             foreach (var item in xElement.Elements(typeof(NamePair).Name))
             {
                 var pair = NamePair.Parse(item);
-                result.namesInIConvert2BufferRenderer.Add(pair.NameInIConvert2BufferRenderer);
+                result.namesInIBufferable.Add(pair.NameInIBufferable);
                 result.namesInShader.Add(pair.UniformNameInShader);
             }
 
@@ -108,11 +75,11 @@ namespace CSharpGL
 
         public IEnumerator<NamePair> GetEnumerator()
         {
-            List<string> namesInIConvert2BufferRenderer = this.namesInIConvert2BufferRenderer;
+            List<string> namesInIBufferable = this.namesInIBufferable;
             List<string> namesInShader = this.namesInShader;
             for (int i = 0; i < namesInShader.Count; i++)
             {
-                yield return new NamePair(namesInIConvert2BufferRenderer[i], namesInShader[i]);
+                yield return new NamePair(namesInIBufferable[i], namesInShader[i]);
             }
         }
 
@@ -124,23 +91,23 @@ namespace CSharpGL
         public class NamePair
         {
 
-            const string strNameInIConvert2BufferRenderer = "NameInIConvert2BufferRenderer";
-            public string NameInIConvert2BufferRenderer { get; set; }
+            const string strNameInIBufferable = "NameInIBufferable";
+            public string NameInIBufferable { get; set; }
 
             const string strUniformNameInShader = "UniformNameInShader";
             public string UniformNameInShader { get; set; }
 
 
-            public NamePair(string nameInIConvert2BufferRenderer, string uniformNameInShader)
+            public NamePair(string nameInIBufferable, string uniformNameInShader)
             {
-                this.NameInIConvert2BufferRenderer = nameInIConvert2BufferRenderer;
+                this.NameInIBufferable = nameInIBufferable;
                 this.UniformNameInShader = uniformNameInShader;
             }
 
             public XElement ToXElement()
             {
                 return new XElement(typeof(NamePair).Name,
-                    new XAttribute(strNameInIConvert2BufferRenderer, NameInIConvert2BufferRenderer),
+                    new XAttribute(strNameInIBufferable, NameInIBufferable),
                     new XAttribute(strUniformNameInShader, UniformNameInShader));
             }
 
@@ -150,7 +117,7 @@ namespace CSharpGL
                 { throw new Exception(string.Format("name not match for {0}", typeof(NamePair).Name)); }
 
                 NamePair result = new NamePair(
-                    xElement.Attribute(strNameInIConvert2BufferRenderer).Value,
+                    xElement.Attribute(strNameInIBufferable).Value,
                     xElement.Attribute(strUniformNameInShader).Value);
 
                 return result;
@@ -158,7 +125,7 @@ namespace CSharpGL
 
             public override string ToString()
             {
-                return string.Format("model [{0}] -> shader \"uniform\" [{1}]", NameInIConvert2BufferRenderer, UniformNameInShader);
+                return string.Format("model [{0}] -> shader \"uniform\" [{1}]", NameInIBufferable, UniformNameInShader);
             }
         }
     }

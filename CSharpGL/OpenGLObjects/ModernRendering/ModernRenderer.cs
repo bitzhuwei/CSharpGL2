@@ -41,13 +41,16 @@ namespace CSharpGL.GLObjects
         /// <param name="shaderCodes">各种类型的shader代码</param>
         /// <param name="propertyNameMap">关联<see cref="BufferPtr"/>和<see cref="ShaderCode"/>中的属性</param>
         /// <param name="uniformNameMap">关联<see cref="BufferPtr"/>和<see cref="ShaderCode"/>中的uniform变量</param>
+        ///<param name="switches"></param>
         public ModernRenderer(IBufferable bufferable, ShaderCode[] shaderCodes,
-            PropertyNameMap propertyNameMap, UniformNameMap uniformNameMap)
+            PropertyNameMap propertyNameMap, UniformNameMap uniformNameMap,
+            params GLSwitch[] switches)
         {
             this.bufferable = bufferable;
             this.shaderCode = shaderCodes;
             this.propertyNameMap = propertyNameMap;
             this.uniformNameMap = uniformNameMap;
+            this.switchList.AddRange(switches);
         }
 
         protected override void DoInitialize()
@@ -65,7 +68,7 @@ namespace CSharpGL.GLObjects
             foreach (var item in propertyNameMap)
             {
                 PropertyBufferPtr bufferRenderer = this.bufferable.GetPropery(
-                    item.NameInIConvert2BufferRenderer, item.VarNameInShader);
+                    item.nameInIBufferable, item.VarNameInShader);
                 if (bufferRenderer == null) { throw new Exception(); }
                 propertyBufferPtrs[index++] = bufferRenderer;
             }
@@ -79,11 +82,17 @@ namespace CSharpGL.GLObjects
             this.propertyNameMap = null;
             this.uniformNameMap = null;
 
+            InitializeElementCount();
+        }
+
+        private void InitializeElementCount()
+        {
             {
                 IndexBufferPtr renderer = this.indexBufferPtr as IndexBufferPtr;
                 if (renderer != null)
                 {
                     this.elementCount = renderer.ElementCount;
+                    return;
                 }
             }
             {
@@ -91,6 +100,7 @@ namespace CSharpGL.GLObjects
                 if (renderer != null)
                 {
                     this.elementCount = renderer.VertexCount;
+                    return;
                 }
             }
         }
@@ -123,7 +133,7 @@ namespace CSharpGL.GLObjects
             {
                 this.vertexArrayObject.Render(e, program);
             }
-         
+
             foreach (var item in switchList)
             {
                 item.Off();
@@ -160,6 +170,90 @@ namespace CSharpGL.GLObjects
                 this.shaderProgram.Delete();
                 this.shaderProgram = null;
             }
+        }
+
+        public void DecreaseVertexCount()
+        {
+            {
+                IndexBufferPtr renderer = this.indexBufferPtr as IndexBufferPtr;
+                if (renderer != null)
+                {
+                    if (renderer.ElementCount > 0)
+                    {
+                        renderer.ElementCount--;
+                    }
+                    return;
+                }
+            }
+            {
+                ZeroIndexBufferPointer renderer = this.indexBufferPtr as ZeroIndexBufferPointer;
+                if (renderer != null)
+                {
+                    if (renderer.VertexCount > 0)
+                    {
+                        renderer.VertexCount--;
+                    }
+                    return;
+                }
+            }
+        }
+
+        public void IncreaseVertexCount()
+        {
+            {
+                IndexBufferPtr renderer = this.indexBufferPtr as IndexBufferPtr;
+                if (renderer != null)
+                {
+                    if (renderer.ElementCount < this.elementCount)
+                    {
+                        renderer.ElementCount++;
+                    }
+                    return;
+                }
+            }
+            {
+                ZeroIndexBufferPointer renderer = this.indexBufferPtr as ZeroIndexBufferPointer;
+                if (renderer != null)
+                {
+                    if (renderer.VertexCount < this.elementCount)
+                    {
+                        renderer.VertexCount++;
+                    }
+                    return;
+                }
+            }
+        }
+
+        public bool GetUniformValue<T>(string uniformNameInIBufferable, out T value) where T : struct
+        {
+            string uniformNameInShader = this.uniformNameMap[uniformNameInIBufferable];
+            foreach (var item in this.uniformVariables)
+            {
+                if (item.VarName == uniformNameInShader)
+                {
+                    value = (T)item.GetValue();
+                    return true;
+                }
+            }
+
+            value = default(T);
+
+            return false;
+        }
+
+        public bool SetUniformValue(string uniformNameInIConvert2BufferRenderer, ValueType value)
+        {
+            string uniformNameInShader = this.uniformNameMap[uniformNameInIConvert2BufferRenderer];
+            foreach (var item in this.uniformVariables)
+            {
+                if (item.VarName == uniformNameInShader)
+                {
+                    item.SetValue(value);
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public IList<GLSwitch> SwitchList
