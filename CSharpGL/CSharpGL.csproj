@@ -42,13 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="readme.txt" />
-    <Compile Include="GLObjects\ModernRendering\CodeShader.cs" />
-    <Compile Include="GLObjects\ModernRendering\GLSwitch.cs" />
-    <Compile Include="GLObjects\ModernRendering\IUpload2GPU.cs" />
-    <Compile Include="GLObjects\ModernRendering\ModernRenderer.cs" />
-    <Compile Include="GLObjects\ModernRendering\PropertyNameMap.cs" />
-    <Compile Include="GLObjects\ModernRendering\UniformNameMap.cs" />
-    <Compile Include="GLObjects\ModernRendering\UniformVariableBase.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\GLSwitch.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\PropertyNameMap.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\ShaderCode.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\UniformNameMap.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\UniformVariableBase.cs" />
+    <None Include="OpenGLObjects\Shaders\ShaderProgram.cs.backup" />
     <Compile Include="Maths\glm_camera.cs" />
     <Compile Include="Maths\glm_inverse.cs" />
     <Compile Include="Maths\glm_trigonometric.cs" />
@@ -61,43 +62,43 @@
     <Compile Include="Maths\vec3.cs" />
     <Compile Include="Maths\vec4.cs" />
     <Compile Include="Maths\vecHelper.cs" />
-    <Compile Include="GLObjects\Cameras\ArcBallRotator.cs" />
-    <Compile Include="GLObjects\Cameras\Camera.cs" />
-    <Compile Include="GLObjects\Cameras\Camera2Matrix.cs" />
-    <Compile Include="GLObjects\Cameras\CameraHelper.cs" />
-    <Compile Include="GLObjects\Cameras\CameraType.cs" />
-    <Compile Include="GLObjects\Cameras\IBoundingBox.cs" />
-    <Compile Include="GLObjects\Cameras\IBoundingBoxHelper.cs" />
-    <Compile Include="GLObjects\Cameras\ICamera.cs" />
-    <Compile Include="GLObjects\Cameras\ICameraRotator.cs" />
-    <Compile Include="GLObjects\Cameras\IOrthoCamera.cs" />
-    <Compile Include="GLObjects\Cameras\IOrthoViewCamera.cs" />
-    <Compile Include="GLObjects\Cameras\IPerspectiveCamera.cs" />
-    <Compile Include="GLObjects\Cameras\IPerspectiveViewCamera.cs" />
-    <Compile Include="GLObjects\Cameras\IViewCamera.cs" />
-    <Compile Include="GLObjects\Cameras\LegacyBoundingBox.cs" />
-    <Compile Include="GLObjects\Cameras\MouseWheelHelper.cs" />
-    <Compile Include="GLObjects\Cameras\SatelliteRotator.cs" />
-    <Compile Include="GLObjects\Cameras\ViewTypes.cs" />
-    <Compile Include="GLObjects\IRenderable.cs" />
-    <Compile Include="GLObjects\RendererBase.cs" />
-    <Compile Include="GLObjects\Shaders\Shader.cs" />
-    <Compile Include="GLObjects\Shaders\ShaderCompilationException.cs" />
-    <Compile Include="GLObjects\Shaders\ShaderProgram.cs" />
-    <Compile Include="GLObjects\Textures\sampler1D.cs" />
-    <Compile Include="GLObjects\Textures\sampler2D.cs" />
-    <Compile Include="GLObjects\Textures\sampler3D.cs" />
-    <Compile Include="GLObjects\VertexBuffers\BufferPtr.cs" />
-    <Compile Include="GLObjects\VertexBuffers\IndexBuffer.cs" />
-    <Compile Include="GLObjects\VertexBuffers\IndexBufferBase.cs" />
-    <Compile Include="GLObjects\VertexBuffers\IndexBufferPtr.cs" />
-    <Compile Include="GLObjects\VertexBuffers\IndexBufferPtrBase.cs" />
-    <Compile Include="GLObjects\VertexBuffers\PropertyBuffer.cs" />
-    <Compile Include="GLObjects\VertexBuffers\PropertyBufferPtr.cs" />
-    <Compile Include="GLObjects\VertexBuffers\VertexArrayObject.cs" />
-    <Compile Include="GLObjects\VertexBuffers\VertexBuffer.cs" />
-    <Compile Include="GLObjects\VertexBuffers\ZeroIndexBuffer.cs" />
-    <Compile Include="GLObjects\VertexBuffers\ZeroIndexBufferPointer.cs" />
+    <Compile Include="OpenGLObjects\Cameras\ArcBallRotator.cs" />
+    <Compile Include="OpenGLObjects\Cameras\Camera.cs" />
+    <Compile Include="OpenGLObjects\Cameras\Camera2Matrix.cs" />
+    <Compile Include="OpenGLObjects\Cameras\CameraHelper.cs" />
+    <Compile Include="OpenGLObjects\Cameras\CameraType.cs" />
+    <Compile Include="OpenGLObjects\Cameras\IBoundingBox.cs" />
+    <Compile Include="OpenGLObjects\Cameras\IBoundingBoxHelper.cs" />
+    <Compile Include="OpenGLObjects\Cameras\ICamera.cs" />
+    <Compile Include="OpenGLObjects\Cameras\ICameraRotator.cs" />
+    <Compile Include="OpenGLObjects\Cameras\IOrthoCamera.cs" />
+    <Compile Include="OpenGLObjects\Cameras\IOrthoViewCamera.cs" />
+    <Compile Include="OpenGLObjects\Cameras\IPerspectiveCamera.cs" />
+    <Compile Include="OpenGLObjects\Cameras\IPerspectiveViewCamera.cs" />
+    <Compile Include="OpenGLObjects\Cameras\IViewCamera.cs" />
+    <Compile Include="OpenGLObjects\Cameras\LegacyBoundingBox.cs" />
+    <Compile Include="OpenGLObjects\Cameras\MouseWheelHelper.cs" />
+    <Compile Include="OpenGLObjects\Cameras\SatelliteRotator.cs" />
+    <Compile Include="OpenGLObjects\Cameras\ViewTypes.cs" />
+    <Compile Include="OpenGLObjects\IRenderable.cs" />
+    <Compile Include="OpenGLObjects\RendererBase.cs" />
+    <Compile Include="OpenGLObjects\Shaders\Shader.cs" />
+    <Compile Include="OpenGLObjects\Shaders\ShaderCompilationException.cs" />
+    <Compile Include="OpenGLObjects\Shaders\ShaderProgram.cs" />
+    <Compile Include="OpenGLObjects\Textures\sampler1D.cs" />
+    <Compile Include="OpenGLObjects\Textures\sampler2D.cs" />
+    <Compile Include="OpenGLObjects\Textures\sampler3D.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\BufferPtr.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\IndexBuffer.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferBase.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferPtr.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferPtrBase.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\PropertyBuffer.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\PropertyBufferPtr.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\VertexArrayObject.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\VertexBuffer.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\ZeroIndexBuffer.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\ZeroIndexBufferPointer.cs" />
     <Compile Include="OpenGLAPI\Enumerations\ActiveTextureIndex.cs" />
     <Compile Include="OpenGLAPI\Enumerations\BeginTransformFeedbackPrimitiveMode.cs" />
     <Compile Include="OpenGLAPI\Enumerations\BlendFunc.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="OpenGLAPI\Enumerations\PolygonMode.cs" />
     <Compile Include="OpenGLAPI\Enumerations\PrimitiveMode.cs" />
     <Compile Include="OpenGLAPI\Enumerations\ShadeModel.cs" />
+    <Compile Include="OpenGLAPI\Enumerations\ShaderType.cs" />
     <Compile Include="OpenGLAPI\Enumerations\TexImage2D.cs" />
     <Compile Include="OpenGLAPI\Enumerations\TexStorage1DTarget.cs" />
     <Compile Include="OpenGLAPI\Enumerations\TexStorage2DTarget.cs" />
@@ -142,6 +144,7 @@
     <Compile Include="OpenGLAPI\Win32API\WNDCLASSEX.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\ArrayHelper.cs" />
+    <Compile Include="Utilities\BinaryInsertHelper.cs" />
     <Compile Include="Utilities\ByteArrayHelper.cs" />
     <Compile Include="Utilities\CurrentOS.cs" />
     <Compile Include="Utilities\DumpTreeToText.cs" />
@@ -158,12 +161,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="GLObjects\VertexBuffers\BufferPointers.cd" />
-    <None Include="GLObjects\VertexBuffers\VertexBuffers.cd" />
+    <None Include="OpenGLObjects\VertexBuffers\BufferPointers.cd" />
+    <None Include="OpenGLObjects\VertexBuffers\VertexBuffers.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Maths\readme.txt" />
-    <Content Include="GLObjects\readme.txt" />
+    <Content Include="OpenGLObjects\readme.txt" />
     <Content Include="OpenGLAPI\readme.txt" />
     <Content Include="Utilities\readme.txt" />
   </ItemGroup>

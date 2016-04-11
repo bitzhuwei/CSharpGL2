@@ -8,8 +8,8 @@ using System.Xml.Linq;
 namespace CSharpGL
 {
     /// <summary>
-    /// 持有从<see cref="IUpload2GPU"/>到GLSL中in/uniform变量名的对应关系。
-    /// 每个<see cref="IUpload2GPU"/>和每个GLSL的代表（Renderer）都有一个Map关系。
+    /// 持有从<see cref="IBufferable"/>到GLSL中in/uniform变量名的对应关系。
+    /// 每个<see cref="IBufferable"/>和每个GLSL的代表（Renderer）都有一个Map关系。
     /// 这里存储的内容需要OpenGL开发者和APP开发者协商对接。
     /// 策略A：如果没有，或者map中有的名字不存在，就默认为两者使用的名字相同。
     /// 策略B：如果没有，或者map中有的名字不存在， 就说明此map不完整，即OpenGL开发者和APP开发者没有完全协商。

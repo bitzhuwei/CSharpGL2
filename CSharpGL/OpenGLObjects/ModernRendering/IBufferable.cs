@@ -11,7 +11,7 @@ namespace CSharpGL
     /// <para>从模型的数据格式转换为<see cref="VertexBuffer&lt;T&gt;"/>，<see cref="VertexBuffer&lt;T&gt;"/>转换为<see cref="BufferPtr"/>，
     /// <see cref="BufferPtr"/>则可用于控制GPU的渲染操作。</para>
     /// </summary>
-    public interface IUpload2GPU
+    public interface IBufferable
     {
 
         /// <summary>
@@ -20,13 +20,13 @@ namespace CSharpGL
         /// <param name="bufferName">CPU代码指定的buffer名字，用以区分各个用途的buffer。</param>
         /// <param name="varNameInShader">此buffer在shader中对应的in变量名。</param>
         /// <returns></returns>
-        BufferPtr GetBufferRenderer(string bufferName, string varNameInShader);
+        PropertyBufferPtr GetPropery(string bufferName, string varNameInShader);
 
         /// <summary>
         /// 获取描述索引的<see cref="BufferPtr"/>。
         /// 应为<see cref="ZeroIndexBufferPointer"/>或<see cref="IndexBufferPtr"/>。
         /// </summary>
         /// <returns></returns>
-        IndexBufferPtrBase GetIndexBufferRenderer();
+        IndexBufferPtrBase GetIndex();
     }
 }
