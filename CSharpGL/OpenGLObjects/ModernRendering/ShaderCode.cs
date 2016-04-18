@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CSharpGL.GLObjects.ModernRendering
+namespace CSharpGL
 {
     /// <summary>
     /// 各种类型的shader代码
