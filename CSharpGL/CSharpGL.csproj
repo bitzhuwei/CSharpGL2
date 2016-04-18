@@ -97,7 +97,7 @@
     <Compile Include="OpenGLObjects\VertexBuffers\VertexArrayObject.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\VertexBuffer.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\ZeroIndexBuffer.cs" />
-    <Compile Include="OpenGLObjects\VertexBuffers\ZeroIndexBufferPointer.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\ZeroIndexBufferPtr.cs" />
     <Compile Include="OpenGLAPI\Enumerations\ActiveTextureIndex.cs" />
     <Compile Include="OpenGLAPI\Enumerations\BeginTransformFeedbackPrimitiveMode.cs" />
     <Compile Include="OpenGLAPI\Enumerations\BlendFunc.cs" />

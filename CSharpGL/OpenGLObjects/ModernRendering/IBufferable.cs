@@ -24,7 +24,7 @@ namespace CSharpGL
 
         /// <summary>
         /// 获取描述索引的<see cref="BufferPtr"/>。
-        /// 应为<see cref="ZeroIndexBufferPointer"/>或<see cref="IndexBufferPtr"/>。
+        /// 应为<see cref="ZeroIndexBufferPtr"/>或<see cref="IndexBufferPtr"/>。
         /// </summary>
         /// <returns></returns>
         IndexBufferPtrBase GetIndex();

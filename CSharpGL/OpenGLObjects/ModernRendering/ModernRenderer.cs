@@ -95,7 +95,7 @@ namespace CSharpGL
                 }
             }
             {
-                ZeroIndexBufferPointer renderer = this.indexBufferPtr as ZeroIndexBufferPointer;
+                ZeroIndexBufferPtr renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
                 if (renderer != null)
                 {
                     this.elementCount = renderer.VertexCount;
@@ -185,7 +185,7 @@ namespace CSharpGL
                 }
             }
             {
-                ZeroIndexBufferPointer renderer = this.indexBufferPtr as ZeroIndexBufferPointer;
+                ZeroIndexBufferPtr renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.VertexCount > 0)
@@ -211,7 +211,7 @@ namespace CSharpGL
                 }
             }
             {
-                ZeroIndexBufferPointer renderer = this.indexBufferPtr as ZeroIndexBufferPointer;
+                ZeroIndexBufferPtr renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.VertexCount < this.elementCount)

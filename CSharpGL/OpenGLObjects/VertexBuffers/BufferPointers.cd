@@ -22,11 +22,11 @@
       <FileName>OpenGLObjects\VertexBuffers\PropertyBufferPtr.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CSharpGL.ZeroIndexBufferPointer">
+  <Class Name="CSharpGL.ZeroIndexBufferPtr">
     <Position X="0.5" Y="7.5" Width="5.25" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAAA=</HashCode>
-      <FileName>OpenGLObjects\VertexBuffers\ZeroIndexBufferPointer.cs</FileName>
+      <FileName>OpenGLObjects\VertexBuffers\ZeroIndexBufferPtr.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CSharpGL.IndexBufferPtr">

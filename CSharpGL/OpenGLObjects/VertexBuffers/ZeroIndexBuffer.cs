@@ -41,7 +41,7 @@ namespace CSharpGL
 
         protected override BufferPtr CreateRenderer()
         {
-            ZeroIndexBufferPointer renderer = new ZeroIndexBufferPointer(
+            ZeroIndexBufferPtr renderer = new ZeroIndexBufferPtr(
                  this.Mode, this.FirstVertex, this.VertexCount);
 
             return renderer;
