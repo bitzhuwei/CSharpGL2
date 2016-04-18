@@ -21,5 +21,10 @@ namespace CSharpGL.Windows.Demos
         {
             (new Form00GLCanvas()).Show();
         }
+
+        private void btnForm02ModernRenderer_Click(object sender, EventArgs e)
+        {
+            (new Form01ModernRenderer()).Show();
+        }
     }
 }
