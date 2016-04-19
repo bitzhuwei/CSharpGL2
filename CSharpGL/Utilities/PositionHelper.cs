@@ -14,7 +14,7 @@ namespace CSharpGL
         /// </summary>
         /// <param name="positions"></param>
         /// <returns></returns>
-        public vec3[] Move2Center(this vec3[] positions)
+        public static vec3[] Move2Center(this vec3[] positions)
         {
             var result = new vec3[positions.Length];
             if (positions.Length == 0) { return result; }
@@ -42,7 +42,7 @@ namespace CSharpGL
         /// </summary>
         /// <param name="positions"></param>
         /// <returns></returns>
-        public List<vec3> Move2Center(this IList<vec3> positions)
+        public static List<vec3> Move2Center(this IList<vec3> positions)
         {
             var result = new List<vec3>();
             if (positions.Count == 0) { return result; }
