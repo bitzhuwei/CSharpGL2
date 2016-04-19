@@ -41,7 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.png" />
+    <Content Include="OpenGLObjects\ColorCodedPicking\readme.txt" />
     <Content Include="readme.txt" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypes.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypesHelper.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\IColorCodedPicking.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\IColorCodedPickingHelper.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\IPickedGeometry.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\PickedGeometryBase.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\PickedGeometryColored.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\PickingShaderHelper.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\PrimitiveModesHelper.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\SharedStageInfo.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\GLSwitch.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.cs" />
@@ -161,6 +173,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cd" />
+    <None Include="OpenGLObjects\ColorCodedPicking\PickingShader.frag" />
+    <None Include="OpenGLObjects\ColorCodedPicking\PickingShader.vert" />
     <None Include="OpenGLObjects\VertexBuffers\BufferPointers.cd" />
     <None Include="OpenGLObjects\VertexBuffers\VertexBuffers.cd" />
   </ItemGroup>
