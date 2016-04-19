@@ -3,7 +3,7 @@
   <Class Name="CSharpGL.VertexBuffer&lt;T&gt;">
     <Position X="7" Y="0.5" Width="5" />
     <TypeIdentifier>
-      <HashCode>BAAAAQAAACAAAgAECAkAAAhEAAAAAiABAAAAAgAAgAA=</HashCode>
+      <HashCode>BAIAAQAAACAAAAAECA0AAAhEAAAAAkABAAAAAgAAAAA=</HashCode>
       <FileName>OpenGLObjects\VertexBuffers\VertexBuffer.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -11,7 +11,7 @@
   <Class Name="CSharpGL.PropertyBuffer&lt;T&gt;">
     <Position X="9.25" Y="6" Width="6.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAEgAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <HashCode>AAIAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>OpenGLObjects\VertexBuffers\PropertyBuffer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -33,14 +33,14 @@
   <Class Name="CSharpGL.IndexBuffer&lt;T&gt;">
     <Position X="5.5" Y="8.5" Width="5.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAQAAAAAAAAA=</HashCode>
       <FileName>OpenGLObjects\VertexBuffers\IndexBuffer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CSharpGL.ZeroIndexBuffer">
     <Position X="0.5" Y="8.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAEAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAYAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>OpenGLObjects\VertexBuffers\ZeroIndexBuffer.cs</FileName>
     </TypeIdentifier>
   </Class>

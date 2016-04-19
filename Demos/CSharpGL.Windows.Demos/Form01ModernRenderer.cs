@@ -13,6 +13,8 @@ namespace CSharpGL.Windows.Demos
     public partial class Form01ModernRenderer : Form
     {
 
+        ModernRenderer renderer;
+
         public Form01ModernRenderer()
         {
             InitializeComponent();

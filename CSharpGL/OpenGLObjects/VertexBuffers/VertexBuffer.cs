@@ -172,9 +172,9 @@ namespace CSharpGL
         /// 获取一个可渲染此VBO的渲染器。
         /// </summary>
         /// <returns></returns>
-        protected abstract BufferPtr CreateRenderer();
+        protected abstract BufferPtr Upload2GPU();
 
-        private BufferPtr renderer = null;
+        private BufferPtr bufferPtr = null;
 
         /// <summary>
         /// 获取一个可渲染此VBO的渲染器。
@@ -182,12 +182,12 @@ namespace CSharpGL
         /// <returns></returns>
         public BufferPtr GetBufferPtr()
         {
-            if (renderer == null)
+            if (bufferPtr == null)
             {
-                renderer = CreateRenderer();
+                bufferPtr = Upload2GPU();
             }
 
-            return renderer;
+            return bufferPtr;
         }
     }
 
