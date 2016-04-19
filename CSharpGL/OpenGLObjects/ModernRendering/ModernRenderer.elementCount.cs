@@ -14,18 +14,18 @@ namespace CSharpGL
         private void InitializeElementCount()
         {
             {
-                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
-                if (renderer != null)
+                var indexBufferPtr = this.indexBufferPtr as OneIndexBufferPtr;
+                if (indexBufferPtr != null)
                 {
-                    this.elementCount = renderer.ElementCount;
+                    this.elementCount = indexBufferPtr.ElementCount;
                     return;
                 }
             }
             {
-                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
-                if (renderer != null)
+                var indexBufferPtr = this.indexBufferPtr as ZeroIndexBufferPtr;
+                if (indexBufferPtr != null)
                 {
-                    this.elementCount = renderer.VertexCount;
+                    this.elementCount = indexBufferPtr.VertexCount;
                     return;
                 }
             }
@@ -34,23 +34,23 @@ namespace CSharpGL
         public void DecreaseVertexCount()
         {
             {
-                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
-                if (renderer != null)
+                var indexBufferPtr = this.indexBufferPtr as OneIndexBufferPtr;
+                if (indexBufferPtr != null)
                 {
-                    if (renderer.ElementCount > 0)
+                    if (indexBufferPtr.ElementCount > 0)
                     {
-                        renderer.ElementCount--;
+                        indexBufferPtr.ElementCount--;
                     }
                     return;
                 }
             }
             {
-                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
-                if (renderer != null)
+                var indexBufferPtr = this.indexBufferPtr as ZeroIndexBufferPtr;
+                if (indexBufferPtr != null)
                 {
-                    if (renderer.VertexCount > 0)
+                    if (indexBufferPtr.VertexCount > 0)
                     {
-                        renderer.VertexCount--;
+                        indexBufferPtr.VertexCount--;
                     }
                     return;
                 }
@@ -60,23 +60,23 @@ namespace CSharpGL
         public void IncreaseVertexCount()
         {
             {
-                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
-                if (renderer != null)
+                var indexBufferPtr = this.indexBufferPtr as OneIndexBufferPtr;
+                if (indexBufferPtr != null)
                 {
-                    if (renderer.ElementCount < this.elementCount)
+                    if (indexBufferPtr.ElementCount < this.elementCount)
                     {
-                        renderer.ElementCount++;
+                        indexBufferPtr.ElementCount++;
                     }
                     return;
                 }
             }
             {
-                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
-                if (renderer != null)
+                var indexBufferPtr = this.indexBufferPtr as ZeroIndexBufferPtr;
+                if (indexBufferPtr != null)
                 {
-                    if (renderer.VertexCount < this.elementCount)
+                    if (indexBufferPtr.VertexCount < this.elementCount)
                     {
-                        renderer.VertexCount++;
+                        indexBufferPtr.VertexCount++;
                     }
                     return;
                 }
