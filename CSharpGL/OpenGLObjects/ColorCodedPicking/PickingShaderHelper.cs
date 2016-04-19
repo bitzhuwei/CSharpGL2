@@ -21,29 +21,6 @@ namespace CSharpGL
             return shaderProgram;
         }
 
-        //static readonly object synObj = new object();
-        //private static ShaderProgram shaderProgram = null;
-
-        //static PickingShaderProgram()
-        //{
-        //if (shaderProgram == null)
-        //{
-        //    lock (synObj)
-        //    {
-        //        if (shaderProgram == null)
-        //        {
-        //            var vertexShaderSource = ManifestResourceLoader.LoadTextFile(@"PickingShader.vert");
-        //            string fragmentShaderSource = ManifestResourceLoader.LoadTextFile(@"PickingShader.frag");
-
-        //            shaderProgram = new ShaderProgram();
-        //            shaderProgram.Create(vertexShaderSource, fragmentShaderSource, null);
-
-        //            shaderProgram.AssertValid();
-        //        }
-        //    }
-        //}
-        //}
-
         /// <summary>
         /// vertex shader's cache.
         /// </summary>
@@ -59,7 +36,7 @@ namespace CSharpGL
         /// </summary>
         /// <param name="shaderType"></param>
         /// <returns></returns>
-        public static string GetShaderSource(ShaderType shaderType)
+        private static string GetShaderSource(ShaderType shaderType)
         {
             string result = string.Empty;
 
@@ -68,14 +45,16 @@ namespace CSharpGL
                 case ShaderType.VertexShader:
                     if (vertexShader == null)
                     {
-                        vertexShader = ManifestResourceLoader.LoadTextFile(@"PickingShader.vert");
+                        vertexShader = ManifestResourceLoader.LoadTextFile(
+                            @"OpenGLObjects.ColorCodedPicking.PickingShader.vert");
                     }
                     result = vertexShader;
                     break;
                 case ShaderType.FragmentShader:
                     if (fragmentShader == null)
                     {
-                        fragmentShader = ManifestResourceLoader.LoadTextFile(@"PickingShader.frag");
+                        fragmentShader = ManifestResourceLoader.LoadTextFile(
+                            @"OpenGLObjects.ColorCodedPicking.PickingShader.frag");
                     }
                     result = fragmentShader;
                     break;
