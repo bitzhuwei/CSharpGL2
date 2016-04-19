@@ -16,8 +16,8 @@ namespace CSharpGL
         protected VertexArrayObject vertexArrayObject;
         protected PropertyBufferPtr[] propertyBufferPtrs;
         protected IndexBufferPtr indexBufferPtr;
-        protected List<UniformVariableBase> uniformVariables;
-        protected OrderedCollection<string> uniformVariableNames;
+        protected List<UniformVariableBase> uniformVariables = new List<UniformVariableBase>();
+        protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");
         private List<GLSwitch> switchList = new List<GLSwitch>();
         public int elementCount;
 
@@ -113,7 +113,10 @@ namespace CSharpGL
 
             foreach (var item in this.uniformVariables)
             {
-                item.SetUniform(program);
+                if (item.Updated)
+                {
+                    item.SetUniform(program);
+                }
             }
 
             foreach (var item in switchList)
@@ -141,7 +144,11 @@ namespace CSharpGL
 
             foreach (var item in this.uniformVariables)
             {
-                item.ResetUniform(program);
+                if (item.Updated)
+                {
+                    item.ResetUniform(program);
+                    item.Updated = false;
+                }
             }
 
             // 解绑shader
@@ -252,7 +259,7 @@ namespace CSharpGL
                         "uniform variable [{0}] not exists!", varNameInShader));
                 }
 
-                UniformVariableBase variable = GetVariable(value);
+                UniformVariableBase variable = GetVariable(value, varNameInShader);
                 variable.SetValue(value);
                 this.uniformVariableNames.TryInsert(varNameInShader);
                 index = this.uniformVariableNames.IndexOf(varNameInShader);
@@ -262,19 +269,19 @@ namespace CSharpGL
             else
             {
                 UniformVariableBase variable = this.uniformVariables[index];
-                variable.SetValue(value);
-                return true;
+                bool updated = variable.SetValue(value);
+                return updated;
             }
         }
 
-        private UniformVariableBase GetVariable(ValueType value)
+        private UniformVariableBase GetVariable(ValueType value, string varNameInShader)
         {
             Type t = value.GetType();
             Type varType;
             if (variableDict.TryGetValue(t, out varType))
             {
-                UniformVariableBase variable = Activator.CreateInstance(varType) as UniformVariableBase;
-                return variable;
+                object variable = Activator.CreateInstance(varType, varNameInShader);
+                return variable as UniformVariableBase;
             }
             else
             {

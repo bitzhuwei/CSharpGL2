@@ -19,6 +19,11 @@ namespace CSharpGL
         public string VarName { get; private set; }
 
         /// <summary>
+        /// 已更新（需要在render时提交到GPU）
+        /// </summary>
+        public bool Updated { get; set; }
+
+        /// <summary>
         /// shader中的一个uniform变量。
         /// </summary>
         /// <param name="varName"></param>
@@ -48,17 +53,17 @@ namespace CSharpGL
             return string.Format("{0}: {1}", this.VarName, this.GetValue());
         }
 
-        public override bool Equals(object obj)
-        {
-            UniformVariableBase uniformVar = obj as UniformVariableBase;
-            if (uniformVar == null) { return false; }
-            return this.VarName == uniformVar.VarName;
-        }
+        //public override bool Equals(object obj)
+        //{
+        //    UniformVariableBase uniformVar = obj as UniformVariableBase;
+        //    if (uniformVar == null) { return false; }
+        //    return this.VarName == uniformVar.VarName;
+        //}
 
-        public override int GetHashCode()
-        {
-            return this.VarName.GetHashCode();
-        }
+        //public override int GetHashCode()
+        //{
+        //    return this.VarName.GetHashCode();
+        //}
     }
 
 
@@ -148,6 +153,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else
@@ -188,6 +194,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else
@@ -230,6 +237,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else
@@ -272,6 +280,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else
@@ -314,6 +323,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else
@@ -355,6 +365,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else
@@ -396,6 +407,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else
@@ -437,6 +449,7 @@ namespace CSharpGL
             if (v != this.Value)
             {
                 this.Value = v;
+                this.Updated = true;
                 return true;
             }
             else

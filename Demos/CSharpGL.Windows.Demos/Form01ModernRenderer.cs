@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,21 +48,23 @@ namespace CSharpGL.Windows.Demos
         {
             {
                 var camera = new Camera(CameraType.Perspecitive, this.glCanvas1.Width, this.glCanvas1.Height);
+                camera.Position = new vec3(0, 0, 5);
+
                 this.camera = camera;
             }
             {
                 IBufferable bufferable = new BigDipperAdapter(new Models.BigDipper());
                 ShaderCode[] shaders = new ShaderCode[2];
-                shaders[0] = new ShaderCode(@"Shaders\BigDipper.vert", ShaderType.VertexShader);
-                shaders[1] = new ShaderCode(@"Shaders\BigDipper.frag", ShaderType.FragmentShader);
+                shaders[0] = new ShaderCode(File.ReadAllText(@"Shaders\BigDipper.vert"), ShaderType.VertexShader);
+                shaders[1] = new ShaderCode(File.ReadAllText(@"Shaders\BigDipper.frag"), ShaderType.FragmentShader);
                 var propertyNameMap = new PropertyNameMap();
                 propertyNameMap.Add("in_Position", "position");
                 propertyNameMap.Add("in_Color", "color");
-                var uniformNameMap = new UniformNameMap();
-                uniformNameMap.Add("projectionMatrix", "projectionMatrix");
-                uniformNameMap.Add("viewMatrix", "viewMatrix");
-                uniformNameMap.Add("modelMatrix", "modelMatrix");
-                var renderer = new ModernRenderer(bufferable, shaders, propertyNameMap, uniformNameMap);
+                //var uniformNameMap = new UniformNameMap();
+                //uniformNameMap.Add("projectionMatrix", "projectionMatrix");
+                //uniformNameMap.Add("viewMatrix", "viewMatrix");
+                //uniformNameMap.Add("modelMatrix", "modelMatrix");
+                var renderer = new ModernRenderer(bufferable, shaders, propertyNameMap);
                 renderer.Initialize();
                 this.renderer = renderer;
             }
