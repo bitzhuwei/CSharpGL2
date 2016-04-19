@@ -19,10 +19,23 @@ namespace CSharpGL
         /// <param name="type">type in GL.DrawElements(uint mode, int count, uint type, IntPtr indices);
         /// <para>表示第3个参数，表示索引元素的类型。</para></param>
         /// <param name="usage"></param>
-        public IndexBuffer(DrawMode mode, IndexElementType type, BufferUsage usage)
+        public IndexBuffer(DrawMode mode, BufferUsage usage)
             : base(mode, usage)
         {
-            this.Type = type;
+            if (typeof(uint) == typeof(T))
+            {
+                this.Type = IndexElementType.UnsignedInt;
+            }
+            else if (typeof(ushort) == typeof(T))
+            {
+                this.Type = IndexElementType.UnsignedShort;
+            }
+            else if (typeof(byte) == typeof(T))
+            {
+                this.Type = IndexElementType.UnsignedByte;
+            }
+            else
+            { throw new ArgumentException(); }
         }
 
         /// <summary>
