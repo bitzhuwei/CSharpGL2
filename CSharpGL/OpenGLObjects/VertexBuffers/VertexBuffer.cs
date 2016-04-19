@@ -180,7 +180,7 @@ namespace CSharpGL
         /// 获取一个可渲染此VBO的渲染器。
         /// </summary>
         /// <returns></returns>
-        public BufferPtr GetRenderer()
+        public BufferPtr GetBufferPtr()
         {
             if (renderer == null)
             {
