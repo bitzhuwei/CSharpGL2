@@ -87,7 +87,7 @@ namespace CSharpGL
         private void InitializeElementCount()
         {
             {
-                OneIndexBufferPtr renderer = this.indexBufferPtr as OneIndexBufferPtr;
+                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
                 if (renderer != null)
                 {
                     this.elementCount = renderer.ElementCount;
@@ -95,7 +95,7 @@ namespace CSharpGL
                 }
             }
             {
-                ZeroIndexBufferPtr renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
+                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
                 if (renderer != null)
                 {
                     this.elementCount = renderer.VertexCount;
