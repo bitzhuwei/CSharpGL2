@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GLM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,8 @@ namespace CSharpGL
         protected VertexArrayObject vertexArrayObject;
         protected PropertyBufferPtr[] propertyBufferPtrs;
         protected IndexBufferPtr indexBufferPtr;
-        protected UniformVariableBase[] uniformVariables;
+        protected List<UniformVariableBase> uniformVariables;
+        protected OrderedCollection<string> uniformVariableNames;
         private List<GLSwitch> switchList = new List<GLSwitch>();
         public int elementCount;
 
@@ -28,10 +30,10 @@ namespace CSharpGL
         /// vertex shader中的in变量与<see cref="propertyBufferPointers"/>中的元素名字的对应关系。
         /// </summary>
         private PropertyNameMap propertyNameMap;
-        /// <summary>
-        /// 各个shader中的uniform变量与<see cref="propertyBufferPointers"/>中的元素名字的对应关系。
-        /// </summary>
-        protected UniformNameMap uniformNameMap;
+        ///// <summary>
+        ///// 各个shader中的uniform变量与<see cref="propertyBufferPointers"/>中的元素名字的对应关系。
+        ///// </summary>
+        //protected UniformNameMap uniformNameMap;
 
         /// <summary>
         /// 
@@ -42,13 +44,13 @@ namespace CSharpGL
         /// <param name="uniformNameMap">关联<see cref="BufferPtr"/>和<see cref="ShaderCode"/>中的uniform变量</param>
         ///<param name="switches"></param>
         public ModernRenderer(IBufferable bufferable, ShaderCode[] shaderCodes,
-            PropertyNameMap propertyNameMap, UniformNameMap uniformNameMap,
+            PropertyNameMap propertyNameMap, //UniformNameMap uniformNameMap,
             params GLSwitch[] switches)
         {
             this.bufferable = bufferable;
             this.shaderCode = shaderCodes;
             this.propertyNameMap = propertyNameMap;
-            this.uniformNameMap = uniformNameMap;
+            //this.uniformNameMap = uniformNameMap;
             this.switchList.AddRange(switches);
         }
 
@@ -79,7 +81,6 @@ namespace CSharpGL
             this.bufferable = null;
             this.shaderCode = null;
             this.propertyNameMap = null;
-            this.uniformNameMap = null;
 
             InitializeElementCount();
         }
@@ -174,7 +175,7 @@ namespace CSharpGL
         public void DecreaseVertexCount()
         {
             {
-                OneIndexBufferPtr renderer = this.indexBufferPtr as OneIndexBufferPtr;
+                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.ElementCount > 0)
@@ -185,7 +186,7 @@ namespace CSharpGL
                 }
             }
             {
-                ZeroIndexBufferPtr renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
+                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.VertexCount > 0)
@@ -223,36 +224,75 @@ namespace CSharpGL
             }
         }
 
-        public bool GetUniformValue<T>(string uniformNameInIBufferable, out T value) where T : struct
+        public bool GetUniformValue<T>(string varNameInShader, out T value) where T : struct
         {
-            string uniformNameInShader = this.uniformNameMap[uniformNameInIBufferable];
-            foreach (var item in this.uniformVariables)
+            int index = this.uniformVariableNames.IndexOf(varNameInShader);
+            if (index < 0)
             {
-                if (item.VarName == uniformNameInShader)
-                {
-                    value = (T)item.GetValue();
-                    return true;
-                }
+                value = default(T);
+                return false;
             }
-
-            value = default(T);
-
-            return false;
+            else
+            {
+                UniformVariableBase variable = this.uniformVariables[index];
+                value = (T)variable.GetValue();
+                return true;
+            }
         }
 
-        public bool SetUniformValue(string uniformNameInIBufferable, ValueType value)
+        public bool SetUniformValue(string varNameInShader, ValueType value)
         {
-            string uniformNameInShader = this.uniformNameMap[uniformNameInIBufferable];
-            foreach (var item in this.uniformVariables)
+            int index = this.uniformVariableNames.IndexOf(varNameInShader);
+            if (index < 0)
             {
-                if (item.VarName == uniformNameInShader)
+                int location = shaderProgram.GetUniformLocation(varNameInShader);
+                if (location < 0)
                 {
-                    item.SetValue(value);
-                    return true;
+                    throw new Exception(string.Format(
+                        "uniform variable [{0}] not exists!", varNameInShader));
                 }
-            }
 
-            return false;
+                UniformVariableBase variable = GetVariable(value);
+                variable.SetValue(value);
+                this.uniformVariableNames.TryInsert(varNameInShader);
+                index = this.uniformVariableNames.IndexOf(varNameInShader);
+                this.uniformVariables.Insert(index, variable);
+                return true;
+            }
+            else
+            {
+                UniformVariableBase variable = this.uniformVariables[index];
+                variable.SetValue(value);
+                return true;
+            }
+        }
+
+        private UniformVariableBase GetVariable(ValueType value)
+        {
+            Type t = value.GetType();
+            Type varType;
+            if (variableDict.TryGetValue(t, out varType))
+            {
+                UniformVariableBase variable = Activator.CreateInstance(varType) as UniformVariableBase;
+                return variable;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        static Dictionary<Type, Type> variableDict = new Dictionary<Type, Type>();
+        static ModernRenderer()
+        {
+            variableDict.Add(typeof(float), typeof(UniformFloat));
+            variableDict.Add(typeof(vec2), typeof(UniformVec2));
+            variableDict.Add(typeof(vec3), typeof(UniformVec3));
+            variableDict.Add(typeof(vec4), typeof(UniformVec4));
+            variableDict.Add(typeof(mat2), typeof(UniformMat2));
+            variableDict.Add(typeof(mat3), typeof(UniformMat3));
+            variableDict.Add(typeof(mat4), typeof(UniformMat4));
+            variableDict.Add(typeof(samplerValue), typeof(UniformSampler2D));
         }
 
         public IList<GLSwitch> SwitchList

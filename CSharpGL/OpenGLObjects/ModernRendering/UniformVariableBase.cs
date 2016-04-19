@@ -31,7 +31,7 @@ namespace CSharpGL
         /// 
         /// </summary>
         /// <param name="value"></param>
-        internal abstract void SetValue(ValueType value);
+        internal abstract bool SetValue(ValueType value);
 
         public abstract ValueType GetValue();
 
@@ -77,6 +77,41 @@ namespace CSharpGL
         {
             return string.Format("name:{0} index:{1}", name, index);
         }
+
+        public static bool operator ==(samplerValue left, samplerValue right)
+        {
+            object leftObj = left, rightObj = right;
+            if (leftObj == null)
+            {
+                if (rightObj == null) { return true; }
+                else { return false; }
+            }
+            else
+            {
+                if (rightObj == null) { return false; }
+            }
+
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(samplerValue left, samplerValue right)
+        {
+            return !(left == right);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var p = (samplerValue)obj;
+
+            //return this.HashCode == p.HashCode;
+            return (this.index == p.index && this.name == p.name);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.ToString().GetHashCode();
+        }
+
     }
     public class UniformSampler2D : UniformVariableBase
     {
@@ -101,7 +136,7 @@ namespace CSharpGL
             GL.BindTexture(GL.GL_TEXTURE_2D, 0);
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(samplerValue))
             {
@@ -109,7 +144,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (samplerValue)value;
+            var v = (samplerValue)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()
@@ -132,7 +176,7 @@ namespace CSharpGL
             program.SetUniform(VarName, Value);
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(float))
             {
@@ -140,7 +184,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (float)value;
+            var v = (float)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()
@@ -165,7 +218,7 @@ namespace CSharpGL
             program.SetUniform(VarName, value.x, value.y);
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(vec2))
             {
@@ -173,7 +226,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (vec2)value;
+            var v = (vec2)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()
@@ -198,7 +260,7 @@ namespace CSharpGL
             program.SetUniform(VarName, value.x, value.y, value.z);
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(vec3))
             {
@@ -206,7 +268,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (vec3)value;
+            var v = (vec3)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()
@@ -231,7 +302,7 @@ namespace CSharpGL
             program.SetUniform(VarName, value.x, value.y, value.z, value.w);
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(vec4))
             {
@@ -239,7 +310,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (vec4)value;
+            var v = (vec4)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()
@@ -263,7 +343,7 @@ namespace CSharpGL
             program.SetUniformMatrix2(VarName, this.Value.to_array());
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(mat2))
             {
@@ -271,7 +351,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (mat2)value;
+            var v = (mat2)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()
@@ -295,7 +384,7 @@ namespace CSharpGL
             program.SetUniformMatrix3(VarName, this.Value.to_array());
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(mat3))
             {
@@ -303,7 +392,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (mat3)value;
+            var v = (mat3)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()
@@ -327,7 +425,7 @@ namespace CSharpGL
             program.SetUniformMatrix4(VarName, this.Value.to_array());
         }
 
-        internal override void SetValue(ValueType value)
+        internal override bool SetValue(ValueType value)
         {
             if (value.GetType() != typeof(mat4))
             {
@@ -335,7 +433,16 @@ namespace CSharpGL
                     value.GetType().Name, this.GetType().Name));
             }
 
-            this.Value = (mat4)value;
+            var v = (mat4)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override ValueType GetValue()

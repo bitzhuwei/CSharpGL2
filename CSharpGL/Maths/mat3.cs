@@ -231,5 +231,41 @@ namespace GLM
         private vec3 col0;
         private vec3 col1;
         private vec3 col2;
+
+        public static bool operator ==(mat3 left, mat3 right)
+        {
+            object leftObj = left, rightObj = right;
+            if (leftObj == null)
+            {
+                if (rightObj == null) { return true; }
+                else { return false; }
+            }
+            else
+            {
+                if (rightObj == null) { return false; }
+            }
+
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(mat3 left, mat3 right)
+        {
+            return !(left == right);
+        }
+
+        public override bool Equals(object obj)
+        {
+            var p = (mat3)obj;
+
+            //return this.HashCode == p.HashCode;
+            return (this.col0 == p.col0 && this.col1 == p.col1
+                && this.col2 == p.col2);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.ToString().GetHashCode();
+        }
+
     }
 }

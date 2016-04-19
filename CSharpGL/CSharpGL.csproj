@@ -47,7 +47,6 @@
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\PropertyNameMap.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ShaderCode.cs" />
-    <Compile Include="OpenGLObjects\ModernRendering\UniformNameMap.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\UniformVariableBase.cs" />
     <Compile Include="Maths\glm_camera.cs" />
     <Compile Include="Maths\glm_inverse.cs" />
@@ -153,6 +152,7 @@
     <Compile Include="Utilities\KMP.cs" />
     <Compile Include="Utilities\ManifestResourceLoader.cs" />
     <Compile Include="Utilities\OpenFolderHelper.cs" />
+    <Compile Include="Utilities\OrderedCollection.cs" />
     <Compile Include="Utilities\PositionHelper.cs" />
     <Compile Include="Utilities\StructHelper.cs" />
     <Compile Include="Utilities\UnmanagedArray.cs" />
