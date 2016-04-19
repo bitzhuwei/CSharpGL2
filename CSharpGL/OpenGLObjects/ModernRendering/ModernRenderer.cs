@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharpGL
 {
-    public class ModernRenderer : RendererBase
+    public partial class ModernRenderer : RendererBase
     {
         // 算法
         protected ShaderProgram shaderProgram;
@@ -19,7 +19,6 @@ namespace CSharpGL
         protected List<UniformVariableBase> uniformVariables = new List<UniformVariableBase>();
         protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");
         private List<GLSwitch> switchList = new List<GLSwitch>();
-        private int elementCount;
 
         /// <summary>
         /// 从模型到buffer的pointer
@@ -82,26 +81,6 @@ namespace CSharpGL
             this.propertyNameMap = null;
 
             InitializeElementCount();
-        }
-
-        private void InitializeElementCount()
-        {
-            {
-                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
-                if (renderer != null)
-                {
-                    this.elementCount = renderer.ElementCount;
-                    return;
-                }
-            }
-            {
-                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
-                if (renderer != null)
-                {
-                    this.elementCount = renderer.VertexCount;
-                    return;
-                }
-            }
         }
 
         protected override void DoRender(RenderEventArgs e)
@@ -175,58 +154,6 @@ namespace CSharpGL
             {
                 this.shaderProgram.Delete();
                 this.shaderProgram = null;
-            }
-        }
-
-        public void DecreaseVertexCount()
-        {
-            {
-                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
-                if (renderer != null)
-                {
-                    if (renderer.ElementCount > 0)
-                    {
-                        renderer.ElementCount--;
-                    }
-                    return;
-                }
-            }
-            {
-                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
-                if (renderer != null)
-                {
-                    if (renderer.VertexCount > 0)
-                    {
-                        renderer.VertexCount--;
-                    }
-                    return;
-                }
-            }
-        }
-
-        public void IncreaseVertexCount()
-        {
-            {
-                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
-                if (renderer != null)
-                {
-                    if (renderer.ElementCount < this.elementCount)
-                    {
-                        renderer.ElementCount++;
-                    }
-                    return;
-                }
-            }
-            {
-                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
-                if (renderer != null)
-                {
-                    if (renderer.VertexCount < this.elementCount)
-                    {
-                        renderer.VertexCount++;
-                    }
-                    return;
-                }
             }
         }
 
