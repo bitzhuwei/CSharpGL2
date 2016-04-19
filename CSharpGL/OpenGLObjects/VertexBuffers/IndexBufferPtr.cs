@@ -22,8 +22,9 @@ namespace CSharpGL
         /// </summary>
         /// <param name="mode"></param>
         /// <param name="bufferID"></param>
-        internal IndexBufferPtr(DrawMode mode, uint bufferID)
-            : base(bufferID)
+        /// <param name="length">此VBO含有多个个元素？</param>
+        internal IndexBufferPtr(DrawMode mode, uint bufferID, int length)
+            : base(bufferID, length)
         {
             this.Mode = mode;
         }

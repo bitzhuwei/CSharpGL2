@@ -62,7 +62,7 @@ namespace CSharpGL
             GL.BufferData(GL.GL_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
 
             PropertyBufferPtr renderer = new PropertyBufferPtr(
-                this.VarNameInVertexShader, buffers[0], this.DataSize, this.DataType);
+                this.VarNameInVertexShader, buffers[0], this.DataSize, this.DataType, this.Length);
 
             return renderer;
         }

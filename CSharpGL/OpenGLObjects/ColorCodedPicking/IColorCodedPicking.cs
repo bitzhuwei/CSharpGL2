@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GLM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,12 @@ namespace CSharpGL
     /// </summary>
     public interface IColorCodedPicking : IRenderable
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        mat4 MVP { get; set; }
+
         /// <summary>
         /// Gets or internal sets how many primitived have been rendered till now during hit test.
         /// <para>This will be set up by <see cref="ColorCodedPickingScene.Draw(RenderMode.HitTest)"/>, so just use it to set shader's uniform variable.</para>

@@ -19,12 +19,19 @@ namespace CSharpGL
         public uint BufferID { get; private set; }
 
         /// <summary>
+        /// 此VBO含有多个个元素？
+        /// </summary>
+        public int Length { get; private set; }
+
+        /// <summary>
         /// 为给定VBO执行渲染时所需的操作。
         /// </summary>
         /// <param name="bufferID">用GL.GenBuffers()得到的VBO的ID。</param>
-        internal BufferPtr(uint bufferID)
+        /// <param name="length">此VBO含有多个个元素？</param>
+        internal BufferPtr(uint bufferID,int length)
         {
             this.BufferID = bufferID;
+            this.Length = length;
         }
 
         /// <summary>
@@ -70,5 +77,6 @@ namespace CSharpGL
         protected virtual void DisposeManagedResources()
         {
         }
+
     }
 }

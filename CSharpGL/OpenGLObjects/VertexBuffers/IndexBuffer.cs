@@ -100,7 +100,7 @@ namespace CSharpGL
             GL.BufferData(GL.GL_ELEMENT_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
 
             OneIndexBufferPtr renderer = new OneIndexBufferPtr(
-                 buffers[0], this.Mode, this.ElementCount, this.Type);
+                 buffers[0], this.Mode, this.ElementCount, this.Type, this.Length);
 
             return renderer;
         }

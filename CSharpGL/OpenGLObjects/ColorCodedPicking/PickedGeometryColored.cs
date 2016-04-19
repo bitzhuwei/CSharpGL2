@@ -10,7 +10,7 @@ namespace CSharpGL
     /// The color-coded picking result.
     /// <para>Representing a primitive.</para>
     /// </summary>
-    public class PickedGeometryColored : PickedGeometryBase 
+    public class PickedGeometryColored : PickedGeometry 
     {
         /// <summary>
         /// Gets or sets colors of this primitive.

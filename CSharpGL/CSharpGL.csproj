@@ -49,13 +49,15 @@
     <Compile Include="OpenGLObjects\ColorCodedPicking\IColorCodedPicking.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\IColorCodedPickingHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\IPickedGeometry.cs" />
-    <Compile Include="OpenGLObjects\ColorCodedPicking\PickedGeometryBase.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\PickedGeometry.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\PickedGeometryColored.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\PickingShaderHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\PrimitiveModesHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\SharedStageInfo.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\GLSwitch.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.DoInitialize.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.ColorCodedPicking.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Uniforms.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Dispose.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.elementCount.cs" />

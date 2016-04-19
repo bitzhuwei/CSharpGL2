@@ -49,7 +49,7 @@ namespace CSharpGL
     public enum RenderModes
     {
         Render,
-        HitTest,
-        DesignMode,
+        ColorCodedPicking,
+        //DesignMode,
     }
 }

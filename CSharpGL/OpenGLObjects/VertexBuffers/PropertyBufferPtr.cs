@@ -22,9 +22,10 @@ namespace CSharpGL
         /// <para>gl.VertexAttribPointer(uint index, int size, uint type, bool normalized, int stride, IntPtr pointer);</para>
         /// <para>gl.VertexAttribPointer(attributeLocation, 3, OpenGL.GL_FLOAT, false, 0, IntPtr.Zero);</para>
         /// <para>表示第3个参数</para></param>
+        /// <param name="length">此VBO含有多个个元素？</param>
         internal PropertyBufferPtr(string varNameInVertexShader,
-            uint bufferID, int dataSize, uint dataType)
-            : base(bufferID)
+            uint bufferID, int dataSize, uint dataType, int length)
+            : base(bufferID, length)
         {
             this.VarNameInVertexShader = varNameInVertexShader;
             this.DataSize = dataSize;
