@@ -31,10 +31,11 @@ namespace CSharpGL.Windows.Demos
             this.glCanvas1.MouseUp += glCanvas1_MouseUp;
             this.glCanvas1.MouseWheel += glCanvas1_MouseWheel;
             // 天蓝色背景
-            GL.ClearColor(0x87 / 255.0f, 0xce / 255.0f, 0xeb / 255.0f, 0xff / 255.0f);
+            //GL.ClearColor(0x87 / 255.0f, 0xce / 255.0f, 0xeb / 255.0f, 0xff / 255.0f);
+            GL.ClearColor(0, 0, 0, 0);
         }
 
-      
+
         private void glCanvas1_OpenGLDraw(object sender, PaintEventArgs e)
         {
             GL.Clear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
@@ -91,7 +92,7 @@ namespace CSharpGL.Windows.Demos
                 var propertyNameMap = new PropertyNameMap();
                 propertyNameMap.Add("in_Position", "position");
                 propertyNameMap.Add("in_Color", "color");
-                var renderer = new ModernRenderer(bufferable, shaders, propertyNameMap);
+                var renderer = new ModernRenderer(bufferable, shaders, propertyNameMap, "position:");
                 renderer.Initialize();
                 this.renderer = renderer;
             }
