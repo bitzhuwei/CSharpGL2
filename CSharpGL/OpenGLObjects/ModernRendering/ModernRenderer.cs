@@ -240,9 +240,9 @@ namespace CSharpGL
             return false;
         }
 
-        public bool SetUniformValue(string uniformNameInIConvert2BufferRenderer, ValueType value)
+        public bool SetUniformValue(string uniformNameInIBufferable, ValueType value)
         {
-            string uniformNameInShader = this.uniformNameMap[uniformNameInIConvert2BufferRenderer];
+            string uniformNameInShader = this.uniformNameMap[uniformNameInIBufferable];
             foreach (var item in this.uniformVariables)
             {
                 if (item.VarName == uniformNameInShader)

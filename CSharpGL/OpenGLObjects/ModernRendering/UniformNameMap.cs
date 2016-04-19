@@ -20,15 +20,15 @@ namespace CSharpGL
         List<string> namesInShader = new List<string>();
         List<string> namesInIBufferable = new List<string>();
 
-        public string this[string nameInModel]
+        public string this[string nameInIBufferable]
         {
             get
             {
                 string result = null;
-                int index = this.namesInIBufferable.IndexOf(nameInModel);
+                int index = this.namesInIBufferable.IndexOf(nameInIBufferable);
                 if (index < 0)
                 {
-                    result = nameInModel;
+                    result = nameInIBufferable;
                 }
                 else
                 {
