@@ -18,6 +18,11 @@ namespace CSharpGL
         protected IndexBufferPtr indexBufferPtr;
         private List<GLSwitch> switchList = new List<GLSwitch>();
 
+        public IList<GLSwitch> SwitchList
+        {
+            get { return switchList; }
+        }
+
         /// <summary>
         /// 从模型到buffer的pointer
         /// </summary>
@@ -87,18 +92,10 @@ namespace CSharpGL
             // 绑定shader
             program.Bind();
 
-            foreach (var item in this.uniformVariables)
-            {
-                if (item.Updated)
-                {
-                    item.SetUniform(program);
-                }
-            }
+            var updatedUniforms = (from item in this.uniformVariables where item.Updated select item).ToArray();
+            foreach (var item in updatedUniforms) { item.SetUniform(program); }
 
-            foreach (var item in switchList)
-            {
-                item.On();
-            }
+            foreach (var item in switchList) { item.On(); }
 
             if (this.vertexArrayObject == null)
             {
@@ -113,27 +110,12 @@ namespace CSharpGL
                 this.vertexArrayObject.Render(e, program);
             }
 
-            foreach (var item in switchList)
-            {
-                item.Off();
-            }
+            foreach (var item in switchList) { item.Off(); }
 
-            foreach (var item in this.uniformVariables)
-            {
-                if (item.Updated)
-                {
-                    item.ResetUniform(program);
-                    item.Updated = false;
-                }
-            }
+            foreach (var item in updatedUniforms) { item.ResetUniform(program); item.Updated = false; }
 
             // 解绑shader
             program.Unbind();
-        }
-
-        public IList<GLSwitch> SwitchList
-        {
-            get { return switchList; }
         }
 
     }
