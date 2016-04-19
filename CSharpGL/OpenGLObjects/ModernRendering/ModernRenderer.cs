@@ -19,7 +19,7 @@ namespace CSharpGL
         protected List<UniformVariableBase> uniformVariables = new List<UniformVariableBase>();
         protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");
         private List<GLSwitch> switchList = new List<GLSwitch>();
-        public int elementCount;
+        private int elementCount;
 
         /// <summary>
         /// 从模型到buffer的pointer
