@@ -17,16 +17,24 @@ namespace CSharpGL.Windows.Demos
     {
 
         ModernRenderer renderer;
+
+        SatelliteRotator rotator;
         Camera camera;
 
         public Form01ModernRenderer()
         {
             InitializeComponent();
 
+            this.glCanvas1.OpenGLDraw += glCanvas1_OpenGLDraw;
+            this.glCanvas1.MouseDown += glCanvas1_MouseDown;
+            this.glCanvas1.MouseMove += glCanvas1_MouseMove;
+            this.glCanvas1.MouseUp += glCanvas1_MouseUp;
+            this.glCanvas1.MouseWheel += glCanvas1_MouseWheel;
             // 天蓝色背景
             GL.ClearColor(0x87 / 255.0f, 0xce / 255.0f, 0xeb / 255.0f, 0xff / 255.0f);
         }
 
+      
         private void glCanvas1_OpenGLDraw(object sender, PaintEventArgs e)
         {
             GL.Clear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
@@ -44,13 +52,36 @@ namespace CSharpGL.Windows.Demos
             }
         }
 
+        private void glCanvas1_MouseDown(object sender, MouseEventArgs e)
+        {
+            rotator.SetBounds(this.glCanvas1.Width, this.glCanvas1.Height);
+            rotator.MouseDown(e.X, e.Y);
+        }
+
+        private void glCanvas1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (rotator.MouseDownFlag)
+            { rotator.MouseMove(e.X, e.Y); }
+        }
+
+        private void glCanvas1_MouseUp(object sender, MouseEventArgs e)
+        {
+            rotator.MouseUp(e.X, e.Y);
+        }
+
+        void glCanvas1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            camera.MouseWheel(e.Delta);
+        }
+
         private void Form01ModernRenderer_Load(object sender, EventArgs e)
         {
             {
                 var camera = new Camera(CameraType.Perspecitive, this.glCanvas1.Width, this.glCanvas1.Height);
                 camera.Position = new vec3(0, 0, 5);
-
+                var rotator = new SatelliteRotator(camera);
                 this.camera = camera;
+                this.rotator = rotator;
             }
             {
                 IBufferable bufferable = new BigDipperAdapter(new Models.BigDipper());
@@ -60,14 +91,11 @@ namespace CSharpGL.Windows.Demos
                 var propertyNameMap = new PropertyNameMap();
                 propertyNameMap.Add("in_Position", "position");
                 propertyNameMap.Add("in_Color", "color");
-                //var uniformNameMap = new UniformNameMap();
-                //uniformNameMap.Add("projectionMatrix", "projectionMatrix");
-                //uniformNameMap.Add("viewMatrix", "viewMatrix");
-                //uniformNameMap.Add("modelMatrix", "modelMatrix");
                 var renderer = new ModernRenderer(bufferable, shaders, propertyNameMap);
                 renderer.Initialize();
                 this.renderer = renderer;
             }
         }
+
     }
 }

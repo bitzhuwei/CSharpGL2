@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.glCanvas1 = new CSharpGL.Windows.GLCanvas();
             ((System.ComponentModel.ISupportInitialize)(this.glCanvas1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +44,6 @@
             this.glCanvas1.RenderTrigger = CSharpGL.Windows.RenderTriggers.TimerBased;
             this.glCanvas1.Size = new System.Drawing.Size(705, 508);
             this.glCanvas1.TabIndex = 0;
-            this.glCanvas1.OpenGLDraw += new System.EventHandler<System.Windows.Forms.PaintEventArgs>(this.glCanvas1_OpenGLDraw);
             // 
             // Form01ModernRenderer
             // 
