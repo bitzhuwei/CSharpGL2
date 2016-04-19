@@ -27,7 +27,7 @@ namespace CSharpGL
 
         public Shader CreateShader()
         {
-            Shader shader = new Shader();
+            var shader = new Shader();
             shader.Create((uint)this.ShaderType, this.SourceCode);
 
             return shader;
