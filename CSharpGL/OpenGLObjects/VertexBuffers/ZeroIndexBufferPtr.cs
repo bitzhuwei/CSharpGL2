@@ -9,7 +9,7 @@ namespace CSharpGL
     /// <summary>
     /// 没有显式索引时的渲染方法。
     /// </summary>
-    public sealed class ZeroIndexBufferPtr : IndexBufferPtrBase
+    public sealed class ZeroIndexBufferPtr : IndexBufferPtr
     {
         /// <summary>
         /// 没有显式索引时的渲染方法。

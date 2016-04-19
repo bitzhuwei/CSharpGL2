@@ -99,7 +99,7 @@ namespace CSharpGL
             GL.BindBuffer(GL.GL_ELEMENT_ARRAY_BUFFER, buffers[0]);
             GL.BufferData(GL.GL_ELEMENT_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
 
-            IndexBufferPtr renderer = new IndexBufferPtr(
+            OneIndexBufferPtr renderer = new OneIndexBufferPtr(
                  buffers[0], this.Mode, this.ElementCount, this.Type);
 
             return renderer;

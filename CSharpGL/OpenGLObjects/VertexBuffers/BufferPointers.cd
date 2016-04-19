@@ -8,11 +8,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="CSharpGL.IndexBufferPtrBase">
+  <Class Name="CSharpGL.IndexBufferPtr">
     <Position X="4" Y="4.5" Width="4" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OpenGLObjects\VertexBuffers\IndexBufferPtrBase.cs</FileName>
+      <FileName>OpenGLObjects\VertexBuffers\IndexBufferPtr.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CSharpGL.PropertyBufferPtr">
@@ -29,11 +29,11 @@
       <FileName>OpenGLObjects\VertexBuffers\ZeroIndexBufferPtr.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CSharpGL.IndexBufferPtr">
+  <Class Name="CSharpGL.OneIndexBufferPtr">
     <Position X="6.25" Y="7.5" Width="6.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAARAAAAAAAAA=</HashCode>
-      <FileName>OpenGLObjects\VertexBuffers\IndexBufferPtr.cs</FileName>
+      <FileName>OpenGLObjects\VertexBuffers\OneIndexBufferPtr.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

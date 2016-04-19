@@ -14,7 +14,7 @@ namespace CSharpGL
         // 数据结构
         protected VertexArrayObject vertexArrayObject;
         protected PropertyBufferPtr[] propertyBufferPtrs;
-        protected IndexBufferPtrBase indexBufferPtr;
+        protected IndexBufferPtr indexBufferPtr;
         protected UniformVariableBase[] uniformVariables;
         private List<GLSwitch> switchList = new List<GLSwitch>();
         public int elementCount;
@@ -87,7 +87,7 @@ namespace CSharpGL
         private void InitializeElementCount()
         {
             {
-                IndexBufferPtr renderer = this.indexBufferPtr as IndexBufferPtr;
+                OneIndexBufferPtr renderer = this.indexBufferPtr as OneIndexBufferPtr;
                 if (renderer != null)
                 {
                     this.elementCount = renderer.ElementCount;
@@ -174,7 +174,7 @@ namespace CSharpGL
         public void DecreaseVertexCount()
         {
             {
-                IndexBufferPtr renderer = this.indexBufferPtr as IndexBufferPtr;
+                OneIndexBufferPtr renderer = this.indexBufferPtr as OneIndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.ElementCount > 0)
@@ -200,7 +200,7 @@ namespace CSharpGL
         public void IncreaseVertexCount()
         {
             {
-                IndexBufferPtr renderer = this.indexBufferPtr as IndexBufferPtr;
+                var renderer = this.indexBufferPtr as OneIndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.ElementCount < this.elementCount)
@@ -211,7 +211,7 @@ namespace CSharpGL
                 }
             }
             {
-                ZeroIndexBufferPtr renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
+                var renderer = this.indexBufferPtr as ZeroIndexBufferPtr;
                 if (renderer != null)
                 {
                     if (renderer.VertexCount < this.elementCount)

@@ -90,8 +90,8 @@
     <Compile Include="OpenGLObjects\VertexBuffers\BufferPtr.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\IndexBuffer.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferBase.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\OneIndexBufferPtr.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferPtr.cs" />
-    <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferPtrBase.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\PropertyBuffer.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\PropertyBufferPtr.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\VertexArrayObject.cs" />
