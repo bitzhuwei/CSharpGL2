@@ -50,7 +50,6 @@ namespace CSharpGL
             this.bufferable = bufferable;
             this.shaderCode = shaderCodes;
             this.propertyNameMap = propertyNameMap;
-            //this.uniformNameMap = uniformNameMap;
             this.switchList.AddRange(switches);
         }
 
@@ -63,15 +62,15 @@ namespace CSharpGL
             this.shaderProgram = program;
             foreach (var item in shaders) { item.Delete(); }
 
-            // init property buffer objects' renderer
+            // init property buffer objects
             var propertyBufferPtrs = new PropertyBufferPtr[propertyNameMap.Count()];
             int index = 0;
             foreach (var item in propertyNameMap)
             {
-                PropertyBufferPtr bufferRenderer = this.bufferable.GetPropery(
+                PropertyBufferPtr bufferPtr = this.bufferable.GetPropery(
                     item.nameInIBufferable, item.VarNameInShader);
-                if (bufferRenderer == null) { throw new Exception(); }
-                propertyBufferPtrs[index++] = bufferRenderer;
+                if (bufferPtr == null) { throw new Exception(); }
+                propertyBufferPtrs[index++] = bufferPtr;
             }
             this.propertyBufferPtrs = propertyBufferPtrs;
 
