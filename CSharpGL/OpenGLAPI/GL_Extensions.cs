@@ -1003,57 +1003,6 @@ namespace CSharpGL
 
         #region GL_EXT_histogram
 
-        //  Methods
-        public static void GetHistogramEXT(uint target, bool reset, uint format, uint type, IntPtr values)
-        {
-            GetDelegateFor<glGetHistogramEXT>()(target, reset, format, type, values);
-        }
-
-        public static void GetHistogramParameterEXT(uint target, uint pname, float[] parameters)
-        {
-            GetDelegateFor<glGetHistogramParameterfvEXT>()(target, pname, parameters);
-        }
-
-        public static void GetHistogramParameterEXT(uint target, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetHistogramParameterivEXT>()(target, pname, parameters);
-        }
-
-        public static void GetMinmaxEXT(uint target, bool reset, uint format, uint type, IntPtr values)
-        {
-            GetDelegateFor<glGetMinmaxEXT>()(target, reset, format, type, values);
-        }
-
-        public static void GetMinmaxParameterfvEXT(uint target, uint pname, float[] parameters)
-        {
-            GetDelegateFor<glGetMinmaxParameterfvEXT>()(target, pname, parameters);
-        }
-
-        public static void GetMinmaxParameterivEXT(uint target, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetMinmaxParameterivEXT>()(target, pname, parameters);
-        }
-
-        public static void HistogramEXT(uint target, int width, uint internalformat, bool sink)
-        {
-            GetDelegateFor<glHistogramEXT>()(target, width, internalformat, sink);
-        }
-
-        public static void MinmaxEXT(uint target, uint internalformat, bool sink)
-        {
-            GetDelegateFor<glMinmaxEXT>()(target, internalformat, sink);
-        }
-
-        public static void ResetHistogramEXT(uint target)
-        {
-            GetDelegateFor<glResetHistogramEXT>()(target);
-        }
-
-        public static void ResetMinmaxEXT(uint target)
-        {
-            GetDelegateFor<glResetMinmaxEXT>()(target);
-        }
-
         //  Delegates
         public delegate void glGetHistogramEXT(uint target, bool reset, uint format, uint type, IntPtr values);
         public delegate void glGetHistogramParameterfvEXT(uint target, uint pname, float[] parameters);
