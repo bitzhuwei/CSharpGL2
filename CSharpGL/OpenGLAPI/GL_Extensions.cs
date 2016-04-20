@@ -2128,26 +2128,6 @@ namespace CSharpGL
 
         #region GL_ARB_compute_shader
 
-        /// <summary>
-        /// Launch one or more compute work groups
-        /// </summary>
-        /// <param name="num_groups_x">The number of work groups to be launched in the X dimension.</param>
-        /// <param name="num_groups_y">The number of work groups to be launched in the Y dimension.</param>
-        /// <param name="num_groups_z">The number of work groups to be launched in the Z dimension.</param>
-        public static void DispatchCompute(uint num_groups_x, uint num_groups_y, uint num_groups_z)
-        {
-            GetDelegateFor<glDispatchCompute>()(num_groups_x, num_groups_y, num_groups_z);
-        }
-
-        /// <summary>
-        /// Launch one or more compute work groups using parameters stored in a buffer
-        /// </summary>
-        /// <param name="indirect">The offset into the buffer object currently bound to the GL_DISPATCH_INDIRECT_BUFFER​ buffer target at which the dispatch parameters are stored.</param>
-        public static void DispatchComputeIndirect(IntPtr indirect)
-        {
-            GetDelegateFor<glDispatchComputeIndirect>()(indirect);
-        }
-
         //  Delegates
         public delegate void glDispatchCompute(uint num_groups_x, uint num_groups_y, uint num_groups_z);
         public delegate void glDispatchComputeIndirect(IntPtr indirect);
