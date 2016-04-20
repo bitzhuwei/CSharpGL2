@@ -13,7 +13,7 @@ namespace CSharpGL
         {
             ShaderCode[] shaders = new ShaderCode[2];
             shaders[0] = new ShaderCode(GetShaderSource(ShaderType.VertexShader), ShaderType.VertexShader);
-            shaders[1] = new ShaderCode(GetShaderSource(ShaderType.FragmentShader), ShaderType.VertexShader);
+            shaders[1] = new ShaderCode(GetShaderSource(ShaderType.FragmentShader), ShaderType.FragmentShader);
 
             var shaderProgram = new ShaderProgram();
             shaderProgram.Create((from item in shaders select item.CreateShader()).ToArray());
