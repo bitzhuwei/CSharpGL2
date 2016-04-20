@@ -1035,12 +1035,6 @@ namespace CSharpGL
 
         #region GL_EXT_blend_color
 
-        //  Methods
-        public static void BlendColorEXT(float red, float green, float blue, float alpha)
-        {
-            GetDelegateFor<glBlendColorEXT>()(red, green, blue, alpha);
-        }
-
         //  Delegates
         public delegate void glBlendColorEXT(float red, float green, float blue, float alpha);
 
@@ -1054,12 +1048,6 @@ namespace CSharpGL
         #endregion
 
         #region GL_EXT_blend_minmax
-
-        //  Methods
-        public static void BlendEquationEXT(uint mode)
-        {
-            GetDelegateFor<glBlendEquationEXT>()(mode);
-        }
 
         //  Delegates
         public delegate void glBlendEquationEXT(uint mode);
