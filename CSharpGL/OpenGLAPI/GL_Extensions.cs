@@ -1331,16 +1331,6 @@ namespace CSharpGL
 
         #region GL_ARB_point_parameters
 
-        //  Methods
-        public static void glPointParameterARB(uint pname, float parameter)
-        {
-            GetDelegateFor<glPointParameterfARB>()(pname, parameter);
-        }
-        public static void glPointParameterARB(uint pname, float[] parameters)
-        {
-            GetDelegateFor<glPointParameterfvARB>()(pname, parameters);
-        }
-
         //  Delegates
         public delegate void glPointParameterfARB(uint pname, float param);
         public delegate void glPointParameterfvARB(uint pname, float[] parameters);
