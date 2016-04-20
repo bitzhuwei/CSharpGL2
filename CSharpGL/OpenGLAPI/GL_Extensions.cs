@@ -1768,12 +1768,6 @@ namespace CSharpGL
 
         #region GL_ARB_draw_buffers
 
-        //  Methods
-        public static void DrawBuffersARB(int n, uint[] bufs)
-        {
-            GetDelegateFor<glDrawBuffersARB>()(n, bufs);
-        }
-
         //  Delegates
         public delegate void glDrawBuffersARB(int n, uint[] bufs);
 
