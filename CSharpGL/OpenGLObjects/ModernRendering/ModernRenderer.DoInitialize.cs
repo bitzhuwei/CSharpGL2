@@ -9,7 +9,19 @@ namespace CSharpGL
 {
     public partial class ModernRenderer : RendererBase
     {
-    
+
+        protected override void DoRender(RenderEventArgs e)
+        {
+            if (e.RenderMode == RenderModes.ColorCodedPicking)
+            {
+                ColorCodedPickingRender(e);
+            }
+            else if (e.RenderMode == RenderModes.Render)
+            {
+                RenderRender(e);
+            }
+
+        }
 
         /// <summary>
         /// 

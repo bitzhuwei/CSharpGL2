@@ -9,7 +9,7 @@ namespace CSharpGL
 {
     public partial class ModernRenderer : RendererBase, IColorCodedPicking
     {
-       
+
         mat4 IColorCodedPicking.MVP
         { get { return pickingMVP.Value; } set { pickingMVP.Value = value; } }
 
@@ -61,88 +61,6 @@ namespace CSharpGL
             base.Render(e);
         }
 
-        protected override void DoRender(RenderEventArgs e)
-        {
-            if (e.RenderMode == RenderModes.ColorCodedPicking)
-            {
-                ColorCodedPickingRender(e);
-            }
-            else if (e.RenderMode == RenderModes.Render)
-            {
-                RenderRender(e);
-            }
-
-        }
-
-        private void RenderRender(RenderEventArgs e)
-        {
-            ShaderProgram program = this.shaderProgram;
-
-            // 绑定shader
-            program.Bind();
-
-            var updatedUniforms = (from item in this.uniformVariables where item.Updated select item).ToArray();
-            foreach (var item in updatedUniforms) { item.SetUniform(program); }
-
-            foreach (var item in switchList) { item.On(); }
-
-            if (this.vertexArrayObject == null)
-            {
-                var vertexArrayObject = new VertexArrayObject(
-                    this.indexBufferPtr, this.propertyBufferPtrs);
-                vertexArrayObject.Create(e, program);
-
-                this.vertexArrayObject = vertexArrayObject;
-            }
-            //else
-            {
-                this.vertexArrayObject.Render(e, program);
-            }
-
-            foreach (var item in switchList) { item.Off(); }
-
-            foreach (var item in updatedUniforms) { item.ResetUniform(program); item.Updated = false; }
-
-            // 解绑shader
-            program.Unbind();
-        }
-
-        private void ColorCodedPickingRender(RenderEventArgs e)
-        {
-            if (this.pickingShaderProgram == null)
-            { this.pickingShaderProgram = PickingShaderHelper.GetPickingShaderProgram(); }
-
-            ShaderProgram program = this.pickingShaderProgram;
-
-            // 绑定shader
-            program.Bind();
-            var picking = this as IColorCodedPicking;
-            // TODO: use uint/int/float or ? use UniformUInt instead
-            program.SetUniform("pickingBaseID", picking.PickingBaseID);
-            pickingMVP.SetUniform(program);
-
-            //foreach (var item in switchList) { item.On(); }
-
-            if (this.vertexArrayObject4Picking == null)
-            {
-                var vertexArrayObject4Picking = new VertexArrayObject(
-                    this.indexBufferPtr, this.positionBufferPtr);
-                vertexArrayObject4Picking.Create(e, program);
-
-                this.vertexArrayObject4Picking = vertexArrayObject4Picking;
-            }
-            //else
-            {
-                this.vertexArrayObject4Picking.Render(e, program);
-            }
-
-            //foreach (var item in switchList) { item.Off(); }
-
-            pickingMVP.ResetUniform(program);
-
-            // 解绑shader
-            program.Unbind();
-        }
 
     }
 }
