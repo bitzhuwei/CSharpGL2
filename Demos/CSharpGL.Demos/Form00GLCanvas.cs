@@ -13,6 +13,10 @@ namespace CSharpGL.Demos
     public partial class Form00GLCanvas : Form
     {
 
+        float[] clearColor = new float[4];
+
+        Random random = new Random();
+
         public Form00GLCanvas()
         {
             InitializeComponent();
@@ -23,18 +27,18 @@ namespace CSharpGL.Demos
 
         private void glCanvas1_OpenGLDraw(object sender, PaintEventArgs e)
         {
+            GL.ClearColor(clearColor[0], clearColor[1], clearColor[2], clearColor[3]);
+
             GL.Clear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int r = random.Next(0, 256);
-            int g = random.Next(0, 256);
-            int b = random.Next(0, 256);
-            int a = random.Next(0, 256);
-            GL.ClearColor(r / 255.0f, g / 255.0f, b / 255.0f, a / 255.0f);
+            for (int i = 0; i < 4; i++)
+            {
+                clearColor[i] = (float)random.NextDouble();
+            }
         }
 
-        Random random = new Random();
     }
 }
