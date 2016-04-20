@@ -906,20 +906,6 @@ namespace CSharpGL
 
         #region GL_EXT_draw_range_elements
 
-        /// <summary>
-        /// Render primitives from array data.
-        /// </summary>
-        /// <param name="mode">The mode.</param>
-        /// <param name="start">The start.</param>
-        /// <param name="end">The end.</param>
-        /// <param name="count">The count.</param>
-        /// <param name="type">The type.</param>
-        /// <param name="indices">The indices.</param>
-        public static void DrawRangeElementsEXT(uint mode, uint start, uint end, uint count, uint type, IntPtr indices)
-        {
-            GetDelegateFor<glDrawRangeElementsEXT>()(mode, start, end, count, type, indices);
-        }
-
         public delegate void glDrawRangeElementsEXT(uint mode, uint start, uint end, uint count, uint type, IntPtr indices);
 
         public const uint GL_MAX_ELEMENTS_VERTICES_EXT = 0x80E8;
