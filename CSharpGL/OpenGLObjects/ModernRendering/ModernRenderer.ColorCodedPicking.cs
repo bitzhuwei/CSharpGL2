@@ -138,6 +138,8 @@ namespace CSharpGL
 
             //foreach (var item in switchList) { item.Off(); }
 
+            pickingMVP.ResetUniform(program);
+
             // 解绑shader
             program.Unbind();
         }
