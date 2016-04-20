@@ -1984,16 +1984,6 @@ namespace CSharpGL
 
         #region GL_EXT_draw_instanced
 
-        //  Methods
-        public static void DrawArraysInstancedEXT(uint mode, int start, int count, int primcount)
-        {
-            GetDelegateFor<glDrawArraysInstancedEXT>()(mode, start, count, primcount);
-        }
-        public static void DrawElementsInstancedEXT(uint mode, int count, uint type, IntPtr indices, int primcount)
-        {
-            GetDelegateFor<glDrawElementsInstancedEXT>()(mode, count, type, indices, primcount);
-        }
-
         //  Delegates
         public delegate void glDrawArraysInstancedEXT(uint mode, int start, int count, int primcount);
         public delegate void glDrawElementsInstancedEXT(uint mode, int count, uint type, IntPtr indices, int primcount);
