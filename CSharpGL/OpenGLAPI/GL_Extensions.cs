@@ -1442,52 +1442,6 @@ namespace CSharpGL
 
         #region GL_ARB_vertex_buffer_object
 
-        //  Methods
-        public static void BindBufferARB(uint target, uint buffer)
-        {
-            GetDelegateFor<glBindBufferARB>()(target, buffer);
-        }
-        public static void DeleteBuffersARB(int n, uint[] buffers)
-        {
-            GetDelegateFor<glDeleteBuffersARB>()(n, buffers);
-        }
-        public static void GenBuffersARB(int n, uint[] buffers)
-        {
-            GetDelegateFor<glGenBuffersARB>()(n, buffers);
-        }
-        public static bool IsBufferARB(uint buffer)
-        {
-            return GetDelegateFor<glIsBufferARB>()(buffer);
-        }
-        public static void BufferDataARB(uint target, uint size, IntPtr data, uint usage)
-        {
-            GetDelegateFor<glBufferDataARB>()(target, size, data, usage);
-        }
-        public static void BufferSubDataARB(uint target, uint offset, uint size, IntPtr data)
-        {
-            GetDelegateFor<glBufferSubDataARB>()(target, offset, size, data);
-        }
-        public static void GetBufferSubDataARB(uint target, uint offset, uint size, IntPtr data)
-        {
-            GetDelegateFor<glGetBufferSubDataARB>()(target, offset, size, data);
-        }
-        public static IntPtr MapBufferARB(uint target, uint access)
-        {
-            return GetDelegateFor<glMapBufferARB>()(target, access);
-        }
-        public static bool UnmapBufferARB(uint target)
-        {
-            return GetDelegateFor<glUnmapBufferARB>()(target);
-        }
-        public static void GetBufferParameterARB(uint target, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetBufferParameterivARB>()(target, pname, parameters);
-        }
-        public static void GetBufferPointerARB(uint target, uint pname, IntPtr parameters)
-        {
-            GetDelegateFor<glGetBufferPointervARB>()(target, pname, parameters);
-        }
-
         //  Delegates
         public delegate void glBindBufferARB(uint target, uint buffer);
         public delegate void glDeleteBuffersARB(int n, uint[] buffers);
