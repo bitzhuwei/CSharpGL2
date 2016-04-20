@@ -2156,6 +2156,7 @@ namespace CSharpGL
 
         #region GL_ARB_copy_image
 
+        //  Delegates
         /// <summary>
         /// Perform a raw data copy between two images
         /// </summary>
@@ -2174,14 +2175,6 @@ namespace CSharpGL
         /// <param name="srcWidth">The width of the region to be copied.</param>
         /// <param name="srcHeight">The height of the region to be copied.</param>
         /// <param name="srcDepth">The depth of the region to be copied.</param>
-        public static void CopyImageSubData(uint srcName, uint srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName,
-            uint dstTarget, int dstLevel, int dstX, int dstY, int dstZ, uint srcWidth, uint srcHeight, uint srcDepth)
-        {
-            GetDelegateFor<glCopyImageSubData>()(srcName, srcTarget, srcLevel, srcX, srcY, srcZ, dstName,
-            dstTarget, dstLevel, dstX, dstY, dstZ, srcWidth, srcHeight, srcDepth);
-        }
-
-        //  Delegates
         public delegate void glCopyImageSubData(uint srcName, uint srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName,
             uint dstTarget, int dstLevel, int dstX, int dstY, int dstZ, uint srcWidth, uint srcHeight, uint srcDepth);
 
