@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +56,18 @@
     </Compile>
     <Compile Include="Controls\GLCanvasHelper.cs" />
     <Compile Include="Controls\RenderTriggers.cs" />
+    <Compile Include="Controls\FormGLSwitchListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormGLSwitchListEditor.Designer.cs">
+      <DependentUpon>FormGLSwitchListEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGLSwtichType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGLSwtichType.Designer.cs">
+      <DependentUpon>FormGLSwtichType.cs</DependentUpon>
+    </Compile>
     <Compile Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypes.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypesHelper.cs" />
@@ -68,6 +81,7 @@
     <Compile Include="OpenGLObjects\ColorCodedPicking\PrimitiveModesHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\SharedStageInfo.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\GLSwitch.cs" />
+    <Compile Include="Controls\GLSwithListEditor.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Property.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.ColorCodedPickingRender.cs" />
@@ -204,6 +218,12 @@
     <None Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cd" />
     <EmbeddedResource Include="Controls\GLCanvas.resx">
       <DependentUpon>GLCanvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormGLSwitchListEditor.resx">
+      <DependentUpon>FormGLSwitchListEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGLSwtichType.resx">
+      <DependentUpon>FormGLSwtichType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenGLObjects\ColorCodedPicking\PickingShader.frag" />
     <EmbeddedResource Include="OpenGLObjects\ColorCodedPicking\PickingShader.vert" />

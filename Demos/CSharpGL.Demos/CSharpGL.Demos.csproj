@@ -57,6 +57,7 @@
     <Compile Include="FormProperyGrid.Designer.cs">
       <DependentUpon>FormProperyGrid.cs</DependentUpon>
     </Compile>
+    <Compile Include="GLSwitchTypeConverter.cs" />
     <Compile Include="ModelAdapters\BigDipperAdapter.cs" />
     <Compile Include="Models\BigDipper.cs" />
     <Compile Include="Models\PCIModel.cs" />

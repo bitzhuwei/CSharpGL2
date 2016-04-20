@@ -7,6 +7,7 @@ namespace CSharpGL
 {
     public abstract class GLSwitch
     {
+        public GLSwitch() { }
 
         public abstract void On();
 
@@ -16,7 +17,9 @@ namespace CSharpGL
     public class PrimitiveRestartSwitch : GLSwitch
     {
 
-        public PrimitiveRestartSwitch(uint restartIndex = uint.MaxValue)
+        public PrimitiveRestartSwitch() : this(uint.MaxValue) { }
+
+        public PrimitiveRestartSwitch(uint restartIndex)
         {
             this.RestartIndex = restartIndex;
         }
@@ -32,13 +35,15 @@ namespace CSharpGL
             GL.Disable(GL.GL_PRIMITIVE_RESTART);
         }
 
-        public uint RestartIndex { get; private set; }
+        public uint RestartIndex { get; set; }
     }
 
     public class PolygonModeSwitch : GLSwitch
     {
 
         int[] originalPolygonMode = new int[1];
+
+        public PolygonModeSwitch() : this(PolygonModes.Filled) { }
 
         public PolygonModeSwitch(PolygonModes mode)
         {
@@ -57,7 +62,7 @@ namespace CSharpGL
             GL.PolygonMode(PolygonModeFaces.FrontAndBack, (PolygonModes)(originalPolygonMode[0]));
         }
 
-        public PolygonModes Mode { get; private set; }
+        public PolygonModes Mode { get; set; }
     }
 
     public class PointSpriteSwitch : GLSwitch
