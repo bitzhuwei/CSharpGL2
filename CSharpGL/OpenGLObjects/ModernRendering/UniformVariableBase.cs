@@ -124,7 +124,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public samplerValue Value;
+        private samplerValue Value;
 
         public UniformSampler2D(string varName) : base(varName) { }
 
@@ -166,6 +166,21 @@ namespace CSharpGL
         {
             return Value;
         }
+
+        public void SetsamplerValue(samplerValue value)
+        {
+            var v = (samplerValue)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public samplerValue GetsamplerValue()
+        {
+            return Value;
+        }
     }
     public class UniformFloat : UniformVariableBase
     {
@@ -173,7 +188,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public float Value;
+        private float Value;
 
         public UniformFloat(string varName) : base(varName) { }
 
@@ -207,6 +222,21 @@ namespace CSharpGL
         {
             return Value;
         }
+
+        public void SetFloat(float value)
+        {
+            var v = (float)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public float GetFloat()
+        {
+            return Value;
+        }
     }
 
     public class UniformVec2 : UniformVariableBase
@@ -215,7 +245,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public vec2 Value;
+        private vec2 Value;
 
         public UniformVec2(string varName) : base(varName) { }
 
@@ -250,6 +280,21 @@ namespace CSharpGL
         {
             return Value;
         }
+
+        public void SetVec2(vec2 value)
+        {
+            var v = (vec2)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public vec2 GetVec2()
+        {
+            return Value;
+        }
     }
 
     public class UniformVec3 : UniformVariableBase
@@ -258,7 +303,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public vec3 Value;
+        private vec3 Value;
 
         public UniformVec3(string varName) : base(varName) { }
 
@@ -293,6 +338,21 @@ namespace CSharpGL
         {
             return Value;
         }
+
+        public void SetVec3(vec3 value)
+        {
+            var v = (vec3)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public vec3 GetVec3()
+        {
+            return Value;
+        }
     }
 
     public class UniformVec4 : UniformVariableBase
@@ -301,7 +361,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public vec4 Value;
+        private vec4 Value;
 
         public UniformVec4(string varName) : base(varName) { }
 
@@ -336,6 +396,21 @@ namespace CSharpGL
         {
             return Value;
         }
+
+        public void SetVec4(vec4 value)
+        {
+            var v = (vec4)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public vec4 GetVec4()
+        {
+            return Value;
+        }
     }
 
     public class UniformMat2 : UniformVariableBase
@@ -344,7 +419,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public mat2 Value;
+        private mat2 Value;
 
         public UniformMat2(string varName) : base(varName) { }
 
@@ -378,6 +453,21 @@ namespace CSharpGL
         {
             return Value;
         }
+
+        public void SetMat2(mat2 value)
+        {
+            var v = (mat2)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public mat2 GetMat2()
+        {
+            return Value;
+        }
     }
 
     public class UniformMat3 : UniformVariableBase
@@ -386,7 +476,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public mat3 Value;
+        private mat3 Value;
 
         public UniformMat3(string varName) : base(varName) { }
 
@@ -417,6 +507,21 @@ namespace CSharpGL
         }
 
         public override ValueType GetValue()
+        {
+            return Value;
+        }
+
+        public void SetMat3(mat3 value)
+        {
+            var v = (mat3)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public mat3 GetMat3()
         {
             return Value;
         }
@@ -458,6 +563,11 @@ namespace CSharpGL
             }
         }
 
+        public override ValueType GetValue()
+        {
+            return Value;
+        }
+
         public void SetMat4(mat4 value)
         {
             var v = (mat4)value;
@@ -473,9 +583,5 @@ namespace CSharpGL
             return Value;
         }
 
-        public override ValueType GetValue()
-        {
-            return Value;
-        }
     }
 }
