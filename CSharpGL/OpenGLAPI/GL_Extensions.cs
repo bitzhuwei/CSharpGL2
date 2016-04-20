@@ -1377,12 +1377,6 @@ namespace CSharpGL
 
         #region  GL_EXT_blend_func_separate
 
-        //  Methods
-        public static void BlendFuncSeparateEXT(uint sfactorRGB, uint dfactorRGB, uint sfactorAlpha, uint dfactorAlpha)
-        {
-            GetDelegateFor<glBlendFuncSeparateEXT>()(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
-        }
-
         //  Delegates
         public delegate void glBlendFuncSeparateEXT(uint sfactorRGB, uint dfactorRGB, uint sfactorAlpha, uint dfactorAlpha);
 
