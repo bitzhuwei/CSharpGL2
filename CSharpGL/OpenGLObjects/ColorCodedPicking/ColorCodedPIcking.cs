@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.OpenGLObjects.ColorCodedPicking
+namespace CSharpGL
 {
     public static class ColorCodedPicking
     {

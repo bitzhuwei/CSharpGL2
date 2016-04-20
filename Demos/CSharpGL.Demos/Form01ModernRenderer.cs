@@ -64,6 +64,15 @@ namespace CSharpGL.Demos
         {
             if (rotator.MouseDownFlag)
             { rotator.MouseMove(e.X, e.Y); }
+
+            {
+                IPickedGeometry pickedGeometry = ColorCodedPicking.Pick(
+                    this.camera, e.X,e.Y,,this.glCanvas1.Width,,this.glCanvas1.Height,this.renderer);
+                if(pickedGeometry!=null)
+                {
+
+                }
+            }
         }
 
         private void glCanvas1_MouseUp(object sender, MouseEventArgs e)
