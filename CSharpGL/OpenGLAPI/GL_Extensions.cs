@@ -2416,11 +2416,7 @@ namespace CSharpGL
         /// <param name="indirect">Specifies the address of an array of structures containing the draw parameters.</param>
         /// <param name="primcount">Specifies the the number of elements in the array of draw parameter structures.</param>
         /// <param name="stride">Specifies the distance in basic machine units between elements of the draw parameter array.</param>
-        public static void MultiDrawArraysIndirect(uint mode, IntPtr indirect, uint primcount, uint stride)
-        {
-            GetDelegateFor<glMultiDrawArraysIndirect>()(mode, indirect, primcount, stride);
-        }
-
+        public delegate void glMultiDrawArraysIndirect(uint mode, IntPtr indirect, uint primcount, uint stride);
         /// <summary>
         /// Render indexed primitives from array data, taking parameters from memory
         /// </summary>
@@ -2429,12 +2425,6 @@ namespace CSharpGL
         /// <param name="indirect">Specifies a byte offset (cast to a pointer type) into the buffer bound to GL_DRAW_INDIRECT_BUFFER​, which designates the starting point of the structure containing the draw parameters.</param>
         /// <param name="primcount">Specifies the number of elements in the array addressed by indirect​.</param>
         /// <param name="stride">Specifies the distance in basic machine units between elements of the draw parameter array.</param>
-        public static void MultiDrawElementsIndirect(uint mode, uint type, IntPtr indirect, uint primcount, uint stride)
-        {
-            GetDelegateFor<glMultiDrawElementsIndirect>()(mode, type, indirect, primcount, stride);
-        }
-
-        public delegate void glMultiDrawArraysIndirect(uint mode, IntPtr indirect, uint primcount, uint stride);
         public delegate void glMultiDrawElementsIndirect(uint mode, uint type, IntPtr indirect, uint primcount, uint stride);
 
         #endregion
