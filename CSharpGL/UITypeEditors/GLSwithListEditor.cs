@@ -5,7 +5,7 @@ using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 
-namespace CSharpGL.OpenGLObjects.ModernRendering
+namespace CSharpGL
 {
     /// <summary>
     /// 用在IList&lt;GLSwitch&gt;类型的属性上。

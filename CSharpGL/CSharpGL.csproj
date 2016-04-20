@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Controls\GLCanvas.ico" />
-    <Content Include="Controls\readme.txt" />
     <Content Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.png" />
     <Content Include="OpenGLObjects\ColorCodedPicking\readme.txt" />
     <Content Include="readme.txt" />
@@ -84,7 +83,7 @@
     <Compile Include="OpenGLObjects\GLSwitches\PolygonModeSwitch.cs" />
     <Compile Include="OpenGLObjects\GLSwitches\PrimitiveRestartSwitch.cs" />
     <Compile Include="OpenGLObjects\GLSwitches\GLSwitch.cs" />
-    <Compile Include="Controls\GLSwithListEditor.cs" />
+    <Compile Include="UITypeEditors\GLSwithListEditor.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Property.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.ColorCodedPickingRender.cs" />
