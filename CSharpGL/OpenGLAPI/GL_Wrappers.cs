@@ -1199,7 +1199,7 @@ namespace CSharpGL
             int[] ids,
             bool enabled)
         {
-            DebugMessageControl((uint)source, (uint)type, (uint)severity, count, ids, enabled);
+            GL.GetDelegateFor<GL.glDebugMessageControl>()((uint)source, (uint)type, (uint)severity, count, ids, enabled);
         }
 
         /// <summary>

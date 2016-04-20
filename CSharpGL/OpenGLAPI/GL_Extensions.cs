@@ -2663,11 +2663,6 @@ namespace CSharpGL
         /// 这样就可以避免垃圾回收的问题。
         /// </param>
         /// <param name="userParam">建议使用<see cref="UnmanagedArray.Header"/></param>
-        public static void DebugMessageCallback(DEBUGPROC callback, IntPtr userParam)
-        {
-            GetDelegateFor<glDebugMessageCallback>()(callback, userParam);
-        }
-
         public delegate void glDebugMessageCallback(DEBUGPROC callback, IntPtr userParam);
         public delegate void DEBUGPROC(
             uint source, uint type, uint id, uint severity, int length, StringBuilder message, IntPtr userParam);
@@ -2702,11 +2697,6 @@ namespace CSharpGL
         /// <param name="count"></param>
         /// <param name="ids"></param>
         /// <param name="enabled"></param>
-        public static void DebugMessageControl(
-            uint source, uint type, uint severity, int count, int[] ids, bool enabled)
-        {
-            GetDelegateFor<glDebugMessageControl>()(source, type, severity, count, ids, enabled);
-        }
         public delegate void glDebugMessageControl(
             uint source, uint type, uint severity, int count, int[] ids, bool enabled);
 
