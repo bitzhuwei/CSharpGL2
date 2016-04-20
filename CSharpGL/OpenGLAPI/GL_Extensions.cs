@@ -916,42 +916,6 @@ namespace CSharpGL
         #region GL_SGI_color_table
 
         //  Delegates
-        public static void ColorTableSGI(uint target, uint internalformat, uint width, uint format, uint type, IntPtr table)
-        {
-            GetDelegateFor<glColorTableSGI>()(target, internalformat, width, format, type, table);
-        }
-
-        public static void ColorTableParameterSGI(uint target, uint pname, float[] parameters)
-        {
-            GetDelegateFor<glColorTableParameterfvSGI>()(target, pname, parameters);
-        }
-
-        public static void ColorTableParameterSGI(uint target, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glColorTableParameterivSGI>()(target, pname, parameters);
-        }
-
-        public static void CopyColorTableSGI(uint target, uint internalformat, int x, int y, uint width)
-        {
-            GetDelegateFor<glCopyColorTableSGI>()(target, internalformat, x, y, width);
-        }
-
-        public static void GetColorTableSGI(uint target, uint format, uint type, IntPtr table)
-        {
-            GetDelegateFor<glGetColorTableSGI>()(target, format, type, table);
-        }
-
-        public static void GetColorTableParameterSGI(uint target, uint pname, float[] parameters)
-        {
-            GetDelegateFor<glGetColorTableParameterfvSGI>()(target, pname, parameters);
-        }
-
-        public static void GetColorTableParameterSGI(uint target, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetColorTableParameterivSGI>()(target, pname, parameters);
-        }
-
-        //  Delegates
         public delegate void glColorTableSGI(uint target, uint internalformat, uint width, uint format, uint type, IntPtr table);
         public delegate void glColorTableParameterfvSGI(uint target, uint pname, float[] parameters);
         public delegate void glColorTableParameterivSGI(uint target, uint pname, int[] parameters);
