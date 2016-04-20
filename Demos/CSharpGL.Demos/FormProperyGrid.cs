@@ -17,7 +17,7 @@ namespace CSharpGL.Demos
             InitializeComponent();
         }
 
-        public void SetObject(object obj)
+        public void DisplayObject(object obj)
         {
             this.propertyGrid1.SelectedObject = obj;
         }

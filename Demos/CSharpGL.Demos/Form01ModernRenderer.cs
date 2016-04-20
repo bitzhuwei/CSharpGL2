@@ -22,6 +22,7 @@ namespace CSharpGL.Demos
         SatelliteRotator rotator;
         Camera camera;
         private FormBulletinBoard bulletinBoard;
+        private FormProperyGrid propertyGrid;
 
         public Form01ModernRenderer()
         {
@@ -118,6 +119,12 @@ namespace CSharpGL.Demos
                 frmBulletinBoard.Dump = true;
                 frmBulletinBoard.Show();
                 this.bulletinBoard = frmBulletinBoard;
+            }
+            {
+                var frmPropertyGrid = new FormProperyGrid();
+                frmPropertyGrid.DisplayObject(this.renderer);
+                frmPropertyGrid.Show();
+                this.propertyGrid = frmPropertyGrid;
             }
         }
 
