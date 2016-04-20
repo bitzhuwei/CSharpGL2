@@ -1742,20 +1742,6 @@ namespace CSharpGL
 
         #region GL_ARB_vertex_shader
 
-        //  Methods
-        public static void BindAttribLocationARB(uint programObj, uint index, string name)
-        {
-            GetDelegateFor<glBindAttribLocationARB>()(programObj, index, name);
-        }
-        public static void GetActiveAttribARB(uint programObj, uint index, int maxLength, int[] length, int[] size, uint[] type, string name)
-        {
-            GetDelegateFor<glGetActiveAttribARB>()(programObj, index, maxLength, length, size, type, name);
-        }
-        public static uint GetAttribLocationARB(uint programObj, string name)
-        {
-            return GetDelegateFor<glGetAttribLocationARB>()(programObj, name);
-        }
-
         //  Delegates
         public delegate void glBindAttribLocationARB(uint programObj, uint index, string name);
         public delegate void glGetActiveAttribARB(uint programObj, uint index, int maxLength, int[] length, int[] size, uint[] type, string name);
