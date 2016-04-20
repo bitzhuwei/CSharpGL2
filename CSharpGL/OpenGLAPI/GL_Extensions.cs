@@ -1185,12 +1185,6 @@ namespace CSharpGL
 
         #region GL_ARB_multisample
 
-        //  Methods
-        public static void SampleCoverageARB(float value, bool invert)
-        {
-            GetDelegateFor<glSampleCoverageARB>()(value, invert);
-        }
-
         //  Delegates
         public delegate void glSampleCoverageARB(float value, bool invert);
 
