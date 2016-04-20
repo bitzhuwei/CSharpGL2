@@ -11,46 +11,45 @@ namespace CSharpGL
 
         #region OpenGL 1.2
 
-       
         //  Delegates
-        private delegate void glBlendColor(float red, float green, float blue, float alpha);
-        private delegate void glBlendEquation(uint mode);
-        private delegate void glDrawRangeElements(uint mode, uint start, uint end, int count, uint type, IntPtr indices);
-        private delegate void glTexImage3D(uint target, int level, int internalformat, int width, int height, int depth, int border, uint format, uint type, IntPtr pixels);
-        private delegate void glTexSubImage3D(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint format, uint type, IntPtr pixels);
-        private delegate void glCopyTexSubImage3D(uint target, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height);
-        private delegate void glColorTable(uint target, uint internalformat, int width, uint format, uint type, IntPtr table);
-        private delegate void glColorTableParameterfv(uint target, uint pname, float[] parameters);
-        private delegate void glColorTableParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glCopyColorTable(uint target, uint internalformat, int x, int y, int width);
-        private delegate void glGetColorTable(uint target, uint format, uint type, IntPtr table);
-        private delegate void glGetColorTableParameterfv(uint target, uint pname, float[] parameters);
-        private delegate void glGetColorTableParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glColorSubTable(uint target, int start, int count, uint format, uint type, IntPtr data);
-        private delegate void glCopyColorSubTable(uint target, int start, int x, int y, int width);
-        private delegate void glConvolutionFilter1D(uint target, uint internalformat, int width, uint format, uint type, IntPtr image);
-        private delegate void glConvolutionFilter2D(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr image);
-        private delegate void glConvolutionParameterf(uint target, uint pname, float parameters);
-        private delegate void glConvolutionParameterfv(uint target, uint pname, float[] parameters);
-        private delegate void glConvolutionParameteri(uint target, uint pname, int parameters);
-        private delegate void glConvolutionParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glCopyConvolutionFilter1D(uint target, uint internalformat, int x, int y, int width);
-        private delegate void glCopyConvolutionFilter2D(uint target, uint internalformat, int x, int y, int width, int height);
-        private delegate void glGetConvolutionFilter(uint target, uint format, uint type, IntPtr image);
-        private delegate void glGetConvolutionParameterfv(uint target, uint pname, float[] parameters);
-        private delegate void glGetConvolutionParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glGetSeparableFilter(uint target, uint format, uint type, IntPtr row, IntPtr column, IntPtr span);
-        private delegate void glSeparableFilter2D(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr row, IntPtr column);
-        private delegate void glGetHistogram(uint target, bool reset, uint format, uint type, IntPtr values);
-        private delegate void glGetHistogramParameterfv(uint target, uint pname, float[] parameters);
-        private delegate void glGetHistogramParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glGetMinmax(uint target, bool reset, uint format, uint type, IntPtr values);
-        private delegate void glGetMinmaxParameterfv(uint target, uint pname, float[] parameters);
-        private delegate void glGetMinmaxParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glHistogram(uint target, int width, uint internalformat, bool sink);
-        private delegate void glMinmax(uint target, uint internalformat, bool sink);
-        private delegate void glResetHistogram(uint target);
-        private delegate void glResetMinmax(uint target);
+        public delegate void glBlendColor(float red, float green, float blue, float alpha);
+        public delegate void glBlendEquation(uint mode);
+        public delegate void glDrawRangeElements(uint mode, uint start, uint end, int count, uint type, IntPtr indices);
+        public delegate void glTexImage3D(uint target, int level, int internalformat, int width, int height, int depth, int border, uint format, uint type, IntPtr pixels);
+        public delegate void glTexSubImage3D(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint format, uint type, IntPtr pixels);
+        public delegate void glCopyTexSubImage3D(uint target, int level, int xoffset, int yoffset, int zoffset, int x, int y, int width, int height);
+        public delegate void glColorTable(uint target, uint internalformat, int width, uint format, uint type, IntPtr table);
+        public delegate void glColorTableParameterfv(uint target, uint pname, float[] parameters);
+        public delegate void glColorTableParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glCopyColorTable(uint target, uint internalformat, int x, int y, int width);
+        public delegate void glGetColorTable(uint target, uint format, uint type, IntPtr table);
+        public delegate void glGetColorTableParameterfv(uint target, uint pname, float[] parameters);
+        public delegate void glGetColorTableParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glColorSubTable(uint target, int start, int count, uint format, uint type, IntPtr data);
+        public delegate void glCopyColorSubTable(uint target, int start, int x, int y, int width);
+        public delegate void glConvolutionFilter1D(uint target, uint internalformat, int width, uint format, uint type, IntPtr image);
+        public delegate void glConvolutionFilter2D(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr image);
+        public delegate void glConvolutionParameterf(uint target, uint pname, float parameters);
+        public delegate void glConvolutionParameterfv(uint target, uint pname, float[] parameters);
+        public delegate void glConvolutionParameteri(uint target, uint pname, int parameters);
+        public delegate void glConvolutionParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glCopyConvolutionFilter1D(uint target, uint internalformat, int x, int y, int width);
+        public delegate void glCopyConvolutionFilter2D(uint target, uint internalformat, int x, int y, int width, int height);
+        public delegate void glGetConvolutionFilter(uint target, uint format, uint type, IntPtr image);
+        public delegate void glGetConvolutionParameterfv(uint target, uint pname, float[] parameters);
+        public delegate void glGetConvolutionParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glGetSeparableFilter(uint target, uint format, uint type, IntPtr row, IntPtr column, IntPtr span);
+        public delegate void glSeparableFilter2D(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr row, IntPtr column);
+        public delegate void glGetHistogram(uint target, bool reset, uint format, uint type, IntPtr values);
+        public delegate void glGetHistogramParameterfv(uint target, uint pname, float[] parameters);
+        public delegate void glGetHistogramParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glGetMinmax(uint target, bool reset, uint format, uint type, IntPtr values);
+        public delegate void glGetMinmaxParameterfv(uint target, uint pname, float[] parameters);
+        public delegate void glGetMinmaxParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glHistogram(uint target, int width, uint internalformat, bool sink);
+        public delegate void glMinmax(uint target, uint internalformat, bool sink);
+        public delegate void glResetHistogram(uint target);
+        public delegate void glResetMinmax(uint target);
 
         //  Constants
         public const uint GL_UNSIGNED_BYTE_3_3_2 = 0x8032;
@@ -97,10 +96,6 @@ namespace CSharpGL
         //  Methods
 
 
-        public static void ActiveTexture(uint texture)
-        {
-            GetDelegateFor<glActiveTexture>()(texture);
-        }
         public static void SampleCoverage(float value, bool invert)
         {
             GetDelegateFor<glSampleCoverage>()(value, invert);
@@ -322,53 +317,53 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glActiveTexture(uint texture);
-        private delegate void glSampleCoverage(float value, bool invert);
-        private delegate void glCompressedTexImage3D(uint target, int level, uint internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data);
-        private delegate void glCompressedTexImage2D(uint target, int level, uint internalformat, int width, int height, int border, int imageSize, IntPtr data);
-        private delegate void glCompressedTexImage1D(uint target, int level, uint internalformat, int width, int border, int imageSize, IntPtr data);
-        private delegate void glCompressedTexSubImage3D(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint format, int imageSize, IntPtr data);
-        private delegate void glCompressedTexSubImage2D(uint target, int level, int xoffset, int yoffset, int width, int height, uint format, int imageSize, IntPtr data);
-        private delegate void glCompressedTexSubImage1D(uint target, int level, int xoffset, int width, uint format, int imageSize, IntPtr data);
-        private delegate void glGetCompressedTexImage(uint target, int level, IntPtr img);
+        public delegate void glActiveTexture(uint texture);
+        public delegate void glSampleCoverage(float value, bool invert);
+        public delegate void glCompressedTexImage3D(uint target, int level, uint internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data);
+        public delegate void glCompressedTexImage2D(uint target, int level, uint internalformat, int width, int height, int border, int imageSize, IntPtr data);
+        public delegate void glCompressedTexImage1D(uint target, int level, uint internalformat, int width, int border, int imageSize, IntPtr data);
+        public delegate void glCompressedTexSubImage3D(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint format, int imageSize, IntPtr data);
+        public delegate void glCompressedTexSubImage2D(uint target, int level, int xoffset, int yoffset, int width, int height, uint format, int imageSize, IntPtr data);
+        public delegate void glCompressedTexSubImage1D(uint target, int level, int xoffset, int width, uint format, int imageSize, IntPtr data);
+        public delegate void glGetCompressedTexImage(uint target, int level, IntPtr img);
 
-        private delegate void glClientActiveTexture(uint texture);
-        private delegate void glMultiTexCoord1d(uint target, double s);
-        private delegate void glMultiTexCoord1dv(uint target, double[] v);
-        private delegate void glMultiTexCoord1f(uint target, float s);
-        private delegate void glMultiTexCoord1fv(uint target, float[] v);
-        private delegate void glMultiTexCoord1i(uint target, int s);
-        private delegate void glMultiTexCoord1iv(uint target, int[] v);
-        private delegate void glMultiTexCoord1s(uint target, short s);
-        private delegate void glMultiTexCoord1sv(uint target, short[] v);
-        private delegate void glMultiTexCoord2d(uint target, double s, double t);
-        private delegate void glMultiTexCoord2dv(uint target, double[] v);
-        private delegate void glMultiTexCoord2f(uint target, float s, float t);
-        private delegate void glMultiTexCoord2fv(uint target, float[] v);
-        private delegate void glMultiTexCoord2i(uint target, int s, int t);
-        private delegate void glMultiTexCoord2iv(uint target, int[] v);
-        private delegate void glMultiTexCoord2s(uint target, short s, short t);
-        private delegate void glMultiTexCoord2sv(uint target, short[] v);
-        private delegate void glMultiTexCoord3d(uint target, double s, double t, double r);
-        private delegate void glMultiTexCoord3dv(uint target, double[] v);
-        private delegate void glMultiTexCoord3f(uint target, float s, float t, float r);
-        private delegate void glMultiTexCoord3fv(uint target, float[] v);
-        private delegate void glMultiTexCoord3i(uint target, int s, int t, int r);
-        private delegate void glMultiTexCoord3iv(uint target, int[] v);
-        private delegate void glMultiTexCoord3s(uint target, short s, short t, short r);
-        private delegate void glMultiTexCoord3sv(uint target, short[] v);
-        private delegate void glMultiTexCoord4d(uint target, double s, double t, double r, double q);
-        private delegate void glMultiTexCoord4dv(uint target, double[] v);
-        private delegate void glMultiTexCoord4f(uint target, float s, float t, float r, float q);
-        private delegate void glMultiTexCoord4fv(uint target, float[] v);
-        private delegate void glMultiTexCoord4i(uint target, int s, int t, int r, int q);
-        private delegate void glMultiTexCoord4iv(uint target, int[] v);
-        private delegate void glMultiTexCoord4s(uint target, short s, short t, short r, short q);
-        private delegate void glMultiTexCoord4sv(uint target, short[] v);
-        private delegate void glLoadTransposeMatrixf(float[] m);
-        private delegate void glLoadTransposeMatrixd(double[] m);
-        private delegate void glMultTransposeMatrixf(float[] m);
-        private delegate void glMultTransposeMatrixd(double[] m);
+        public delegate void glClientActiveTexture(uint texture);
+        public delegate void glMultiTexCoord1d(uint target, double s);
+        public delegate void glMultiTexCoord1dv(uint target, double[] v);
+        public delegate void glMultiTexCoord1f(uint target, float s);
+        public delegate void glMultiTexCoord1fv(uint target, float[] v);
+        public delegate void glMultiTexCoord1i(uint target, int s);
+        public delegate void glMultiTexCoord1iv(uint target, int[] v);
+        public delegate void glMultiTexCoord1s(uint target, short s);
+        public delegate void glMultiTexCoord1sv(uint target, short[] v);
+        public delegate void glMultiTexCoord2d(uint target, double s, double t);
+        public delegate void glMultiTexCoord2dv(uint target, double[] v);
+        public delegate void glMultiTexCoord2f(uint target, float s, float t);
+        public delegate void glMultiTexCoord2fv(uint target, float[] v);
+        public delegate void glMultiTexCoord2i(uint target, int s, int t);
+        public delegate void glMultiTexCoord2iv(uint target, int[] v);
+        public delegate void glMultiTexCoord2s(uint target, short s, short t);
+        public delegate void glMultiTexCoord2sv(uint target, short[] v);
+        public delegate void glMultiTexCoord3d(uint target, double s, double t, double r);
+        public delegate void glMultiTexCoord3dv(uint target, double[] v);
+        public delegate void glMultiTexCoord3f(uint target, float s, float t, float r);
+        public delegate void glMultiTexCoord3fv(uint target, float[] v);
+        public delegate void glMultiTexCoord3i(uint target, int s, int t, int r);
+        public delegate void glMultiTexCoord3iv(uint target, int[] v);
+        public delegate void glMultiTexCoord3s(uint target, short s, short t, short r);
+        public delegate void glMultiTexCoord3sv(uint target, short[] v);
+        public delegate void glMultiTexCoord4d(uint target, double s, double t, double r, double q);
+        public delegate void glMultiTexCoord4dv(uint target, double[] v);
+        public delegate void glMultiTexCoord4f(uint target, float s, float t, float r, float q);
+        public delegate void glMultiTexCoord4fv(uint target, float[] v);
+        public delegate void glMultiTexCoord4i(uint target, int s, int t, int r, int q);
+        public delegate void glMultiTexCoord4iv(uint target, int[] v);
+        public delegate void glMultiTexCoord4s(uint target, short s, short t, short r, short q);
+        public delegate void glMultiTexCoord4sv(uint target, short[] v);
+        public delegate void glLoadTransposeMatrixf(float[] m);
+        public delegate void glLoadTransposeMatrixd(double[] m);
+        public delegate void glMultTransposeMatrixf(float[] m);
+        public delegate void glMultTransposeMatrixd(double[] m);
 
         //  Constants
         public const uint GL_TEXTURE0 = 0x84C0;
@@ -658,51 +653,51 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBlendFuncSeparate(uint sfactorRGB, uint dfactorRGB, uint sfactorAlpha, uint dfactorAlpha);
-        private delegate void glMultiDrawArrays(uint mode, int[] first, int[] count, int primcount);
-        private delegate void glMultiDrawElements(uint mode, int[] count, uint type, IntPtr indices, int primcount);
-        private delegate void glPointParameterf(uint pname, float parameter);
-        private delegate void glPointParameterfv(uint pname, float[] parameters);
-        private delegate void glPointParameteri(uint pname, int parameter);
-        private delegate void glPointParameteriv(uint pname, int[] parameters);
-        private delegate void glFogCoordf(float coord);
-        private delegate void glFogCoordfv(float[] coord);
-        private delegate void glFogCoordd(double coord);
-        private delegate void glFogCoorddv(double[] coord);
-        private delegate void glFogCoordPointer(uint type, int stride, IntPtr pointer);
-        private delegate void glSecondaryColor3b(sbyte red, sbyte green, sbyte blue);
-        private delegate void glSecondaryColor3bv(sbyte[] v);
-        private delegate void glSecondaryColor3d(double red, double green, double blue);
-        private delegate void glSecondaryColor3dv(double[] v);
-        private delegate void glSecondaryColor3f(float red, float green, float blue);
-        private delegate void glSecondaryColor3fv(float[] v);
-        private delegate void glSecondaryColor3i(int red, int green, int blue);
-        private delegate void glSecondaryColor3iv(int[] v);
-        private delegate void glSecondaryColor3s(short red, short green, short blue);
-        private delegate void glSecondaryColor3sv(short[] v);
-        private delegate void glSecondaryColor3ub(byte red, byte green, byte blue);
-        private delegate void glSecondaryColor3ubv(byte[] v);
-        private delegate void glSecondaryColor3ui(uint red, uint green, uint blue);
-        private delegate void glSecondaryColor3uiv(uint[] v);
-        private delegate void glSecondaryColor3us(ushort red, ushort green, ushort blue);
-        private delegate void glSecondaryColor3usv(ushort[] v);
-        private delegate void glSecondaryColorPointer(int size, uint type, int stride, IntPtr pointer);
-        private delegate void glWindowPos2d(double x, double y);
-        private delegate void glWindowPos2dv(double[] v);
-        private delegate void glWindowPos2f(float x, float y);
-        private delegate void glWindowPos2fv(float[] v);
-        private delegate void glWindowPos2i(int x, int y);
-        private delegate void glWindowPos2iv(int[] v);
-        private delegate void glWindowPos2s(short x, short y);
-        private delegate void glWindowPos2sv(short[] v);
-        private delegate void glWindowPos3d(double x, double y, double z);
-        private delegate void glWindowPos3dv(double[] v);
-        private delegate void glWindowPos3f(float x, float y, float z);
-        private delegate void glWindowPos3fv(float[] v);
-        private delegate void glWindowPos3i(int x, int y, int z);
-        private delegate void glWindowPos3iv(int[] v);
-        private delegate void glWindowPos3s(short x, short y, short z);
-        private delegate void glWindowPos3sv(short[] v);
+        public delegate void glBlendFuncSeparate(uint sfactorRGB, uint dfactorRGB, uint sfactorAlpha, uint dfactorAlpha);
+        public delegate void glMultiDrawArrays(uint mode, int[] first, int[] count, int primcount);
+        public delegate void glMultiDrawElements(uint mode, int[] count, uint type, IntPtr indices, int primcount);
+        public delegate void glPointParameterf(uint pname, float parameter);
+        public delegate void glPointParameterfv(uint pname, float[] parameters);
+        public delegate void glPointParameteri(uint pname, int parameter);
+        public delegate void glPointParameteriv(uint pname, int[] parameters);
+        public delegate void glFogCoordf(float coord);
+        public delegate void glFogCoordfv(float[] coord);
+        public delegate void glFogCoordd(double coord);
+        public delegate void glFogCoorddv(double[] coord);
+        public delegate void glFogCoordPointer(uint type, int stride, IntPtr pointer);
+        public delegate void glSecondaryColor3b(sbyte red, sbyte green, sbyte blue);
+        public delegate void glSecondaryColor3bv(sbyte[] v);
+        public delegate void glSecondaryColor3d(double red, double green, double blue);
+        public delegate void glSecondaryColor3dv(double[] v);
+        public delegate void glSecondaryColor3f(float red, float green, float blue);
+        public delegate void glSecondaryColor3fv(float[] v);
+        public delegate void glSecondaryColor3i(int red, int green, int blue);
+        public delegate void glSecondaryColor3iv(int[] v);
+        public delegate void glSecondaryColor3s(short red, short green, short blue);
+        public delegate void glSecondaryColor3sv(short[] v);
+        public delegate void glSecondaryColor3ub(byte red, byte green, byte blue);
+        public delegate void glSecondaryColor3ubv(byte[] v);
+        public delegate void glSecondaryColor3ui(uint red, uint green, uint blue);
+        public delegate void glSecondaryColor3uiv(uint[] v);
+        public delegate void glSecondaryColor3us(ushort red, ushort green, ushort blue);
+        public delegate void glSecondaryColor3usv(ushort[] v);
+        public delegate void glSecondaryColorPointer(int size, uint type, int stride, IntPtr pointer);
+        public delegate void glWindowPos2d(double x, double y);
+        public delegate void glWindowPos2dv(double[] v);
+        public delegate void glWindowPos2f(float x, float y);
+        public delegate void glWindowPos2fv(float[] v);
+        public delegate void glWindowPos2i(int x, int y);
+        public delegate void glWindowPos2iv(int[] v);
+        public delegate void glWindowPos2s(short x, short y);
+        public delegate void glWindowPos2sv(short[] v);
+        public delegate void glWindowPos3d(double x, double y, double z);
+        public delegate void glWindowPos3dv(double[] v);
+        public delegate void glWindowPos3f(float x, float y, float z);
+        public delegate void glWindowPos3fv(float[] v);
+        public delegate void glWindowPos3i(int x, int y, int z);
+        public delegate void glWindowPos3iv(int[] v);
+        public delegate void glWindowPos3s(short x, short y, short z);
+        public delegate void glWindowPos3sv(short[] v);
 
         //  Constants
         public const uint GL_BLEND_DST_RGB = 0x80C8;
@@ -830,26 +825,26 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glGenQueries(int n, uint[] ids);
-        private delegate void glDeleteQueries(int n, uint[] ids);
-        private delegate bool glIsQuery(uint id);
-        private delegate void glBeginQuery(uint target, uint id);
-        private delegate void glEndQuery(uint target);
-        private delegate void glGetQueryiv(uint target, uint pname, int[] parameters);
-        private delegate void glGetQueryObjectiv(uint id, uint pname, int[] parameters);
-        private delegate void glGetQueryObjectuiv(uint id, uint pname, uint[] parameters);
-        private delegate void glBindBuffer(uint target, uint buffer);
-        private delegate void glDeleteBuffers(int n, uint[] buffers);
-        private delegate void glGenBuffers(int n, uint[] buffers);
-        private delegate bool glIsBuffer(uint buffer);
-        private delegate void glBufferData(uint target, int size, IntPtr data, uint usage);
-        private delegate void glBufferSubData(uint target, int offset, int size, IntPtr data);
-        private delegate void glGetBufferSubData(uint target, int offset, int size, IntPtr data);
-        private delegate IntPtr glMapBuffer(uint target, uint access);
-        private delegate IntPtr glMapBufferRange(uint target, int offset, int length, uint access);
-        private delegate bool glUnmapBuffer(uint target);
-        private delegate void glGetBufferParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glGetBufferPointerv(uint target, uint pname, IntPtr[] parameters);
+        public delegate void glGenQueries(int n, uint[] ids);
+        public delegate void glDeleteQueries(int n, uint[] ids);
+        public delegate bool glIsQuery(uint id);
+        public delegate void glBeginQuery(uint target, uint id);
+        public delegate void glEndQuery(uint target);
+        public delegate void glGetQueryiv(uint target, uint pname, int[] parameters);
+        public delegate void glGetQueryObjectiv(uint id, uint pname, int[] parameters);
+        public delegate void glGetQueryObjectuiv(uint id, uint pname, uint[] parameters);
+        public delegate void glBindBuffer(uint target, uint buffer);
+        public delegate void glDeleteBuffers(int n, uint[] buffers);
+        public delegate void glGenBuffers(int n, uint[] buffers);
+        public delegate bool glIsBuffer(uint buffer);
+        public delegate void glBufferData(uint target, int size, IntPtr data, uint usage);
+        public delegate void glBufferSubData(uint target, int offset, int size, IntPtr data);
+        public delegate void glGetBufferSubData(uint target, int offset, int size, IntPtr data);
+        public delegate IntPtr glMapBuffer(uint target, uint access);
+        public delegate IntPtr glMapBufferRange(uint target, int offset, int length, uint access);
+        public delegate bool glUnmapBuffer(uint target);
+        public delegate void glGetBufferParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glGetBufferPointerv(uint target, uint pname, IntPtr[] parameters);
 
         //  Constants
         public const uint GL_BUFFER_SIZE = 0x8764;
@@ -1328,105 +1323,105 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBlendEquationSeparate(uint modeRGB, uint modeAlpha);
-        private delegate void glDrawBuffers(int n, uint[] bufs);
-        private delegate void glStencilOpSeparate(uint face, uint sfail, uint dpfail, uint dppass);
-        private delegate void glStencilFuncSeparate(uint face, uint func, int reference, uint mask);
-        private delegate void glStencilMaskSeparate(uint face, uint mask);
-        private delegate void glAttachShader(uint program, uint shader);
-        private delegate void glBindAttribLocation(uint program, uint index, string name);
-        private delegate void glCompileShader(uint shader);
-        private delegate uint glCreateProgram();
-        private delegate uint glCreateShader(uint type);
-        private delegate void glDeleteProgram(uint program);
-        private delegate void glDeleteShader(uint shader);
-        private delegate void glDetachShader(uint program, uint shader);
-        private delegate void glDisableVertexAttribArray(uint index);
-        private delegate void glEnableVertexAttribArray(uint index);
-        private delegate void glGetActiveAttrib(uint program, uint index, int bufSize, out int length, out int size, out uint type, StringBuilder name);
-        private delegate void glGetActiveUniform(uint program, uint index, int bufSize, out int length, out int size, out uint type, StringBuilder name);
-        private delegate void glGetAttachedShaders(uint program, int maxCount, int[] count, uint[] obj);
-        private delegate int glGetAttribLocation(uint program, string name);
-        private delegate void glGetProgramiv(uint program, uint pname, int[] parameters);
-        private delegate void glGetProgramInfoLog(uint program, int bufSize, IntPtr length, StringBuilder infoLog);
-        private delegate void glGetShaderiv(uint shader, uint pname, int[] parameters);
-        private delegate void glGetShaderInfoLog(uint shader, int bufSize, IntPtr length, StringBuilder infoLog);
-        private delegate void glGetShaderSource(uint shader, int bufSize, IntPtr length, StringBuilder source);
-        private delegate int glGetUniformLocation(uint program, string name);
-        private delegate void glGetUniformfv(uint program, int location, float[] parameters);
-        private delegate void glGetUniformiv(uint program, int location, int[] parameters);
-        private delegate void glGetVertexAttribdv(uint index, uint pname, double[] parameters);
-        private delegate void glGetVertexAttribfv(uint index, uint pname, float[] parameters);
-        private delegate void glGetVertexAttribiv(uint index, uint pname, int[] parameters);
-        private delegate void glGetVertexAttribPointerv(uint index, uint pname, IntPtr pointer);
-        private delegate bool glIsProgram(uint program);
-        private delegate bool glIsShader(uint shader);
-        private delegate void glLinkProgram(uint program);
+        public delegate void glBlendEquationSeparate(uint modeRGB, uint modeAlpha);
+        public delegate void glDrawBuffers(int n, uint[] bufs);
+        public delegate void glStencilOpSeparate(uint face, uint sfail, uint dpfail, uint dppass);
+        public delegate void glStencilFuncSeparate(uint face, uint func, int reference, uint mask);
+        public delegate void glStencilMaskSeparate(uint face, uint mask);
+        public delegate void glAttachShader(uint program, uint shader);
+        public delegate void glBindAttribLocation(uint program, uint index, string name);
+        public delegate void glCompileShader(uint shader);
+        public delegate uint glCreateProgram();
+        public delegate uint glCreateShader(uint type);
+        public delegate void glDeleteProgram(uint program);
+        public delegate void glDeleteShader(uint shader);
+        public delegate void glDetachShader(uint program, uint shader);
+        public delegate void glDisableVertexAttribArray(uint index);
+        public delegate void glEnableVertexAttribArray(uint index);
+        public delegate void glGetActiveAttrib(uint program, uint index, int bufSize, out int length, out int size, out uint type, StringBuilder name);
+        public delegate void glGetActiveUniform(uint program, uint index, int bufSize, out int length, out int size, out uint type, StringBuilder name);
+        public delegate void glGetAttachedShaders(uint program, int maxCount, int[] count, uint[] obj);
+        public delegate int glGetAttribLocation(uint program, string name);
+        public delegate void glGetProgramiv(uint program, uint pname, int[] parameters);
+        public delegate void glGetProgramInfoLog(uint program, int bufSize, IntPtr length, StringBuilder infoLog);
+        public delegate void glGetShaderiv(uint shader, uint pname, int[] parameters);
+        public delegate void glGetShaderInfoLog(uint shader, int bufSize, IntPtr length, StringBuilder infoLog);
+        public delegate void glGetShaderSource(uint shader, int bufSize, IntPtr length, StringBuilder source);
+        public delegate int glGetUniformLocation(uint program, string name);
+        public delegate void glGetUniformfv(uint program, int location, float[] parameters);
+        public delegate void glGetUniformiv(uint program, int location, int[] parameters);
+        public delegate void glGetVertexAttribdv(uint index, uint pname, double[] parameters);
+        public delegate void glGetVertexAttribfv(uint index, uint pname, float[] parameters);
+        public delegate void glGetVertexAttribiv(uint index, uint pname, int[] parameters);
+        public delegate void glGetVertexAttribPointerv(uint index, uint pname, IntPtr pointer);
+        public delegate bool glIsProgram(uint program);
+        public delegate bool glIsShader(uint shader);
+        public delegate void glLinkProgram(uint program);
         //  By specifying 'ThrowOnUnmappableChar' we protect ourselves from inadvertantly using a unicode character
         //  in the source which the marshaller cannot map. Without this, it maps it to '?' leading to long and pointless
         //  sessions of trying to find bugs in the shader, which are most often just copied and pasted unicode characters!
         //  If you're getting exceptions here, remove all unicode crap from your input files (remember, some unicode 
         //  characters you can't even see).
         [UnmanagedFunctionPointer(CallingConvention.StdCall, ThrowOnUnmappableChar = true)]
-        private delegate void glShaderSource(uint shader, int count, string[] source, int[] length);
-        private delegate void glUseProgram(uint program);
-        private delegate void glUniform1f(int location, float v0);
-        private delegate void glUniform2f(int location, float v0, float v1);
-        private delegate void glUniform3f(int location, float v0, float v1, float v2);
-        private delegate void glUniform4f(int location, float v0, float v1, float v2, float v3);
-        private delegate void glUniform1i(int location, int v0);
-        private delegate void glUniform2i(int location, int v0, int v1);
-        private delegate void glUniform3i(int location, int v0, int v1, int v2);
-        private delegate void glUniform4i(int location, int v0, int v1, int v2, int v3);
-        private delegate void glUniform1fv(int location, int count, float[] value);
-        private delegate void glUniform2fv(int location, int count, float[] value);
-        private delegate void glUniform3fv(int location, int count, float[] value);
-        private delegate void glUniform4fv(int location, int count, float[] value);
-        private delegate void glUniform1iv(int location, int count, int[] value);
-        private delegate void glUniform2iv(int location, int count, int[] value);
-        private delegate void glUniform3iv(int location, int count, int[] value);
-        private delegate void glUniform4iv(int location, int count, int[] value);
-        private delegate void glUniformMatrix2fv(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix3fv(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix4fv(int location, int count, bool transpose, float[] value);
-        private delegate void glValidateProgram(uint program);
-        private delegate void glVertexAttrib1d(uint index, double x);
-        private delegate void glVertexAttrib1dv(uint index, double[] v);
-        private delegate void glVertexAttrib1f(uint index, float x);
-        private delegate void glVertexAttrib1fv(uint index, float[] v);
-        private delegate void glVertexAttrib1s(uint index, short x);
-        private delegate void glVertexAttrib1sv(uint index, short[] v);
-        private delegate void glVertexAttrib2d(uint index, double x, double y);
-        private delegate void glVertexAttrib2dv(uint index, double[] v);
-        private delegate void glVertexAttrib2f(uint index, float x, float y);
-        private delegate void glVertexAttrib2fv(uint index, float[] v);
-        private delegate void glVertexAttrib2s(uint index, short x, short y);
-        private delegate void glVertexAttrib2sv(uint index, short[] v);
-        private delegate void glVertexAttrib3d(uint index, double x, double y, double z);
-        private delegate void glVertexAttrib3dv(uint index, double[] v);
-        private delegate void glVertexAttrib3f(uint index, float x, float y, float z);
-        private delegate void glVertexAttrib3fv(uint index, float[] v);
-        private delegate void glVertexAttrib3s(uint index, short x, short y, short z);
-        private delegate void glVertexAttrib3sv(uint index, short[] v);
-        private delegate void glVertexAttrib4Nbv(uint index, sbyte[] v);
-        private delegate void glVertexAttrib4Niv(uint index, int[] v);
-        private delegate void glVertexAttrib4Nsv(uint index, short[] v);
-        private delegate void glVertexAttrib4Nub(uint index, byte x, byte y, byte z, byte w);
-        private delegate void glVertexAttrib4Nubv(uint index, byte[] v);
-        private delegate void glVertexAttrib4Nuiv(uint index, uint[] v);
-        private delegate void glVertexAttrib4Nusv(uint index, ushort[] v);
-        private delegate void glVertexAttrib4bv(uint index, sbyte[] v);
-        private delegate void glVertexAttrib4d(uint index, double x, double y, double z, double w);
-        private delegate void glVertexAttrib4dv(uint index, double[] v);
-        private delegate void glVertexAttrib4f(uint index, float x, float y, float z, float w);
-        private delegate void glVertexAttrib4fv(uint index, float[] v);
-        private delegate void glVertexAttrib4iv(uint index, int[] v);
-        private delegate void glVertexAttrib4s(uint index, short x, short y, short z, short w);
-        private delegate void glVertexAttrib4sv(uint index, short[] v);
-        private delegate void glVertexAttrib4ubv(uint index, byte[] v);
-        private delegate void glVertexAttrib4uiv(uint index, uint[] v);
-        private delegate void glVertexAttrib4usv(uint index, ushort[] v);
-        private delegate void glVertexAttribPointer(uint index, int size, uint type, bool normalized, int stride, IntPtr pointer);
+        public delegate void glShaderSource(uint shader, int count, string[] source, int[] length);
+        public delegate void glUseProgram(uint program);
+        public delegate void glUniform1f(int location, float v0);
+        public delegate void glUniform2f(int location, float v0, float v1);
+        public delegate void glUniform3f(int location, float v0, float v1, float v2);
+        public delegate void glUniform4f(int location, float v0, float v1, float v2, float v3);
+        public delegate void glUniform1i(int location, int v0);
+        public delegate void glUniform2i(int location, int v0, int v1);
+        public delegate void glUniform3i(int location, int v0, int v1, int v2);
+        public delegate void glUniform4i(int location, int v0, int v1, int v2, int v3);
+        public delegate void glUniform1fv(int location, int count, float[] value);
+        public delegate void glUniform2fv(int location, int count, float[] value);
+        public delegate void glUniform3fv(int location, int count, float[] value);
+        public delegate void glUniform4fv(int location, int count, float[] value);
+        public delegate void glUniform1iv(int location, int count, int[] value);
+        public delegate void glUniform2iv(int location, int count, int[] value);
+        public delegate void glUniform3iv(int location, int count, int[] value);
+        public delegate void glUniform4iv(int location, int count, int[] value);
+        public delegate void glUniformMatrix2fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix3fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix4fv(int location, int count, bool transpose, float[] value);
+        public delegate void glValidateProgram(uint program);
+        public delegate void glVertexAttrib1d(uint index, double x);
+        public delegate void glVertexAttrib1dv(uint index, double[] v);
+        public delegate void glVertexAttrib1f(uint index, float x);
+        public delegate void glVertexAttrib1fv(uint index, float[] v);
+        public delegate void glVertexAttrib1s(uint index, short x);
+        public delegate void glVertexAttrib1sv(uint index, short[] v);
+        public delegate void glVertexAttrib2d(uint index, double x, double y);
+        public delegate void glVertexAttrib2dv(uint index, double[] v);
+        public delegate void glVertexAttrib2f(uint index, float x, float y);
+        public delegate void glVertexAttrib2fv(uint index, float[] v);
+        public delegate void glVertexAttrib2s(uint index, short x, short y);
+        public delegate void glVertexAttrib2sv(uint index, short[] v);
+        public delegate void glVertexAttrib3d(uint index, double x, double y, double z);
+        public delegate void glVertexAttrib3dv(uint index, double[] v);
+        public delegate void glVertexAttrib3f(uint index, float x, float y, float z);
+        public delegate void glVertexAttrib3fv(uint index, float[] v);
+        public delegate void glVertexAttrib3s(uint index, short x, short y, short z);
+        public delegate void glVertexAttrib3sv(uint index, short[] v);
+        public delegate void glVertexAttrib4Nbv(uint index, sbyte[] v);
+        public delegate void glVertexAttrib4Niv(uint index, int[] v);
+        public delegate void glVertexAttrib4Nsv(uint index, short[] v);
+        public delegate void glVertexAttrib4Nub(uint index, byte x, byte y, byte z, byte w);
+        public delegate void glVertexAttrib4Nubv(uint index, byte[] v);
+        public delegate void glVertexAttrib4Nuiv(uint index, uint[] v);
+        public delegate void glVertexAttrib4Nusv(uint index, ushort[] v);
+        public delegate void glVertexAttrib4bv(uint index, sbyte[] v);
+        public delegate void glVertexAttrib4d(uint index, double x, double y, double z, double w);
+        public delegate void glVertexAttrib4dv(uint index, double[] v);
+        public delegate void glVertexAttrib4f(uint index, float x, float y, float z, float w);
+        public delegate void glVertexAttrib4fv(uint index, float[] v);
+        public delegate void glVertexAttrib4iv(uint index, int[] v);
+        public delegate void glVertexAttrib4s(uint index, short x, short y, short z, short w);
+        public delegate void glVertexAttrib4sv(uint index, short[] v);
+        public delegate void glVertexAttrib4ubv(uint index, byte[] v);
+        public delegate void glVertexAttrib4uiv(uint index, uint[] v);
+        public delegate void glVertexAttrib4usv(uint index, ushort[] v);
+        public delegate void glVertexAttribPointer(uint index, int size, uint type, bool normalized, int stride, IntPtr pointer);
 
         //  Constants
         public const uint GL_BLEND_EQUATION_RGB = 0x8009;
@@ -1543,12 +1538,12 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glUniformMatrix2x3fv(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix3x2fv(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix2x4fv(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix4x2fv(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix3x4fv(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix4x3fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix2x3fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix3x2fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix2x4fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix4x2fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix3x4fv(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix4x3fv(int location, int count, bool transpose, float[] value);
 
         //  Constants
         public const uint GL_PIXEL_PACK_BUFFER = 0x88EB;
@@ -1807,64 +1802,64 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glColorMaski(uint index, bool r, bool g, bool b, bool a);
-        private delegate void glGetBooleani_v(uint target, uint index, bool[] data);
-        private delegate void glGetIntegeri_v(uint target, uint index, int[] data);
-        private delegate void glEnablei(uint target, uint index);
-        private delegate void glDisablei(uint target, uint index);
-        private delegate bool glIsEnabledi(uint target, uint index);
-        private delegate void glBeginTransformFeedback(uint primitiveMode);
-        private delegate void glEndTransformFeedback();
-        private delegate void glBindBufferRange(uint target, uint index, uint buffer, int offset, int size);
-        private delegate void glBindBufferBase(uint target, uint index, uint buffer);
-        private delegate void glTransformFeedbackVaryings(uint program, int count, string[] varyings, uint bufferMode);
-        private delegate void glGetTransformFeedbackVarying(uint program, uint index, int bufSize, int[] length, int[] size, uint[] type, string name);
-        private delegate void glClampColor(uint target, uint clamp);
-        private delegate void glBeginConditionalRender(uint id, uint mode);
-        private delegate void glEndConditionalRender();
-        private delegate void glVertexAttribIPointer(uint index, int size, uint type, int stride, IntPtr pointer);
-        private delegate void glGetVertexAttribIiv(uint index, uint pname, int[] parameters);
-        private delegate void glGetVertexAttribIuiv(uint index, uint pname, uint[] parameters);
-        private delegate void glVertexAttribI1i(uint index, int x);
-        private delegate void glVertexAttribI2i(uint index, int x, int y);
-        private delegate void glVertexAttribI3i(uint index, int x, int y, int z);
-        private delegate void glVertexAttribI4i(uint index, int x, int y, int z, int w);
-        private delegate void glVertexAttribI1ui(uint index, uint x);
-        private delegate void glVertexAttribI2ui(uint index, uint x, uint y);
-        private delegate void glVertexAttribI3ui(uint index, uint x, uint y, uint z);
-        private delegate void glVertexAttribI4ui(uint index, uint x, uint y, uint z, uint w);
-        private delegate void glVertexAttribI1iv(uint index, int[] v);
-        private delegate void glVertexAttribI2iv(uint index, int[] v);
-        private delegate void glVertexAttribI3iv(uint index, int[] v);
-        private delegate void glVertexAttribI4iv(uint index, int[] v);
-        private delegate void glVertexAttribI1uiv(uint index, uint[] v);
-        private delegate void glVertexAttribI2uiv(uint index, uint[] v);
-        private delegate void glVertexAttribI3uiv(uint index, uint[] v);
-        private delegate void glVertexAttribI4uiv(uint index, uint[] v);
-        private delegate void glVertexAttribI4bv(uint index, sbyte[] v);
-        private delegate void glVertexAttribI4sv(uint index, short[] v);
-        private delegate void glVertexAttribI4ubv(uint index, byte[] v);
-        private delegate void glVertexAttribI4usv(uint index, ushort[] v);
-        private delegate void glGetUniformuiv(uint program, int location, uint[] parameters);
-        private delegate void glBindFragDataLocation(uint program, uint color, string name);
-        private delegate int glGetFragDataLocation(uint program, string name);
-        private delegate void glUniform1ui(int location, uint v0);
-        private delegate void glUniform2ui(int location, uint v0, uint v1);
-        private delegate void glUniform3ui(int location, uint v0, uint v1, uint v2);
-        private delegate void glUniform4ui(int location, uint v0, uint v1, uint v2, uint v3);
-        private delegate void glUniform1uiv(int location, int count, uint[] value);
-        private delegate void glUniform2uiv(int location, int count, uint[] value);
-        private delegate void glUniform3uiv(int location, int count, uint[] value);
-        private delegate void glUniform4uiv(int location, int count, uint[] value);
-        private delegate void glTexParameterIiv(uint target, uint pname, int[] parameters);
-        private delegate void glTexParameterIuiv(uint target, uint pname, uint[] parameters);
-        private delegate void glGetTexParameterIiv(uint target, uint pname, int[] parameters);
-        private delegate void glGetTexParameterIuiv(uint target, uint pname, uint[] parameters);
-        private delegate void glClearBufferiv(uint buffer, int drawbuffer, int[] value);
-        private delegate void glClearBufferuiv(uint buffer, int drawbuffer, uint[] value);
-        private delegate void glClearBufferfv(uint buffer, int drawbuffer, float[] value);
-        private delegate void glClearBufferfi(uint buffer, int drawbuffer, float depth, int stencil);
-        private delegate string glGetStringi(uint name, uint index);
+        public delegate void glColorMaski(uint index, bool r, bool g, bool b, bool a);
+        public delegate void glGetBooleani_v(uint target, uint index, bool[] data);
+        public delegate void glGetIntegeri_v(uint target, uint index, int[] data);
+        public delegate void glEnablei(uint target, uint index);
+        public delegate void glDisablei(uint target, uint index);
+        public delegate bool glIsEnabledi(uint target, uint index);
+        public delegate void glBeginTransformFeedback(uint primitiveMode);
+        public delegate void glEndTransformFeedback();
+        public delegate void glBindBufferRange(uint target, uint index, uint buffer, int offset, int size);
+        public delegate void glBindBufferBase(uint target, uint index, uint buffer);
+        public delegate void glTransformFeedbackVaryings(uint program, int count, string[] varyings, uint bufferMode);
+        public delegate void glGetTransformFeedbackVarying(uint program, uint index, int bufSize, int[] length, int[] size, uint[] type, string name);
+        public delegate void glClampColor(uint target, uint clamp);
+        public delegate void glBeginConditionalRender(uint id, uint mode);
+        public delegate void glEndConditionalRender();
+        public delegate void glVertexAttribIPointer(uint index, int size, uint type, int stride, IntPtr pointer);
+        public delegate void glGetVertexAttribIiv(uint index, uint pname, int[] parameters);
+        public delegate void glGetVertexAttribIuiv(uint index, uint pname, uint[] parameters);
+        public delegate void glVertexAttribI1i(uint index, int x);
+        public delegate void glVertexAttribI2i(uint index, int x, int y);
+        public delegate void glVertexAttribI3i(uint index, int x, int y, int z);
+        public delegate void glVertexAttribI4i(uint index, int x, int y, int z, int w);
+        public delegate void glVertexAttribI1ui(uint index, uint x);
+        public delegate void glVertexAttribI2ui(uint index, uint x, uint y);
+        public delegate void glVertexAttribI3ui(uint index, uint x, uint y, uint z);
+        public delegate void glVertexAttribI4ui(uint index, uint x, uint y, uint z, uint w);
+        public delegate void glVertexAttribI1iv(uint index, int[] v);
+        public delegate void glVertexAttribI2iv(uint index, int[] v);
+        public delegate void glVertexAttribI3iv(uint index, int[] v);
+        public delegate void glVertexAttribI4iv(uint index, int[] v);
+        public delegate void glVertexAttribI1uiv(uint index, uint[] v);
+        public delegate void glVertexAttribI2uiv(uint index, uint[] v);
+        public delegate void glVertexAttribI3uiv(uint index, uint[] v);
+        public delegate void glVertexAttribI4uiv(uint index, uint[] v);
+        public delegate void glVertexAttribI4bv(uint index, sbyte[] v);
+        public delegate void glVertexAttribI4sv(uint index, short[] v);
+        public delegate void glVertexAttribI4ubv(uint index, byte[] v);
+        public delegate void glVertexAttribI4usv(uint index, ushort[] v);
+        public delegate void glGetUniformuiv(uint program, int location, uint[] parameters);
+        public delegate void glBindFragDataLocation(uint program, uint color, string name);
+        public delegate int glGetFragDataLocation(uint program, string name);
+        public delegate void glUniform1ui(int location, uint v0);
+        public delegate void glUniform2ui(int location, uint v0, uint v1);
+        public delegate void glUniform3ui(int location, uint v0, uint v1, uint v2);
+        public delegate void glUniform4ui(int location, uint v0, uint v1, uint v2, uint v3);
+        public delegate void glUniform1uiv(int location, int count, uint[] value);
+        public delegate void glUniform2uiv(int location, int count, uint[] value);
+        public delegate void glUniform3uiv(int location, int count, uint[] value);
+        public delegate void glUniform4uiv(int location, int count, uint[] value);
+        public delegate void glTexParameterIiv(uint target, uint pname, int[] parameters);
+        public delegate void glTexParameterIuiv(uint target, uint pname, uint[] parameters);
+        public delegate void glGetTexParameterIiv(uint target, uint pname, int[] parameters);
+        public delegate void glGetTexParameterIuiv(uint target, uint pname, uint[] parameters);
+        public delegate void glClearBufferiv(uint buffer, int drawbuffer, int[] value);
+        public delegate void glClearBufferuiv(uint buffer, int drawbuffer, uint[] value);
+        public delegate void glClearBufferfv(uint buffer, int drawbuffer, float[] value);
+        public delegate void glClearBufferfi(uint buffer, int drawbuffer, float depth, int stencil);
+        public delegate string glGetStringi(uint name, uint index);
 
         //  Constants
         public const uint GL_COMPARE_REF_TO_TEXTURE = 0x884E;
@@ -2015,10 +2010,10 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glDrawArraysInstanced(uint mode, int first, int count, int primcount);
-        private delegate void glDrawElementsInstanced(uint mode, int count, uint type, IntPtr indices, int primcount);
-        private delegate void glTexBuffer(uint target, uint internalformat, uint buffer);
-        private delegate void glPrimitiveRestartIndex(uint index);
+        public delegate void glDrawArraysInstanced(uint mode, int first, int count, int primcount);
+        public delegate void glDrawElementsInstanced(uint mode, int count, uint type, IntPtr indices, int primcount);
+        public delegate void glTexBuffer(uint target, uint internalformat, uint buffer);
+        public delegate void glPrimitiveRestartIndex(uint index);
 
         //  Constants
         public const uint GL_SAMPLER_2D_RECT = 0x8B63;
@@ -2072,9 +2067,9 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glGetInteger64i_v(uint target, uint index, Int64[] data);
-        private delegate void glGetBufferParameteri64v(uint target, uint pname, Int64[] parameters);
-        private delegate void glFramebufferTexture(uint target, uint attachment, uint texture, int level);
+        public delegate void glGetInteger64i_v(uint target, uint index, Int64[] data);
+        public delegate void glGetBufferParameteri64v(uint target, uint pname, Int64[] parameters);
+        public delegate void glFramebufferTexture(uint target, uint attachment, uint texture, int level);
 
         //  Constants
         public const uint GL_CONTEXT_CORE_PROFILE_BIT = 0x00000001;
@@ -2112,7 +2107,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glVertexAttribDivisor(uint index, uint divisor);
+        public delegate void glVertexAttribDivisor(uint index, uint divisor);
 
         //  Constants
         public const uint GL_VERTEX_ATTRIB_ARRAY_DIVISOR = 0x88FE;
@@ -2144,11 +2139,11 @@ namespace CSharpGL
         }
 
         //  Delegates        
-        private delegate void glMinSampleShading(float value);
-        private delegate void glBlendEquationi(uint buf, uint mode);
-        private delegate void glBlendEquationSeparatei(uint buf, uint modeRGB, uint modeAlpha);
-        private delegate void glBlendFunci(uint buf, uint src, uint dst);
-        private delegate void glBlendFuncSeparatei(uint buf, uint srcRGB, uint dstRGB, uint srcAlpha, uint dstAlpha);
+        public delegate void glMinSampleShading(float value);
+        public delegate void glBlendEquationi(uint buf, uint mode);
+        public delegate void glBlendEquationSeparatei(uint buf, uint modeRGB, uint modeAlpha);
+        public delegate void glBlendFunci(uint buf, uint src, uint dst);
+        public delegate void glBlendFuncSeparatei(uint buf, uint srcRGB, uint dstRGB, uint srcAlpha, uint dstAlpha);
 
         //  Constants
         public const uint GL_SAMPLE_SHADING = 0x8C36;
@@ -2206,9 +2201,9 @@ namespace CSharpGL
             GetDelegateFor<glTexSubImage3DEXT>()(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
         }
 
-        private delegate void glTexImage3DEXT(uint target, int level, uint internalformat, uint width,
+        public delegate void glTexImage3DEXT(uint target, int level, uint internalformat, uint width,
             uint height, uint depth, int border, uint format, uint type, IntPtr pixels);
-        private delegate void glTexSubImage3DEXT(uint target, int level, int xoffset, int yoffset, int zoffset,
+        public delegate void glTexSubImage3DEXT(uint target, int level, int xoffset, int yoffset, int zoffset,
             uint width, uint height, uint depth, uint format, uint type, IntPtr pixels);
 
         #endregion
@@ -2275,7 +2270,7 @@ namespace CSharpGL
             GetDelegateFor<glDrawRangeElementsEXT>()(mode, start, end, count, type, indices);
         }
 
-        private delegate void glDrawRangeElementsEXT(uint mode, uint start, uint end, uint count, uint type, IntPtr indices);
+        public delegate void glDrawRangeElementsEXT(uint mode, uint start, uint end, uint count, uint type, IntPtr indices);
 
         public const uint GL_MAX_ELEMENTS_VERTICES_EXT = 0x80E8;
         public const uint GL_MAX_ELEMENTS_INDICES_EXT = 0x80E9;
@@ -2321,13 +2316,13 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glColorTableSGI(uint target, uint internalformat, uint width, uint format, uint type, IntPtr table);
-        private delegate void glColorTableParameterfvSGI(uint target, uint pname, float[] parameters);
-        private delegate void glColorTableParameterivSGI(uint target, uint pname, int[] parameters);
-        private delegate void glCopyColorTableSGI(uint target, uint internalformat, int x, int y, uint width);
-        private delegate void glGetColorTableSGI(uint target, uint format, uint type, IntPtr table);
-        private delegate void glGetColorTableParameterfvSGI(uint target, uint pname, float[] parameters);
-        private delegate void glGetColorTableParameterivSGI(uint target, uint pname, int[] parameters);
+        public delegate void glColorTableSGI(uint target, uint internalformat, uint width, uint format, uint type, IntPtr table);
+        public delegate void glColorTableParameterfvSGI(uint target, uint pname, float[] parameters);
+        public delegate void glColorTableParameterivSGI(uint target, uint pname, int[] parameters);
+        public delegate void glCopyColorTableSGI(uint target, uint internalformat, int x, int y, uint width);
+        public delegate void glGetColorTableSGI(uint target, uint format, uint type, IntPtr table);
+        public delegate void glGetColorTableParameterfvSGI(uint target, uint pname, float[] parameters);
+        public delegate void glGetColorTableParameterivSGI(uint target, uint pname, int[] parameters);
 
         //  Constants
         public const uint GL_COLOR_TABLE_SGI = 0x80D0;
@@ -2418,19 +2413,19 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glConvolutionFilter1DEXT(uint target, uint internalformat, int width, uint format, uint type, IntPtr image);
-        private delegate void glConvolutionFilter2DEXT(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr image);
-        private delegate void glConvolutionParameterfEXT(uint target, uint pname, float parameters);
-        private delegate void glConvolutionParameterfvEXT(uint target, uint pname, float[] parameters);
-        private delegate void glConvolutionParameteriEXT(uint target, uint pname, int parameter);
-        private delegate void glConvolutionParameterivEXT(uint target, uint pname, int[] parameters);
-        private delegate void glCopyConvolutionFilter1DEXT(uint target, uint internalformat, int x, int y, int width);
-        private delegate void glCopyConvolutionFilter2DEXT(uint target, uint internalformat, int x, int y, int width, int height);
-        private delegate void glGetConvolutionFilterEXT(uint target, uint format, uint type, IntPtr image);
-        private delegate void glGetConvolutionParameterfvEXT(uint target, uint pname, float[] parameters);
-        private delegate void glGetConvolutionParameterivEXT(uint target, uint pname, int[] parameters);
-        private delegate void glGetSeparableFilterEXT(uint target, uint format, uint type, IntPtr row, IntPtr column, IntPtr span);
-        private delegate void glSeparableFilter2DEXT(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr row, IntPtr column);
+        public delegate void glConvolutionFilter1DEXT(uint target, uint internalformat, int width, uint format, uint type, IntPtr image);
+        public delegate void glConvolutionFilter2DEXT(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr image);
+        public delegate void glConvolutionParameterfEXT(uint target, uint pname, float parameters);
+        public delegate void glConvolutionParameterfvEXT(uint target, uint pname, float[] parameters);
+        public delegate void glConvolutionParameteriEXT(uint target, uint pname, int parameter);
+        public delegate void glConvolutionParameterivEXT(uint target, uint pname, int[] parameters);
+        public delegate void glCopyConvolutionFilter1DEXT(uint target, uint internalformat, int x, int y, int width);
+        public delegate void glCopyConvolutionFilter2DEXT(uint target, uint internalformat, int x, int y, int width, int height);
+        public delegate void glGetConvolutionFilterEXT(uint target, uint format, uint type, IntPtr image);
+        public delegate void glGetConvolutionParameterfvEXT(uint target, uint pname, float[] parameters);
+        public delegate void glGetConvolutionParameterivEXT(uint target, uint pname, int[] parameters);
+        public delegate void glGetSeparableFilterEXT(uint target, uint format, uint type, IntPtr row, IntPtr column, IntPtr span);
+        public delegate void glSeparableFilter2DEXT(uint target, uint internalformat, int width, int height, uint format, uint type, IntPtr row, IntPtr column);
 
         //  Constants        
         public static uint GL_CONVOLUTION_1D_EXT = 0x8010;
@@ -2526,16 +2521,16 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glGetHistogramEXT(uint target, bool reset, uint format, uint type, IntPtr values);
-        private delegate void glGetHistogramParameterfvEXT(uint target, uint pname, float[] parameters);
-        private delegate void glGetHistogramParameterivEXT(uint target, uint pname, int[] parameters);
-        private delegate void glGetMinmaxEXT(uint target, bool reset, uint format, uint type, IntPtr values);
-        private delegate void glGetMinmaxParameterfvEXT(uint target, uint pname, float[] parameters);
-        private delegate void glGetMinmaxParameterivEXT(uint target, uint pname, int[] parameters);
-        private delegate void glHistogramEXT(uint target, int width, uint internalformat, bool sink);
-        private delegate void glMinmaxEXT(uint target, uint internalformat, bool sink);
-        private delegate void glResetHistogramEXT(uint target);
-        private delegate void glResetMinmaxEXT(uint target);
+        public delegate void glGetHistogramEXT(uint target, bool reset, uint format, uint type, IntPtr values);
+        public delegate void glGetHistogramParameterfvEXT(uint target, uint pname, float[] parameters);
+        public delegate void glGetHistogramParameterivEXT(uint target, uint pname, int[] parameters);
+        public delegate void glGetMinmaxEXT(uint target, bool reset, uint format, uint type, IntPtr values);
+        public delegate void glGetMinmaxParameterfvEXT(uint target, uint pname, float[] parameters);
+        public delegate void glGetMinmaxParameterivEXT(uint target, uint pname, int[] parameters);
+        public delegate void glHistogramEXT(uint target, int width, uint internalformat, bool sink);
+        public delegate void glMinmaxEXT(uint target, uint internalformat, bool sink);
+        public delegate void glResetHistogramEXT(uint target);
+        public delegate void glResetMinmaxEXT(uint target);
 
         //  Constants
         public const uint GL_HISTOGRAM_EXT = 0x8024;
@@ -2564,7 +2559,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBlendColorEXT(float red, float green, float blue, float alpha);
+        public delegate void glBlendColorEXT(float red, float green, float blue, float alpha);
 
         //  Constants        
         public const uint GL_CONSTANT_COLOR_EXT = 0x8001;
@@ -2584,7 +2579,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBlendEquationEXT(uint mode);
+        public delegate void glBlendEquationEXT(uint mode);
 
         //  Constants        
         public const uint GL_FUNC_ADD_EXT = 0x8006;
@@ -2770,40 +2765,40 @@ namespace CSharpGL
         }
 
         //  Delegates 
-        private delegate void glActiveTextureARB(uint texture);
-        private delegate void glClientActiveTextureARB(uint texture);
-        private delegate void glMultiTexCoord1dARB(uint target, double s);
-        private delegate void glMultiTexCoord1dvARB(uint target, double[] v);
-        private delegate void glMultiTexCoord1fARB(uint target, float s);
-        private delegate void glMultiTexCoord1fvARB(uint target, float[] v);
-        private delegate void glMultiTexCoord1iARB(uint target, int s);
-        private delegate void glMultiTexCoord1ivARB(uint target, int[] v);
-        private delegate void glMultiTexCoord1sARB(uint target, short s);
-        private delegate void glMultiTexCoord1svARB(uint target, short[] v);
-        private delegate void glMultiTexCoord2dARB(uint target, double s, double t);
-        private delegate void glMultiTexCoord2dvARB(uint target, double[] v);
-        private delegate void glMultiTexCoord2fARB(uint target, float s, float t);
-        private delegate void glMultiTexCoord2fvARB(uint target, float[] v);
-        private delegate void glMultiTexCoord2iARB(uint target, int s, int t);
-        private delegate void glMultiTexCoord2ivARB(uint target, int[] v);
-        private delegate void glMultiTexCoord2sARB(uint target, short s, short t);
-        private delegate void glMultiTexCoord2svARB(uint target, short[] v);
-        private delegate void glMultiTexCoord3dARB(uint target, double s, double t, double r);
-        private delegate void glMultiTexCoord3dvARB(uint target, double[] v);
-        private delegate void glMultiTexCoord3fARB(uint target, float s, float t, float r);
-        private delegate void glMultiTexCoord3fvARB(uint target, float[] v);
-        private delegate void glMultiTexCoord3iARB(uint target, int s, int t, int r);
-        private delegate void glMultiTexCoord3ivARB(uint target, int[] v);
-        private delegate void glMultiTexCoord3sARB(uint target, short s, short t, short r);
-        private delegate void glMultiTexCoord3svARB(uint target, short[] v);
-        private delegate void glMultiTexCoord4dARB(uint target, double s, double t, double r, double q);
-        private delegate void glMultiTexCoord4dvARB(uint target, double[] v);
-        private delegate void glMultiTexCoord4fARB(uint target, float s, float t, float r, float q);
-        private delegate void glMultiTexCoord4fvARB(uint target, float[] v);
-        private delegate void glMultiTexCoord4iARB(uint target, int s, int t, int r, int q);
-        private delegate void glMultiTexCoord4ivARB(uint target, int[] v);
-        private delegate void glMultiTexCoord4sARB(uint target, short s, short t, short r, short q);
-        private delegate void glMultiTexCoord4svARB(uint target, short[] v);
+        public delegate void glActiveTextureARB(uint texture);
+        public delegate void glClientActiveTextureARB(uint texture);
+        public delegate void glMultiTexCoord1dARB(uint target, double s);
+        public delegate void glMultiTexCoord1dvARB(uint target, double[] v);
+        public delegate void glMultiTexCoord1fARB(uint target, float s);
+        public delegate void glMultiTexCoord1fvARB(uint target, float[] v);
+        public delegate void glMultiTexCoord1iARB(uint target, int s);
+        public delegate void glMultiTexCoord1ivARB(uint target, int[] v);
+        public delegate void glMultiTexCoord1sARB(uint target, short s);
+        public delegate void glMultiTexCoord1svARB(uint target, short[] v);
+        public delegate void glMultiTexCoord2dARB(uint target, double s, double t);
+        public delegate void glMultiTexCoord2dvARB(uint target, double[] v);
+        public delegate void glMultiTexCoord2fARB(uint target, float s, float t);
+        public delegate void glMultiTexCoord2fvARB(uint target, float[] v);
+        public delegate void glMultiTexCoord2iARB(uint target, int s, int t);
+        public delegate void glMultiTexCoord2ivARB(uint target, int[] v);
+        public delegate void glMultiTexCoord2sARB(uint target, short s, short t);
+        public delegate void glMultiTexCoord2svARB(uint target, short[] v);
+        public delegate void glMultiTexCoord3dARB(uint target, double s, double t, double r);
+        public delegate void glMultiTexCoord3dvARB(uint target, double[] v);
+        public delegate void glMultiTexCoord3fARB(uint target, float s, float t, float r);
+        public delegate void glMultiTexCoord3fvARB(uint target, float[] v);
+        public delegate void glMultiTexCoord3iARB(uint target, int s, int t, int r);
+        public delegate void glMultiTexCoord3ivARB(uint target, int[] v);
+        public delegate void glMultiTexCoord3sARB(uint target, short s, short t, short r);
+        public delegate void glMultiTexCoord3svARB(uint target, short[] v);
+        public delegate void glMultiTexCoord4dARB(uint target, double s, double t, double r, double q);
+        public delegate void glMultiTexCoord4dvARB(uint target, double[] v);
+        public delegate void glMultiTexCoord4fARB(uint target, float s, float t, float r, float q);
+        public delegate void glMultiTexCoord4fvARB(uint target, float[] v);
+        public delegate void glMultiTexCoord4iARB(uint target, int s, int t, int r, int q);
+        public delegate void glMultiTexCoord4ivARB(uint target, int[] v);
+        public delegate void glMultiTexCoord4sARB(uint target, short s, short t, short r, short q);
+        public delegate void glMultiTexCoord4svARB(uint target, short[] v);
 
         //  Constants
         public const uint GL_TEXTURE0_ARB = 0x84C0;
@@ -2873,13 +2868,13 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glCompressedTexImage3DARB(uint target, int level, uint internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data);
-        private delegate void glCompressedTexImage2DARB(uint target, int level, uint internalformat, int width, int height, int border, int imageSize, IntPtr data);
-        private delegate void glCompressedTexImage1DARB(uint target, int level, uint internalformat, int width, int border, int imageSize, IntPtr data);
-        private delegate void glCompressedTexSubImage3DARB(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint format, int imageSize, IntPtr data);
-        private delegate void glCompressedTexSubImage2DARB(uint target, int level, int xoffset, int yoffset, int width, int height, uint format, int imageSize, IntPtr data);
-        private delegate void glCompressedTexSubImage1DARB(uint target, int level, int xoffset, int width, uint format, int imageSize, IntPtr data);
-        private delegate void glGetCompressedTexImageARB(uint target, int level, IntPtr img);
+        public delegate void glCompressedTexImage3DARB(uint target, int level, uint internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data);
+        public delegate void glCompressedTexImage2DARB(uint target, int level, uint internalformat, int width, int height, int border, int imageSize, IntPtr data);
+        public delegate void glCompressedTexImage1DARB(uint target, int level, uint internalformat, int width, int border, int imageSize, IntPtr data);
+        public delegate void glCompressedTexSubImage3DARB(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint format, int imageSize, IntPtr data);
+        public delegate void glCompressedTexSubImage2DARB(uint target, int level, int xoffset, int yoffset, int width, int height, uint format, int imageSize, IntPtr data);
+        public delegate void glCompressedTexSubImage1DARB(uint target, int level, int xoffset, int width, uint format, int imageSize, IntPtr data);
+        public delegate void glGetCompressedTexImageARB(uint target, int level, IntPtr img);
 
         //  Constants
         public const uint GL_COMPRESSED_ALPHA_ARB = 0x84E9;
@@ -2923,7 +2918,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glSampleCoverageARB(float value, bool invert);
+        public delegate void glSampleCoverageARB(float value, bool invert);
 
         //  Constants
         public const uint GL_MULTISAMPLE_ARB = 0x809D;
@@ -3008,10 +3003,10 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glLoadTransposeMatrixfARB(float[] m);
-        private delegate void glLoadTransposeMatrixdARB(double[] m);
-        private delegate void glMultTransposeMatrixfARB(float[] m);
-        private delegate void glMultTransposeMatrixdARB(double[] m);
+        public delegate void glLoadTransposeMatrixfARB(float[] m);
+        public delegate void glLoadTransposeMatrixdARB(double[] m);
+        public delegate void glMultTransposeMatrixfARB(float[] m);
+        public delegate void glMultTransposeMatrixdARB(double[] m);
 
         //  Constants
         public const uint GL_TRANSPOSE_MODELVIEW_MATRIX_ARB = 0x84E3;
@@ -3080,11 +3075,11 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glFogCoordfEXT(float coord);
-        private delegate void glFogCoordfvEXT(float[] coord);
-        private delegate void glFogCoorddEXT(double coord);
-        private delegate void glFogCoorddvEXT(double[] coord);
-        private delegate void glFogCoordPointerEXT(uint type, int stride, IntPtr pointer);
+        public delegate void glFogCoordfEXT(float coord);
+        public delegate void glFogCoordfvEXT(float[] coord);
+        public delegate void glFogCoorddEXT(double coord);
+        public delegate void glFogCoorddvEXT(double[] coord);
+        public delegate void glFogCoordPointerEXT(uint type, int stride, IntPtr pointer);
 
         //  Constants
         public const uint GL_FOG_COORDINATE_SOURCE_EXT = 0x8450;
@@ -3111,8 +3106,8 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glMultiDrawArraysEXT(uint mode, int[] first, int[] count, int primcount);
-        private delegate void glMultiDrawElementsEXT(uint mode, int[] count, uint type, IntPtr indices, int primcount);
+        public delegate void glMultiDrawArraysEXT(uint mode, int[] first, int[] count, int primcount);
+        public delegate void glMultiDrawElementsEXT(uint mode, int[] count, uint type, IntPtr indices, int primcount);
 
         #endregion
 
@@ -3129,8 +3124,8 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glPointParameterfARB(uint pname, float param);
-        private delegate void glPointParameterfvARB(uint pname, float[] parameters);
+        public delegate void glPointParameterfARB(uint pname, float param);
+        public delegate void glPointParameterfvARB(uint pname, float[] parameters);
 
         //  Constants
         public const uint GL_POINT_SIZE_MIN_ARB = 0x8126;
@@ -3213,23 +3208,23 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glSecondaryColor3bEXT(sbyte red, sbyte green, sbyte blue);
-        private delegate void glSecondaryColor3bvEXT(sbyte[] v);
-        private delegate void glSecondaryColor3dEXT(double red, double green, double blue);
-        private delegate void glSecondaryColor3dvEXT(double[] v);
-        private delegate void glSecondaryColor3fEXT(float red, float green, float blue);
-        private delegate void glSecondaryColor3fvEXT(float[] v);
-        private delegate void glSecondaryColor3iEXT(int red, int green, int blue);
-        private delegate void glSecondaryColor3ivEXT(int[] v);
-        private delegate void glSecondaryColor3sEXT(short red, short green, short blue);
-        private delegate void glSecondaryColor3svEXT(short[] v);
-        private delegate void glSecondaryColor3ubEXT(byte red, byte green, byte blue);
-        private delegate void glSecondaryColor3ubvEXT(byte[] v);
-        private delegate void glSecondaryColor3uiEXT(uint red, uint green, uint blue);
-        private delegate void glSecondaryColor3uivEXT(uint[] v);
-        private delegate void glSecondaryColor3usEXT(ushort red, ushort green, ushort blue);
-        private delegate void glSecondaryColor3usvEXT(ushort[] v);
-        private delegate void glSecondaryColorPointerEXT(int size, uint type, int stride, IntPtr pointer);
+        public delegate void glSecondaryColor3bEXT(sbyte red, sbyte green, sbyte blue);
+        public delegate void glSecondaryColor3bvEXT(sbyte[] v);
+        public delegate void glSecondaryColor3dEXT(double red, double green, double blue);
+        public delegate void glSecondaryColor3dvEXT(double[] v);
+        public delegate void glSecondaryColor3fEXT(float red, float green, float blue);
+        public delegate void glSecondaryColor3fvEXT(float[] v);
+        public delegate void glSecondaryColor3iEXT(int red, int green, int blue);
+        public delegate void glSecondaryColor3ivEXT(int[] v);
+        public delegate void glSecondaryColor3sEXT(short red, short green, short blue);
+        public delegate void glSecondaryColor3svEXT(short[] v);
+        public delegate void glSecondaryColor3ubEXT(byte red, byte green, byte blue);
+        public delegate void glSecondaryColor3ubvEXT(byte[] v);
+        public delegate void glSecondaryColor3uiEXT(uint red, uint green, uint blue);
+        public delegate void glSecondaryColor3uivEXT(uint[] v);
+        public delegate void glSecondaryColor3usEXT(ushort red, ushort green, ushort blue);
+        public delegate void glSecondaryColor3usvEXT(ushort[] v);
+        public delegate void glSecondaryColorPointerEXT(int size, uint type, int stride, IntPtr pointer);
 
         //  Constants        
         public const uint GL_COLOR_SUM_EXT = 0x8458;
@@ -3251,7 +3246,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBlendFuncSeparateEXT(uint sfactorRGB, uint dfactorRGB, uint sfactorAlpha, uint dfactorAlpha);
+        public delegate void glBlendFuncSeparateEXT(uint sfactorRGB, uint dfactorRGB, uint sfactorAlpha, uint dfactorAlpha);
 
         //  Constants
         public const uint GL_BLEND_DST_RGB_EXT = 0x80C8;
@@ -3360,22 +3355,22 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glWindowPos2dARB(double x, double y);
-        private delegate void glWindowPos2dvARB(double[] v);
-        private delegate void glWindowPos2fARB(float x, float y);
-        private delegate void glWindowPos2fvARB(float[] v);
-        private delegate void glWindowPos2iARB(int x, int y);
-        private delegate void glWindowPos2ivARB(int[] v);
-        private delegate void glWindowPos2sARB(short x, short y);
-        private delegate void glWindowPos2svARB(short[] v);
-        private delegate void glWindowPos3dARB(double x, double y, double z);
-        private delegate void glWindowPos3dvARB(double[] v);
-        private delegate void glWindowPos3fARB(float x, float y, float z);
-        private delegate void glWindowPos3fvARB(float[] v);
-        private delegate void glWindowPos3iARB(int x, int y, int z);
-        private delegate void glWindowPos3ivARB(int[] v);
-        private delegate void glWindowPos3sARB(short x, short y, short z);
-        private delegate void glWindowPos3svARB(short[] v);
+        public delegate void glWindowPos2dARB(double x, double y);
+        public delegate void glWindowPos2dvARB(double[] v);
+        public delegate void glWindowPos2fARB(float x, float y);
+        public delegate void glWindowPos2fvARB(float[] v);
+        public delegate void glWindowPos2iARB(int x, int y);
+        public delegate void glWindowPos2ivARB(int[] v);
+        public delegate void glWindowPos2sARB(short x, short y);
+        public delegate void glWindowPos2svARB(short[] v);
+        public delegate void glWindowPos3dARB(double x, double y, double z);
+        public delegate void glWindowPos3dvARB(double[] v);
+        public delegate void glWindowPos3fARB(float x, float y, float z);
+        public delegate void glWindowPos3fvARB(float[] v);
+        public delegate void glWindowPos3iARB(int x, int y, int z);
+        public delegate void glWindowPos3ivARB(int[] v);
+        public delegate void glWindowPos3sARB(short x, short y, short z);
+        public delegate void glWindowPos3svARB(short[] v);
 
         #endregion
 
@@ -3428,17 +3423,17 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBindBufferARB(uint target, uint buffer);
-        private delegate void glDeleteBuffersARB(int n, uint[] buffers);
-        private delegate void glGenBuffersARB(int n, uint[] buffers);
-        private delegate bool glIsBufferARB(uint buffer);
-        private delegate void glBufferDataARB(uint target, uint size, IntPtr data, uint usage);
-        private delegate void glBufferSubDataARB(uint target, uint offset, uint size, IntPtr data);
-        private delegate void glGetBufferSubDataARB(uint target, uint offset, uint size, IntPtr data);
-        private delegate IntPtr glMapBufferARB(uint target, uint access);
-        private delegate bool glUnmapBufferARB(uint target);
-        private delegate void glGetBufferParameterivARB(uint target, uint pname, int[] parameters);
-        private delegate void glGetBufferPointervARB(uint target, uint pname, IntPtr parameters);
+        public delegate void glBindBufferARB(uint target, uint buffer);
+        public delegate void glDeleteBuffersARB(int n, uint[] buffers);
+        public delegate void glGenBuffersARB(int n, uint[] buffers);
+        public delegate bool glIsBufferARB(uint buffer);
+        public delegate void glBufferDataARB(uint target, uint size, IntPtr data, uint usage);
+        public delegate void glBufferSubDataARB(uint target, uint offset, uint size, IntPtr data);
+        public delegate void glGetBufferSubDataARB(uint target, uint offset, uint size, IntPtr data);
+        public delegate IntPtr glMapBufferARB(uint target, uint access);
+        public delegate bool glUnmapBufferARB(uint target);
+        public delegate void glGetBufferParameterivARB(uint target, uint pname, int[] parameters);
+        public delegate void glGetBufferPointervARB(uint target, uint pname, IntPtr parameters);
 
         //  Constants
         public const uint GL_BUFFER_SIZE_ARB = 0x8764;
@@ -3511,14 +3506,14 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glGenQueriesARB(int n, uint[] ids);
-        private delegate void glDeleteQueriesARB(int n, uint[] ids);
-        private delegate bool glIsQueryARB(uint id);
-        private delegate void glBeginQueryARB(uint target, uint id);
-        private delegate void glEndQueryARB(uint target);
-        private delegate void glGetQueryivARB(uint target, uint pname, int[] parameters);
-        private delegate void glGetQueryObjectivARB(uint id, uint pname, int[] parameters);
-        private delegate void glGetQueryObjectuivARB(uint id, uint pname, uint[] parameters);
+        public delegate void glGenQueriesARB(int n, uint[] ids);
+        public delegate void glDeleteQueriesARB(int n, uint[] ids);
+        public delegate bool glIsQueryARB(uint id);
+        public delegate void glBeginQueryARB(uint target, uint id);
+        public delegate void glEndQueryARB(uint target);
+        public delegate void glGetQueryivARB(uint target, uint pname, int[] parameters);
+        public delegate void glGetQueryObjectivARB(uint id, uint pname, int[] parameters);
+        public delegate void glGetQueryObjectuivARB(uint id, uint pname, uint[] parameters);
 
         //  Constants
         public const uint GL_QUERY_COUNTER_BITS_ARB = 0x8864;
@@ -3691,45 +3686,45 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glDeleteObjectARB(uint obj);
-        private delegate uint glGetHandleARB(uint pname);
-        private delegate void glDetachObjectARB(uint containerObj, uint attachedObj);
-        private delegate uint glCreateShaderObjectARB(uint shaderType);
-        private delegate void glShaderSourceARB(uint shaderObj, int count, string[] source, ref int length);
-        private delegate void glCompileShaderARB(uint shaderObj);
-        private delegate uint glCreateProgramObjectARB();
-        private delegate void glAttachObjectARB(uint containerObj, uint obj);
-        private delegate void glLinkProgramARB(uint programObj);
-        private delegate void glUseProgramObjectARB(uint programObj);
-        private delegate void glValidateProgramARB(uint programObj);
-        private delegate void glUniform1fARB(int location, float v0);
-        private delegate void glUniform2fARB(int location, float v0, float v1);
-        private delegate void glUniform3fARB(int location, float v0, float v1, float v2);
-        private delegate void glUniform4fARB(int location, float v0, float v1, float v2, float v3);
-        private delegate void glUniform1iARB(int location, int v0);
-        private delegate void glUniform2iARB(int location, int v0, int v1);
-        private delegate void glUniform3iARB(int location, int v0, int v1, int v2);
-        private delegate void glUniform4iARB(int location, int v0, int v1, int v2, int v3);
-        private delegate void glUniform1fvARB(int location, int count, float[] value);
-        private delegate void glUniform2fvARB(int location, int count, float[] value);
-        private delegate void glUniform3fvARB(int location, int count, float[] value);
-        private delegate void glUniform4fvARB(int location, int count, float[] value);
-        private delegate void glUniform1ivARB(int location, int count, int[] value);
-        private delegate void glUniform2ivARB(int location, int count, int[] value);
-        private delegate void glUniform3ivARB(int location, int count, int[] value);
-        private delegate void glUniform4ivARB(int location, int count, int[] value);
-        private delegate void glUniformMatrix2fvARB(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix3fvARB(int location, int count, bool transpose, float[] value);
-        private delegate void glUniformMatrix4fvARB(int location, int count, bool transpose, float[] value);
-        private delegate void glGetObjectParameterfvARB(uint obj, uint pname, float[] parameters);
-        private delegate void glGetObjectParameterivARB(uint obj, uint pname, int[] parameters);
-        private delegate void glGetInfoLogARB(uint obj, int maxLength, ref int length, string infoLog);
-        private delegate void glGetAttachedObjectsARB(uint containerObj, int maxCount, ref int count, ref uint obj);
-        private delegate int glGetUniformLocationARB(uint programObj, string name);
-        private delegate void glGetActiveUniformARB(uint programObj, uint index, int maxLength, ref int length, ref int size, ref uint type, string name);
-        private delegate void glGetUniformfvARB(uint programObj, int location, float[] parameters);
-        private delegate void glGetUniformivARB(uint programObj, int location, int[] parameters);
-        private delegate void glGetShaderSourceARB(uint obj, int maxLength, ref int length, string source);
+        public delegate void glDeleteObjectARB(uint obj);
+        public delegate uint glGetHandleARB(uint pname);
+        public delegate void glDetachObjectARB(uint containerObj, uint attachedObj);
+        public delegate uint glCreateShaderObjectARB(uint shaderType);
+        public delegate void glShaderSourceARB(uint shaderObj, int count, string[] source, ref int length);
+        public delegate void glCompileShaderARB(uint shaderObj);
+        public delegate uint glCreateProgramObjectARB();
+        public delegate void glAttachObjectARB(uint containerObj, uint obj);
+        public delegate void glLinkProgramARB(uint programObj);
+        public delegate void glUseProgramObjectARB(uint programObj);
+        public delegate void glValidateProgramARB(uint programObj);
+        public delegate void glUniform1fARB(int location, float v0);
+        public delegate void glUniform2fARB(int location, float v0, float v1);
+        public delegate void glUniform3fARB(int location, float v0, float v1, float v2);
+        public delegate void glUniform4fARB(int location, float v0, float v1, float v2, float v3);
+        public delegate void glUniform1iARB(int location, int v0);
+        public delegate void glUniform2iARB(int location, int v0, int v1);
+        public delegate void glUniform3iARB(int location, int v0, int v1, int v2);
+        public delegate void glUniform4iARB(int location, int v0, int v1, int v2, int v3);
+        public delegate void glUniform1fvARB(int location, int count, float[] value);
+        public delegate void glUniform2fvARB(int location, int count, float[] value);
+        public delegate void glUniform3fvARB(int location, int count, float[] value);
+        public delegate void glUniform4fvARB(int location, int count, float[] value);
+        public delegate void glUniform1ivARB(int location, int count, int[] value);
+        public delegate void glUniform2ivARB(int location, int count, int[] value);
+        public delegate void glUniform3ivARB(int location, int count, int[] value);
+        public delegate void glUniform4ivARB(int location, int count, int[] value);
+        public delegate void glUniformMatrix2fvARB(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix3fvARB(int location, int count, bool transpose, float[] value);
+        public delegate void glUniformMatrix4fvARB(int location, int count, bool transpose, float[] value);
+        public delegate void glGetObjectParameterfvARB(uint obj, uint pname, float[] parameters);
+        public delegate void glGetObjectParameterivARB(uint obj, uint pname, int[] parameters);
+        public delegate void glGetInfoLogARB(uint obj, int maxLength, ref int length, string infoLog);
+        public delegate void glGetAttachedObjectsARB(uint containerObj, int maxCount, ref int count, ref uint obj);
+        public delegate int glGetUniformLocationARB(uint programObj, string name);
+        public delegate void glGetActiveUniformARB(uint programObj, uint index, int maxLength, ref int length, ref int size, ref uint type, string name);
+        public delegate void glGetUniformfvARB(uint programObj, int location, float[] parameters);
+        public delegate void glGetUniformivARB(uint programObj, int location, int[] parameters);
+        public delegate void glGetShaderSourceARB(uint obj, int maxLength, ref int length, string source);
 
         //  Constants
         public const uint GL_PROGRAM_OBJECT_ARB = 0x8B40;
@@ -4018,67 +4013,67 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glVertexAttrib1dARB(uint index, double x);
-        private delegate void glVertexAttrib1dvARB(uint index, double[] v);
-        private delegate void glVertexAttrib1fARB(uint index, float x);
-        private delegate void glVertexAttrib1fvARB(uint index, float[] v);
-        private delegate void glVertexAttrib1sARB(uint index, short x);
-        private delegate void glVertexAttrib1svARB(uint index, short[] v);
-        private delegate void glVertexAttrib2dARB(uint index, double x, double y);
-        private delegate void glVertexAttrib2dvARB(uint index, double[] v);
-        private delegate void glVertexAttrib2fARB(uint index, float x, float y);
-        private delegate void glVertexAttrib2fvARB(uint index, float[] v);
-        private delegate void glVertexAttrib2sARB(uint index, short x, short y);
-        private delegate void glVertexAttrib2svARB(uint index, short[] v);
-        private delegate void glVertexAttrib3dARB(uint index, double x, double y, double z);
-        private delegate void glVertexAttrib3dvARB(uint index, double[] v);
-        private delegate void glVertexAttrib3fARB(uint index, float x, float y, float z);
-        private delegate void glVertexAttrib3fvARB(uint index, float[] v);
-        private delegate void glVertexAttrib3sARB(uint index, short x, short y, short z);
-        private delegate void glVertexAttrib3svARB(uint index, short[] v);
-        private delegate void glVertexAttrib4NbvARB(uint index, sbyte[] v);
-        private delegate void glVertexAttrib4NivARB(uint index, int[] v);
-        private delegate void glVertexAttrib4NsvARB(uint index, short[] v);
-        private delegate void glVertexAttrib4NubARB(uint index, byte x, byte y, byte z, byte w);
-        private delegate void glVertexAttrib4NubvARB(uint index, byte[] v);
-        private delegate void glVertexAttrib4NuivARB(uint index, uint[] v);
-        private delegate void glVertexAttrib4NusvARB(uint index, ushort[] v);
-        private delegate void glVertexAttrib4bvARB(uint index, sbyte[] v);
-        private delegate void glVertexAttrib4dARB(uint index, double x, double y, double z, double w);
-        private delegate void glVertexAttrib4dvARB(uint index, double[] v);
-        private delegate void glVertexAttrib4fARB(uint index, float x, float y, float z, float w);
-        private delegate void glVertexAttrib4fvARB(uint index, float[] v);
-        private delegate void glVertexAttrib4ivARB(uint index, int[] v);
-        private delegate void glVertexAttrib4sARB(uint index, short x, short y, short z, short w);
-        private delegate void glVertexAttrib4svARB(uint index, short[] v);
-        private delegate void glVertexAttrib4ubvARB(uint index, byte[] v);
-        private delegate void glVertexAttrib4uivARB(uint index, uint[] v);
-        private delegate void glVertexAttrib4usvARB(uint index, ushort[] v);
-        private delegate void glVertexAttribPointerARB(uint index, int size, uint type, bool normalized, int stride, IntPtr pointer);
-        private delegate void glEnableVertexAttribArrayARB(uint index);
-        private delegate void glDisableVertexAttribArrayARB(uint index);
-        private delegate void glProgramStringARB(uint target, uint format, int len, IntPtr str);
-        private delegate void glBindProgramARB(uint target, uint program);
-        private delegate void glDeleteProgramsARB(int n, uint[] programs);
-        private delegate void glGenProgramsARB(int n, uint[] programs);
-        private delegate void glProgramEnvParameter4dARB(uint target, uint index, double x, double y, double z, double w);
-        private delegate void glProgramEnvParameter4dvARB(uint target, uint index, double[] parameters);
-        private delegate void glProgramEnvParameter4fARB(uint target, uint index, float x, float y, float z, float w);
-        private delegate void glProgramEnvParameter4fvARB(uint target, uint index, float[] parameters);
-        private delegate void glProgramLocalParameter4dARB(uint target, uint index, double x, double y, double z, double w);
-        private delegate void glProgramLocalParameter4dvARB(uint target, uint index, double[] parameters);
-        private delegate void glProgramLocalParameter4fARB(uint target, uint index, float x, float y, float z, float w);
-        private delegate void glProgramLocalParameter4fvARB(uint target, uint index, float[] parameters);
-        private delegate void glGetProgramEnvParameterdvARB(uint target, uint index, double[] parameters);
-        private delegate void glGetProgramEnvParameterfvARB(uint target, uint index, float[] parameters);
-        private delegate void glGetProgramLocalParameterdvARB(uint target, uint index, double[] parameters);
-        private delegate void glGetProgramLocalParameterfvARB(uint target, uint index, float[] parameters);
-        private delegate void glGetProgramivARB(uint target, uint pname, int[] parameters);
-        private delegate void glGetProgramStringARB(uint target, uint pname, IntPtr str);
-        private delegate void glGetVertexAttribdvARB(uint index, uint pname, double[] parameters);
-        private delegate void glGetVertexAttribfvARB(uint index, uint pname, float[] parameters);
-        private delegate void glGetVertexAttribivARB(uint index, uint pname, int[] parameters);
-        private delegate void glGetVertexAttribPointervARB(uint index, uint pname, IntPtr pointer);
+        public delegate void glVertexAttrib1dARB(uint index, double x);
+        public delegate void glVertexAttrib1dvARB(uint index, double[] v);
+        public delegate void glVertexAttrib1fARB(uint index, float x);
+        public delegate void glVertexAttrib1fvARB(uint index, float[] v);
+        public delegate void glVertexAttrib1sARB(uint index, short x);
+        public delegate void glVertexAttrib1svARB(uint index, short[] v);
+        public delegate void glVertexAttrib2dARB(uint index, double x, double y);
+        public delegate void glVertexAttrib2dvARB(uint index, double[] v);
+        public delegate void glVertexAttrib2fARB(uint index, float x, float y);
+        public delegate void glVertexAttrib2fvARB(uint index, float[] v);
+        public delegate void glVertexAttrib2sARB(uint index, short x, short y);
+        public delegate void glVertexAttrib2svARB(uint index, short[] v);
+        public delegate void glVertexAttrib3dARB(uint index, double x, double y, double z);
+        public delegate void glVertexAttrib3dvARB(uint index, double[] v);
+        public delegate void glVertexAttrib3fARB(uint index, float x, float y, float z);
+        public delegate void glVertexAttrib3fvARB(uint index, float[] v);
+        public delegate void glVertexAttrib3sARB(uint index, short x, short y, short z);
+        public delegate void glVertexAttrib3svARB(uint index, short[] v);
+        public delegate void glVertexAttrib4NbvARB(uint index, sbyte[] v);
+        public delegate void glVertexAttrib4NivARB(uint index, int[] v);
+        public delegate void glVertexAttrib4NsvARB(uint index, short[] v);
+        public delegate void glVertexAttrib4NubARB(uint index, byte x, byte y, byte z, byte w);
+        public delegate void glVertexAttrib4NubvARB(uint index, byte[] v);
+        public delegate void glVertexAttrib4NuivARB(uint index, uint[] v);
+        public delegate void glVertexAttrib4NusvARB(uint index, ushort[] v);
+        public delegate void glVertexAttrib4bvARB(uint index, sbyte[] v);
+        public delegate void glVertexAttrib4dARB(uint index, double x, double y, double z, double w);
+        public delegate void glVertexAttrib4dvARB(uint index, double[] v);
+        public delegate void glVertexAttrib4fARB(uint index, float x, float y, float z, float w);
+        public delegate void glVertexAttrib4fvARB(uint index, float[] v);
+        public delegate void glVertexAttrib4ivARB(uint index, int[] v);
+        public delegate void glVertexAttrib4sARB(uint index, short x, short y, short z, short w);
+        public delegate void glVertexAttrib4svARB(uint index, short[] v);
+        public delegate void glVertexAttrib4ubvARB(uint index, byte[] v);
+        public delegate void glVertexAttrib4uivARB(uint index, uint[] v);
+        public delegate void glVertexAttrib4usvARB(uint index, ushort[] v);
+        public delegate void glVertexAttribPointerARB(uint index, int size, uint type, bool normalized, int stride, IntPtr pointer);
+        public delegate void glEnableVertexAttribArrayARB(uint index);
+        public delegate void glDisableVertexAttribArrayARB(uint index);
+        public delegate void glProgramStringARB(uint target, uint format, int len, IntPtr str);
+        public delegate void glBindProgramARB(uint target, uint program);
+        public delegate void glDeleteProgramsARB(int n, uint[] programs);
+        public delegate void glGenProgramsARB(int n, uint[] programs);
+        public delegate void glProgramEnvParameter4dARB(uint target, uint index, double x, double y, double z, double w);
+        public delegate void glProgramEnvParameter4dvARB(uint target, uint index, double[] parameters);
+        public delegate void glProgramEnvParameter4fARB(uint target, uint index, float x, float y, float z, float w);
+        public delegate void glProgramEnvParameter4fvARB(uint target, uint index, float[] parameters);
+        public delegate void glProgramLocalParameter4dARB(uint target, uint index, double x, double y, double z, double w);
+        public delegate void glProgramLocalParameter4dvARB(uint target, uint index, double[] parameters);
+        public delegate void glProgramLocalParameter4fARB(uint target, uint index, float x, float y, float z, float w);
+        public delegate void glProgramLocalParameter4fvARB(uint target, uint index, float[] parameters);
+        public delegate void glGetProgramEnvParameterdvARB(uint target, uint index, double[] parameters);
+        public delegate void glGetProgramEnvParameterfvARB(uint target, uint index, float[] parameters);
+        public delegate void glGetProgramLocalParameterdvARB(uint target, uint index, double[] parameters);
+        public delegate void glGetProgramLocalParameterfvARB(uint target, uint index, float[] parameters);
+        public delegate void glGetProgramivARB(uint target, uint pname, int[] parameters);
+        public delegate void glGetProgramStringARB(uint target, uint pname, IntPtr str);
+        public delegate void glGetVertexAttribdvARB(uint index, uint pname, double[] parameters);
+        public delegate void glGetVertexAttribfvARB(uint index, uint pname, float[] parameters);
+        public delegate void glGetVertexAttribivARB(uint index, uint pname, int[] parameters);
+        public delegate void glGetVertexAttribPointervARB(uint index, uint pname, IntPtr pointer);
 
         //  Constants
         public const uint GL_COLOR_SUM_ARB = 0x8458;
@@ -4180,9 +4175,9 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBindAttribLocationARB(uint programObj, uint index, string name);
-        private delegate void glGetActiveAttribARB(uint programObj, uint index, int maxLength, int[] length, int[] size, uint[] type, string name);
-        private delegate uint glGetAttribLocationARB(uint programObj, string name);
+        public delegate void glBindAttribLocationARB(uint programObj, uint index, string name);
+        public delegate void glGetActiveAttribARB(uint programObj, uint index, int maxLength, int[] length, int[] size, uint[] type, string name);
+        public delegate uint glGetAttribLocationARB(uint programObj, string name);
 
         //  Constants
         public const uint GL_VERTEX_SHADER_ARB = 0x8B31;
@@ -4212,7 +4207,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glDrawBuffersARB(int n, uint[] bufs);
+        public delegate void glDrawBuffersARB(int n, uint[] bufs);
 
         //  Constants        
         public const uint GL_MAX_DRAW_BUFFERS_ARB = 0x8824;
@@ -4295,7 +4290,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBlendEquationSeparateEXT(uint modeRGB, uint modeAlpha);
+        public delegate void glBlendEquationSeparateEXT(uint modeRGB, uint modeAlpha);
 
         //  Constants
         public const uint GL_BLEND_EQUATION_RGB_EXT = 0x8009;
@@ -4312,7 +4307,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glActiveStencilFaceEXT(uint face);
+        public delegate void glActiveStencilFaceEXT(uint face);
 
         //  Constants
         public const uint GL_STENCIL_TEST_TWO_SIDE_EXT = 0x8009;
@@ -4439,23 +4434,23 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate bool glIsRenderbufferEXT(uint renderbuffer);
-        private delegate void glBindRenderbufferEXT(uint target, uint renderbuffer);
-        private delegate void glDeleteRenderbuffersEXT(uint n, uint[] renderbuffers);
-        private delegate void glGenRenderbuffersEXT(uint n, uint[] renderbuffers);
-        private delegate void glRenderbufferStorageEXT(uint target, uint internalformat, int width, int height);
-        private delegate void glGetRenderbufferParameterivEXT(uint target, uint pname, int[] parameters);
-        private delegate bool glIsFramebufferEXT(uint framebuffer);
-        private delegate void glBindFramebufferEXT(uint target, uint framebuffer);
-        private delegate void glDeleteFramebuffersEXT(uint n, uint[] framebuffers);
-        private delegate void glGenFramebuffersEXT(uint n, uint[] framebuffers);
-        private delegate uint glCheckFramebufferStatusEXT(uint target);
-        private delegate void glFramebufferTexture1DEXT(uint target, uint attachment, uint textarget, uint texture, int level);
-        private delegate void glFramebufferTexture2DEXT(uint target, uint attachment, uint textarget, uint texture, int level);
-        private delegate void glFramebufferTexture3DEXT(uint target, uint attachment, uint textarget, uint texture, int level, int zoffset);
-        private delegate void glFramebufferRenderbufferEXT(uint target, uint attachment, uint renderbuffertarget, uint renderbuffer);
-        private delegate void glGetFramebufferAttachmentParameterivEXT(uint target, uint attachment, uint pname, int[] parameters);
-        private delegate void glGenerateMipmapEXT(uint target);
+        public delegate bool glIsRenderbufferEXT(uint renderbuffer);
+        public delegate void glBindRenderbufferEXT(uint target, uint renderbuffer);
+        public delegate void glDeleteRenderbuffersEXT(uint n, uint[] renderbuffers);
+        public delegate void glGenRenderbuffersEXT(uint n, uint[] renderbuffers);
+        public delegate void glRenderbufferStorageEXT(uint target, uint internalformat, int width, int height);
+        public delegate void glGetRenderbufferParameterivEXT(uint target, uint pname, int[] parameters);
+        public delegate bool glIsFramebufferEXT(uint framebuffer);
+        public delegate void glBindFramebufferEXT(uint target, uint framebuffer);
+        public delegate void glDeleteFramebuffersEXT(uint n, uint[] framebuffers);
+        public delegate void glGenFramebuffersEXT(uint n, uint[] framebuffers);
+        public delegate uint glCheckFramebufferStatusEXT(uint target);
+        public delegate void glFramebufferTexture1DEXT(uint target, uint attachment, uint textarget, uint texture, int level);
+        public delegate void glFramebufferTexture2DEXT(uint target, uint attachment, uint textarget, uint texture, int level);
+        public delegate void glFramebufferTexture3DEXT(uint target, uint attachment, uint textarget, uint texture, int level, int zoffset);
+        public delegate void glFramebufferRenderbufferEXT(uint target, uint attachment, uint renderbuffertarget, uint renderbuffer);
+        public delegate void glGetFramebufferAttachmentParameterivEXT(uint target, uint attachment, uint pname, int[] parameters);
+        public delegate void glGenerateMipmapEXT(uint target);
 
         //  Constants
         public const uint GL_INVALID_FRAMEBUFFER_OPERATION_EXT = 0x0506;
@@ -4521,7 +4516,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glRenderbufferStorageMultisampleEXT(uint target, int samples, uint internalformat, int width, int height);
+        public delegate void glRenderbufferStorageMultisampleEXT(uint target, int samples, uint internalformat, int width, int height);
 
         //  Constants
         public const uint GL_RENDERBUFFER_SAMPLES_EXT = 0x8CAB;
@@ -4543,8 +4538,8 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glDrawArraysInstancedEXT(uint mode, int start, int count, int primcount);
-        private delegate void glDrawElementsInstancedEXT(uint mode, int count, uint type, IntPtr indices, int primcount);
+        public delegate void glDrawArraysInstancedEXT(uint mode, int start, int count, int primcount);
+        public delegate void glDrawElementsInstancedEXT(uint mode, int count, uint type, IntPtr indices, int primcount);
 
         #endregion
 
@@ -4573,10 +4568,10 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBindVertexArray(uint array);
-        private delegate void glDeleteVertexArrays(int n, uint[] arrays);
-        private delegate void glGenVertexArrays(int n, uint[] arrays);
-        private delegate bool glIsVertexArray(uint array);
+        public delegate void glBindVertexArray(uint array);
+        public delegate void glDeleteVertexArrays(int n, uint[] arrays);
+        public delegate void glGenVertexArrays(int n, uint[] arrays);
+        public delegate bool glIsVertexArray(uint array);
 
         //  Constants
         public const uint GL_VERTEX_ARRAY_BINDING = 0x85B5;
@@ -4624,13 +4619,13 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBeginTransformFeedbackEXT(uint primitiveMode);
-        private delegate void glEndTransformFeedbackEXT();
-        private delegate void glBindBufferRangeEXT(uint target, uint index, uint buffer, int offset, int size);
-        private delegate void glBindBufferOffsetEXT(uint target, uint index, uint buffer, int offset);
-        private delegate void glBindBufferBaseEXT(uint target, uint index, uint buffer);
-        private delegate void glTransformFeedbackVaryingsEXT(uint program, int count, string[] varyings, uint bufferMode);
-        private delegate void glGetTransformFeedbackVaryingEXT(uint program, uint index, int bufSize, int[] length, int[] size, uint[] type, string name);
+        public delegate void glBeginTransformFeedbackEXT(uint primitiveMode);
+        public delegate void glEndTransformFeedbackEXT();
+        public delegate void glBindBufferRangeEXT(uint target, uint index, uint buffer, int offset, int size);
+        public delegate void glBindBufferOffsetEXT(uint target, uint index, uint buffer, int offset);
+        public delegate void glBindBufferBaseEXT(uint target, uint index, uint buffer);
+        public delegate void glTransformFeedbackVaryingsEXT(uint program, int count, string[] varyings, uint bufferMode);
+        public delegate void glGetTransformFeedbackVaryingEXT(uint program, uint index, int bufSize, int[] length, int[] size, uint[] type, string name);
 
         //  Constants
         public const uint GL_TRANSFORM_FEEDBACK_BUFFER_EXT = 0x8C8E;
@@ -4663,7 +4658,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate string wglGetExtensionsStringARB(IntPtr hdc);
+        public delegate string wglGetExtensionsStringARB(IntPtr hdc);
 
         #endregion
 
@@ -4694,7 +4689,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate IntPtr wglCreateContextAttribsARB(IntPtr hDC, IntPtr hShareContext, int[] attribList);
+        public delegate IntPtr wglCreateContextAttribsARB(IntPtr hDC, IntPtr hShareContext, int[] attribList);
 
         //  Constants
         public const int WGL_CONTEXT_MAJOR_VERSION_ARB = 0x2091;
@@ -4763,10 +4758,10 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glClearBufferData(uint target, uint internalformat, uint format, uint type, IntPtr data);
-        private delegate void glClearBufferSubData(uint target, uint internalformat, IntPtr offset, uint size, uint format, uint type, IntPtr data);
-        private delegate void glClearNamedBufferDataEXT(uint buffer, uint internalformat, uint format, uint type, IntPtr data);
-        private delegate void glClearNamedBufferSubDataEXT(uint buffer, uint internalformat, IntPtr offset, uint size, uint format, uint type, IntPtr data);
+        public delegate void glClearBufferData(uint target, uint internalformat, uint format, uint type, IntPtr data);
+        public delegate void glClearBufferSubData(uint target, uint internalformat, IntPtr offset, uint size, uint format, uint type, IntPtr data);
+        public delegate void glClearNamedBufferDataEXT(uint buffer, uint internalformat, uint format, uint type, IntPtr data);
+        public delegate void glClearNamedBufferSubDataEXT(uint buffer, uint internalformat, IntPtr offset, uint size, uint format, uint type, IntPtr data);
 
         #endregion
 
@@ -4793,8 +4788,8 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glDispatchCompute(uint num_groups_x, uint num_groups_y, uint num_groups_z);
-        private delegate void glDispatchComputeIndirect(IntPtr indirect);
+        public delegate void glDispatchCompute(uint num_groups_x, uint num_groups_y, uint num_groups_z);
+        public delegate void glDispatchComputeIndirect(IntPtr indirect);
 
         // Constants
         public const uint GL_COMPUTE_SHADER = 0x91B9;
@@ -4846,7 +4841,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glCopyImageSubData(uint srcName, uint srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName,
+        public delegate void glCopyImageSubData(uint srcName, uint srcTarget, int srcLevel, int srcX, int srcY, int srcZ, uint dstName,
             uint dstTarget, int dstLevel, int dstX, int dstY, int dstZ, uint srcWidth, uint srcHeight, uint srcDepth);
 
         #endregion
@@ -4907,10 +4902,10 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glFramebufferParameteri(uint target, uint pname, int param);
-        private delegate void glGetFramebufferParameteriv(uint target, uint pname, int[] parameters);
-        private delegate void glNamedFramebufferParameteriEXT(uint framebuffer, uint pname, int param);
-        private delegate void glGetNamedFramebufferParameterivEXT(uint framebuffer, uint pname, int[] parameters);
+        public delegate void glFramebufferParameteri(uint target, uint pname, int param);
+        public delegate void glGetFramebufferParameteriv(uint target, uint pname, int[] parameters);
+        public delegate void glNamedFramebufferParameteriEXT(uint framebuffer, uint pname, int param);
+        public delegate void glGetNamedFramebufferParameterivEXT(uint framebuffer, uint pname, int[] parameters);
 
         #endregion
 
@@ -4943,8 +4938,8 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glGetInternalformativ(uint target, uint internalformat, uint pname, uint bufSize, int[] parameters);
-        private delegate void glGetInternalformati64v(uint target, uint internalformat, uint pname, uint bufSize, Int64[] parameters);
+        public delegate void glGetInternalformativ(uint target, uint internalformat, uint pname, uint bufSize, int[] parameters);
+        public delegate void glGetInternalformati64v(uint target, uint internalformat, uint pname, uint bufSize, Int64[] parameters);
 
         //  Constants
         public const uint GL_RENDERBUFFER = 0x8D41;
@@ -5131,13 +5126,13 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glInvalidateTexSubImage(uint texture, int level, int xoffset,
+        public delegate void glInvalidateTexSubImage(uint texture, int level, int xoffset,
             int yoffset, int zoffset, uint width, uint height, uint depth);
-        private delegate void glInvalidateTexImage(uint texture, int level);
-        private delegate void glInvalidateBufferSubData(uint buffer, IntPtr offset, IntPtr length);
-        private delegate void glInvalidateBufferData(uint buffer);
-        private delegate void glInvalidateFramebuffer(uint target, uint numAttachments, uint[] attachments);
-        private delegate void glInvalidateSubFramebuffer(uint target, uint numAttachments, uint[] attachments,
+        public delegate void glInvalidateTexImage(uint texture, int level);
+        public delegate void glInvalidateBufferSubData(uint buffer, IntPtr offset, IntPtr length);
+        public delegate void glInvalidateBufferData(uint buffer);
+        public delegate void glInvalidateFramebuffer(uint target, uint numAttachments, uint[] attachments);
+        public delegate void glInvalidateSubFramebuffer(uint target, uint numAttachments, uint[] attachments,
             int x, int y, uint width, uint height);
 
         #endregion
@@ -5169,8 +5164,8 @@ namespace CSharpGL
             GetDelegateFor<glMultiDrawElementsIndirect>()(mode, type, indirect, primcount, stride);
         }
 
-        private delegate void glMultiDrawArraysIndirect(uint mode, IntPtr indirect, uint primcount, uint stride);
-        private delegate void glMultiDrawElementsIndirect(uint mode, uint type, IntPtr indirect, uint primcount, uint stride);
+        public delegate void glMultiDrawArraysIndirect(uint mode, IntPtr indirect, uint primcount, uint stride);
+        public delegate void glMultiDrawElementsIndirect(uint mode, uint type, IntPtr indirect, uint primcount, uint stride);
 
         #endregion
 
@@ -5260,12 +5255,12 @@ namespace CSharpGL
             GetDelegateFor<glGetProgramResourceLocationIndex>()(program, programInterface, name);
         }
 
-        private delegate void glGetProgramInterfaceiv(uint program, uint programInterface, uint pname, int[] parameters);
-        private delegate uint glGetProgramResourceIndex(uint program, uint programInterface, string name);
-        private delegate void glGetProgramResourceName(uint program, uint programInterface, uint index, uint bufSize, uint[] length, string[] name);
-        private delegate void glGetProgramResourceiv(uint program, uint programInterface, uint index, uint propCount, uint[] props, uint bufSize, uint[] length, int[] parameters);
-        private delegate int glGetProgramResourceLocation(uint program, uint programInterface, string name);
-        private delegate int glGetProgramResourceLocationIndex(uint program, uint programInterface, string name);
+        public delegate void glGetProgramInterfaceiv(uint program, uint programInterface, uint pname, int[] parameters);
+        public delegate uint glGetProgramResourceIndex(uint program, uint programInterface, string name);
+        public delegate void glGetProgramResourceName(uint program, uint programInterface, uint index, uint bufSize, uint[] length, string[] name);
+        public delegate void glGetProgramResourceiv(uint program, uint programInterface, uint index, uint propCount, uint[] props, uint bufSize, uint[] length, int[] parameters);
+        public delegate int glGetProgramResourceLocation(uint program, uint programInterface, string name);
+        public delegate int glGetProgramResourceLocationIndex(uint program, uint programInterface, string name);
 
         #endregion
 
@@ -5282,7 +5277,7 @@ namespace CSharpGL
             GetDelegateFor<glShaderStorageBlockBinding>()(program, storageBlockIndex, storageBlockBinding);
         }
 
-        private delegate void glShaderStorageBlockBinding(uint program, uint storageBlockIndex, uint storageBlockBinding);
+        public delegate void glShaderStorageBlockBinding(uint program, uint storageBlockIndex, uint storageBlockBinding);
 
         //  Constants
         public const uint GL_SHADER_STORAGE_BUFFER = 0x90D2;
@@ -5340,8 +5335,8 @@ namespace CSharpGL
             GetDelegateFor<glTextureBufferRangeEXT>()(texture, target, internalformat, buffer, offset, size);
         }
 
-        private delegate void glTexBufferRange(uint target, uint internalformat, uint buffer, IntPtr offset, IntPtr size);
-        private delegate void glTextureBufferRangeEXT(uint texture, uint target, uint internalformat, uint buffer, IntPtr offset, IntPtr size);
+        public delegate void glTexBufferRange(uint target, uint internalformat, uint buffer, IntPtr offset, IntPtr size);
+        public delegate void glTextureBufferRangeEXT(uint texture, uint target, uint internalformat, uint buffer, IntPtr offset, IntPtr size);
 
         #endregion
 
@@ -5408,10 +5403,10 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glTexStorage2DMultisample(uint target, uint samples, uint internalformat, uint width, uint height, bool fixedsamplelocations);
-        private delegate void glTexStorage3DMultisample(uint target, uint samples, uint internalformat, uint width, uint height, uint depth, bool fixedsamplelocations);
-        private delegate void glTexStorage2DMultisampleEXT(uint texture, uint target, uint samples, uint internalformat, uint width, uint height, bool fixedsamplelocations);
-        private delegate void glTexStorage3DMultisampleEXT(uint texture, uint target, uint samples, uint internalformat, uint width, uint height, uint depth, bool fixedsamplelocations);
+        public delegate void glTexStorage2DMultisample(uint target, uint samples, uint internalformat, uint width, uint height, bool fixedsamplelocations);
+        public delegate void glTexStorage3DMultisample(uint target, uint samples, uint internalformat, uint width, uint height, uint depth, bool fixedsamplelocations);
+        public delegate void glTexStorage2DMultisampleEXT(uint texture, uint target, uint samples, uint internalformat, uint width, uint height, bool fixedsamplelocations);
+        public delegate void glTexStorage3DMultisampleEXT(uint texture, uint target, uint samples, uint internalformat, uint width, uint height, uint depth, bool fixedsamplelocations);
 
         #endregion
 
@@ -5434,7 +5429,7 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glTextureView(uint texture, uint target, uint origtexture, uint internalformat, uint minlevel, uint numlevels, uint minlayer, uint numlayers);
+        public delegate void glTextureView(uint texture, uint target, uint origtexture, uint internalformat, uint minlevel, uint numlevels, uint minlayer, uint numlayers);
 
         //  Constants
         public const uint GL_TEXTURE_VIEW_MIN_LEVEL = 0x82DB;
@@ -5597,18 +5592,18 @@ namespace CSharpGL
         }
 
         //  Delegates
-        private delegate void glBindVertexBuffer(uint bindingindex, uint buffer, IntPtr offset, uint stride);
-        private delegate void glVertexAttribFormat(uint attribindex, int size, uint type, bool normalized, uint relativeoffset);
-        private delegate void glVertexAttribIFormat(uint attribindex, int size, uint type, uint relativeoffset);
-        private delegate void glVertexAttribLFormat(uint attribindex, int size, uint type, uint relativeoffset);
-        private delegate void glVertexAttribBinding(uint attribindex, uint bindingindex);
-        private delegate void glVertexBindingDivisor(uint bindingindex, uint divisor);
-        private delegate void glVertexArrayBindVertexBufferEXT(uint vaobj, uint bindingindex, uint buffer, IntPtr offset, uint stride);
-        private delegate void glVertexArrayVertexAttribFormatEXT(uint vaobj, uint attribindex, int size, uint type, bool normalized, uint relativeoffset);
-        private delegate void glVertexArrayVertexAttribIFormatEXT(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset);
-        private delegate void glVertexArrayVertexAttribLFormatEXT(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset);
-        private delegate void glVertexArrayVertexAttribBindingEXT(uint vaobj, uint attribindex, uint bindingindex);
-        private delegate void glVertexArrayVertexBindingDivisorEXT(uint vaobj, uint bindingindex, uint divisor);
+        public delegate void glBindVertexBuffer(uint bindingindex, uint buffer, IntPtr offset, uint stride);
+        public delegate void glVertexAttribFormat(uint attribindex, int size, uint type, bool normalized, uint relativeoffset);
+        public delegate void glVertexAttribIFormat(uint attribindex, int size, uint type, uint relativeoffset);
+        public delegate void glVertexAttribLFormat(uint attribindex, int size, uint type, uint relativeoffset);
+        public delegate void glVertexAttribBinding(uint attribindex, uint bindingindex);
+        public delegate void glVertexBindingDivisor(uint bindingindex, uint divisor);
+        public delegate void glVertexArrayBindVertexBufferEXT(uint vaobj, uint bindingindex, uint buffer, IntPtr offset, uint stride);
+        public delegate void glVertexArrayVertexAttribFormatEXT(uint vaobj, uint attribindex, int size, uint type, bool normalized, uint relativeoffset);
+        public delegate void glVertexArrayVertexAttribIFormatEXT(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset);
+        public delegate void glVertexArrayVertexAttribLFormatEXT(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset);
+        public delegate void glVertexArrayVertexAttribBindingEXT(uint vaobj, uint attribindex, uint bindingindex);
+        public delegate void glVertexArrayVertexBindingDivisorEXT(uint vaobj, uint bindingindex, uint divisor);
 
         //  Constants
         public const uint GL_VERTEX_ATTRIB_BINDING = 0x82D4;
@@ -5642,7 +5637,7 @@ namespace CSharpGL
             GetDelegateFor<glDebugMessageCallback>()(callback, userParam);
         }
 
-        private delegate void glDebugMessageCallback(DEBUGPROC callback, IntPtr userParam);
+        public delegate void glDebugMessageCallback(DEBUGPROC callback, IntPtr userParam);
         public delegate void DEBUGPROC(
             uint source, uint type, uint id, uint severity, int length, StringBuilder message, IntPtr userParam);
 
@@ -5681,7 +5676,7 @@ namespace CSharpGL
         {
             GetDelegateFor<glDebugMessageControl>()(source, type, severity, count, ids, enabled);
         }
-        private delegate void glDebugMessageControl(
+        public delegate void glDebugMessageControl(
             uint source, uint type, uint severity, int count, int[] ids, bool enabled);
 
         /// <summary>
@@ -5698,7 +5693,7 @@ namespace CSharpGL
         {
             GetDelegateFor<glDebugMessageInsert>()(source, type, id, severity, length, buf);
         }
-        private delegate void glDebugMessageInsert(
+        public delegate void glDebugMessageInsert(
             uint source, uint type, uint id, uint severity, int length, StringBuilder buf);
 
         #endregion debugging and profiling
@@ -5712,13 +5707,13 @@ namespace CSharpGL
             GetDelegateFor<glGenTransformFeedbacks>()(n, ids);
         }
 
-        private delegate void glGenTransformFeedbacks(int n, uint[] ids);
+        public delegate void glGenTransformFeedbacks(int n, uint[] ids);
 
         public static void BindTransformFeedback(uint target, uint id)
         {
             GetDelegateFor<glBindTransformFeedback>()(target, id);
         }
-        private delegate void glBindTransformFeedback(uint target, uint id);
+        public delegate void glBindTransformFeedback(uint target, uint id);
 
         public const uint GL_TRANSFORM_FEEDBACK = 0x8E22;
         public const uint GL_TRANSFORM_FEEDBACK_BUFFER_PAUSED = 0x8E23;
@@ -5729,25 +5724,25 @@ namespace CSharpGL
         {
             GetDelegateFor<glIsTransformFeedback>()(id);
         }
-        private delegate void glIsTransformFeedback(uint id);
+        public delegate void glIsTransformFeedback(uint id);
 
         public static void DeleteTransformFeedbacks(int n, uint[] ids)
         {
             GetDelegateFor<glDeleteTransformFeedbacks>()(n, ids);
         }
-        private delegate void glDeleteTransformFeedbacks(int n, uint[] ids);
+        public delegate void glDeleteTransformFeedbacks(int n, uint[] ids);
 
         public static void PauseTransformFeedback()
         {
             GetDelegateFor<glPauseTransformFeedback>()();
         }
-        private delegate void glPauseTransformFeedback();
+        public delegate void glPauseTransformFeedback();
 
         public static void ResumeTransformFeedback()
         {
             GetDelegateFor<glResumeTransformFeedback>()();
         }
-        private delegate void glResumeTransformFeedback();
+        public delegate void glResumeTransformFeedback();
 
         public const uint GL_ATOMIC_COUNTER_BUFFER = 0x92C0;
         public const uint GL_UNIFORM_BUFFER = 0x8A11;
@@ -5757,13 +5752,13 @@ namespace CSharpGL
         {
             GetDelegateFor<glUniformBlockBinding>()(program, uniformBlockIndex, uniformBlockBinding);
         }
-        private delegate void glUniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding);
+        public delegate void glUniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding);
 
         public static uint GetUniformBlockIndex(uint program, string uniformBlockName)
         {
             return GetDelegateFor<glGetUniformBlockIndex>()(program, uniformBlockName);
         }
-        private delegate uint glGetUniformBlockIndex(uint program, string uniformBlockName);
+        public delegate uint glGetUniformBlockIndex(uint program, string uniformBlockName);
 
         public const uint GL_UNIFORM_BUFFER_OFFSET_ALIGNMENT = 0x8A34;
 
@@ -5778,7 +5773,7 @@ namespace CSharpGL
         {
             GetDelegateFor<glDrawTransformFeedback>()(mode, id);
         }
-        private delegate void glDrawTransformFeedback(uint mode, uint id);
+        public delegate void glDrawTransformFeedback(uint mode, uint id);
 
         #endregion transform feedbacks
 
@@ -5793,7 +5788,7 @@ namespace CSharpGL
         {
             GetDelegateFor<glPatchParameteri>()(pname, value);
         }
-        private delegate void glPatchParameteri(uint pname, int value);
+        public delegate void glPatchParameteri(uint pname, int value);
 
         /// <summary>
         /// specifies the parameters for patch primitives
@@ -5804,7 +5799,7 @@ namespace CSharpGL
         {
             GetDelegateFor<glPatchParameterfv>()(pname, values);
         }
-        private delegate void glPatchParameterfv(uint pname, float[] values);
+        public delegate void glPatchParameterfv(uint pname, float[] values);
 
         public const uint GL_PATCH_VERTICES = 0x8E72;
         public const uint GL_PATCH_DEFAULT_INNER_LEVEL = 0x8E73;
@@ -5829,25 +5824,25 @@ namespace CSharpGL
             GetDelegateFor<glBindImageTexture>()(unit, texture, level, layered, layer, access, format);
         }
 
-        private delegate void glBindImageTexture(uint unit, uint texture, int level, bool layered, int layer, uint access, uint format);
+        public delegate void glBindImageTexture(uint unit, uint texture, int level, bool layered, int layer, uint access, uint format);
 
         public static void TexStorage1D(uint target, int levels, uint internalformat, int width)
         {
             GetDelegateFor<glTexStorage1D>()(target, levels, internalformat, width);
         }
-        private delegate void glTexStorage1D(uint target, int levels, uint internalformat, int width);
+        public delegate void glTexStorage1D(uint target, int levels, uint internalformat, int width);
 
         public static void TexStorage2D(uint target, int levels, uint internalformat, int width, int height)
         {
             GetDelegateFor<glTexStorage2D>()(target, levels, internalformat, width, height);
         }
-        private delegate void glTexStorage2D(uint target, int levels, uint internalformat, int width, int height);
+        public delegate void glTexStorage2D(uint target, int levels, uint internalformat, int width, int height);
 
         public static void TexStorage3D(uint target, int levels, uint internalformat, int width, int height, int depth)
         {
             GetDelegateFor<glTexStorage3D>()(target, levels, internalformat, width, height, depth);
         }
-        private delegate void glTexStorage3D(uint target, int levels, uint internalformat, int width, int height, int depth);
+        public delegate void glTexStorage3D(uint target, int levels, uint internalformat, int width, int height, int depth);
 
         #endregion texture
 
@@ -5859,7 +5854,7 @@ namespace CSharpGL
         {
             GetDelegateFor<glMemoryBarrier>()(barriers);
         }
-        private delegate void glMemoryBarrier(uint barriers);
+        public delegate void glMemoryBarrier(uint barriers);
 
         public const uint GL_VERTEX_ATTRIB_ARRAY_BARRIER_BIT = 0x00000001;
         public const uint GL_ELEMENT_ARRAY_BARRIER_BIT = 0x00000002;
