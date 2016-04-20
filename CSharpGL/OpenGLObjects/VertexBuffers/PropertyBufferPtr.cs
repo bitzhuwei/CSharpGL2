@@ -60,8 +60,8 @@ namespace CSharpGL
         {
             uint location = shaderProgram.GetAttributeLocation(this.VarNameInVertexShader);
             GL.BindBuffer(BufferTarget.ArrayBuffer, this.BufferID);
-            GL.VertexAttribPointer(location, this.DataSize, this.DataType, false, 0, IntPtr.Zero);
-            GL.EnableVertexAttribArray(location);
+            GL.GetDelegateFor<GL.glVertexAttribPointer>()(location, this.DataSize, this.DataType, false, 0, IntPtr.Zero);
+            GL.GetDelegateFor<GL.glEnableVertexAttribArray>()(location);
         }
 
     }

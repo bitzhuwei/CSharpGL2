@@ -15,13 +15,12 @@ namespace CSharpGL
         public void Create(uint shaderType, string source)
         {
             //  Create the OpenGL shader object.
-            ShaderObject = GL.CreateShader(shaderType);
+            ShaderObject = GL.GetDelegateFor<GL.glCreateShader>()(shaderType);
 
             //  Set the shader source.
-            GL.ShaderSource(ShaderObject, source);
-
+            GL.GetDelegateFor<GL.glShaderSource>()(ShaderObject, 1, new[] { source }, new[] { source.Length });
             //  Compile the shader object.
-            GL.CompileShader(ShaderObject);
+            GL.GetDelegateFor<GL.glCompileShader>()(ShaderObject);
 
             //  Now that we've compiled the shader, check it's compilation status. If it's not compiled properly, we're
             //  going to throw an exception.
@@ -35,14 +34,14 @@ namespace CSharpGL
 
         public void Delete()
         {
-            GL.DeleteShader(ShaderObject);
+            GL.GetDelegateFor<GL.glDeleteShader>()(ShaderObject);
             ShaderObject = 0;
         }
 
         public bool GetCompileStatus()
         {
             int[] parameters = new int[] { 0 };
-            GL.GetShader(ShaderObject, GL.GL_COMPILE_STATUS, parameters);
+            GL.GetDelegateFor<GL.glGetShaderiv>()(ShaderObject, GL.GL_COMPILE_STATUS, parameters);
             return parameters[0] == GL.GL_TRUE;
         }
 
@@ -50,14 +49,12 @@ namespace CSharpGL
         {
             //  Get the info log length.
             int[] infoLength = new int[] { 0 };
-            GL.GetShader(ShaderObject,
-                GL.GL_INFO_LOG_LENGTH, infoLength);
+            GL.GetDelegateFor<GL.glGetShaderiv>()(ShaderObject, GL.GL_INFO_LOG_LENGTH, infoLength);
             int bufSize = infoLength[0];
 
             //  Get the compile info.
             StringBuilder il = new StringBuilder(bufSize);
-            GL.GetShaderInfoLog(ShaderObject, bufSize, IntPtr.Zero, il);
-
+            GL.GetDelegateFor<GL.glGetShaderInfoLog>()(ShaderObject, bufSize, IntPtr.Zero, il);
             string log = il.ToString();
             return log;
         }
