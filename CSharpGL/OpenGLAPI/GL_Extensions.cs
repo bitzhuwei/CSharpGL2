@@ -2438,22 +2438,14 @@ namespace CSharpGL
         /// <param name="programInterface">A token identifying the interface within program​ to query.</param>
         /// <param name="pname">The name of the parameter within programInterface​ to query.</param>
         /// <param name="parameters">The address of a variable to retrieve the value of pname​ for the program interface..</param>
-        public static void GetProgramInterface(uint program, uint programInterface, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetProgramInterfaceiv>()(program, programInterface, pname, parameters);
-        }
-
+        public delegate void glGetProgramInterfaceiv(uint program, uint programInterface, uint pname, int[] parameters);
         /// <summary>
         /// Query the index of a named resource within a program
         /// </summary>
         /// <param name="program">The name of a program object whose resources to query.</param>
         /// <param name="programInterface">A token identifying the interface within program​ containing the resource named name​.</param>
         /// <param name="name">The name of the resource to query the index of.</param>
-        public static void GetProgramResourceIndex(uint program, uint programInterface, string name)
-        {
-            GetDelegateFor<glGetProgramResourceIndex>()(program, programInterface, name);
-        }
-
+        public delegate uint glGetProgramResourceIndex(uint program, uint programInterface, string name);
         /// <summary>
         /// Query the name of an indexed resource within a program
         /// </summary>
@@ -2463,15 +2455,7 @@ namespace CSharpGL
         /// <param name="bufSize">The size of the character array whose address is given by name​.</param>
         /// <param name="length">The address of a variable which will receive the length of the resource name.</param>
         /// <param name="name">The address of a character array into which will be written the name of the resource.</param>
-        public static void GetProgramResourceName(uint program, uint programInterface, uint index, uint bufSize, out uint length, out string name)
-        {
-            var lengthParameter = new uint[1];
-            var nameParameter = new string[1];
-            GetDelegateFor<glGetProgramResourceName>()(program, programInterface, index, bufSize, lengthParameter, nameParameter);
-            length = lengthParameter[0];
-            name = nameParameter[0];
-        }
-
+        public delegate void glGetProgramResourceName(uint program, uint programInterface, uint index, uint bufSize, uint[] length, string[] name);
         /// <summary>
         /// Retrieve values for multiple properties of a single active resource within a program object
         /// </summary>
@@ -2483,43 +2467,20 @@ namespace CSharpGL
         /// <param name="bufSize">The number of GLint values in the params​ array.</param>
         /// <param name="length">If not NULL, then this value will be filled in with the number of actual parameters written to params​.</param>
         /// <param name="parameters">The output array of parameters to write.</param>
-        public static void GetProgramResource(uint program, uint programInterface, uint index, uint propCount, uint[] props, uint bufSize, out uint length, out int[] parameters)
-        {
-            var lengthParameter = new uint[1];
-            var parametersParameter = new int[bufSize];
-
-            GetDelegateFor<glGetProgramResourceiv>()(program, programInterface, index, propCount, props, bufSize, lengthParameter, parametersParameter);
-            length = lengthParameter[0];
-            parameters = parametersParameter;
-        }
-
+        public delegate void glGetProgramResourceiv(uint program, uint programInterface, uint index, uint propCount, uint[] props, uint bufSize, uint[] length, int[] parameters);
         /// <summary>
         /// Query the location of a named resource within a program.
         /// </summary>
         /// <param name="program">The name of a program object whose resources to query.</param>
         /// <param name="programInterface">A token identifying the interface within program​ containing the resource named name​.</param>
         /// <param name="name">The name of the resource to query the location of.</param>
-        public static void GetProgramResourceLocation(uint program, uint programInterface, string name)
-        {
-            GetDelegateFor<glGetProgramResourceLocation>()(program, programInterface, name);
-        }
-
+        public delegate int glGetProgramResourceLocation(uint program, uint programInterface, string name);
         /// <summary>
         /// Query the fragment color index of a named variable within a program.
         /// </summary>
         /// <param name="program">The name of a program object whose resources to query.</param>
         /// <param name="programInterface">A token identifying the interface within program​ containing the resource named name​.</param>
         /// <param name="name">The name of the resource to query the location of.</param>
-        public static void GetProgramResourceLocationIndex(uint program, uint programInterface, string name)
-        {
-            GetDelegateFor<glGetProgramResourceLocationIndex>()(program, programInterface, name);
-        }
-
-        public delegate void glGetProgramInterfaceiv(uint program, uint programInterface, uint pname, int[] parameters);
-        public delegate uint glGetProgramResourceIndex(uint program, uint programInterface, string name);
-        public delegate void glGetProgramResourceName(uint program, uint programInterface, uint index, uint bufSize, uint[] length, string[] name);
-        public delegate void glGetProgramResourceiv(uint program, uint programInterface, uint index, uint propCount, uint[] props, uint bufSize, uint[] length, int[] parameters);
-        public delegate int glGetProgramResourceLocation(uint program, uint programInterface, string name);
         public delegate int glGetProgramResourceLocationIndex(uint program, uint programInterface, string name);
 
         #endregion
