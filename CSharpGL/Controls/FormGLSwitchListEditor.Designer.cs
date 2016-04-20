@@ -80,6 +80,7 @@
             this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "移除(&R)";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // button3
             // 
@@ -128,6 +129,7 @@
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -138,6 +140,7 @@
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // FormGLSwitchListEditor
             // 

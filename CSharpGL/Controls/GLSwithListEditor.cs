@@ -20,7 +20,12 @@ namespace CSharpGL.OpenGLObjects.ModernRendering
         {
             //打开属性编辑器修改数据 
             var frmGLSwitchListEditor = new FormGLSwitchListEditor(value as List<GLSwitch>);
-            frmGLSwitchListEditor.ShowDialog();
+            if (frmGLSwitchListEditor.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                var list = value as List<GLSwitch>;
+                list.Clear();
+                list.AddRange(frmGLSwitchListEditor.SwitchList);
+            }
 
             return value;
         }
