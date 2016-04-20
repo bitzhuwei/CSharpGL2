@@ -55,10 +55,10 @@
     </Compile>
     <Compile Include="Controls\GLCanvasHelper.cs" />
     <Compile Include="Controls\RenderTriggers.cs" />
-    <Compile Include="Controls\FormGLSwitchListEditor.cs">
+    <Compile Include="UITypeEditors\FormGLSwitchListEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\FormGLSwitchListEditor.Designer.cs">
+    <Compile Include="UITypeEditors\FormGLSwitchListEditor.Designer.cs">
       <DependentUpon>FormGLSwitchListEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGLSwtichType.cs">
@@ -221,7 +221,7 @@
     <EmbeddedResource Include="Controls\GLCanvas.resx">
       <DependentUpon>GLCanvas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\FormGLSwitchListEditor.resx">
+    <EmbeddedResource Include="UITypeEditors\FormGLSwitchListEditor.resx">
       <DependentUpon>FormGLSwitchListEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGLSwtichType.resx">
