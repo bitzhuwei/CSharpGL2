@@ -69,6 +69,7 @@
     <Compile Include="OpenGLObjects\ColorCodedPicking\SharedStageInfo.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\GLSwitch.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Property.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.ColorCodedPickingRender.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.RenderRender.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.RendererBase.cs" />

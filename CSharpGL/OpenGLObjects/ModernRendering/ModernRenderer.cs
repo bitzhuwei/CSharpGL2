@@ -24,39 +24,7 @@ namespace CSharpGL
         protected VertexArrayObject vertexArrayObject;
         protected PropertyBufferPtr[] propertyBufferPtrs;
         protected IndexBufferPtr indexBufferPtr;
-
-        public DrawMode DrawMode
-        {
-            get
-            {
-                if (this.indexBufferPtr != null)
-                {
-                    return this.indexBufferPtr.Mode;
-                }
-                else
-                {
-                    return CSharpGL.DrawMode.Points;
-                }
-            }
-            set
-            {
-                if (this.indexBufferPtr != null)
-                {
-                    this.indexBufferPtr.Mode = value;
-                }
-            }
-        }
-        //[Browsable(true)]
-        protected IndexBufferPtr IndexBufferPtr
-        {
-            get { return indexBufferPtr; }
-            set { indexBufferPtr = value; }
-        }
         protected List<GLSwitch> switchList = new List<GLSwitch>();
-        public List<GLSwitch> SwitchList
-        {
-            get { return switchList; }
-        }
 
         /// <summary>
         /// 从模型到buffer的pointer
