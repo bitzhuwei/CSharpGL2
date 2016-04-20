@@ -2201,42 +2201,20 @@ namespace CSharpGL
 
         #region GL_ARB_framebuffer_no_attachments
 
-        //  Methods
-
+        //  Delegates
         /// <summary>
         /// Set a named parameter of a framebuffer.
         /// </summary>
         /// <param name="target">The target of the operation, which must be GL_READ_FRAMEBUFFER​, GL_DRAW_FRAMEBUFFER​ or GL_FRAMEBUFFER​.</param>
         /// <param name="pname">A token indicating the parameter to be modified.</param>
         /// <param name="param">The new value for the parameter named pname​.</param>
-        public static void FramebufferParameter(uint target, uint pname, int param)
-        {
-            GetDelegateFor<glFramebufferParameteri>()(target, pname, param);
-        }
-
+        public delegate void glFramebufferParameteri(uint target, uint pname, int param);
         /// <summary>
         /// Retrieve a named parameter from a framebuffer
         /// </summary>
         /// <param name="target">The target of the operation, which must be GL_READ_FRAMEBUFFER​, GL_DRAW_FRAMEBUFFER​ or GL_FRAMEBUFFER​.</param>
         /// <param name="pname">A token indicating the parameter to be retrieved.</param>
         /// <param name="parameters">The address of a variable to receive the value of the parameter named pname​.</param>
-        public static void GetFramebufferParameter(uint target, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetFramebufferParameteriv>()(target, pname, parameters);
-        }
-
-        public static void NamedFramebufferParameterEXT(uint framebuffer, uint pname, int param)
-        {
-            GetDelegateFor<glNamedFramebufferParameteriEXT>()(framebuffer, pname, param);
-        }
-
-        public static void GetNamedFramebufferParameterEXT(uint framebuffer, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetNamedFramebufferParameterivEXT>()(framebuffer, pname, parameters);
-        }
-
-        //  Delegates
-        public delegate void glFramebufferParameteri(uint target, uint pname, int param);
         public delegate void glGetFramebufferParameteriv(uint target, uint pname, int[] parameters);
         public delegate void glNamedFramebufferParameteriEXT(uint framebuffer, uint pname, int param);
         public delegate void glGetNamedFramebufferParameterivEXT(uint framebuffer, uint pname, int[] parameters);
