@@ -80,7 +80,10 @@
     <Compile Include="OpenGLObjects\ColorCodedPicking\DrawModeHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\PrimitiveModesHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\SharedStageInfo.cs" />
-    <Compile Include="OpenGLObjects\ModernRendering\GLSwitch.cs" />
+    <Compile Include="OpenGLObjects\GLSwitches\PointSpriteSwitch.cs" />
+    <Compile Include="OpenGLObjects\GLSwitches\PolygonModeSwitch.cs" />
+    <Compile Include="OpenGLObjects\GLSwitches\PrimitiveRestartSwitch.cs" />
+    <Compile Include="OpenGLObjects\GLSwitches\GLSwitch.cs" />
     <Compile Include="Controls\GLSwithListEditor.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Property.cs" />

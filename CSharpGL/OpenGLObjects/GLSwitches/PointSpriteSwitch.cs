@@ -5,66 +5,6 @@ using System.Text;
 
 namespace CSharpGL
 {
-    public abstract class GLSwitch
-    {
-        public GLSwitch() { }
-
-        public abstract void On();
-
-        public abstract void Off();
-    }
-
-    public class PrimitiveRestartSwitch : GLSwitch
-    {
-
-        public PrimitiveRestartSwitch() : this(uint.MaxValue) { }
-
-        public PrimitiveRestartSwitch(uint restartIndex)
-        {
-            this.RestartIndex = restartIndex;
-        }
-
-        public override void On()
-        {
-            GL.Enable(GL.GL_PRIMITIVE_RESTART);
-            GL.PrimitiveRestartIndex(RestartIndex);
-        }
-
-        public override void Off()
-        {
-            GL.Disable(GL.GL_PRIMITIVE_RESTART);
-        }
-
-        public uint RestartIndex { get; set; }
-    }
-
-    public class PolygonModeSwitch : GLSwitch
-    {
-
-        int[] originalPolygonMode = new int[1];
-
-        public PolygonModeSwitch() : this(PolygonModes.Filled) { }
-
-        public PolygonModeSwitch(PolygonModes mode)
-        {
-            this.Mode = mode;
-        }
-
-        public override void On()
-        {
-            GL.GetInteger(GetTarget.PolygonMode, originalPolygonMode);
-
-            GL.PolygonMode(PolygonModeFaces.FrontAndBack, Mode);
-        }
-
-        public override void Off()
-        {
-            GL.PolygonMode(PolygonModeFaces.FrontAndBack, (PolygonModes)(originalPolygonMode[0]));
-        }
-
-        public PolygonModes Mode { get; set; }
-    }
-
     public class PointSpriteSwitch : GLSwitch
     {
         int m_ParticleSize = 30;
