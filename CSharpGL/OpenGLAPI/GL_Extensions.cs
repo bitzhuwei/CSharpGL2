@@ -1323,16 +1323,6 @@ namespace CSharpGL
 
         #region GL_EXT_multi_draw_arrays
 
-        //  Methods
-        public static void MultiDrawArraysEXT(uint mode, int[] first, int[] count, int primcount)
-        {
-            GetDelegateFor<glMultiDrawArraysEXT>()(mode, first, count, primcount);
-        }
-        public static void MultiDrawElementsEXT(uint mode, int[] count, uint type, IntPtr indices, int primcount)
-        {
-            GetDelegateFor<glMultiDrawElementsEXT>()(mode, count, type, indices, primcount);
-        }
-
         //  Delegates
         public delegate void glMultiDrawArraysEXT(uint mode, int[] first, int[] count, int primcount);
         public delegate void glMultiDrawElementsEXT(uint mode, int[] count, uint type, IntPtr indices, int primcount);
