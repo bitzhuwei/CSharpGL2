@@ -2223,34 +2223,24 @@ namespace CSharpGL
 
         #region GL_ARB_internalformat_query2
 
-        /// <summary>
-        /// Retrieve information about implementation-dependent support for internal formats
-        /// </summary>
-        /// <param name="target">Indicates the usage of the internal format. target​ must be GL_TEXTURE_1D​, GL_TEXTURE_1D_ARRAY​, GL_TEXTURE_2D​, GL_TEXTURE_2D_ARRAY​, GL_TEXTURE_3D​, GL_TEXTURE_CUBE_MAP​, GL_TEXTURE_CUBE_MAP_ARRAY​, GL_TEXTURE_RECTANGLE​, GL_TEXTURE_BUFFER​, GL_RENDERBUFFER​, GL_TEXTURE_2D_MULTISAMPLE​ or GL_TEXTURE_2D_MULTISAMPLE_ARRAY​.</param>
-        /// <param name="internalformat">Specifies the internal format about which to retrieve information.</param>
-        /// <param name="pname">Specifies the type of information to query.</param>
-        /// <param name="bufSize">Specifies the maximum number of basic machine units that may be written to params​ by the function.</param>
-        /// <param name="parameters">Specifies the address of a variable into which to write the retrieved information.</param>
-        public static void GetInternalformat(uint target, uint internalformat, uint pname, uint bufSize, int[] parameters)
-        {
-            GetDelegateFor<glGetInternalformativ>()(target, internalformat, pname, bufSize, parameters);
-        }
-
-        /// <summary>
-        /// Retrieve information about implementation-dependent support for internal formats
-        /// </summary>
-        /// <param name="target">Indicates the usage of the internal format. target​ must be GL_TEXTURE_1D​, GL_TEXTURE_1D_ARRAY​, GL_TEXTURE_2D​, GL_TEXTURE_2D_ARRAY​, GL_TEXTURE_3D​, GL_TEXTURE_CUBE_MAP​, GL_TEXTURE_CUBE_MAP_ARRAY​, GL_TEXTURE_RECTANGLE​, GL_TEXTURE_BUFFER​, GL_RENDERBUFFER​, GL_TEXTURE_2D_MULTISAMPLE​ or GL_TEXTURE_2D_MULTISAMPLE_ARRAY​.</param>
-        /// <param name="internalformat">Specifies the internal format about which to retrieve information.</param>
-        /// <param name="pname">Specifies the type of information to query.</param>
-        /// <param name="bufSize">Specifies the maximum number of basic machine units that may be written to params​ by the function.</param>
-        /// <param name="parameters">Specifies the address of a variable into which to write the retrieved information.</param>
-        public static void GetInternalformat(uint target, uint internalformat, uint pname, uint bufSize, Int64[] parameters)
-        {
-            GetDelegateFor<glGetInternalformati64v>()(target, internalformat, pname, bufSize, parameters);
-        }
-
         //  Delegates
+        /// <summary>
+        /// Retrieve information about implementation-dependent support for internal formats
+        /// </summary>
+        /// <param name="target">Indicates the usage of the internal format. target​ must be GL_TEXTURE_1D​, GL_TEXTURE_1D_ARRAY​, GL_TEXTURE_2D​, GL_TEXTURE_2D_ARRAY​, GL_TEXTURE_3D​, GL_TEXTURE_CUBE_MAP​, GL_TEXTURE_CUBE_MAP_ARRAY​, GL_TEXTURE_RECTANGLE​, GL_TEXTURE_BUFFER​, GL_RENDERBUFFER​, GL_TEXTURE_2D_MULTISAMPLE​ or GL_TEXTURE_2D_MULTISAMPLE_ARRAY​.</param>
+        /// <param name="internalformat">Specifies the internal format about which to retrieve information.</param>
+        /// <param name="pname">Specifies the type of information to query.</param>
+        /// <param name="bufSize">Specifies the maximum number of basic machine units that may be written to params​ by the function.</param>
+        /// <param name="parameters">Specifies the address of a variable into which to write the retrieved information.</param>
         public delegate void glGetInternalformativ(uint target, uint internalformat, uint pname, uint bufSize, int[] parameters);
+        /// <summary>
+        /// Retrieve information about implementation-dependent support for internal formats
+        /// </summary>
+        /// <param name="target">Indicates the usage of the internal format. target​ must be GL_TEXTURE_1D​, GL_TEXTURE_1D_ARRAY​, GL_TEXTURE_2D​, GL_TEXTURE_2D_ARRAY​, GL_TEXTURE_3D​, GL_TEXTURE_CUBE_MAP​, GL_TEXTURE_CUBE_MAP_ARRAY​, GL_TEXTURE_RECTANGLE​, GL_TEXTURE_BUFFER​, GL_RENDERBUFFER​, GL_TEXTURE_2D_MULTISAMPLE​ or GL_TEXTURE_2D_MULTISAMPLE_ARRAY​.</param>
+        /// <param name="internalformat">Specifies the internal format about which to retrieve information.</param>
+        /// <param name="pname">Specifies the type of information to query.</param>
+        /// <param name="bufSize">Specifies the maximum number of basic machine units that may be written to params​ by the function.</param>
+        /// <param name="parameters">Specifies the address of a variable into which to write the retrieved information.</param>
         public delegate void glGetInternalformati64v(uint target, uint internalformat, uint pname, uint bufSize, Int64[] parameters);
 
         //  Constants
