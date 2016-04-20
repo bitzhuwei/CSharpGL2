@@ -2013,36 +2013,6 @@ namespace CSharpGL
 
         #region GGL_EXT_transform_feedback
 
-        //  Methods
-        public static void BeginTransformFeedbackEXT(uint primitiveMode)
-        {
-            GetDelegateFor<glBeginTransformFeedbackEXT>()(primitiveMode);
-        }
-        public static void EndTransformFeedbackEXT()
-        {
-            GetDelegateFor<glEndTransformFeedbackEXT>()();
-        }
-        public static void BindBufferRangeEXT(uint target, uint index, uint buffer, int offset, int size)
-        {
-            GetDelegateFor<glBindBufferRangeEXT>()(target, index, buffer, offset, size);
-        }
-        public static void BindBufferOffsetEXT(uint target, uint index, uint buffer, int offset)
-        {
-            GetDelegateFor<glBindBufferOffsetEXT>()(target, index, buffer, offset);
-        }
-        public static void BindBufferBaseEXT(uint target, uint index, uint buffer)
-        {
-            GetDelegateFor<glBindBufferBaseEXT>()(target, index, buffer);
-        }
-        public static void TransformFeedbackVaryingsEXT(uint program, int count, string[] varyings, uint bufferMode)
-        {
-            GetDelegateFor<glTransformFeedbackVaryingsEXT>()(program, count, varyings, bufferMode);
-        }
-        public static void GetTransformFeedbackVaryingEXT(uint program, uint index, int bufSize, int[] length, int[] size, uint[] type, string name)
-        {
-            GetDelegateFor<glGetTransformFeedbackVaryingEXT>()(program, index, bufSize, length, size, type, name);
-        }
-
         //  Delegates
         public delegate void glBeginTransformFeedbackEXT(uint primitiveMode);
         public delegate void glEndTransformFeedbackEXT();
