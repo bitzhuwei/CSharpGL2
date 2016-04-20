@@ -1972,12 +1972,6 @@ namespace CSharpGL
 
         #region GL_EXT_framebuffer_multisample
 
-        //  Methods
-        public static void RenderbufferStorageMultisampleEXT(uint target, int samples, uint internalformat, int width, int height)
-        {
-            GetDelegateFor<glRenderbufferStorageMultisampleEXT>()(target, samples, internalformat, width, height);
-        }
-
         //  Delegates
         public delegate void glRenderbufferStorageMultisampleEXT(uint target, int samples, uint internalformat, int width, int height);
 
