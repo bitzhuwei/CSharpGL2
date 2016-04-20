@@ -1,4 +1,5 @@
-﻿using CSharpGL.Windows.Demos.ModelAdapters;
+﻿using CSharpGL.ModelAdapters;
+using CSharpGL.Models;
 using GLM;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSharpGL.Windows.Demos
+namespace CSharpGL.Demos
 {
     public partial class Form01ModernRenderer : Form
     {
@@ -85,7 +86,7 @@ namespace CSharpGL.Windows.Demos
                 this.rotator = rotator;
             }
             {
-                IBufferable bufferable = new BigDipperAdapter(new Models.BigDipper());
+                IBufferable bufferable = new BigDipperAdapter(new BigDipper());
                 ShaderCode[] shaders = new ShaderCode[2];
                 shaders[0] = new ShaderCode(File.ReadAllText(@"Shaders\BigDipper.vert"), ShaderType.VertexShader);
                 shaders[1] = new ShaderCode(File.ReadAllText(@"Shaders\BigDipper.frag"), ShaderType.FragmentShader);

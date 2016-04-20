@@ -110,10 +110,6 @@
       <Project>{115ab8f1-a732-4fad-8f16-f8c9e4da02a1}</Project>
       <Name>CSharpGL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Windows\CSharpGL.Windows\CSharpGL.Windows.csproj">
-      <Project>{989591e2-3943-442c-a12e-40c3c2b3231f}</Project>
-      <Name>CSharpGL.Windows</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

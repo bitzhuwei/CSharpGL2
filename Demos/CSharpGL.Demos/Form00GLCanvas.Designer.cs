@@ -1,4 +1,5 @@
-﻿namespace CSharpGL.Windows.Demos
+﻿using CSharpGL.Windows;
+namespace CSharpGL.Demos
 {
     partial class Form00GLCanvas
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Windows.Models
+namespace CSharpGL.Models
 {
     /// <summary>
     /// Position, Color, Index

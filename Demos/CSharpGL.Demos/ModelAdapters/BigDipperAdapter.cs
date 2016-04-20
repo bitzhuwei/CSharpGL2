@@ -1,4 +1,4 @@
-﻿using CSharpGL.Windows.Models;
+﻿using CSharpGL.Models;
 using GLM;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.Windows.Demos.ModelAdapters
+namespace CSharpGL.ModelAdapters
 {
     class BigDipperAdapter : IBufferable
     {

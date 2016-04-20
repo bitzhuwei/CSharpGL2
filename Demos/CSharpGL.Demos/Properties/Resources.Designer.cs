@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSharpGL.Windows.Demos.Properties
+namespace CSharpGL.Demos.Properties
 {
 
 

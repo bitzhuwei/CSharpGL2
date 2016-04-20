@@ -5,15 +5,11 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpGL", "CSharpGL\CSharpGL.csproj", "{115AB8F1-A732-4FAD-8F16-F8C9E4DA02A1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{7391459C-0A8F-4B09-8D0E-1F3002CA6036}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpGL.Windows", "Windows\CSharpGL.Windows\CSharpGL.Windows.csproj", "{989591E2-3943-442C-A12E-40C3C2B3231F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{E800BE67-00FE-4C05-9F0F-640DC7134E7D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{772765C9-9DD4-487B-8FEB-5EAACA9F955B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpGL.Windows.Demos", "Demos\CSharpGL.Windows.Demos\CSharpGL.Windows.Demos.csproj", "{0DACF739-1C40-4C52-86F4-159B6B8B6968}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpGL.Demos", "Demos\CSharpGL.Demos\CSharpGL.Demos.csproj", "{0DACF739-1C40-4C52-86F4-159B6B8B6968}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +21,6 @@ Global
 		{115AB8F1-A732-4FAD-8F16-F8C9E4DA02A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{115AB8F1-A732-4FAD-8F16-F8C9E4DA02A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{115AB8F1-A732-4FAD-8F16-F8C9E4DA02A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{989591E2-3943-442C-A12E-40C3C2B3231F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{989591E2-3943-442C-A12E-40C3C2B3231F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{989591E2-3943-442C-A12E-40C3C2B3231F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{989591E2-3943-442C-A12E-40C3C2B3231F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0DACF739-1C40-4C52-86F4-159B6B8B6968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0DACF739-1C40-4C52-86F4-159B6B8B6968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DACF739-1C40-4C52-86F4-159B6B8B6968}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,7 +30,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{989591E2-3943-442C-A12E-40C3C2B3231F} = {7391459C-0A8F-4B09-8D0E-1F3002CA6036}
 		{0DACF739-1C40-4C52-86F4-159B6B8B6968} = {772765C9-9DD4-487B-8FEB-5EAACA9F955B}
 	EndGlobalSection
 EndGlobal
