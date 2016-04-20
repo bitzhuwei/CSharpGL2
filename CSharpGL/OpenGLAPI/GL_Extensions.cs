@@ -2598,6 +2598,7 @@ namespace CSharpGL
 
         #region GL_ARB_texture_view
 
+        //  Delegates
         /// <summary>
         /// Initialize a texture as a data alias of another texture's data store.
         /// </summary>
@@ -2609,12 +2610,6 @@ namespace CSharpGL
         /// <param name="numlevels">Specifies the number of levels of detail to include in the view.</param>
         /// <param name="minlayer">Specifies the index of the first layer to include in the view.</param>
         /// <param name="numlayers">Specifies the number of layers to include in the view.</param>
-        public static void TextureView(uint texture, uint target, uint origtexture, uint internalformat, uint minlevel, uint numlevels, uint minlayer, uint numlayers)
-        {
-            GetDelegateFor<glTextureView>()(texture, target, origtexture, internalformat, minlevel, numlevels, minlayer, numlayers);
-        }
-
-        //  Delegates
         public delegate void glTextureView(uint texture, uint target, uint origtexture, uint internalformat, uint minlevel, uint numlevels, uint minlayer, uint numlayers);
 
         //  Constants
@@ -2626,157 +2621,7 @@ namespace CSharpGL
         #endregion
 
         #region GL_ARB_vertex_attrib_binding
-
-        /// <summary>
-        /// Bind a buffer to a vertex buffer bind point.
-        /// </summary>
-        /// <param name="bindingindex">The index of the vertex buffer binding point to which to bind the buffer.</param>
-        /// <param name="buffer">The name of an existing buffer to bind to the vertex buffer binding point.</param>
-        /// <param name="offset">The offset of the first element of the buffer.</param>
-        /// <param name="stride">The distance between elements within the buffer.</param>
-        public static void BindVertexBuffer(uint bindingindex, uint buffer, IntPtr offset, uint stride)
-        {
-            GetDelegateFor<glBindVertexBuffer>()(bindingindex, buffer, offset, stride);
-        }
-
-        /// <summary>
-        /// Specify the organization of vertex arrays.
-        /// </summary>
-        /// <param name="attribindex">The generic vertex attribute array being described.</param>
-        /// <param name="size">The number of values per vertex that are stored in the array.</param>
-        /// <param name="type">The type of the data stored in the array.</param>
-        /// <param name="normalized">GL_TRUE​ if the parameter represents a normalized integer (type​ must be an integer type). GL_FALSE​ otherwise.</param>
-        /// <param name="relativeoffset">The offset, measured in basic machine units of the first element relative to the start of the vertex buffer binding this attribute fetches from.</param>
-        public static void VertexAttribFormat(uint attribindex, int size, uint type, bool normalized, uint relativeoffset)
-        {
-            GetDelegateFor<glVertexAttribFormat>()(attribindex, size, type, normalized, relativeoffset);
-        }
-
-        /// <summary>
-        /// Specify the organization of vertex arrays.
-        /// </summary>
-        /// <param name="attribindex">The generic vertex attribute array being described.</param>
-        /// <param name="size">The number of values per vertex that are stored in the array.</param>
-        /// <param name="type">The type of the data stored in the array.</param>
-        /// <param name="relativeoffset">The offset, measured in basic machine units of the first element relative to the start of the vertex buffer binding this attribute fetches from.</param>
-        public static void VertexAttribIFormat(uint attribindex, int size, uint type, uint relativeoffset)
-        {
-            GetDelegateFor<glVertexAttribIFormat>()(attribindex, size, type, relativeoffset);
-        }
-
-        /// <summary>
-        /// Specify the organization of vertex arrays.
-        /// </summary>
-        /// <param name="attribindex">The generic vertex attribute array being described.</param>
-        /// <param name="size">The number of values per vertex that are stored in the array.</param>
-        /// <param name="type">The type of the data stored in the array.</param>
-        /// <param name="relativeoffset">The offset, measured in basic machine units of the first element relative to the start of the vertex buffer binding this attribute fetches from.</param>
-        public static void VertexAttribLFormat(uint attribindex, int size, uint type, uint relativeoffset)
-        {
-            GetDelegateFor<glVertexAttribLFormat>()(attribindex, size, type, relativeoffset);
-        }
-
-        /// <summary>
-        /// Associate a vertex attribute and a vertex buffer binding.
-        /// </summary>
-        /// <param name="attribindex">The index of the attribute to associate with a vertex buffer binding.</param>
-        /// <param name="bindingindex">The index of the vertex buffer binding with which to associate the generic vertex attribute.</param>
-        public static void VertexAttribBinding(uint attribindex, uint bindingindex)
-        {
-            GetDelegateFor<glVertexAttribBinding>()(attribindex, bindingindex);
-        }
-
-        /// <summary>
-        /// Modify the rate at which generic vertex attributes advance.
-        /// </summary>
-        /// <param name="bindingindex">The index of the binding whose divisor to modify.</param>
-        /// <param name="divisor">The new value for the instance step rate to apply.</param>
-        public static void VertexBindingDivisor(uint bindingindex, uint divisor)
-        {
-            GetDelegateFor<glVertexBindingDivisor>()(bindingindex, divisor);
-        }
-
-        /// <summary>
-        /// Bind a buffer to a vertex buffer bind point.
-        /// Available only when When EXT_direct_state_access is present.
-        /// </summary>
-        /// <param name="vaobj">The vertex array object.</param>
-        /// <param name="bindingindex">The index of the vertex buffer binding point to which to bind the buffer.</param>
-        /// <param name="buffer">The name of an existing buffer to bind to the vertex buffer binding point.</param>
-        /// <param name="offset">The offset of the first element of the buffer.</param>
-        /// <param name="stride">The distance between elements within the buffer.</param>
-        public static void VertexArrayBindVertexBufferEXT(uint vaobj, uint bindingindex, uint buffer, IntPtr offset, uint stride)
-        {
-            GetDelegateFor<glVertexArrayBindVertexBufferEXT>()(vaobj, bindingindex, buffer, offset, stride);
-        }
-
-        /// <summary>
-        /// Specify the organization of vertex arrays.
-        /// Available only when When EXT_direct_state_access is present.
-        /// </summary>
-        /// <param name="vaobj">The vertex array object.</param>
-        /// <param name="attribindex">The generic vertex attribute array being described.</param>
-        /// <param name="size">The number of values per vertex that are stored in the array.</param>
-        /// <param name="type">The type of the data stored in the array.</param>
-        /// <param name="normalized">GL_TRUE​ if the parameter represents a normalized integer (type​ must be an integer type). GL_FALSE​ otherwise.</param>
-        /// <param name="relativeoffset">The offset, measured in basic machine units of the first element relative to the start of the vertex buffer binding this attribute fetches from.</param>
-        public static void VertexArrayVertexAttribFormatEXT(uint vaobj, uint attribindex, int size, uint type, bool normalized, uint relativeoffset)
-        {
-            GetDelegateFor<glVertexArrayVertexAttribFormatEXT>()(vaobj, attribindex, size, type, normalized, relativeoffset);
-        }
-
-        /// <summary>
-        /// Specify the organization of vertex arrays.
-        /// Available only when When EXT_direct_state_access is present.
-        /// </summary>
-        /// <param name="vaobj">The vertex array object.</param>
-        /// <param name="attribindex">The generic vertex attribute array being described.</param>
-        /// <param name="size">The number of values per vertex that are stored in the array.</param>
-        /// <param name="type">The type of the data stored in the array.</param>
-        /// <param name="relativeoffset">The offset, measured in basic machine units of the first element relative to the start of the vertex buffer binding this attribute fetches from.</param>
-        public static void VertexArrayVertexAttribIFormatEXT(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset)
-        {
-            GetDelegateFor<glVertexArrayVertexAttribIFormatEXT>()(vaobj, attribindex, size, type, relativeoffset);
-        }
-
-        /// <summary>
-        /// Specify the organization of vertex arrays.
-        /// Available only when When EXT_direct_state_access is present.
-        /// </summary>
-        /// <param name="vaobj">The vertex array object.</param>
-        /// <param name="attribindex">The generic vertex attribute array being described.</param>
-        /// <param name="size">The number of values per vertex that are stored in the array.</param>
-        /// <param name="type">The type of the data stored in the array.</param>
-        /// <param name="relativeoffset">The offset, measured in basic machine units of the first element relative to the start of the vertex buffer binding this attribute fetches from.</param>
-        public static void VertexArrayVertexAttribLFormatEXT(uint vaobj, uint attribindex, int size, uint type, uint relativeoffset)
-        {
-            GetDelegateFor<glVertexArrayVertexAttribLFormatEXT>()(vaobj, attribindex, size, type, relativeoffset);
-        }
-
-        /// <summary>
-        /// Associate a vertex attribute and a vertex buffer binding.
-        /// Available only when When EXT_direct_state_access is present.
-        /// </summary>
-        /// <param name="vaobj">The vertex array object.</param>
-        /// <param name="attribindex">The index of the attribute to associate with a vertex buffer binding.</param>
-        /// <param name="bindingindex">The index of the vertex buffer binding with which to associate the generic vertex attribute.</param>
-        public static void VertexArrayVertexAttribBindingEXT(uint vaobj, uint attribindex, uint bindingindex)
-        {
-            GetDelegateFor<glVertexArrayVertexAttribBindingEXT>()(vaobj, attribindex, bindingindex);
-        }
-
-        /// <summary>
-        /// Modify the rate at which generic vertex attributes advance.
-        /// Available only when When EXT_direct_state_access is present.
-        /// </summary>
-        /// <param name="vaobj">The vertex array object.</param>
-        /// <param name="bindingindex">The index of the binding whose divisor to modify.</param>
-        /// <param name="divisor">The new value for the instance step rate to apply.</param>
-        public static void VertexArrayVertexBindingDivisorEXT(uint vaobj, uint bindingindex, uint divisor)
-        {
-            GetDelegateFor<glVertexArrayVertexBindingDivisorEXT>()(vaobj, bindingindex, divisor);
-        }
-
+		
         //  Delegates
         public delegate void glBindVertexBuffer(uint bindingindex, uint buffer, IntPtr offset, uint stride);
         public delegate void glVertexAttribFormat(uint attribindex, int size, uint type, bool normalized, uint relativeoffset);
