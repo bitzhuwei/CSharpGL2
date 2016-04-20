@@ -53,17 +53,6 @@ namespace CSharpGL
             return string.Format("{0}: {1}", this.VarName, this.GetValue());
         }
 
-        //public override bool Equals(object obj)
-        //{
-        //    UniformVariableBase uniformVar = obj as UniformVariableBase;
-        //    if (uniformVar == null) { return false; }
-        //    return this.VarName == uniformVar.VarName;
-        //}
-
-        //public override int GetHashCode()
-        //{
-        //    return this.VarName.GetHashCode();
-        //}
     }
 
 
