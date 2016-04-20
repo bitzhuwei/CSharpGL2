@@ -18,7 +18,7 @@ namespace CSharpGL
         public override void On()
         {
             GL.Enable(GL.GL_PRIMITIVE_RESTART);
-            GL.PrimitiveRestartIndex(RestartIndex);
+            GL.GetDelegateFor<GL.glPrimitiveRestartIndex>()(RestartIndex);
         }
 
         public override void Off()

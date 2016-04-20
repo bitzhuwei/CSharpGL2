@@ -740,24 +740,6 @@ namespace CSharpGL
 
         #region OpenGL 3.1
 
-        //  Methods
-        public static void DrawArraysInstanced(uint mode, int first, int count, int primcount)
-        {
-            GetDelegateFor<glDrawArraysInstanced>()(mode, first, count, primcount);
-        }
-        public static void DrawElementsInstanced(uint mode, int count, uint type, IntPtr indices, int primcount)
-        {
-            GetDelegateFor<glDrawElementsInstanced>()(mode, count, type, indices, primcount);
-        }
-        public static void TexBuffer(uint target, uint internalformat, uint buffer)
-        {
-            GetDelegateFor<glTexBuffer>()(target, internalformat, buffer);
-        }
-        public static void PrimitiveRestartIndex(uint index)
-        {
-            GetDelegateFor<glPrimitiveRestartIndex>()(index);
-        }
-
         //  Delegates
         public delegate void glDrawArraysInstanced(uint mode, int first, int count, int primcount);
         public delegate void glDrawElementsInstanced(uint mode, int count, uint type, IntPtr indices, int primcount);
