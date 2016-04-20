@@ -1491,40 +1491,6 @@ namespace CSharpGL
 
         #region GL_ARB_occlusion_query
 
-        //  Methods
-        public static void GenQueriesARB(int n, uint[] ids)
-        {
-            GetDelegateFor<glGenQueriesARB>()(n, ids);
-        }
-        public static void DeleteQueriesARB(int n, uint[] ids)
-        {
-            GetDelegateFor<glDeleteQueriesARB>()(n, ids);
-        }
-        public static bool IsQueryARB(uint id)
-        {
-            return GetDelegateFor<glIsQueryARB>()(id);
-        }
-        public static void BeginQueryARB(uint target, uint id)
-        {
-            GetDelegateFor<glBeginQueryARB>()(target, id);
-        }
-        public static void EndQueryARB(uint target)
-        {
-            GetDelegateFor<glEndQueryARB>()(target);
-        }
-        public static void GetQueryARB(uint target, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetQueryivARB>()(target, pname, parameters);
-        }
-        public static void GetQueryObjectARB(uint id, uint pname, int[] parameters)
-        {
-            GetDelegateFor<glGetQueryObjectivARB>()(id, pname, parameters);
-        }
-        public static void GetQueryObjectARB(uint id, uint pname, uint[] parameters)
-        {
-            GetDelegateFor<glGetQueryObjectuivARB>()(id, pname, parameters);
-        }
-
         //  Delegates
         public delegate void glGenQueriesARB(int n, uint[] ids);
         public delegate void glDeleteQueriesARB(int n, uint[] ids);
