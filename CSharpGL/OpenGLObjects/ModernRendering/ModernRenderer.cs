@@ -9,37 +9,34 @@ namespace CSharpGL
 {
     public partial class ModernRenderer : RendererBase
     {
-        //protected override void DoRender(RenderEventArgs e)
-        //{
-        //    ShaderProgram program = this.shaderProgram;
-        //    // 绑定shader
-        //    program.Bind();
+        // Color Coded Picking
+        protected VertexArrayObject vertexArrayObject4Picking;
+        protected string positionNameInIBufferable;
+        protected PropertyBufferPtr positionBufferPtr;
+        protected UniformMat4 pickingMVP = new UniformMat4("MVP");
+        protected ShaderProgram pickingShaderProgram;
 
-        //    var updatedUniforms = (from item in this.uniformVariables where item.Updated select item).ToArray();
-        //    foreach (var item in updatedUniforms) { item.SetUniform(program); }
+        // normal rendering
+        // 算法
+        protected ShaderProgram shaderProgram;
+        // 数据结构
+        protected VertexArrayObject vertexArrayObject;
+        protected PropertyBufferPtr[] propertyBufferPtrs;
+        protected IndexBufferPtr indexBufferPtr;
+        protected List<GLSwitch> switchList = new List<GLSwitch>();
+        public IList<GLSwitch> SwitchList
+        {
+            get { return switchList; }
+        }
 
-        //    foreach (var item in switchList) { item.On(); }
-
-        //    if (this.vertexArrayObject == null)
-        //    {
-        //        var vertexArrayObject = new VertexArrayObject(
-        //            this.indexBufferPtr, this.propertyBufferPtrs);
-        //        vertexArrayObject.Create(e, program);
-
-        //        this.vertexArrayObject = vertexArrayObject;
-        //    }
-        //    //else
-        //    {
-        //        this.vertexArrayObject.Render(e, program);
-        //    }
-
-        //    foreach (var item in switchList) { item.Off(); }
-
-        //    foreach (var item in updatedUniforms) { item.ResetUniform(program); item.Updated = false; }
-
-        //    // 解绑shader
-        //    program.Unbind();
-        //}
-
+        /// <summary>
+        /// 从模型到buffer的pointer
+        /// </summary>
+        protected IBufferable bufferable;
+        protected ShaderCode[] shaderCode;
+        /// <summary>
+        /// vertex shader中的in变量与<see cref="propertyBufferPointers"/>中的元素名字的对应关系。
+        /// </summary>
+        protected PropertyNameMap propertyNameMap;
     }
 }

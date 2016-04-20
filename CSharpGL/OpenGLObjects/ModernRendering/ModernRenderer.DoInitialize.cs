@@ -9,34 +9,7 @@ namespace CSharpGL
 {
     public partial class ModernRenderer : RendererBase
     {
-        // 算法
-        protected ShaderProgram shaderProgram;
-
-        // 数据结构
-        protected VertexArrayObject vertexArrayObject;
-        protected PropertyBufferPtr[] propertyBufferPtrs;
-        protected IndexBufferPtr indexBufferPtr;
-        private List<GLSwitch> switchList = new List<GLSwitch>();
-
-        public IList<GLSwitch> SwitchList
-        {
-            get { return switchList; }
-        }
-
-        /// <summary>
-        /// 从模型到buffer的pointer
-        /// </summary>
-        private IBufferable bufferable;
-        private ShaderCode[] shaderCode;
-        /// <summary>
-        /// vertex shader中的in变量与<see cref="propertyBufferPointers"/>中的元素名字的对应关系。
-        /// </summary>
-        private PropertyNameMap propertyNameMap;
-        ///// <summary>
-        ///// 各个shader中的uniform变量与<see cref="propertyBufferPointers"/>中的元素名字的对应关系。
-        ///// </summary>
-        //protected UniformNameMap uniformNameMap;
-        protected string positionNameInIBufferable;
+    
 
         /// <summary>
         /// 

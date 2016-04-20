@@ -32,6 +32,22 @@ namespace CSharpGL
                 this.shaderProgram.Delete();
                 this.shaderProgram = null;
             }
+            // dispose picking resources
+            if (this.vertexArrayObject4Picking != null)
+            {
+                this.vertexArrayObject4Picking.Dispose();
+                this.vertexArrayObject4Picking = null;
+            }
+            if (this.positionBufferPtr != null)
+            {
+                this.positionBufferPtr = null;// already disposed in propertyBufferPtrs
+            }
+            if (this.pickingShaderProgram != null)
+            {
+                this.pickingShaderProgram.Delete();
+                this.pickingShaderProgram = null;
+            }
+
         }
 
     }

@@ -9,13 +9,7 @@ namespace CSharpGL
 {
     public partial class ModernRenderer : RendererBase, IColorCodedPicking
     {
-        protected VertexArrayObject vertexArrayObject4Picking;
-        protected PropertyBufferPtr positionBufferPtr;
-
-        UniformMat4 pickingMVP = new UniformMat4("MVP");
-
-        ShaderProgram pickingShaderProgram;
-
+       
         mat4 IColorCodedPicking.MVP
         { get { return pickingMVP.Value; } set { pickingMVP.Value = value; } }
 
