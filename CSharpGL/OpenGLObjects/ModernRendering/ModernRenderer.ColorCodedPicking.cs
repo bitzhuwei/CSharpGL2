@@ -11,7 +11,10 @@ namespace CSharpGL
     {
 
         mat4 IColorCodedPicking.MVP
-        { get { return pickingMVP.Value; } set { pickingMVP.Value = value; } }
+        {
+            get { return pickingMVP.GetMat4(); }
+            set { pickingMVP.SetMat4(value); }
+        }
 
         uint IColorCodedPicking.PickingBaseID { get; set; }
 

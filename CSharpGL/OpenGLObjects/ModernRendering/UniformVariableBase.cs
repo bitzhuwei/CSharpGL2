@@ -428,7 +428,7 @@ namespace CSharpGL
         /// <summary>
         /// 用字段减少复制，提升效率。
         /// </summary>
-        public mat4 Value;
+        private mat4 Value;
 
         public UniformMat4(string varName) : base(varName) { }
 
@@ -456,6 +456,21 @@ namespace CSharpGL
             {
                 return false;
             }
+        }
+
+        public void SetMat4(mat4 value)
+        {
+            var v = (mat4)value;
+            if (v != this.Value)
+            {
+                this.Value = v;
+                this.Updated = true;
+            }
+        }
+
+        public mat4 GetMat4()
+        {
+            return Value;
         }
 
         public override ValueType GetValue()
