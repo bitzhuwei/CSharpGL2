@@ -36,7 +36,7 @@ namespace CSharpGL.Demos
                     using (StreamWriter sw = new StreamWriter(filename, true))
                     {
                         sw.WriteLine(string.Format(
-                            "=========================={0:yyyy-MM-dd HH:mm:ss.ff}:", DateTime.Now));
+                            "=========================={0:yyyy-MM-dd HH:mm:ss.ff}========================", DateTime.Now));
                         sw.WriteLine(str);
                     }
 
