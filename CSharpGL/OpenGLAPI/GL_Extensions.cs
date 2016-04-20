@@ -520,32 +520,6 @@ namespace CSharpGL
 
         #region OpenGL 2.1
 
-        //  Methods
-        public static void UniformMatrix2x3(int location, int count, bool transpose, float[] value)
-        {
-            GetDelegateFor<glUniformMatrix2x3fv>()(location, count, transpose, value);
-        }
-        public static void UniformMatrix3x2(int location, int count, bool transpose, float[] value)
-        {
-            GetDelegateFor<glUniformMatrix3x2fv>()(location, count, transpose, value);
-        }
-        public static void UniformMatrix2x4(int location, int count, bool transpose, float[] value)
-        {
-            GetDelegateFor<glUniformMatrix2x4fv>()(location, count, transpose, value);
-        }
-        public static void UniformMatrix4x2(int location, int count, bool transpose, float[] value)
-        {
-            GetDelegateFor<glUniformMatrix4x2fv>()(location, count, transpose, value);
-        }
-        public static void UniformMatrix3x4(int location, int count, bool transpose, float[] value)
-        {
-            GetDelegateFor<glUniformMatrix3x4fv>()(location, count, transpose, value);
-        }
-        public static void UniformMatrix4x3(int location, int count, bool transpose, float[] value)
-        {
-            GetDelegateFor<glUniformMatrix4x3fv>()(location, count, transpose, value);
-        }
-
         //  Delegates
         public delegate void glUniformMatrix2x3fv(int location, int count, bool transpose, float[] value);
         public delegate void glUniformMatrix3x2fv(int location, int count, bool transpose, float[] value);
