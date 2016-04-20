@@ -783,20 +783,6 @@ namespace CSharpGL
 
         #region OpenGL 3.2
 
-        //  Methods
-        public static void GetInteger64(uint target, uint index, Int64[] data)
-        {
-            GetDelegateFor<glGetInteger64i_v>()(target, index, data);
-        }
-        public static void GetBufferParameteri64(uint target, uint pname, Int64[] parameters)
-        {
-            GetDelegateFor<glGetBufferParameteri64v>()(target, pname, parameters);
-        }
-        public static void FramebufferTexture(uint target, uint attachment, uint texture, int level)
-        {
-            GetDelegateFor<glFramebufferTexture>()(target, attachment, texture, level);
-        }
-
         //  Delegates
         public delegate void glGetInteger64i_v(uint target, uint index, Int64[] data);
         public delegate void glGetBufferParameteri64v(uint target, uint pname, Int64[] parameters);
