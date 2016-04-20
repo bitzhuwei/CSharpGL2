@@ -1272,7 +1272,7 @@ namespace CSharpGL
         /// <param name="value">Specifies the new value for the parameter given by <paramref name="pname"/>​.</param>
         public static void PatchParameter(PatchParameterName pname, int value)
         {
-            PatchParameter((uint)pname, value);
+            GL.GetDelegateFor<GL.glPatchParameteri>()((uint)pname, value);
         }
 
         /// <summary>

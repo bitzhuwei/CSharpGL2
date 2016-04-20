@@ -2725,44 +2725,19 @@ namespace CSharpGL
         public const uint GL_TRANSFORM_FEEDBACK_BUFFER_ACTIVE = 0x8E24;
         public const uint GL_TRANSFORM_FEEDBACK_BINDING = 0x8E25;
 
-        public static void IsTransformFeedback(uint id)
-        {
-            GetDelegateFor<glIsTransformFeedback>()(id);
-        }
         public delegate void glIsTransformFeedback(uint id);
 
-        public static void DeleteTransformFeedbacks(int n, uint[] ids)
-        {
-            GetDelegateFor<glDeleteTransformFeedbacks>()(n, ids);
-        }
         public delegate void glDeleteTransformFeedbacks(int n, uint[] ids);
 
-        public static void PauseTransformFeedback()
-        {
-            GetDelegateFor<glPauseTransformFeedback>()();
-        }
         public delegate void glPauseTransformFeedback();
 
-        public static void ResumeTransformFeedback()
-        {
-            GetDelegateFor<glResumeTransformFeedback>()();
-        }
         public delegate void glResumeTransformFeedback();
 
         public const uint GL_ATOMIC_COUNTER_BUFFER = 0x92C0;
         public const uint GL_UNIFORM_BUFFER = 0x8A11;
 
-        //void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
-        public static void UniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding)
-        {
-            GetDelegateFor<glUniformBlockBinding>()(program, uniformBlockIndex, uniformBlockBinding);
-        }
         public delegate void glUniformBlockBinding(uint program, uint uniformBlockIndex, uint uniformBlockBinding);
 
-        public static uint GetUniformBlockIndex(uint program, string uniformBlockName)
-        {
-            return GetDelegateFor<glGetUniformBlockIndex>()(program, uniformBlockName);
-        }
         public delegate uint glGetUniformBlockIndex(uint program, string uniformBlockName);
 
         public const uint GL_UNIFORM_BUFFER_OFFSET_ALIGNMENT = 0x8A34;
@@ -2774,10 +2749,6 @@ namespace CSharpGL
         public const uint GL_MAP_FLUSH_EXPLICIT_BIT = 0x0010;
         public const uint GL_MAP_UNSYNCHRONIZED_BIT = 0x0020;
 
-        public static void DrawTransformFeedback(uint mode, uint id)
-        {
-            GetDelegateFor<glDrawTransformFeedback>()(mode, id);
-        }
         public delegate void glDrawTransformFeedback(uint mode, uint id);
 
         #endregion transform feedbacks
@@ -2789,10 +2760,6 @@ namespace CSharpGL
         /// </summary>
         /// <param name="pname">Specifies the name of the parameter to set.</param>
         /// <param name="value">Specifies the new value for the parameter given by <paramref name="pname"/>​.</param>
-        public static void PatchParameter(uint pname, int value)
-        {
-            GetDelegateFor<glPatchParameteri>()(pname, value);
-        }
         public delegate void glPatchParameteri(uint pname, int value);
 
         /// <summary>
