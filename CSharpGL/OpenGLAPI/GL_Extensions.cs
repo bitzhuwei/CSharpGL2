@@ -817,12 +817,6 @@ namespace CSharpGL
 
         #region OpenGL 3.3
 
-        //  Methods
-        public static void VertexAttribDivisor(uint index, uint divisor)
-        {
-            GetDelegateFor<glVertexAttribDivisor>()(index, divisor);
-        }
-
         //  Delegates
         public delegate void glVertexAttribDivisor(uint index, uint divisor);
 
