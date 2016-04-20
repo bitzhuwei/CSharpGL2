@@ -7,6 +7,9 @@ using System.Text;
 
 namespace CSharpGL.OpenGLObjects.ModernRendering
 {
+    /// <summary>
+    /// 用在IList&lt;GLSwitch&gt;类型的属性上。
+    /// </summary>
     public class GLSwithListEditor : UITypeEditor
     {
 
@@ -22,9 +25,12 @@ namespace CSharpGL.OpenGLObjects.ModernRendering
             var frmGLSwitchListEditor = new FormGLSwitchListEditor(value as List<GLSwitch>);
             if (frmGLSwitchListEditor.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                var list = value as List<GLSwitch>;
+                var list = value as IList<GLSwitch>;
                 list.Clear();
-                list.AddRange(frmGLSwitchListEditor.SwitchList);
+                foreach (var item in frmGLSwitchListEditor.SwitchList)
+                {
+                    list.Add(item);
+                }
             }
 
             return value;
