@@ -827,28 +827,6 @@ namespace CSharpGL
 
         #region OpenGL 4.0
 
-        //  Methods        
-        public static void MinSampleShading(float value)
-        {
-            GetDelegateFor<glMinSampleShading>()(value);
-        }
-        public static void BlendEquation(uint buf, uint mode)
-        {
-            GetDelegateFor<glBlendEquationi>()(buf, mode);
-        }
-        public static void BlendEquationSeparate(uint buf, uint modeRGB, uint modeAlpha)
-        {
-            GetDelegateFor<glBlendEquationSeparatei>()(buf, modeRGB, modeAlpha);
-        }
-        public static void BlendFunc(uint buf, uint src, uint dst)
-        {
-            GetDelegateFor<glBlendFunci>()(buf, src, dst);
-        }
-        public static void BlendFuncSeparate(uint buf, uint srcRGB, uint dstRGB, uint srcAlpha, uint dstAlpha)
-        {
-            GetDelegateFor<glBlendFuncSeparatei>()(buf, srcRGB, dstRGB, srcAlpha, dstAlpha);
-        }
-
         //  Delegates        
         public delegate void glMinSampleShading(float value);
         public delegate void glBlendEquationi(uint buf, uint mode);
