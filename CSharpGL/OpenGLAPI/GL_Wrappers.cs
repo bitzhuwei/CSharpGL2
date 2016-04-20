@@ -1282,7 +1282,7 @@ namespace CSharpGL
         /// <param name="values">Specifies the address of an array containing the new values for the parameter given by <paramref name="pname"/>​.</param>
         public static void PatchParameter(PatchParameterName pname, float[] values)
         {
-            PatchParameter((uint)pname, values);
+            GL.GetDelegateFor<GL.glPatchParameterfv>()((uint)pname, values);
         }
 
         #endregion patch
@@ -1308,7 +1308,7 @@ namespace CSharpGL
         /// <param name="width"></param>
         public static void TexStorage1D(TexStorage1DTarget target, int levels, uint internalformat, int width)
         {
-            TexStorage1D((uint)target, levels, internalformat, width);
+            GL.GetDelegateFor<GL.glTexStorage1D>()((uint)target, levels, internalformat, width);
         }
 
         // https://www.opengl.org/wiki/GLAPI/glTexStorage2D
@@ -1322,7 +1322,7 @@ namespace CSharpGL
         /// <param name="height"></param>
         public static void TexStorage2D(TexStorage2DTarget target, int levels, uint internalformat, int width, int height)
         {
-            TexStorage2D((uint)target, levels, internalformat, width, height);
+            GL.GetDelegateFor<GL.glTexStorage2D>()((uint)target, levels, internalformat, width, height);
         }
 
         // https://www.opengl.org/wiki/GLAPI/glTexStorage3D
@@ -1337,7 +1337,7 @@ namespace CSharpGL
         /// <param name="depth"></param>
         public static void TexStorage3D(TexStorage3DTarget target, int levels, uint internalformat, int width, int height, int depth)
         {
-            TexStorage3D((uint)target, levels, internalformat, width, height, depth);
+            GL.GetDelegateFor<GL.glTexStorage3D>()((uint)target, levels, internalformat, width, height, depth);
         }
         #endregion texture
 
