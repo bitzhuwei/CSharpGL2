@@ -71,7 +71,11 @@ namespace CSharpGL
 
         protected virtual void DIsposeUnmanagedResources()
         {
-            GL.DeleteBuffers(1, new uint[] { this.BufferID });
+            IntPtr context = Win32.wglGetCurrentContext();
+            if (context != IntPtr.Zero)
+            {
+                GL.GetDelegateFor<GL.glDeleteBuffers>()(1, new uint[] { this.BufferID });
+            }
         }
 
         protected virtual void DisposeManagedResources()

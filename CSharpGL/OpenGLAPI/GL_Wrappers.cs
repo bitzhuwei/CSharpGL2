@@ -1010,7 +1010,7 @@ namespace CSharpGL
         /// <param name="id"></param>
         public static void BindBuffer(BufferTarget target, uint id)
         {
-            GL.BindBuffer((uint)target, id);
+            GL.GetDelegateFor<GL.glBindBuffer>()((uint)target, id);
         }
 
 

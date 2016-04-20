@@ -57,9 +57,9 @@ namespace CSharpGL
         protected override BufferPtr Upload2GPU()
         {
             uint[] buffers = new uint[1];
-            GL.GenBuffers(1, buffers);
-            GL.BindBuffer(GL.GL_ARRAY_BUFFER, buffers[0]);
-            GL.BufferData(GL.GL_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
+            GL.GetDelegateFor<GL.glGenBuffers>()(1, buffers);
+            GL.GetDelegateFor<GL.glBindBuffer>()(GL.GL_ARRAY_BUFFER, buffers[0]);
+            GL.GetDelegateFor<GL.glBufferData>()(GL.GL_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
 
             PropertyBufferPtr renderer = new PropertyBufferPtr(
                 this.VarNameInVertexShader, buffers[0], this.DataSize, this.DataType, this.Length);
