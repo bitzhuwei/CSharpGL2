@@ -25,5 +25,6 @@ namespace CSharpGL
         Patches = GL.GL_PATCHES,
         QuadStrip = GL.GL_QUAD_STRIP,
         Quads = GL.GL_QUADS,
+        Polygon = GL.GL_POLYGON,
     }
 }
