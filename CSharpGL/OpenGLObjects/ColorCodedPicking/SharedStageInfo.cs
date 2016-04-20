@@ -14,15 +14,7 @@ namespace CSharpGL
         /// <summary>
         /// Gets or sets how many vertices have been rendered during hit test.
         /// </summary>
-        public virtual uint RenderedVertexCount { get; set; }
-
-        /// <summary>
-        /// Reset this instance's fields' values to initial state so that it can be used again during rendering.
-        /// </summary>
-        public virtual void Reset()
-        {
-            RenderedVertexCount = 0;
-        }
+        public virtual uint RenderedVertexCount { get; private set; }
 
         public override string ToString()
         {
@@ -43,8 +35,7 @@ namespace CSharpGL
                 pickable.PickingBaseID = this.RenderedVertexCount;
 
                 //  render the element.
-                IRenderable renderable = pickable;
-                renderable.Render(e);
+                pickable.Render(e);
 
                 uint rendered = this.RenderedVertexCount + pickable.GetVertexCount();
                 if (this.RenderedVertexCount <= rendered)

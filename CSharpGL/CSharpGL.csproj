@@ -44,6 +44,7 @@
     <Content Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.png" />
     <Content Include="OpenGLObjects\ColorCodedPicking\readme.txt" />
     <Content Include="readme.txt" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypes.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypesHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\IColorCodedPicking.cs" />
