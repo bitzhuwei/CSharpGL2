@@ -2353,6 +2353,7 @@ namespace CSharpGL
 
         #region GL_ARB_invalidate_subdata
 
+        //  Delegates
         /// <summary>
         /// Invalidate a region of a texture image
         /// </summary>
@@ -2364,53 +2365,33 @@ namespace CSharpGL
         /// <param name="width">The width of the region to be invalidated.</param>
         /// <param name="height">The height of the region to be invalidated.</param>
         /// <param name="depth">The depth of the region to be invalidated.</param>
-        public static void InvalidateTexSubImage(uint texture, int level, int xoffset, int yoffset, int zoffset,
-            uint width, uint height, uint depth)
-        {
-            GetDelegateFor<glInvalidateTexSubImage>()(texture, level, xoffset, yoffset, zoffset, width, height, depth);
-        }
-
+        public delegate void glInvalidateTexSubImage(uint texture, int level, int xoffset,
+            int yoffset, int zoffset, uint width, uint height, uint depth);
         /// <summary>
         /// Invalidate the entirety a texture image
         /// </summary>
         /// <param name="texture">The name of a texture object to invalidate.</param>
         /// <param name="level">The level of detail of the texture object to invalidate.</param>
-        public static void InvalidateTexImage(uint texture, int level)
-        {
-            GetDelegateFor<glInvalidateTexImage>()(texture, level);
-        }
-
+        public delegate void glInvalidateTexImage(uint texture, int level);
         /// <summary>
         /// Invalidate a region of a buffer object's data store
         /// </summary>
         /// <param name="buffer">The name of a buffer object, a subrange of whose data store to invalidate.</param>
         /// <param name="offset">The offset within the buffer's data store of the start of the range to be invalidated.</param>
         /// <param name="length">The length of the range within the buffer's data store to be invalidated.</param>
-        public static void InvalidateBufferSubData(uint buffer, IntPtr offset, IntPtr length)
-        {
-            GetDelegateFor<glInvalidateBufferSubData>()(buffer, offset, length);
-        }
-
+        public delegate void glInvalidateBufferSubData(uint buffer, IntPtr offset, IntPtr length);
         /// <summary>
         /// Invalidate the content of a buffer object's data store
         /// </summary>
         /// <param name="buffer">The name of a buffer object whose data store to invalidate.</param>
-        public static void InvalidateBufferData(uint buffer)
-        {
-            GetDelegateFor<glInvalidateBufferData>()(buffer);
-        }
-
+        public delegate void glInvalidateBufferData(uint buffer);
         /// <summary>
         /// Invalidate the content some or all of a framebuffer object's attachments
         /// </summary>
         /// <param name="target">The target to which the framebuffer is attached. target​ must be GL_FRAMEBUFFER​, GL_DRAW_FRAMEBUFFER​, or GL_READ_FRAMEBUFFER​.</param>
         /// <param name="numAttachments">The number of entries in the attachments​ array.</param>
         /// <param name="attachments">The address of an array identifying the attachments to be invalidated.</param>
-        public static void InvalidateFramebuffer(uint target, uint numAttachments, uint[] attachments)
-        {
-            GetDelegateFor<glInvalidateFramebuffer>()(target, numAttachments, attachments);
-        }
-
+        public delegate void glInvalidateFramebuffer(uint target, uint numAttachments, uint[] attachments);
         /// <summary>
         /// Invalidate the content of a region of some or all of a framebuffer object's attachments
         /// </summary>
@@ -2421,19 +2402,6 @@ namespace CSharpGL
         /// <param name="y">The Y offset of the region to be invalidated.</param>
         /// <param name="width">The width of the region to be invalidated.</param>
         /// <param name="height">The height of the region to be invalidated.</param>
-        public static void InvalidateSubFramebuffer(uint target, uint numAttachments, uint[] attachments,
-            int x, int y, uint width, uint height)
-        {
-            GetDelegateFor<glInvalidateSubFramebuffer>()(target, numAttachments, attachments, x, y, width, height);
-        }
-
-        //  Delegates
-        public delegate void glInvalidateTexSubImage(uint texture, int level, int xoffset,
-            int yoffset, int zoffset, uint width, uint height, uint depth);
-        public delegate void glInvalidateTexImage(uint texture, int level);
-        public delegate void glInvalidateBufferSubData(uint buffer, IntPtr offset, IntPtr length);
-        public delegate void glInvalidateBufferData(uint buffer);
-        public delegate void glInvalidateFramebuffer(uint target, uint numAttachments, uint[] attachments);
         public delegate void glInvalidateSubFramebuffer(uint target, uint numAttachments, uint[] attachments,
             int x, int y, uint width, uint height);
 
