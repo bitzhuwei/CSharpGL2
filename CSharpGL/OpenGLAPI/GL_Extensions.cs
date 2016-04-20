@@ -1252,24 +1252,6 @@ namespace CSharpGL
 
         #region GL_ARB_transpose_matrix
 
-        //  Methods
-        public static void glLoadTransposeMatrixARB(float[] m)
-        {
-            GetDelegateFor<glLoadTransposeMatrixfARB>()(m);
-        }
-        public static void glLoadTransposeMatrixARB(double[] m)
-        {
-            GetDelegateFor<glLoadTransposeMatrixdARB>()(m);
-        }
-        public static void glMultTransposeMatrixARB(float[] m)
-        {
-            GetDelegateFor<glMultTransposeMatrixfARB>()(m);
-        }
-        public static void glMultTransposeMatrixARB(double[] m)
-        {
-            GetDelegateFor<glMultTransposeMatrixdARB>()(m);
-        }
-
         //  Delegates
         public delegate void glLoadTransposeMatrixfARB(float[] m);
         public delegate void glLoadTransposeMatrixdARB(double[] m);
