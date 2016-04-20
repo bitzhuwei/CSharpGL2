@@ -1219,7 +1219,7 @@ namespace CSharpGL
             int length,
             StringBuilder buf)
         {
-            DebugMessageInsert((uint)source, (uint)type, id, (uint)severity, length, buf);
+            GL.GetDelegateFor<GL.glDebugMessageInsert>()((uint)source, (uint)type, id, (uint)severity, length, buf);
         }
 
         #endregion debugging and profiling

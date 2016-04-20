@@ -2709,11 +2709,6 @@ namespace CSharpGL
         /// <param name="severity"></param>
         /// <param name="length">用-1即可。</param>
         /// <param name="buf"></param>
-        public static void DebugMessageInsert(
-            uint source, uint type, uint id, uint severity, int length, StringBuilder buf)
-        {
-            GetDelegateFor<glDebugMessageInsert>()(source, type, id, severity, length, buf);
-        }
         public delegate void glDebugMessageInsert(
             uint source, uint type, uint id, uint severity, int length, StringBuilder buf);
 
