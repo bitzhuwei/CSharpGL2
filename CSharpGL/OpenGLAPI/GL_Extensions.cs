@@ -2043,15 +2043,6 @@ namespace CSharpGL
 
         #region WGL_ARB_extensions_string
 
-        /// <summary>
-        /// Gets the ARB extensions string.
-        /// </summary>
-        /// <param name="hDC">device context handle.</param>
-        public static string GetExtensionsStringARB(IntPtr hDC)
-        {
-            return GetDelegateFor<wglGetExtensionsStringARB>()(hDC);
-        }
-
         //  Delegates
         public delegate string wglGetExtensionsStringARB(IntPtr hdc);
 
