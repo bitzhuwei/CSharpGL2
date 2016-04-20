@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharpGL
 {
-    public partial class ModernRenderer : RendererBase, IColorCodedPicking
+    public partial class ModernRenderer 
     {
        
         private void RenderRender(RenderEventArgs e)

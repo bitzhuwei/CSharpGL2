@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharpGL
 {
-    public partial class ModernRenderer : RendererBase
+    public partial class ModernRenderer
     {
         // Color Coded Picking
         protected VertexArrayObject vertexArrayObject4Picking;
@@ -38,5 +38,25 @@ namespace CSharpGL
         /// vertex shader中的in变量与<see cref="propertyBufferPointers"/>中的元素名字的对应关系。
         /// </summary>
         protected PropertyNameMap propertyNameMap;
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="bufferable">一种渲染方式</param>
+        /// <param name="shaderCodes">各种类型的shader代码</param>
+        /// <param name="propertyNameMap">关联<see cref="BufferPtr"/>和<see cref="ShaderCode"/>中的属性</param>
+        /// <param name="positionNameInIBufferable">描述顶点位置信息的buffer的名字</param>
+        ///<param name="switches"></param>
+        public ModernRenderer(IBufferable bufferable, ShaderCode[] shaderCodes,
+            PropertyNameMap propertyNameMap, string positionNameInIBufferable,
+            params GLSwitch[] switches)
+        {
+            this.bufferable = bufferable;
+            this.shaderCode = shaderCodes;
+            this.propertyNameMap = propertyNameMap;
+            this.positionNameInIBufferable = positionNameInIBufferable;
+            this.switchList.AddRange(switches);
+        }
     }
 }

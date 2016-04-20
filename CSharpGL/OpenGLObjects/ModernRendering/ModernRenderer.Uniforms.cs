@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharpGL
 {
-    public partial class ModernRenderer : RendererBase
+    public partial class ModernRenderer 
     {
         protected List<UniformVariableBase> uniformVariables = new List<UniformVariableBase>();
         protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");

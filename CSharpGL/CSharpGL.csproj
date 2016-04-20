@@ -70,7 +70,7 @@
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.ColorCodedPickingRender.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.RenderRender.cs" />
-    <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.DoInitialize.cs" />
+    <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.RendererBase.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.ColorCodedPicking.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Uniforms.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Dispose.cs" />
@@ -198,6 +198,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="OpenGLObjects\ModernRendering\ModernRenderer.cd" />
     <None Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cd" />
     <EmbeddedResource Include="Controls\GLCanvas.resx">
       <DependentUpon>GLCanvas.cs</DependentUpon>
