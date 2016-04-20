@@ -1141,32 +1141,6 @@ namespace CSharpGL
 
         #region GL_ARB_texture_compression
 
-        //  Methods
-        public static void CompressedTexImage3DARB(uint target, int level, uint internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data)
-        {
-            GetDelegateFor<glCompressedTexImage3DARB>()(target, level, internalformat, width, height, depth, border, imageSize, data);
-        }
-        public static void CompressedTexImage2DARB(uint target, int level, uint internalformat, int width, int height, int border, int imageSize, IntPtr data)
-        {
-            GetDelegateFor<glCompressedTexImage2DARB>()(target, level, internalformat, width, height, border, imageSize, data);
-        }
-        public static void CompressedTexImage1DARB(uint target, int level, uint internalformat, int width, int border, int imageSize, IntPtr data)
-        {
-            GetDelegateFor<glCompressedTexImage1DARB>()(target, level, internalformat, width, border, imageSize, data);
-        }
-        public static void CompressedTexSubImage3DARB(uint target, int level, int xoffset, int yoffset, int zoffset, int width, int height, int depth, uint format, int imageSize, IntPtr data)
-        {
-            GetDelegateFor<glCompressedTexSubImage3DARB>()(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
-        }
-        public static void CompressedTexSubImage2DARB(uint target, int level, int xoffset, int yoffset, int width, int height, uint format, int imageSize, IntPtr data)
-        {
-            GetDelegateFor<glCompressedTexSubImage2DARB>()(target, level, xoffset, yoffset, width, height, format, imageSize, data);
-        }
-        public static void CompressedTexSubImage1DARB(uint target, int level, int xoffset, int width, uint format, int imageSize, IntPtr data)
-        {
-            GetDelegateFor<glCompressedTexSubImage1DARB>()(target, level, xoffset, width, format, imageSize, data);
-        }
-
         //  Delegates
         public delegate void glCompressedTexImage3DARB(uint target, int level, uint internalformat, int width, int height, int depth, int border, int imageSize, IntPtr data);
         public delegate void glCompressedTexImage2DARB(uint target, int level, uint internalformat, int width, int height, int border, int imageSize, IntPtr data);
