@@ -2767,10 +2767,6 @@ namespace CSharpGL
         /// </summary>
         /// <param name="pname">Specifies the name of the parameter to set.</param>
         /// <param name="values">Specifies the address of an array containing the new values for the parameter given by <paramref name="pname"/>​.</param>
-        public static void PatchParameter(uint pname, float[] values)
-        {
-            GetDelegateFor<glPatchParameterfv>()(pname, values);
-        }
         public delegate void glPatchParameterfv(uint pname, float[] values);
 
         public const uint GL_PATCH_VERTICES = 0x8E72;
@@ -2791,29 +2787,12 @@ namespace CSharpGL
         /// <param name="layer">If <paramref name="layered"/>​ is false, specifies the layer of texture​ to be bound to the image unit. Ignored otherwise.</param>
         /// <param name="access">Specifies a token indicating the type of access that will be performed on the image.</param>
         /// <param name="format">Specifies the format that the elements of the image will be treated as for the purposes of formatted stores.</param>
-        public static void BindImageTexture(uint unit, uint texture, int level, bool layered, int layer, uint access, uint format)
-        {
-            GetDelegateFor<glBindImageTexture>()(unit, texture, level, layered, layer, access, format);
-        }
-
         public delegate void glBindImageTexture(uint unit, uint texture, int level, bool layered, int layer, uint access, uint format);
 
-        public static void TexStorage1D(uint target, int levels, uint internalformat, int width)
-        {
-            GetDelegateFor<glTexStorage1D>()(target, levels, internalformat, width);
-        }
         public delegate void glTexStorage1D(uint target, int levels, uint internalformat, int width);
 
-        public static void TexStorage2D(uint target, int levels, uint internalformat, int width, int height)
-        {
-            GetDelegateFor<glTexStorage2D>()(target, levels, internalformat, width, height);
-        }
         public delegate void glTexStorage2D(uint target, int levels, uint internalformat, int width, int height);
 
-        public static void TexStorage3D(uint target, int levels, uint internalformat, int width, int height, int depth)
-        {
-            GetDelegateFor<glTexStorage3D>()(target, levels, internalformat, width, height, depth);
-        }
         public delegate void glTexStorage3D(uint target, int levels, uint internalformat, int width, int height, int depth);
 
         #endregion texture
@@ -2822,10 +2801,6 @@ namespace CSharpGL
         /// defines a barrier ordering memory transactions
         /// </summary>
         /// <param name="barriers">Specifies the barriers to insert.</param>
-        public static void MemoryBarrier(uint barriers)
-        {
-            GetDelegateFor<glMemoryBarrier>()(barriers);
-        }
         public delegate void glMemoryBarrier(uint barriers);
 
         public const uint GL_VERTEX_ATTRIB_ARRAY_BARRIER_BIT = 0x00000001;

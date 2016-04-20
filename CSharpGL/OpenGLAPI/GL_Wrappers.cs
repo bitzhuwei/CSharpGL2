@@ -1295,7 +1295,7 @@ namespace CSharpGL
         /// <param name="barriers">Specifies the barriers to insert.</param>
         public static void MemoryBarrier(MemoryBarrierFlags barriers)
         {
-            MemoryBarrier((uint)barriers);
+            GL.GetDelegateFor<GL.glMemoryBarrier>()((uint)barriers);
         }
 
         // https://www.opengl.org/wiki/GLAPI/glTexStorage1D
