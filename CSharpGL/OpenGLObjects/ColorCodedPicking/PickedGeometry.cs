@@ -53,8 +53,9 @@ namespace CSharpGL
                 }
             }
 
-            string result = string.Format("{0}: Position: {1} vertex ID:{2}/{3} ∈{4}",
-                GeometryType, strPositions, lastVertexID, stageVertexID, From);
+            string result = string.Format("{0}: Positions: {1} {5}last/stage vertex ID:{2}/{3} {5}From element: {4}",
+                GeometryType, strPositions, lastVertexID, stageVertexID, From,
+                Environment.NewLine);
             return result;
             //return base.ToString();
         }
