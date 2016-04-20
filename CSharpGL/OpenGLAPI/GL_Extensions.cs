@@ -1992,28 +1992,6 @@ namespace CSharpGL
 
         #region GL_ARB_vertex_array_object
 
-        //  Methods
-        public static void BindVertexArray(uint array)
-        {
-            GetDelegateFor<glBindVertexArray>()(array);
-        }
-        public static void DeleteVertexArrays(int n, uint[] arrays)
-        {
-            IntPtr ptr = Win32.wglGetCurrentContext();
-            if (ptr != IntPtr.Zero)
-            {
-                GetDelegateFor<glDeleteVertexArrays>()(n, arrays);
-            }
-        }
-        public static void GenVertexArrays(int n, uint[] arrays)
-        {
-            GetDelegateFor<glGenVertexArrays>()(n, arrays);
-        }
-        public static bool IsVertexArray(uint array)
-        {
-            return GetDelegateFor<glIsVertexArray>()(array);
-        }
-
         //  Delegates
         public delegate void glBindVertexArray(uint array);
         public delegate void glDeleteVertexArrays(int n, uint[] arrays);

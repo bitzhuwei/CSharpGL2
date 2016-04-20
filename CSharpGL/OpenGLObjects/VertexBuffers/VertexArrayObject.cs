@@ -52,7 +52,7 @@ namespace CSharpGL
             { throw new Exception(string.Format("ID[{0}] is already generated!", this.ID)); }
 
             uint[] buffers = new uint[1];
-            GL.GenVertexArrays(1, buffers);
+            GL.GetDelegateFor<GL.glGenVertexArrays>()(1, buffers);
 
             this.ID = buffers[0];
 
@@ -66,12 +66,12 @@ namespace CSharpGL
 
         private void Bind()
         {
-            GL.BindVertexArray(this.ID);
+            GL.GetDelegateFor<GL.glBindVertexArray>()(this.ID);
         }
 
         private void Unbind()
         {
-            GL.BindVertexArray(0);
+            GL.GetDelegateFor<GL.glBindVertexArray>()(0);
         }
 
         /// <summary>
@@ -117,7 +117,11 @@ namespace CSharpGL
                 // Dispose unmanaged resources.
                 uint[] arrays = new uint[] { this.ID };
                 this.ID = 0;
-                GL.DeleteVertexArrays(1, new uint[] { this.ID });
+                IntPtr ptr = Win32.wglGetCurrentContext();
+                if (ptr != IntPtr.Zero)
+                {
+                    GL.GetDelegateFor<GL.glDeleteVertexArrays>()(1, new uint[] { this.ID });
+                }
                 foreach (var item in this.bufferRenderers)
                 {
                     item.Dispose();
