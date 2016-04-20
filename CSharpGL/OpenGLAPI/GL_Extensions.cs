@@ -851,45 +851,6 @@ namespace CSharpGL
 
         #region GL_EXT_texture3D
 
-        /// <summary>
-        /// Specify a three-dimensional texture subimage.
-        /// </summary>
-        /// <param name="target">The target.</param>
-        /// <param name="level">The level.</param>
-        /// <param name="internalformat">The internalformat.</param>
-        /// <param name="width">The width.</param>
-        /// <param name="height">The height.</param>
-        /// <param name="depth">The depth.</param>
-        /// <param name="border">The border.</param>
-        /// <param name="format">The format.</param>
-        /// <param name="type">The type.</param>
-        /// <param name="pixels">The pixels.</param>
-        public static void TexImage3DEXT(uint target, int level, uint internalformat, uint width,
-            uint height, uint depth, int border, uint format, uint type, IntPtr pixels)
-        {
-            GetDelegateFor<glTexImage3DEXT>()(target, level, internalformat, width, height, depth, border, format, type, pixels);
-        }
-
-        /// <summary>
-        /// Texes the sub image3 DEXT.
-        /// </summary>
-        /// <param name="target">The target.</param>
-        /// <param name="level">The level.</param>
-        /// <param name="xoffset">The xoffset.</param>
-        /// <param name="yoffset">The yoffset.</param>
-        /// <param name="zoffset">The zoffset.</param>
-        /// <param name="width">The width.</param>
-        /// <param name="height">The height.</param>
-        /// <param name="depth">The depth.</param>
-        /// <param name="format">The format.</param>
-        /// <param name="type">The type.</param>
-        /// <param name="pixels">The pixels.</param>
-        public static void TexSubImage3DEXT(uint target, int level, int xoffset, int yoffset, int zoffset,
-            uint width, uint height, uint depth, uint format, uint type, IntPtr pixels)
-        {
-            GetDelegateFor<glTexSubImage3DEXT>()(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
-        }
-
         public delegate void glTexImage3DEXT(uint target, int level, uint internalformat, uint width,
             uint height, uint depth, int border, uint format, uint type, IntPtr pixels);
         public delegate void glTexSubImage3DEXT(uint target, int level, int xoffset, int yoffset, int zoffset,
