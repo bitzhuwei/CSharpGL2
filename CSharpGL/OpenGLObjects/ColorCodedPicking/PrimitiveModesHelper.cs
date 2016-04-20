@@ -13,39 +13,39 @@ namespace CSharpGL
         /// </summary>
         /// <param name="mode"></param>
         /// <returns></returns>
-        public static GeometryTypes ToGeometryType(this PrimitiveModes mode)
+        public static GeometryTypes ToGeometryType(this PrimitiveMode mode)
         {
             GeometryTypes result = GeometryTypes.Point;
             switch (mode)
             {
-                case PrimitiveModes.Points:
+                case PrimitiveMode.Points:
                     result = GeometryTypes.Point;
                     break;
-                case PrimitiveModes.Lines:
+                case PrimitiveMode.Lines:
                     result = GeometryTypes.Line;
                     break;
-                case PrimitiveModes.LineLoop:
+                case PrimitiveMode.LineLoop:
                     result = GeometryTypes.Line;
                     break;
-                case PrimitiveModes.LineStrip:
+                case PrimitiveMode.LineStrip:
                     result = GeometryTypes.Line;
                     break;
-                case PrimitiveModes.Triangles:
+                case PrimitiveMode.Triangles:
                     result = GeometryTypes.Triangle;
                     break;
-                case PrimitiveModes.TriangleStrip:
+                case PrimitiveMode.TriangleStrip:
                     result = GeometryTypes.Triangle;
                     break;
-                case PrimitiveModes.TriangleFan:
+                case PrimitiveMode.TriangleFan:
                     result = GeometryTypes.Triangle;
                     break;
-                case PrimitiveModes.Quads:
+                case PrimitiveMode.Quads:
                     result = GeometryTypes.Quad;
                     break;
-                case PrimitiveModes.QuadStrip:
+                case PrimitiveMode.QuadStrip:
                     result = GeometryTypes.Quad;
                     break;
-                case PrimitiveModes.Polygon:
+                case PrimitiveMode.Polygon:
                     result = GeometryTypes.Polygon;
                     break;
                 default:

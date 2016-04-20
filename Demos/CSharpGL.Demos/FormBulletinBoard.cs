@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSharpGL.Windows.Demos
+namespace CSharpGL.Demos
 {
     public partial class FormBulletinBoard : Form
     {

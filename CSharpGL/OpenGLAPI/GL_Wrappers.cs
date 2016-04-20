@@ -847,7 +847,7 @@ namespace CSharpGL
 
         [Obsolete(fixedPipelineIsNotGood, error)]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void Begin(PrimitiveModes primitiveMode)
+        public static void Begin(PrimitiveMode primitiveMode)
         {
             GL.Begin((uint)primitiveMode);
         }

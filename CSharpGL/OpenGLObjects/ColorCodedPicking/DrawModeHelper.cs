@@ -13,7 +13,7 @@ namespace CSharpGL
         /// </summary>
         /// <param name="mode"></param>
         /// <returns></returns>
-        public static PrimitiveMode ToGeometryType(this DrawMode mode)
+        public static PrimitiveMode ToPrimitiveMode(this DrawMode mode)
         {
             PrimitiveMode result = PrimitiveMode.Points;
             switch (mode)

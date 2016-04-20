@@ -1,4 +1,4 @@
-﻿namespace CSharpGL.Windows.Demos
+﻿namespace CSharpGL.Demos
 {
     partial class FormBulletinBoard
     {

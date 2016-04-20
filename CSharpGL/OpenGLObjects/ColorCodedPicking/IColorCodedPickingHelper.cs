@@ -57,7 +57,7 @@ namespace CSharpGL
         /// <param name="stageVertexID">Refers to the last vertex that constructs the primitive. And it's unique in scene's all elements.</param>
         /// <returns></returns>
         public static T TryPick<T>(
-            this IColorCodedPicking element, PrimitiveModes mode, uint stageVertexID)
+            this IColorCodedPicking element, PrimitiveMode mode, uint stageVertexID)
             where T : IPickedGeometry, new()
         {
             T pickedGeometry = default(T);
@@ -90,7 +90,7 @@ namespace CSharpGL
         /// <param name="positions">element's vertices' position array.</param>
         /// <returns></returns>
         public static T TryPick<T>(
-            this IColorCodedPicking element, PrimitiveModes mode, uint stageVertexID, float[] positions)
+            this IColorCodedPicking element, PrimitiveMode mode, uint stageVertexID, float[] positions)
             where T : IPickedGeometry, new()
         {
             if (positions == null) { throw new ArgumentNullException("positions"); }
@@ -137,7 +137,7 @@ namespace CSharpGL
         /// <para>Ranges from 0 to (<paramref name="element"/>'s vertices' count - 1).</para></param>
         /// <param name="index"></param>
         /// <returns></returns>
-        public static bool GetGeometryIndex(this IColorCodedPicking element, PrimitiveModes mode, uint lastVertexID, out uint index)
+        public static bool GetGeometryIndex(this IColorCodedPicking element, PrimitiveMode mode, uint lastVertexID, out uint index)
         {
             index = uint.MaxValue;
             if (element == null) { return false; }
@@ -148,40 +148,40 @@ namespace CSharpGL
             {
                 switch (mode)
                 {
-                    case PrimitiveModes.Points:
+                    case PrimitiveMode.Points:
                         // vertexID should range from 0 to vertexCount - 1.
                         index = lastVertexID;
                         break;
-                    case PrimitiveModes.Lines:
+                    case PrimitiveMode.Lines:
                         // vertexID should range from 0 to vertexCount - 1.
                         index = lastVertexID / 2;
                         break;
-                    case PrimitiveModes.LineLoop:
+                    case PrimitiveMode.LineLoop:
                         // vertexID should range from 0 to vertexCount.
                         if (lastVertexID == 0) // This is the last primitive.
                         { index = vertexCount - 1; }
                         else
                         { index = lastVertexID - 1; }
                         break;
-                    case PrimitiveModes.LineStrip:
+                    case PrimitiveMode.LineStrip:
                         index = lastVertexID - 1;// If lastVertexID is 0, this returns -1.
                         break;
-                    case PrimitiveModes.Triangles:
+                    case PrimitiveMode.Triangles:
                         index = lastVertexID / 3;
                         break;
-                    case PrimitiveModes.TriangleStrip:
+                    case PrimitiveMode.TriangleStrip:
                         index = lastVertexID - 2;// if lastVertexID is 0 or 1, this returns -2 or -1.
                         break;
-                    case PrimitiveModes.TriangleFan:
+                    case PrimitiveMode.TriangleFan:
                         index = lastVertexID - 2;// if lastVertexID is 0 or 1, this returns -2 or -1.
                         break;
-                    case PrimitiveModes.Quads:
+                    case PrimitiveMode.Quads:
                         index = lastVertexID / 4;
                         break;
-                    case PrimitiveModes.QuadStrip:
+                    case PrimitiveMode.QuadStrip:
                         index = lastVertexID / 2 - 1;// If lastVertexID is 0 or 1, this returns -1.
                         break;
-                    case PrimitiveModes.Polygon:
+                    case PrimitiveMode.Polygon:
                         index = 0;
                         break;
                     default:
@@ -200,7 +200,7 @@ namespace CSharpGL
         /// <param name="mode"></param>
         /// <param name="count"></param>
         /// <returns></returns>
-        public static bool GetGeometryCount(this IColorCodedPicking element, PrimitiveModes mode, out uint count)
+        public static bool GetGeometryCount(this IColorCodedPicking element, PrimitiveMode mode, out uint count)
         {
             bool result = false;
             count = uint.MaxValue;
@@ -211,34 +211,34 @@ namespace CSharpGL
 
                 switch (mode)
                 {
-                    case PrimitiveModes.Points:
+                    case PrimitiveMode.Points:
                         count = vertexCount;
                         break;
-                    case PrimitiveModes.Lines:
+                    case PrimitiveMode.Lines:
                         count = vertexCount / 2;
                         break;
-                    case PrimitiveModes.LineLoop:
+                    case PrimitiveMode.LineLoop:
                         count = vertexCount;
                         break;
-                    case PrimitiveModes.LineStrip:
+                    case PrimitiveMode.LineStrip:
                         count = vertexCount - 1;
                         break;
-                    case PrimitiveModes.Triangles:
+                    case PrimitiveMode.Triangles:
                         count = vertexCount / 3;
                         break;
-                    case PrimitiveModes.TriangleStrip:
+                    case PrimitiveMode.TriangleStrip:
                         count = vertexCount - 2;
                         break;
-                    case PrimitiveModes.TriangleFan:
+                    case PrimitiveMode.TriangleFan:
                         count = vertexCount - 2;
                         break;
-                    case PrimitiveModes.Quads:
+                    case PrimitiveMode.Quads:
                         count = vertexCount / 4;
                         break;
-                    case PrimitiveModes.QuadStrip:
+                    case PrimitiveMode.QuadStrip:
                         count = vertexCount / 2 - 1;
                         break;
-                    case PrimitiveModes.Polygon:
+                    case PrimitiveMode.Polygon:
                         count = 1;
                         break;
                     default:

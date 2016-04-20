@@ -7,8 +7,8 @@
     <ProjectGuid>{0DACF739-1C40-4C52-86F4-159B6B8B6968}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpGL.Windows.Demos</RootNamespace>
-    <AssemblyName>CSharpGL.Windows.Demos</AssemblyName>
+    <RootNamespace>CSharpGL.Demos</RootNamespace>
+    <AssemblyName>CSharpGL.Demos</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -100,6 +100,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -21,6 +21,7 @@ namespace CSharpGL.Demos
 
         SatelliteRotator rotator;
         Camera camera;
+        private FormBulletinBoard bulletinBoard;
 
         public Form01ModernRenderer()
         {
@@ -66,11 +67,17 @@ namespace CSharpGL.Demos
             { rotator.MouseMove(e.X, e.Y); }
 
             {
+                IColorCodedPicking pickable = this.renderer;
+                pickable.MVP = this.camera.GetProjectionMat4() * this.camera.GetViewMat4();
                 IPickedGeometry pickedGeometry = ColorCodedPicking.Pick(
-                    this.camera, e.X,e.Y,,this.glCanvas1.Width,,this.glCanvas1.Height,this.renderer);
-                if(pickedGeometry!=null)
+                    this.camera, e.X, e.Y, this.glCanvas1.Width, this.glCanvas1.Height, this.renderer);
+                if (pickedGeometry != null)
                 {
-
+                    this.bulletinBoard.SetContent(pickedGeometry.ToString());
+                }
+                else
+                {
+                    this.bulletinBoard.SetContent("picked nothing.");
                 }
             }
         }
@@ -102,9 +109,14 @@ namespace CSharpGL.Demos
                 var propertyNameMap = new PropertyNameMap();
                 propertyNameMap.Add("in_Position", "position");
                 propertyNameMap.Add("in_Color", "color");
-                var renderer = new ModernRenderer(bufferable, shaders, propertyNameMap, "position:");
+                var renderer = new ModernRenderer(bufferable, shaders, propertyNameMap, "position");
                 renderer.Initialize();
                 this.renderer = renderer;
+            }
+            {
+                var frmBulletinBoard = new FormBulletinBoard();
+                frmBulletinBoard.Show();
+                this.bulletinBoard = frmBulletinBoard;
             }
         }
 

@@ -25,11 +25,11 @@ namespace CSharpGL
         {
             var element = this as IColorCodedPicking;
             PickedGeometry pickedGeometry = element.TryPick<PickedGeometry>(
-                PrimitiveModes.TriangleStrip, stageVertexID);
+                this.indexBufferPtr.Mode.ToPrimitiveMode(), stageVertexID);
 
             if (pickedGeometry == null) { return null; }
 
-            // Fill primitive's positions and colors. This maybe changes much more than lines above in second dev.
+            // Fill primitive's position information.
             uint lastVertexID;
             if (element.GetLastVertexIDOfPickedGeometry(stageVertexID, out lastVertexID))
             {
