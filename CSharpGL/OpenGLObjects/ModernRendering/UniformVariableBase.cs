@@ -119,7 +119,7 @@ namespace CSharpGL
 
         public override void SetUniform(ShaderProgram program)
         {
-            GL.ActiveTexture((uint)Value.index);
+            GL.GetDelegateFor<GL.glActiveTexture>()((uint)Value.index);
             GL.Enable(GL.GL_TEXTURE_2D);
             GL.BindTexture(GL.GL_TEXTURE_2D, Value.name);
             program.SetUniform(VarName, (int)((uint)Value.index - GL.GL_TEXTURE0));
