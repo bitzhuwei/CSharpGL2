@@ -35,29 +35,34 @@ namespace CSharpGL
 
         public override string ToString()
         {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendFormat("Geometry Type: {0}", this.GeometryType);
+            builder.AppendLine();
+
             var positions = this.positions;
             if (positions == null) { positions = new vec3[0]; }
 
-            string strPositions = positions.PrintArray();
-
             uint stageVertexID = this.StageVertexID;
+            uint lastVertexID = uint.MaxValue;
+            string strLastVertexID;
             IColorCodedPicking picking = this.From;
-
-            string lastVertexID = "?";
             if (picking != null)
             {
-                uint tmp;
-                if (picking.GetLastVertexIDOfPickedGeometry(stageVertexID, out tmp))
-                {
-                    lastVertexID = string.Format("{0}", tmp);
-                }
+                if (picking.GetLastVertexIDOfPickedGeometry(stageVertexID, out lastVertexID))
+                { strLastVertexID = string.Format("{0}", lastVertexID); }
             }
 
-            string result = string.Format("{0}: Positions: {1} {5}last/stage vertex ID:{2}/{3} {5}From element: {4}",
-                GeometryType, strPositions, lastVertexID, stageVertexID, From,
-                Environment.NewLine);
-            return result;
-            //return base.ToString();
+            for (int i = 0; i < positions.Length; i++)
+            {
+                builder.Append('['); builder.Append(lastVertexID - (positions.Length - 1) + i); builder.Append("]: ");
+                builder.AppendLine(positions[i].ToString());
+            }
+
+            builder.AppendFormat("Stage Vertex ID: {0}", stageVertexID);
+            builder.AppendLine();
+            builder.AppendFormat("From: {0}", this.From);
+
+            return builder.ToString();
         }
 
     }
