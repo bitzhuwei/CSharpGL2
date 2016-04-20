@@ -1302,28 +1302,6 @@ namespace CSharpGL
 
         #region GL_EXT_fog_coord
 
-        //  Methods
-        public static void FogCoordEXT(float coord)
-        {
-            GetDelegateFor<glFogCoordfEXT>()(coord);
-        }
-        public static void FogCoordEXT(float[] coord)
-        {
-            GetDelegateFor<glFogCoordfvEXT>()(coord);
-        }
-        public static void FogCoordEXT(double coord)
-        {
-            GetDelegateFor<glFogCoorddEXT>()(coord);
-        }
-        public static void FogCoordEXT(double[] coord)
-        {
-            GetDelegateFor<glFogCoorddvEXT>()(coord);
-        }
-        public static void FogCoordPointerEXT(uint type, int stride, IntPtr pointer)
-        {
-            GetDelegateFor<glFogCoordPointerEXT>()(type, stride, pointer);
-        }
-
         //  Delegates
         public delegate void glFogCoordfEXT(float coord);
         public delegate void glFogCoordfvEXT(float[] coord);
