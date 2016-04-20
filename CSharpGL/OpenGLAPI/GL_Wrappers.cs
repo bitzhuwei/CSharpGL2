@@ -1228,7 +1228,7 @@ namespace CSharpGL
 
         public static void BindTransformFeedback(TransformFeedbackTarget target, uint id)
         {
-            BindTransformFeedback((uint)target, id);
+            GL.GetDelegateFor<GL.glBindTransformFeedback>()((uint)target, id);
         }
 
         /// <summary>

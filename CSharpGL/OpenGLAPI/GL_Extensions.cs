@@ -2718,17 +2718,6 @@ namespace CSharpGL
 
         #region transform feedbacks
 
-        public static void GenTransformFeedbacks(int n, uint[] ids)
-        {
-            GetDelegateFor<glGenTransformFeedbacks>()(n, ids);
-        }
-
-        public delegate void glGenTransformFeedbacks(int n, uint[] ids);
-
-        public static void BindTransformFeedback(uint target, uint id)
-        {
-            GetDelegateFor<glBindTransformFeedback>()(target, id);
-        }
         public delegate void glBindTransformFeedback(uint target, uint id);
 
         public const uint GL_TRANSFORM_FEEDBACK = 0x8E22;
