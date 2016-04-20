@@ -2493,11 +2493,6 @@ namespace CSharpGL
         /// <param name="program">The name of the program containing the block whose binding to change.</param>
         /// <param name="storageBlockIndex">The index storage block within the program.</param>
         /// <param name="storageBlockBinding">The index storage block binding to associate with the specified storage block.</param>
-        public static void ShaderStorageBlockBinding(uint program, uint storageBlockIndex, uint storageBlockBinding)
-        {
-            GetDelegateFor<glShaderStorageBlockBinding>()(program, storageBlockIndex, storageBlockBinding);
-        }
-
         public delegate void glShaderStorageBlockBinding(uint program, uint storageBlockIndex, uint storageBlockBinding);
 
         //  Constants
