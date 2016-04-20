@@ -1855,12 +1855,6 @@ namespace CSharpGL
 
         #region GL_EXT_stencil_two_side
 
-        //  Methods
-        public static void ActiveStencilFaceEXT(uint face)
-        {
-            GetDelegateFor<glActiveStencilFaceEXT>()(face);
-        }
-
         //  Delegates
         public delegate void glActiveStencilFaceEXT(uint face);
 
