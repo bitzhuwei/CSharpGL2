@@ -1240,7 +1240,7 @@ namespace CSharpGL
         /// <param name="buffer">The name of a buffer object to bind to the specified binding point.</param>
         public static void BindBufferBase(TransformFeedbackBufferTarget target, uint index, uint buffer)
         {
-            BindBufferBase((uint)target, index, buffer);
+            GL.GetDelegateFor<GL.glBindBufferBase>()((uint)target, index, buffer);
         }
         /// <summary>
         /// bind a range within a buffer object to an indexed buffer target
@@ -1252,11 +1252,11 @@ namespace CSharpGL
         /// <param name="size">The amount of data in machine units that can be read from the buffer object while used as an indexed target.</param>
         public static void BindBufferRange(TransformFeedbackBufferTarget target, uint index, uint buffer, int offset, int size)
         {
-            BindBufferRange((uint)target, index, buffer, offset, size);
+            GL.GetDelegateFor<GL.glBindBufferRange>()((uint)target, index, buffer, offset, size);
         }
         public static void BeginTransformFeedback(BeginTransformFeedbackPrimitiveMode primitiveMode)
         {
-            BeginTransformFeedback((uint)primitiveMode);
+            GL.GetDelegateFor<GL.glBeginTransformFeedback>()((uint)primitiveMode);
         }
 
 
