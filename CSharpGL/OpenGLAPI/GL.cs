@@ -26,7 +26,7 @@ namespace CSharpGL
         /// <typeparam name="T">The extension delegate type.</typeparam>
         /// <returns>The delegate that points to the extension function.</returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static T GetDelegateFor<T>() where T : class
+        public static T GetDelegateFor<T>() where T : class
         {
             //  Get the type of the extension function.
             Type delegateType = typeof(T);
