@@ -209,6 +209,7 @@
     <Compile Include="Utilities\OpenFolderHelper.cs" />
     <Compile Include="Utilities\OrderedCollection.cs" />
     <Compile Include="Utilities\PositionHelper.cs" />
+    <Compile Include="Utilities\StringHelper.cs" />
     <Compile Include="Utilities\StructHelper.cs" />
     <Compile Include="Utilities\UnmanagedArray.cs" />
     <Compile Include="Utilities\UnmanagedArrayFastAccessHelper.cs" />
