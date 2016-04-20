@@ -1844,13 +1844,6 @@ namespace CSharpGL
 
         #region GL_EXT_blend_equation_separate
 
-        //  Methods
-        public static void BlendEquationSeparateEXT(uint modeRGB, uint modeAlpha)
-        {
-            // GetDelegateFor<glBlendEquationEXT>()(modeRGB, modeAlpha);
-            GetDelegateFor<glBlendEquationEXT>()(modeRGB);
-        }
-
         //  Delegates
         public delegate void glBlendEquationSeparateEXT(uint modeRGB, uint modeAlpha);
 
