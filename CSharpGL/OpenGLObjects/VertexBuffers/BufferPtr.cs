@@ -63,13 +63,13 @@ namespace CSharpGL
                 }
 
                 // Dispose unmanaged resources.
-                DIsposeUnmanagedResources();
+                DisposeUnmanagedResources();
             }
 
             this.disposedValue = true;
         }
 
-        protected virtual void DIsposeUnmanagedResources()
+        protected virtual void DisposeUnmanagedResources()
         {
             IntPtr context = Win32.wglGetCurrentContext();
             if (context != IntPtr.Zero)
