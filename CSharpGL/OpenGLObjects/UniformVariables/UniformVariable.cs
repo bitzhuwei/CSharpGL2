@@ -10,7 +10,7 @@ namespace CSharpGL
     /// <summary>
     /// shader中的一个uniform变量。
     /// </summary>
-    public abstract class UniformVariableBase
+    public abstract class UniformVariable
     {
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace CSharpGL
         /// shader中的一个uniform变量。
         /// </summary>
         /// <param name="varName"></param>
-        public UniformVariableBase(string varName)
+        public UniformVariable(string varName)
         {
             this.VarName = varName;
         }
@@ -107,7 +107,7 @@ namespace CSharpGL
         }
 
     }
-    public class UniformSampler2D : UniformVariableBase
+    public class UniformSampler2D : UniformVariable
     {
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace CSharpGL
             return Value;
         }
     }
-    public class UniformFloat : UniformVariableBase
+    public class UniformFloat : UniformVariable
     {
 
         /// <summary>
@@ -228,7 +228,7 @@ namespace CSharpGL
         }
     }
 
-    public class UniformVec2 : UniformVariableBase
+    public class UniformVec2 : UniformVariable
     {
 
         /// <summary>
@@ -286,7 +286,7 @@ namespace CSharpGL
         }
     }
 
-    public class UniformVec3 : UniformVariableBase
+    public class UniformVec3 : UniformVariable
     {
 
         /// <summary>
@@ -344,7 +344,7 @@ namespace CSharpGL
         }
     }
 
-    public class UniformVec4 : UniformVariableBase
+    public class UniformVec4 : UniformVariable
     {
 
         /// <summary>
@@ -402,7 +402,7 @@ namespace CSharpGL
         }
     }
 
-    public class UniformMat2 : UniformVariableBase
+    public class UniformMat2 : UniformVariable
     {
 
         /// <summary>
@@ -459,7 +459,7 @@ namespace CSharpGL
         }
     }
 
-    public class UniformMat3 : UniformVariableBase
+    public class UniformMat3 : UniformVariable
     {
 
         /// <summary>
@@ -516,7 +516,7 @@ namespace CSharpGL
         }
     }
 
-    public class UniformMat4 : UniformVariableBase
+    public class UniformMat4 : UniformVariable
     {
 
         /// <summary>

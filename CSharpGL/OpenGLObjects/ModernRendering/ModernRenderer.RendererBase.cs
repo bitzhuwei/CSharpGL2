@@ -49,7 +49,8 @@ namespace CSharpGL
                         bufferPtr.BufferID,
                         bufferPtr.DataSize,
                         bufferPtr.DataType,
-                        bufferPtr.Length);
+                        bufferPtr.Length,
+                        bufferPtr.ByteLength);
                 }
             }
             this.propertyBufferPtrs = propertyBufferPtrs;

@@ -24,8 +24,8 @@ namespace CSharpGL
         /// <para>表示第3个参数</para></param>
         /// <param name="length">此VBO含有多个个元素？</param>
         internal PropertyBufferPtr(string varNameInVertexShader,
-            uint bufferID, int dataSize, uint dataType, int length)
-            : base(bufferID, length)
+            uint bufferID, int dataSize, uint dataType, int length, int byteLength)
+            : base(bufferID, length, byteLength)
         {
             this.VarNameInVertexShader = varNameInVertexShader;
             this.DataSize = dataSize;

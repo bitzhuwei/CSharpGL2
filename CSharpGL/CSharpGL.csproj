@@ -101,7 +101,7 @@
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\PropertyNameMap.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ShaderCode.cs" />
-    <Compile Include="OpenGLObjects\ModernRendering\UniformVariableBase.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformVariable.cs" />
     <Compile Include="Maths\glm_camera.cs" />
     <Compile Include="Maths\glm_inverse.cs" />
     <Compile Include="Maths\glm_trigonometric.cs" />

@@ -1035,6 +1035,11 @@ namespace CSharpGL
             return GetDelegateFor<glUnmapBuffer>()((uint)target);
         }
 
+        public static IntPtr MapBufferRange(BufferTarget target, int offset, int length ,MapBufferAccess access)
+        {
+            return GetDelegateFor<GL.glMapBufferRange>()((uint)target, offset, length, (uint)access);
+        }
+
         /// <summary>
         /// This function sets the image for the currently binded texture.
         /// </summary>

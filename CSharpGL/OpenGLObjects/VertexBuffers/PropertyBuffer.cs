@@ -62,7 +62,7 @@ namespace CSharpGL
             GL.GetDelegateFor<GL.glBufferData>()(GL.GL_ARRAY_BUFFER, this.ByteLength, this.Header, (uint)this.Usage);
 
             PropertyBufferPtr bufferPtr = new PropertyBufferPtr(
-                this.VarNameInVertexShader, buffers[0], this.DataSize, this.DataType, this.Length);
+                this.VarNameInVertexShader, buffers[0], this.DataSize, this.DataType, this.Length, this.ByteLength);
 
             return bufferPtr;
         }

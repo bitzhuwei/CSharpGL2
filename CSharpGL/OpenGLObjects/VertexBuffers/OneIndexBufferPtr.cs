@@ -20,8 +20,9 @@ namespace CSharpGL
         /// <param name="type">type in GL.DrawElements(uint mode, int count, uint type, IntPtr indices);
         /// <para>表示第3个参数，表示索引元素的类型。</para></param>
         /// <param name="length">此VBO含有多个个元素？</param>
-        internal OneIndexBufferPtr(uint bufferID, DrawMode mode, int elementCount, IndexElementType type , int length)
-            : base(mode, bufferID, length)
+        internal OneIndexBufferPtr(uint bufferID, DrawMode mode, int elementCount, 
+            IndexElementType type , int length, int byteLength)
+            : base(mode, bufferID, length, byteLength)
         {
             this.ElementCount = elementCount;
             this.Type = type;

@@ -1,6 +1,7 @@
 ﻿using GLM;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,27 +38,42 @@ namespace CSharpGL
             if (element.GetLastVertexIDOfPickedGeometry(stageVertexID, out lastVertexID))
             {
                 int vertexCount = pickedGeometry.GeometryType.GetVertexCount();
-                if (vertexCount == -1) { vertexCount = this.positionBufferPtr.Length / this.positionBufferPtr.DataSize; }
+                if (vertexCount == -1) { vertexCount = this.positionBufferPtr.Length; }
                 GL.BindBuffer(BufferTarget.ArrayBuffer, this.positionBufferPtr.BufferID);
-                IntPtr pointer = GL.MapBuffer(BufferTarget.ArrayBuffer, MapBufferAccess.ReadOnly);
-                unsafe
+                //IntPtr pointer = GL.MapBuffer(BufferTarget.ArrayBuffer, MapBufferAccess.ReadOnly);
+                IntPtr pointer = GL.MapBufferRange(BufferTarget.ArrayBuffer, 0, this.positionBufferPtr.ByteLength, MapBufferAccess.ReadOnly);
+                //(int)((lastVertexID - (vertexCount - 1)) * 3), vertexCount * 3, MapBufferAccess.ReadOnly);
+                if (pointer.ToInt32() != 0)
                 {
-                    vec3* array = (vec3*)pointer.ToPointer();
-                    var geometryPositions = new vec3[vertexCount];
-                    uint i = lastVertexID;
-                    for (int j = (geometryPositions.Length - 1); j >= 0; i--, j--)
+                    unsafe
                     {
-                        if (i * 3 + 2 == uint.MaxValue)// This is when mode is GL_LINE_LOOP.
-                        { i = (uint)(this.positionBufferPtr.Length / this.positionBufferPtr.DataSize - 1); }
-                        geometryPositions[j] = array[i];
+                        vec3* array = (vec3*)pointer.ToPointer();
+                        var geometryPositions = new vec3[vertexCount];
+                        //uint i = lastVertexID;
+                        uint i = (uint)(vertexCount * 3 - 1);
+                        for (int j = (geometryPositions.Length - 1); j >= 0; i--, j--)
+                        {
+                            if (i * 3 + 2 == uint.MaxValue)// This is when mode is GL_LINE_LOOP.
+                            { i = (uint)(this.positionBufferPtr.Length / this.positionBufferPtr.DataSize - 1); }
+                            geometryPositions[j] = array[i];
+                        }
+                        pickedGeometry.positions = geometryPositions;
                     }
-                    pickedGeometry.positions = geometryPositions;
+                    success++;
+                }
+                else
+                {
+                    Debug.WriteLine("MapBufferRange failed: buffer ID: [{0}]", this.positionBufferPtr.BufferID);
+                    failure++;
                 }
                 GL.UnmapBuffer(BufferTarget.ArrayBuffer);
             }
 
             return pickedGeometry;
         }
+
+        int success = 0;
+        int failure = 0;
 
         void IRenderable.Render(RenderEventArgs e)
         {

@@ -9,7 +9,7 @@ namespace CSharpGL
 {
     public partial class ModernRenderer 
     {
-        private List<UniformVariableBase> uniformVariables = new List<UniformVariableBase>();
+        private List<UniformVariable> uniformVariables = new List<UniformVariable>();
 
         protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");
 
@@ -23,7 +23,7 @@ namespace CSharpGL
             }
             else
             {
-                UniformVariableBase variable = this.uniformVariables[index];
+                UniformVariable variable = this.uniformVariables[index];
                 value = (T)variable.GetValue();
                 return true;
             }
@@ -41,7 +41,7 @@ namespace CSharpGL
                         "uniform variable [{0}] not exists!", varNameInShader));
                 }
 
-                UniformVariableBase variable = GetVariable(value, varNameInShader);
+                UniformVariable variable = GetVariable(value, varNameInShader);
                 variable.SetValue(value);
                 this.uniformVariableNames.TryInsert(varNameInShader);
                 index = this.uniformVariableNames.IndexOf(varNameInShader);
@@ -50,20 +50,20 @@ namespace CSharpGL
             }
             else
             {
-                UniformVariableBase variable = this.uniformVariables[index];
+                UniformVariable variable = this.uniformVariables[index];
                 bool updated = variable.SetValue(value);
                 return updated;
             }
         }
 
-        private UniformVariableBase GetVariable(ValueType value, string varNameInShader)
+        private UniformVariable GetVariable(ValueType value, string varNameInShader)
         {
             Type t = value.GetType();
             Type varType;
             if (variableDict.TryGetValue(t, out varType))
             {
                 object variable = Activator.CreateInstance(varType, varNameInShader);
-                return variable as UniformVariableBase;
+                return variable as UniformVariable;
             }
             else
             {
