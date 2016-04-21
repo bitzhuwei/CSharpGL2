@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Linq;
 
 namespace GLM
@@ -6,8 +7,20 @@ namespace GLM
     /// <summary>
     /// Represents a 2x2 matrix.
     /// </summary>
+    [TypeConverter(typeof(Mat2TypeConverter))]
     public struct mat2
     {
+        static readonly char[] separator = new char[] { '[', ']' };
+
+        public static mat2 Parse(string value)
+        {
+            string[] parts = value.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            vec2 col0 = vec2.Parse(parts[1]);
+            vec2 col1 = vec2.Parse(parts[3]);
+
+            return new mat2(col0, col1);
+        }
+
         public override string ToString()
         {
             var builder = new System.Text.StringBuilder();
@@ -48,10 +61,10 @@ namespace GLM
             this.col1 = cols[1];
         }
 
-        public mat2(vec2 a, vec2 b)
+        public mat2(vec2 col0, vec2 col1)
         {
-            this.col0 = a;
-            this.col1 = b;
+            this.col0 = col0;
+            this.col1 = col1;
         }
 
         public mat2(float a, float b, float c, float d)

@@ -71,6 +71,12 @@
     <Compile Include="OpenGLObjects\UniformVariables\UniformVec4.cs" />
     <Compile Include="OpenGLObjects\UniformVariables\UniformVec3.cs" />
     <Compile Include="OpenGLObjects\UniformVariables\UniformVec2.cs" />
+    <Compile Include="TypeConverters\Mat2TypeConverter.cs" />
+    <Compile Include="TypeConverters\Mat3TypeConverter.cs" />
+    <Compile Include="TypeConverters\Mat4TypeConverter.cs" />
+    <Compile Include="TypeConverters\Vec4TypeConverter.cs" />
+    <Compile Include="TypeConverters\Vec3TypeConverter.cs" />
+    <Compile Include="TypeConverters\Vec2TypeConverter.cs" />
     <Compile Include="UITypeEditors\FormUniformVariableListEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,9 +248,7 @@
     <Compile Include="Utilities\UnmanagedArrayFastAccessHelper.cs" />
     <Compile Include="Utilities\UnmanagedArrayHelper.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TypeConverters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="OpenGLObjects\ModernRendering\ModernRenderer.cd" />
     <None Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cd" />

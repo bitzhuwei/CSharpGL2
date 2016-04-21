@@ -22,6 +22,7 @@ namespace CSharpGL.Demos
         /// </summary>
         ModernRenderer renderer;
 
+        bool cameraUpdated = true;
         /// <summary>
         /// 控制Camera的旋转、进退
         /// </summary>
@@ -54,15 +55,19 @@ namespace CSharpGL.Demos
         {
             GL.Clear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
 
-            mat4 projectionMatrix = camera.GetProjectionMat4();
-            mat4 viewMatrix = camera.GetViewMat4();
-            mat4 modelMatrix = mat4.identity();
             ModernRenderer renderer = this.renderer;
             if (renderer != null)
             {
-                renderer.SetUniformValue("projectionMatrix", projectionMatrix);
-                renderer.SetUniformValue("viewMatrix", viewMatrix);
-                renderer.SetUniformValue("modelMatrix", modelMatrix);
+                if (cameraUpdated)
+                {
+                    mat4 projectionMatrix = camera.GetProjectionMat4();
+                    mat4 viewMatrix = camera.GetViewMat4();
+                    mat4 modelMatrix = mat4.identity();
+                    renderer.SetUniformValue("projectionMatrix", projectionMatrix);
+                    renderer.SetUniformValue("viewMatrix", viewMatrix);
+                    renderer.SetUniformValue("modelMatrix", modelMatrix);
+                    cameraUpdated = false;
+                }
                 renderer.Render(new RenderEventArgs(RenderModes.Render, this.camera));
             }
         }
@@ -76,7 +81,10 @@ namespace CSharpGL.Demos
         private void glCanvas1_MouseMove(object sender, MouseEventArgs e)
         {
             if (rotator.MouseDownFlag)
-            { rotator.MouseMove(e.X, e.Y); }
+            {
+                rotator.MouseMove(e.X, e.Y);
+                this.cameraUpdated = true;
+            }
 
             {
                 IColorCodedPicking pickable = this.renderer;
@@ -102,6 +110,7 @@ namespace CSharpGL.Demos
         void glCanvas1_MouseWheel(object sender, MouseEventArgs e)
         {
             camera.MouseWheel(e.Delta);
+            cameraUpdated = true;
         }
 
         private void Form01ModernRenderer_Load(object sender, EventArgs e)

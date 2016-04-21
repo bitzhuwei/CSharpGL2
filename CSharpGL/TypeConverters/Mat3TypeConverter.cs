@@ -1,5 +1,4 @@
-﻿using GLM;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GLM
 {
-    public class Vec3TypeConverter : TypeConverter
+    public class Mat3TypeConverter : TypeConverter
     {
         public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
         {
@@ -20,17 +19,17 @@ namespace GLM
             CultureInfo culture, object value)
         {
             string str = value as string;
-            if(!string.IsNullOrEmpty(str))
+            if (!string.IsNullOrEmpty(str))
             {
-                return vec3.Parse(str);
+                return mat3.Parse(str);
             }
             else
-            { return new vec3(); }
+            { return new mat3(); }
         }
 
         public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
         {
-            return destinationType == typeof(vec3);
+            return destinationType == typeof(mat3);
         }
 
         public override object ConvertTo(ITypeDescriptorContext context,

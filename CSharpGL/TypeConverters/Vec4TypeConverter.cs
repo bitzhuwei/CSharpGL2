@@ -36,8 +36,6 @@ namespace GLM
         public override object ConvertTo(ITypeDescriptorContext context,
             CultureInfo culture, object value, Type destinationType)
         {
-            return base.ConvertTo(context, culture, value, destinationType);
-
             if (destinationType == typeof(string))
             { return value.ToString(); }
             else

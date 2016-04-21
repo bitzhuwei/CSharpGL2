@@ -115,9 +115,9 @@
             this.propertyGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.propertyGrid.Location = new System.Drawing.Point(330, 37);
+            this.propertyGrid.Location = new System.Drawing.Point(330, 80);
             this.propertyGrid.Name = "propertyGrid";
-            this.propertyGrid.Size = new System.Drawing.Size(336, 400);
+            this.propertyGrid.Size = new System.Drawing.Size(336, 357);
             this.propertyGrid.TabIndex = 3;
             // 
             // btnCancel

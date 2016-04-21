@@ -1,4 +1,6 @@
+using CSharpGL;
 using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 
@@ -7,8 +9,22 @@ namespace GLM
     /// <summary>
     /// Represents a 4x4 matrix.
     /// </summary>
+    [TypeConverter(typeof(Mat4TypeConverter))]
     public struct mat4
     {
+        static readonly char[] separator = new char[] { '[', ']' };
+
+        public static mat4 Parse(string value)
+        {
+            string[] parts = value.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            vec4 col0 = vec4.Parse(parts[1]);
+            vec4 col1 = vec4.Parse(parts[3]);
+            vec4 col2 = vec4.Parse(parts[5]);
+            vec4 col3 = vec4.Parse(parts[7]);
+
+            return new mat4(col0, col1, col2, col3);
+        }
+
         public override string ToString()
         {
             var builder = new System.Text.StringBuilder();
@@ -52,12 +68,12 @@ namespace GLM
             this.col3 = cols[3];
         }
 
-        public mat4(vec4 a, vec4 b, vec4 c, vec4 d)
+        public mat4(vec4 col0, vec4 col1, vec4 col2, vec4 col3)
         {
-            this.col0 = a;
-            this.col1 = b;
-            this.col2 = c;
-            this.col3 = d;
+            this.col0 = col0;
+            this.col1 = col1;
+            this.col2 = col2;
+            this.col3 = col3;
         }
 
         /// <summary>

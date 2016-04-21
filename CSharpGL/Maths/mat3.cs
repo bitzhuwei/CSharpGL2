@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Linq;
 
 namespace GLM
@@ -6,8 +7,21 @@ namespace GLM
     /// <summary>
     /// Represents a 3x3 matrix.
     /// </summary>
+    [TypeConverter(typeof(Mat3TypeConverter))]
     public struct mat3
     {
+        static readonly char[] separator = new char[] { '[', ']' };
+
+        public static mat3 Parse(string value)
+        {
+            string[] parts = value.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            vec3 col0 = vec3.Parse(parts[1]);
+            vec3 col1 = vec3.Parse(parts[3]);
+            vec3 col2 = vec3.Parse(parts[5]);
+
+            return new mat3(col0, col1, col2);
+        }
+
         public override string ToString()
         {
             var builder = new System.Text.StringBuilder();
@@ -50,11 +64,11 @@ namespace GLM
             this.col2 = cols[2];
         }
 
-        public mat3(vec3 a, vec3 b, vec3 c)
+        public mat3(vec3 col0, vec3 col1, vec3 col2)
         {
-            this.col0 = a;
-            this.col1 = b;
-            this.col2 = c;
+            this.col0 = col0;
+            this.col1 = col1;
+            this.col2 = col2;
         }
 
         /// <summary>
