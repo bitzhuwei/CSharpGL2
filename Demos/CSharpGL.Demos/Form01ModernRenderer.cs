@@ -17,12 +17,23 @@ namespace CSharpGL.Demos
     public partial class Form01ModernRenderer : Form
     {
 
+        /// <summary>
+        /// 要渲染的对象
+        /// </summary>
         ModernRenderer renderer;
 
+        /// <summary>
+        /// 控制Camera的旋转、进退
+        /// </summary>
         SatelliteRotator rotator;
+        /// <summary>
+        /// 摄像机
+        /// </summary>
         Camera camera;
+
         private FormBulletinBoard bulletinBoard;
-        private FormProperyGrid propertyGrid;
+        private FormProperyGrid rendererPropertyGrid;
+        private FormProperyGrid cameraPropertyGrid;
 
         public Form01ModernRenderer()
         {
@@ -71,7 +82,7 @@ namespace CSharpGL.Demos
                 IColorCodedPicking pickable = this.renderer;
                 pickable.MVP = this.camera.GetProjectionMat4() * this.camera.GetViewMat4();
                 IPickedGeometry pickedGeometry = ColorCodedPicking.Pick(
-                    this.camera, e.X, e.Y, this.glCanvas1.Width, this.glCanvas1.Height, this.renderer);
+                    this.camera, e.X, e.Y, this.glCanvas1.Width, this.glCanvas1.Height, pickable);
                 if (pickedGeometry != null)
                 {
                     this.bulletinBoard.SetContent(pickedGeometry.ToString());
@@ -124,7 +135,13 @@ namespace CSharpGL.Demos
                 var frmPropertyGrid = new FormProperyGrid();
                 frmPropertyGrid.DisplayObject(this.renderer);
                 frmPropertyGrid.Show();
-                this.propertyGrid = frmPropertyGrid;
+                this.rendererPropertyGrid = frmPropertyGrid;
+            }
+            {
+                var frmPropertyGrid = new FormProperyGrid();
+                frmPropertyGrid.DisplayObject(this.camera);
+                frmPropertyGrid.Show();
+                this.cameraPropertyGrid = frmPropertyGrid;
             }
         }
 
