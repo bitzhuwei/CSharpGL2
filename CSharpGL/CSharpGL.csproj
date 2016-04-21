@@ -61,6 +61,14 @@
     </Compile>
     <Compile Include="OpenGLObjects\GLSwitches\LineWidthSwitch.cs" />
     <Compile Include="OpenGLObjects\GLSwitches\PointSizeSwitch.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformSampler2D.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformFloat.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformMat2.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformMat3.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformMat4.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformVec4.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformVec3.cs" />
+    <Compile Include="OpenGLObjects\UniformVariables\UniformVec2.cs" />
     <Compile Include="UITypeEditors\FormGLSwitchListEditor.cs">
       <SubType>Form</SubType>
     </Compile>

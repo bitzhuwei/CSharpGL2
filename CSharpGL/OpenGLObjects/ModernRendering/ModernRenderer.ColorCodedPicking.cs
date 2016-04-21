@@ -13,8 +13,8 @@ namespace CSharpGL
 
         mat4 IColorCodedPicking.MVP
         {
-            get { return pickingMVP.GetMat4(); }
-            set { pickingMVP.SetMat4(value); }
+            get { return pickingMVP.Value; }
+            set { pickingMVP.Value = value; }
         }
 
         uint IColorCodedPicking.PickingBaseID { get; set; }
