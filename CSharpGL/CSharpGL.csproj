@@ -142,7 +142,7 @@
     <Compile Include="OpenGLObjects\Textures\sampler2D.cs" />
     <Compile Include="OpenGLObjects\Textures\sampler3D.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\VertexBufferPtr.cs" />
-    <Compile Include="OpenGLObjects\VertexBuffers\IndexBuffer.cs" />
+    <Compile Include="OpenGLObjects\VertexBuffers\OneIndexBuffer.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferBase.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\OneIndexBufferPtr.cs" />
     <Compile Include="OpenGLObjects\VertexBuffers\IndexBufferPtr.cs" />

@@ -10,7 +10,7 @@ namespace CSharpGL
     /// 索引buffer。索引指定了<see cref="PropertyBuffer"/>里各个顶点的渲染顺序。
     /// </summary>
     /// <typeparam name="T">此buffer存储的是哪种struct的数据？</typeparam>
-    public class IndexBuffer<T> : IndexBufferBase<T> where T : struct
+    public class OneIndexBuffer<T> : IndexBufferBase<T> where T : struct
     {
         /// <summary>
         /// 用于存储索引的VBO。
@@ -19,7 +19,7 @@ namespace CSharpGL
         /// <param name="type">type in GL.DrawElements(uint mode, int count, uint type, IntPtr indices);
         /// <para>表示第3个参数，表示索引元素的类型。</para></param>
         /// <param name="usage"></param>
-        public IndexBuffer(DrawMode mode, BufferUsage usage)
+        public OneIndexBuffer(DrawMode mode, BufferUsage usage)
             : base(mode, usage)
         {
             if (typeof(uint) == typeof(T))

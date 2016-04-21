@@ -65,7 +65,7 @@ namespace CSharpGL.ModelAdapters
 
         public IndexBufferPtr GetIndex()
         {
-            using (var buffer = new IndexBuffer<uint>(
+            using (var buffer = new OneIndexBuffer<uint>(
                 DrawMode.LineStrip, BufferUsage.StaticDraw))
             {
                 buffer.Alloc(model.Indexes.Length);
