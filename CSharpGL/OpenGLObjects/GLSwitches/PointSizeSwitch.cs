@@ -36,6 +36,11 @@ namespace CSharpGL
 
         float[] original = new float[1];
 
+        public override string ToString()
+        {
+            return string.Format("Point Size: {0}", PointSize);
+        }
+
         public override void On()
         {
             GL.GetFloat(GetTarget.PointSize, original);

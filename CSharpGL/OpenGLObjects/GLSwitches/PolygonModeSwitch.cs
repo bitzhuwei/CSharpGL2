@@ -17,6 +17,11 @@ namespace CSharpGL
             this.Mode = mode;
         }
 
+        public override string ToString()
+        {
+            return string.Format("Polygon Mode: {0}", Mode);
+        }
+
         public override void On()
         {
             GL.GetInteger(GetTarget.PolygonMode, originalPolygonMode);

@@ -36,6 +36,11 @@ namespace CSharpGL
 
         float[] original = new float[1];
 
+        public override string ToString()
+        {
+            return string.Format("Line Width: {0}", LineWidth);
+        }
+
         public override void On()
         {
             GL.GetFloat(GetTarget.LineWidth, original);

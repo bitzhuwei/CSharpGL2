@@ -15,6 +15,11 @@ namespace CSharpGL
             this.RestartIndex = restartIndex;
         }
 
+        public override string ToString()
+        {
+            return string.Format("Restart Index: {0}", RestartIndex);
+        }
+
         public override void On()
         {
             GL.Enable(GL.GL_PRIMITIVE_RESTART);
