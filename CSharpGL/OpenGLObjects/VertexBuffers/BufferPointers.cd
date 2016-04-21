@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
-  <Class Name="CSharpGL.BufferPtr">
+  <Class Name="CSharpGL.VertexBufferPtr">
     <Position X="5.75" Y="0.5" Width="4.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACCAAAAAAAAAAAAAAAAAAAAAABAAAgAAEAA=</HashCode>
-      <FileName>OpenGLObjects\VertexBuffers\BufferPtr.cs</FileName>
+      <HashCode>AAAAAAAAACCAAAAAAAAAAABAAAAAAAAAABAAAgAQAAA=</HashCode>
+      <FileName>OpenGLObjects\VertexBuffers\VertexBufferPtr.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
