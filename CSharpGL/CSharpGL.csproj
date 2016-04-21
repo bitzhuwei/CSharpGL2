@@ -55,6 +55,9 @@
     </Compile>
     <Compile Include="Controls\GLCanvasHelper.cs" />
     <Compile Include="Controls\RenderTriggers.cs" />
+    <Compile Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="OpenGLObjects\GLSwitches\LineWidthSwitch.cs" />
     <Compile Include="OpenGLObjects\GLSwitches\PointSizeSwitch.cs" />
     <Compile Include="UITypeEditors\FormGLSwitchListEditor.cs">
@@ -69,7 +72,6 @@
     <Compile Include="UITypeEditors\FormGLSwtichType.Designer.cs">
       <DependentUpon>FormGLSwtichType.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypes.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\GeometryTypesHelper.cs" />
     <Compile Include="OpenGLObjects\ColorCodedPicking\IColorCodedPicking.cs" />
