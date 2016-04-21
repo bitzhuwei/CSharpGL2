@@ -1,6 +1,4 @@
 ﻿using CSharpGL;
-using CSharpGL.Objects;
-using CSharpGL.Objects.VertexBuffers;
 using GLM;
 using System;
 using System.Collections.Generic;
@@ -9,14 +7,14 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.ClassicalModels
+namespace CSharpGL.ModelAdapters
 {
     /// <summary>
     /// 一个立方体的模型。
     /// http://images.cnblogs.com/cnblogs_com/bitzhuwei/554293/o_bitzhuwei.cnblogs.com000000061.jpg
     /// http://images.cnblogs.com/cnblogs_com/bitzhuwei/554293/o_bitzhuwei.cnblogs.com000000062.jpg
     /// </summary>
-    public class CubeModel : IUpload2GPU
+    public class CubeModel : IBufferable
     {
         static vec3[] eightVertexes = new vec3[] 
         { 
@@ -76,7 +74,7 @@ namespace CSharpGL.ClassicalModels
         CubeColor color;
         uint[] index;
 
-        public static IUpload2GPU GetModel(float radius)
+        public static IBufferable GetModel(float radius)
         {
             return new CubeModel(radius);
         }
@@ -231,7 +229,7 @@ namespace CSharpGL.ClassicalModels
         public const string strColor = "color";
         public const string strNormal = "normal";
 
-        public BufferPointer GetBufferRenderer(string bufferName, string varNameInShader)
+        public PropertyBufferPtr GetProperty(string bufferName, string varNameInShader)
         {
             if (bufferName == strPosition)
             {
@@ -244,7 +242,7 @@ namespace CSharpGL.ClassicalModels
                         positionArray[0] = this.position;
                     }
 
-                    return positionBuffer.GetRenderer();
+                    return positionBuffer.GetBufferPtr() as PropertyBufferPtr;
                 }
             }
             else if (bufferName == strColor)
@@ -258,7 +256,7 @@ namespace CSharpGL.ClassicalModels
                         colorArray[0] = this.color;
                     }
 
-                    return colorBuffer.GetRenderer();
+                    return colorBuffer.GetBufferPtr() as PropertyBufferPtr;
                 }
             }
             else if (bufferName == strNormal)
@@ -272,7 +270,7 @@ namespace CSharpGL.ClassicalModels
                         normalArray[0] = this.normal;
                     }
 
-                    return normalBuffer.GetRenderer();
+                    return normalBuffer.GetBufferPtr() as PropertyBufferPtr;
                 }
             }
             else
@@ -281,9 +279,9 @@ namespace CSharpGL.ClassicalModels
             }
         }
 
-        public IndexBufferPointerBase GetIndexBufferRenderer()
+        public IndexBufferPtr GetIndex()
         {
-            using (var buffer = new IndexBuffer<uint>(DrawMode.Triangles, IndexElementType.UnsignedInt, BufferUsage.StaticDraw))
+            using (var buffer = new OneIndexBuffer<uint>(DrawMode.Triangles, BufferUsage.StaticDraw))
             {
                 buffer.Alloc(this.index.Length);
                 unsafe
@@ -295,7 +293,7 @@ namespace CSharpGL.ClassicalModels
                     }
                 }
 
-                return buffer.GetRenderer() as IndexBufferPointerBase;
+                return buffer.GetBufferPtr() as IndexBufferPtr;
             }
         }
     }

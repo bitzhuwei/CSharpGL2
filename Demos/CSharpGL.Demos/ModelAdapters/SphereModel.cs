@@ -1,6 +1,4 @@
 ﻿using CSharpGL;
-using CSharpGL.Objects;
-using CSharpGL.Objects.VertexBuffers;
 using GLM;
 using System;
 using System.Collections.Generic;
@@ -9,13 +7,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.ClassicalModels
+namespace CSharpGL.ModelAdapters
 {
     /// <summary>
     /// 一个球体的模型。
     /// http://images.cnblogs.com/cnblogs_com/bitzhuwei/554293/o_sphere.jpg
     /// </summary>
-    public class SphereModel : IUpload2GPU
+    public class SphereModel : IBufferable
     {
         vec3[] positions;
         vec3[] normals;
@@ -45,7 +43,7 @@ namespace CSharpGL.ClassicalModels
         /// <param name="longitudeParts">用经线把地球切割为几块。</param>
         /// <param name="colorGenerator"></param>
         /// <returns></returns>
-        public static IUpload2GPU GetModel(float radius = 1.0f, int latitudeParts = 10, int longitudeParts = 40, Func<int, int, vec3> colorGenerator = null)
+        public static IBufferable GetModel(float radius = 1.0f, int latitudeParts = 10, int longitudeParts = 40, Func<int, int, vec3> colorGenerator = null)
         {
             if (radius <= 0.0f || latitudeParts < 1 || longitudeParts < 3) { throw new Exception(); }
 
@@ -138,7 +136,7 @@ namespace CSharpGL.ClassicalModels
         public const string strColor = "color";
         public const string strNormal = "normal";
 
-        public BufferPointer GetBufferRenderer(string bufferName, string varNameInShader)
+        public PropertyBufferPtr GetProperty(string bufferName, string varNameInShader)
         {
             if (bufferName == strPosition)
             {
@@ -154,7 +152,7 @@ namespace CSharpGL.ClassicalModels
                         }
                     }
 
-                    return buffer.GetRenderer();
+                    return buffer.GetBufferPtr() as PropertyBufferPtr;
                 }
             }
             else if (bufferName == strColor)
@@ -171,7 +169,7 @@ namespace CSharpGL.ClassicalModels
                         }
                     }
 
-                    return buffer.GetRenderer();
+                    return buffer.GetBufferPtr() as PropertyBufferPtr;
                 }
             }
             else if (bufferName == strNormal)
@@ -188,7 +186,7 @@ namespace CSharpGL.ClassicalModels
                         }
                     }
 
-                    return buffer.GetRenderer();
+                    return buffer.GetBufferPtr() as PropertyBufferPtr;
                 }
             }
             else
@@ -198,10 +196,10 @@ namespace CSharpGL.ClassicalModels
 
         }
 
-        public IndexBufferPointerBase GetIndexBufferRenderer()
+        public IndexBufferPtr GetIndex()
         {
 
-            using (var indexBuffer = new IndexBuffer<uint>(DrawMode.TriangleStrip, IndexElementType.UnsignedInt, BufferUsage.StaticDraw))
+            using (var indexBuffer = new OneIndexBuffer<uint>(DrawMode.TriangleStrip, BufferUsage.StaticDraw))
             {
                 indexBuffer.Alloc(indexes.Length);
                 unsafe
@@ -213,7 +211,7 @@ namespace CSharpGL.ClassicalModels
                     }
                 }
 
-                return indexBuffer.GetRenderer() as IndexBufferPointerBase;
+                return indexBuffer.GetBufferPtr() as IndexBufferPtr;
             }
         }
     }

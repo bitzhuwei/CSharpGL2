@@ -37,7 +37,7 @@ namespace CSharpGL
             int index = 0;
             foreach (var item in propertyNameMap)
             {
-                PropertyBufferPtr bufferPtr = this.bufferable.GetPropery(
+                PropertyBufferPtr bufferPtr = this.bufferable.GetProperty(
                     item.nameInIBufferable, item.VarNameInShader);
                 if (bufferPtr == null) { throw new Exception(); }
                 propertyBufferPtrs[index++] = bufferPtr;

@@ -19,7 +19,7 @@ namespace CSharpGL.ModelAdapters
         public const string position = "position";
         public const string color = "color";
 
-        public PropertyBufferPtr GetPropery(string bufferName, string varNameInShader)
+        public PropertyBufferPtr GetProperty(string bufferName, string varNameInShader)
         {
             if (bufferName == position)
             {

@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.ClassicalModels
+namespace CSharpGL.Models
 {
     public sealed class TeapotLoader
     {

@@ -1,15 +1,13 @@
-﻿using CSharpGL.Objects;
-using CSharpGL.Objects.VertexBuffers;
-using GLM;
+﻿using GLM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpGL.ClassicalModels
+namespace CSharpGL.ModelAdapters
 {
-    public class TeapotModel : IUpload2GPU
+    public class TeapotModel : IBufferable
     {
         internal List<vec3> positions = new List<vec3>();
         internal List<vec3> normals = new List<vec3>();
@@ -17,7 +15,7 @@ namespace CSharpGL.ClassicalModels
 
         internal TeapotModel() { }
 
-        public static IUpload2GPU GetModel(float radius = 1.0f)
+        public static IBufferable GetModel(float radius = 1.0f)
         {
             TeapotModel model = TeapotLoader.GetModel();
 
@@ -79,7 +77,7 @@ namespace CSharpGL.ClassicalModels
                         }
                     }
 
-                    return buffer.GetRenderer();
+                    return buffer.GetBufferPtr();
                 }
             }
             else if (bufferName == strColor)
@@ -96,7 +94,7 @@ namespace CSharpGL.ClassicalModels
                         }
                     }
 
-                    return buffer.GetRenderer();
+                    return buffer.GetBufferPtr();
                 }
             }
             else if (bufferName == strNormal)
@@ -113,7 +111,7 @@ namespace CSharpGL.ClassicalModels
                         }
                     }
 
-                    return buffer.GetRenderer();
+                    return buffer.GetBufferPtr();
                 }
             }
             else
@@ -122,9 +120,9 @@ namespace CSharpGL.ClassicalModels
             }
         }
 
-        public IndexBufferPointerBase GetIndexBufferRenderer()
+        public IndexBufferPtr GetIndexBufferRenderer()
         {
-            using (var buffer = new IndexBuffer<uint>(DrawMode.Triangles, IndexElementType.UnsignedInt, BufferUsage.StaticDraw))
+            using (var buffer = new OneIndexBuffer<uint>(DrawMode.Triangles, BufferUsage.StaticDraw))
             {
                 buffer.Alloc(faces.Count * 3);
                 unsafe
@@ -143,7 +141,7 @@ namespace CSharpGL.ClassicalModels
                     }
                 }
 
-                return buffer.GetRenderer() as IndexBufferPointerBase;
+                return buffer.GetBufferPtr() as IndexBufferPointerBase;
             }
         }
     }
