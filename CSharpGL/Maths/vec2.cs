@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace GLM
@@ -6,6 +7,7 @@ namespace GLM
     /// <summary>
     /// Represents a two dimensional vector.
     /// </summary>
+    [TypeConverter(typeof(Vec2TypeConverter))]
     public struct vec2
     {
         public float x;
@@ -151,5 +153,15 @@ namespace GLM
             //return string.Format("{0:0.00},{1:0.00}", x, y);
             return string.Format("{0}, {1}", x.ToShortString(), y.ToShortString());
         }
+
+        public static vec2 Parse(string value)
+        {
+            string[] parts = value.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            float x = float.Parse(parts[0]);
+            float y = float.Parse(parts[1]);
+            return new vec2(x, y);
+        }
+
+        static readonly char[] separator = new char[] { ' ', ',' };
     }
 }

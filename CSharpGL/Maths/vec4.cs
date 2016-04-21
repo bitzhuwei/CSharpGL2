@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace GLM
@@ -6,7 +7,8 @@ namespace GLM
     /// <summary>
     /// Represents a four dimensional vector.
     /// </summary>
-    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Size = 4 * 4)]
+    //[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Size = 4 * 4)]   
+    [TypeConverter(typeof(Vec4TypeConverter))]
     public struct vec4
     {
         public float x;
@@ -166,5 +168,18 @@ namespace GLM
             return string.Format("{0}, {1}, {2}, {3}", x.ToShortString(), y.ToShortString(), z.ToShortString(), w.ToShortString());
             //return base.ToString();
         }
+
+
+        public static vec4 Parse(string value)
+        {
+            string[] parts = value.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            float x = float.Parse(parts[0]);
+            float y = float.Parse(parts[1]);
+            float z = float.Parse(parts[2]);
+            float w = float.Parse(parts[3]);
+            return new vec4(x, y, z, w);
+        }
+
+        static readonly char[] separator = new char[] { ' ', ',' };
     }
 }

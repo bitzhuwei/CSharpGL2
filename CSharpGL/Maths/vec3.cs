@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 
 namespace GLM
@@ -6,6 +7,7 @@ namespace GLM
     /// <summary>
     /// Represents a three dimensional vector.
     /// </summary>
+    [TypeConverter(typeof(Vec3TypeConverter))]
     public struct vec3
     {
         public float x;
@@ -171,5 +173,16 @@ namespace GLM
             //return string.Format("{0:0.00},{1:0.00},{2:0.00}", x, y, z);
             return string.Format("{0}, {1}, {2}", x.ToShortString(), y.ToShortString(), z.ToShortString());
         }
+
+        public static vec3 Parse(string value)
+        {
+            string[] parts = value.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            float x = float.Parse(parts[0]);
+            float y = float.Parse(parts[1]);
+            float z = float.Parse(parts[2]);
+            return new vec3(x, y, z);
+        }
+
+        static readonly char[] separator = new char[] { ' ', ',' };
     }
 }
