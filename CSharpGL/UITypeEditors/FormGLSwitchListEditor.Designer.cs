@@ -34,7 +34,7 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblProperty = new System.Windows.Forms.Label();
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
@@ -101,14 +101,14 @@
             this.button4.Text = "↓";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblProperty
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(331, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "属性(&P):";
+            this.lblProperty.AutoSize = true;
+            this.lblProperty.Location = new System.Drawing.Point(331, 9);
+            this.lblProperty.Name = "lblProperty";
+            this.lblProperty.Size = new System.Drawing.Size(69, 15);
+            this.lblProperty.TabIndex = 0;
+            this.lblProperty.Text = "属性(&P):";
             // 
             // propertyGrid
             // 
@@ -158,7 +158,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lstMember);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblProperty);
             this.Controls.Add(this.label1);
             this.Name = "FormGLSwitchListEditor";
             this.Text = "GLSwticth集合编辑器";
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblProperty;
         private System.Windows.Forms.PropertyGrid propertyGrid;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;

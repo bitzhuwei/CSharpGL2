@@ -71,6 +71,7 @@ namespace CSharpGL
         {
             object obj = this.lstMember.SelectedItem;
             this.propertyGrid.SelectedObject = obj;
+            this.lblProperty.Text = string.Format("{0}", obj);
         }
 
     }
