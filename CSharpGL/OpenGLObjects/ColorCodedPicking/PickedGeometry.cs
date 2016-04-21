@@ -20,7 +20,12 @@ namespace CSharpGL
         /// <summary>
         /// Gets or sets positions of this primitive's vertices.
         /// </summary>
-        public vec3[] positions { get; set; }
+        public vec3[] Positions { get; set; }
+
+        /// <summary>
+        /// Gets or sets indexes of this primitive's vertexes' index in the VBO.
+        /// </summary>
+        public uint[] Indexes { get; set; }
 
         /// <summary>
         /// The last vertex's id that constructs the picked primitive.
@@ -39,22 +44,23 @@ namespace CSharpGL
             builder.AppendFormat("Geometry Type: {0}", this.GeometryType);
             builder.AppendLine();
 
-            var positions = this.positions;
+            var positions = this.Positions;
             if (positions == null) { positions = new vec3[0]; }
 
             uint stageVertexID = this.StageVertexID;
-            uint lastVertexID = uint.MaxValue;
-            string strLastVertexID;
-            IColorCodedPicking picking = this.From;
-            if (picking != null)
-            {
-                if (picking.GetLastVertexIDOfPickedGeometry(stageVertexID, out lastVertexID))
-                { strLastVertexID = string.Format("{0}", lastVertexID); }
-            }
+            //uint lastVertexID = uint.MaxValue;
+            //string strLastVertexID;
+            //IColorCodedPicking picking = this.From;
+            //if (picking != null)
+            //{
+            //    if (picking.GetLastVertexIDOfPickedGeometry(stageVertexID, out lastVertexID))
+            //    { strLastVertexID = string.Format("{0}", lastVertexID); }
+            //}
 
             for (int i = 0; i < positions.Length; i++)
             {
-                builder.Append('['); builder.Append(lastVertexID - (positions.Length - 1) + i); builder.Append("]: ");
+                //builder.Append(lastVertexID - (positions.Length - 1) + i); 
+                builder.Append('['); builder.Append(Indexes[i]); builder.Append("]: ");
                 builder.AppendLine(positions[i].ToString());
             }
 

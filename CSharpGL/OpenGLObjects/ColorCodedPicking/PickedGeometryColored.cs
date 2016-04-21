@@ -19,7 +19,7 @@ namespace CSharpGL
 
         public override string ToString()
         {
-            var positions = this.positions;
+            var positions = this.Positions;
             if (positions == null) { positions = new vec3[0]; }
             var colors = this.colors;
             if (colors == null) { colors = new vec3[0]; }

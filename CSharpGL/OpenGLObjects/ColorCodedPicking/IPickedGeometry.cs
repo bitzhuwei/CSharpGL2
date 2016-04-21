@@ -20,7 +20,12 @@ namespace CSharpGL
         /// <summary>
         /// Gets or sets positions of this primitive's vertices.
         /// </summary>
-        vec3[] positions { get; set; }
+        vec3[] Positions { get; set; }
+
+        /// <summary>
+        /// Gets or sets indexes of this primitive's vertexes' index in the VBO.
+        /// </summary>
+        uint[] Indexes { get; set; }
 
         /// <summary>
         /// The scene's element from which this <see cref="IPickedGeometry"/>'s instance is picked.

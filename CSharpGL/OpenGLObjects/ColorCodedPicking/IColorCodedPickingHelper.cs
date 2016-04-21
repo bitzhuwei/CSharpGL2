@@ -119,7 +119,7 @@ namespace CSharpGL
                     {
                         poss[t] = new vec3(geometryPositions[t * 3 + 0], geometryPositions[t * 3 + 1], geometryPositions[t * 3 + 2]);
                     }
-                    pickedGeometry.positions = poss;
+                    pickedGeometry.Positions = poss;
                 }
             }
 
