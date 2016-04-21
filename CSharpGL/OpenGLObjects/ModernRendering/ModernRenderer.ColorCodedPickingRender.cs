@@ -24,7 +24,7 @@ namespace CSharpGL
             program.SetUniform("pickingBaseID", picking.PickingBaseID);
             pickingMVP.SetUniform(program);
 
-            //foreach (var item in switchList) { item.On(); }
+            foreach (var item in switchList) { item.On(); }
 
             if (this.vertexArrayObject4Picking == null)
             {
@@ -39,7 +39,7 @@ namespace CSharpGL
                 this.vertexArrayObject4Picking.Render(e, program);
             }
 
-            //foreach (var item in switchList) { item.Off(); }
+            foreach (var item in switchList) { item.Off(); }
 
             pickingMVP.ResetUniform(program);
 
