@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Controls\GLCanvasHelper.cs" />
     <Compile Include="Controls\RenderTriggers.cs" />
+    <Compile Include="OpenGLObjects\GLSwitches\PointSizeSwitch.cs" />
     <Compile Include="UITypeEditors\FormGLSwitchListEditor.cs">
       <SubType>Form</SubType>
     </Compile>
