@@ -10,7 +10,7 @@ namespace CSharpGL
     /// 索引buffer。索引指定了<see cref="PropertyBuffer"/>里各个顶点的渲染顺序。
     /// </summary>
     /// <typeparam name="T">此buffer存储的是哪种struct的数据？</typeparam>
-    public class OneIndexBuffer<T> : IndexBufferBase<T> where T : struct
+    public class OneIndexBuffer<T> : IndexBuffer<T> where T : struct
     {
         /// <summary>
         /// 用于存储索引的VBO。
