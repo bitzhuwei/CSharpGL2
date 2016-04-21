@@ -40,5 +40,9 @@ namespace CSharpGL
             get { return switchList; }
         }
 
+        public List<UniformVariableBase> UniformVariables
+        {
+            get { return uniformVariables; }
+        }
     }
 }

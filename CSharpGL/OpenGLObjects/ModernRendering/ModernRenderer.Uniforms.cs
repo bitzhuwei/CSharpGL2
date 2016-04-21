@@ -9,7 +9,8 @@ namespace CSharpGL
 {
     public partial class ModernRenderer 
     {
-        protected List<UniformVariableBase> uniformVariables = new List<UniformVariableBase>();
+        private List<UniformVariableBase> uniformVariables = new List<UniformVariableBase>();
+
         protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");
 
         public bool GetUniformValue<T>(string varNameInShader, out T value) where T : struct
