@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CSharpGL
 {
-    public partial class FormGLSwitchListEditor : Form
+    public partial class FormUniformVariableListEditor : Form
     {
 
-        public FormGLSwitchListEditor(List<GLSwitch> list)
+        public FormUniformVariableListEditor(List<UniformVariable> list)
         {
             InitializeComponent();
 
@@ -28,7 +28,7 @@ namespace CSharpGL
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var frmSelectType = new FormGLSwtichType();
+            var frmSelectType = new FormUniformVariableType();
             if (frmSelectType.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 Type type = frmSelectType.SelectedType;
@@ -54,18 +54,18 @@ namespace CSharpGL
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            var list = new List<GLSwitch>();
-            foreach (GLSwitch item in this.lstMember.Items)
+            var list = new List<UniformVariable>();
+            foreach (UniformVariable item in this.lstMember.Items)
             {
                 list.Add(item);
             }
 
-            this.GLSwitchList = list;
+            this.UniformVariableList = list;
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
-        public List<GLSwitch> GLSwitchList { get; set; }
+        public List<UniformVariable> UniformVariableList { get; set; }
 
         private void lstMember_SelectedIndexChanged(object sender, EventArgs e)
         {

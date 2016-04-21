@@ -27,7 +27,7 @@ namespace CSharpGL
             {
                 var list = value as IList<GLSwitch>;
                 list.Clear();
-                foreach (var item in frmGLSwitchListEditor.SwitchList)
+                foreach (var item in frmGLSwitchListEditor.GLSwitchList)
                 {
                     list.Add(item);
                 }

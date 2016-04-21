@@ -69,6 +69,12 @@
     <Compile Include="OpenGLObjects\UniformVariables\UniformVec4.cs" />
     <Compile Include="OpenGLObjects\UniformVariables\UniformVec3.cs" />
     <Compile Include="OpenGLObjects\UniformVariables\UniformVec2.cs" />
+    <Compile Include="UITypeEditors\FormUniformVariableListEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UITypeEditors\FormUniformVariableListEditor.Designer.cs">
+      <DependentUpon>FormUniformVariableListEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UITypeEditors\FormGLSwitchListEditor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     <None Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cd" />
     <EmbeddedResource Include="Controls\GLCanvas.resx">
       <DependentUpon>GLCanvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UITypeEditors\FormUniformVariableListEditor.resx">
+      <DependentUpon>FormUniformVariableListEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UITypeEditors\FormGLSwitchListEditor.resx">
       <DependentUpon>FormGLSwitchListEditor.cs</DependentUpon>
