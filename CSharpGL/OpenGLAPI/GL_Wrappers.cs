@@ -1035,7 +1035,7 @@ namespace CSharpGL
             return GetDelegateFor<glUnmapBuffer>()((uint)target);
         }
 
-        public static IntPtr MapBufferRange(BufferTarget target, int offset, int length ,MapBufferAccess access)
+        public static IntPtr MapBufferRange(BufferTarget target, int offset, int length, MapBufferRangeAccess access)
         {
             return GetDelegateFor<GL.glMapBufferRange>()((uint)target, offset, length, (uint)access);
         }
