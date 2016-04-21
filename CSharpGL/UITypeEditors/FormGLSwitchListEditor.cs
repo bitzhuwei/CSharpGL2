@@ -67,5 +67,11 @@ namespace CSharpGL
 
         public List<GLSwitch> SwitchList { get; set; }
 
+        private void lstMember_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            object obj = this.lstMember.SelectedItem;
+            this.propertyGrid.SelectedObject = obj;
+        }
+
     }
 }

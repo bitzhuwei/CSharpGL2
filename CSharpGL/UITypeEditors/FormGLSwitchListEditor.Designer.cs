@@ -59,6 +59,7 @@
             this.lstMember.Name = "lstMember";
             this.lstMember.Size = new System.Drawing.Size(267, 394);
             this.lstMember.TabIndex = 1;
+            this.lstMember.SelectedIndexChanged += new System.EventHandler(this.lstMember_SelectedIndexChanged);
             // 
             // btnAdd
             // 
