@@ -61,10 +61,10 @@
     <Compile Include="UITypeEditors\FormGLSwitchListEditor.Designer.cs">
       <DependentUpon>FormGLSwitchListEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormGLSwtichType.cs">
+    <Compile Include="UITypeEditors\FormGLSwtichType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGLSwtichType.Designer.cs">
+    <Compile Include="UITypeEditors\FormGLSwtichType.Designer.cs">
       <DependentUpon>FormGLSwtichType.cs</DependentUpon>
     </Compile>
     <Compile Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cs" />
@@ -225,7 +225,7 @@
     <EmbeddedResource Include="UITypeEditors\FormGLSwitchListEditor.resx">
       <DependentUpon>FormGLSwitchListEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGLSwtichType.resx">
+    <EmbeddedResource Include="UITypeEditors\FormGLSwtichType.resx">
       <DependentUpon>FormGLSwtichType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpenGLObjects\ColorCodedPicking\PickingShader.frag" />
