@@ -172,15 +172,15 @@ namespace CSharpGL
         /// 获取一个可渲染此VBO的渲染器。
         /// </summary>
         /// <returns></returns>
-        protected abstract BufferPtr Upload2GPU();
+        protected abstract VertexBufferPtr Upload2GPU();
 
-        private BufferPtr bufferPtr = null;
+        private VertexBufferPtr bufferPtr = null;
 
         /// <summary>
         /// 获取一个可渲染此VBO的渲染器。
         /// </summary>
         /// <returns></returns>
-        public BufferPtr GetBufferPtr()
+        public VertexBufferPtr GetBufferPtr()
         {
             if (bufferPtr == null)
             {

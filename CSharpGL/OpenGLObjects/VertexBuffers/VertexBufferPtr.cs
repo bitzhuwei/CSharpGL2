@@ -9,7 +9,7 @@ namespace CSharpGL
     /// <summary>
     /// 为给定VBO执行渲染时所需的操作。
     /// </summary>
-    public abstract class BufferPtr : IDisposable
+    public abstract class VertexBufferPtr : IDisposable
     {
         private bool disposedValue = false;
 
@@ -28,7 +28,7 @@ namespace CSharpGL
         /// </summary>
         /// <param name="bufferID">用GL.GenBuffers()得到的VBO的ID。</param>
         /// <param name="length">此VBO含有多个个元素？</param>
-        internal BufferPtr(uint bufferID,int length)
+        internal VertexBufferPtr(uint bufferID,int length)
         {
             this.BufferID = bufferID;
             this.Length = length;
@@ -47,7 +47,7 @@ namespace CSharpGL
             GC.SuppressFinalize(this);
         }
 
-        ~BufferPtr()
+        ~VertexBufferPtr()
         {
             this.Dispose(false);
         }

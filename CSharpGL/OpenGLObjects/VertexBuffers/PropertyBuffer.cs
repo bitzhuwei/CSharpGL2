@@ -54,7 +54,7 @@ namespace CSharpGL
         /// </summary>
         public int DataSize { get; private set; }
 
-        protected override BufferPtr Upload2GPU()
+        protected override VertexBufferPtr Upload2GPU()
         {
             uint[] buffers = new uint[1];
             GL.GetDelegateFor<GL.glGenBuffers>()(1, buffers);

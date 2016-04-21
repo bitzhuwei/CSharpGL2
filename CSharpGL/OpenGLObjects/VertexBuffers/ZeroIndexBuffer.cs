@@ -39,7 +39,7 @@ namespace CSharpGL
             return null;
         }
 
-        protected override BufferPtr Upload2GPU()
+        protected override VertexBufferPtr Upload2GPU()
         {
             ZeroIndexBufferPtr renderer = new ZeroIndexBufferPtr(
                  this.Mode, this.FirstVertex, this.VertexCount);
