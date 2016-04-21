@@ -7,32 +7,44 @@ using System.Threading.Tasks;
 
 namespace CSharpGL
 {
-    public partial class ModernRenderer 
+    public partial class ModernRenderer
     {
         private List<UniformVariable> uniformVariables = new List<UniformVariable>();
 
-        protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");
+        //protected OrderedCollection<string> uniformVariableNames = new OrderedCollection<string>(", ");
 
         public bool GetUniformValue<T>(string varNameInShader, out T value) where T : struct
         {
-            int index = this.uniformVariableNames.IndexOf(varNameInShader);
-            if (index < 0)
+            value = default(T);
+            bool gotUniform = false;
+            foreach (var item in this.uniformVariables)
             {
-                value = default(T);
-                return false;
+                if (item.VarName == varNameInShader)
+                {
+                    value = (T)item.GetValue();
+                    gotUniform = true;
+                    break;
+                }
             }
-            else
-            {
-                UniformVariable variable = this.uniformVariables[index];
-                value = (T)variable.GetValue();
-                return true;
-            }
+
+            return gotUniform;
         }
 
         public bool SetUniformValue(string varNameInShader, ValueType value)
         {
-            int index = this.uniformVariableNames.IndexOf(varNameInShader);
-            if (index < 0)
+            bool gotUniform = false;
+            bool updated = false;
+            foreach (var item in this.uniformVariables)
+            {
+                if (item.VarName == varNameInShader)
+                {
+                    updated = item.SetValue(value);
+                    gotUniform = true;
+                    break;
+                }
+            }
+
+            if (!gotUniform)
             {
                 int location = shaderProgram.GetUniformLocation(varNameInShader);
                 if (location < 0)
@@ -43,17 +55,11 @@ namespace CSharpGL
 
                 UniformVariable variable = GetVariable(value, varNameInShader);
                 variable.SetValue(value);
-                this.uniformVariableNames.TryInsert(varNameInShader);
-                index = this.uniformVariableNames.IndexOf(varNameInShader);
-                this.uniformVariables.Insert(index, variable);
-                return true;
+                this.uniformVariables.Add(variable);
+                updated = true;
             }
-            else
-            {
-                UniformVariable variable = this.uniformVariables[index];
-                bool updated = variable.SetValue(value);
-                return updated;
-            }
+
+            return updated;
         }
 
         private UniformVariable GetVariable(ValueType value, string varNameInShader)
