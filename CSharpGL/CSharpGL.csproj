@@ -230,8 +230,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OpenGLObjects\ColorCodedPicking\PickingShader.frag" />
     <EmbeddedResource Include="OpenGLObjects\ColorCodedPicking\PickingShader.vert" />
-    <None Include="OpenGLObjects\VertexBuffers\BufferPointers.cd" />
-    <None Include="OpenGLObjects\VertexBuffers\VertexBuffers.cd" />
+    <None Include="OpenGLObjects\VertexBuffers\VertexBuffer.cd" />
+    <None Include="OpenGLObjects\VertexBuffers\VertexBufferPtr.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Maths\readme.txt" />

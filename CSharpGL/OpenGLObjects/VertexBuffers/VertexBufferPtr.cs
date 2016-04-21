@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CSharpGL
 {
     /// <summary>
-    /// 为给定VBO执行渲染时所需的操作。
+    /// 将VBO上传到GPU后，就得到VBO的指针。CPU内存中的VBO数据就可以释放掉了。
     /// </summary>
     public abstract class VertexBufferPtr : IDisposable
     {
