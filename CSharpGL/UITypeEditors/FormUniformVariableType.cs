@@ -11,27 +11,27 @@ using System.Windows.Forms;
 
 namespace CSharpGL
 {
-    public partial class FormGLSwtichType : Form
+    public partial class FormUniformVariableType : Form
     {
-        public FormGLSwtichType()
+        public FormUniformVariableType()
         {
             InitializeComponent();
         }
 
         private void FormGLSwtichType_Load(object sender, EventArgs e)
         {
-            if (typeList == null)
-            { typeList = InitializeTypeList(); }
+            if (tyepList == null)
+            { tyepList = InitializeTypeList(); }
 
-            foreach (var item in typeList)
+            foreach (var item in tyepList)
             {
-                this.lstGLSwtichType.Items.Add(item);
+                this.lstType.Items.Add(item);
             }
         }
 
         private List<Type> InitializeTypeList()
         {
-            Type type = typeof(GLSwitch);
+            Type type = typeof(UniformVariable);
             Assembly asm = Assembly.GetAssembly(type);
             var result = (from item in asm.ExportedTypes
                           where type.IsAssignableFrom(item) && (!item.IsAbstract)
@@ -39,7 +39,7 @@ namespace CSharpGL
             return result;
         }
 
-        static List<Type> typeList;
+        static List<Type> tyepList;
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -48,13 +48,13 @@ namespace CSharpGL
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (this.lstGLSwtichType.SelectedItem == null)
+            if (this.lstType.SelectedItem == null)
             {
                 MessageBox.Show("Please select a type first!");
                 return;
             }
 
-            this.SelectedType = this.lstGLSwtichType.SelectedItem as Type;
+            this.SelectedType = this.lstType.SelectedItem as Type;
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }

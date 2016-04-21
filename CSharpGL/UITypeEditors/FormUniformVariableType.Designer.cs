@@ -1,6 +1,6 @@
 ﻿namespace CSharpGL
 {
-    partial class FormGLSwtichType
+    partial class FormUniformVariableType
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lstGLSwtichType = new System.Windows.Forms.ListBox();
+            this.lstType = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -59,15 +59,15 @@
             // 
             // lstGLSwtichType
             // 
-            this.lstGLSwtichType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lstType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstGLSwtichType.Font = new System.Drawing.Font("宋体", 14F);
-            this.lstGLSwtichType.FormattingEnabled = true;
-            this.lstGLSwtichType.ItemHeight = 23;
-            this.lstGLSwtichType.Location = new System.Drawing.Point(12, 37);
-            this.lstGLSwtichType.Name = "lstGLSwtichType";
-            this.lstGLSwtichType.Size = new System.Drawing.Size(418, 372);
-            this.lstGLSwtichType.TabIndex = 6;
+            this.lstType.Font = new System.Drawing.Font("宋体", 14F);
+            this.lstType.FormattingEnabled = true;
+            this.lstType.ItemHeight = 23;
+            this.lstType.Location = new System.Drawing.Point(12, 37);
+            this.lstType.Name = "lstGLSwtichType";
+            this.lstType.Size = new System.Drawing.Size(418, 372);
+            this.lstType.TabIndex = 6;
             // 
             // label1
             // 
@@ -78,18 +78,18 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "GLSwitch Type:";
             // 
-            // FormGLSwtichType
+            // FormUniformVariableType
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(442, 472);
-            this.Controls.Add(this.lstGLSwtichType);
+            this.Controls.Add(this.lstType);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
-            this.Name = "FormGLSwtichType";
+            this.Name = "FormUniformVariableType";
             this.Text = "FormGLSwtichType";
             this.Load += new System.EventHandler(this.FormGLSwtichType_Load);
             this.ResumeLayout(false);
@@ -101,7 +101,7 @@
 
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ListBox lstGLSwtichType;
+        private System.Windows.Forms.ListBox lstType;
         private System.Windows.Forms.Label label1;
     }
 }
