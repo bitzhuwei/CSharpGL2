@@ -40,6 +40,7 @@ namespace CSharpGL
             get { return switchList; }
         }
 
+        [Editor(typeof(UniformVariableListEditor), typeof(UITypeEditor))]
         public List<UniformVariable> UniformVariables
         {
             get { return uniformVariables; }

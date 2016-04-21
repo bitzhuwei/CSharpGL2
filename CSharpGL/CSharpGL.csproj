@@ -109,6 +109,7 @@
     <Compile Include="OpenGLObjects\GLSwitches\PolygonModeSwitch.cs" />
     <Compile Include="OpenGLObjects\GLSwitches\PrimitiveRestartSwitch.cs" />
     <Compile Include="OpenGLObjects\GLSwitches\GLSwitch.cs" />
+    <Compile Include="UITypeEditors\UniformVariableListEditor.cs" />
     <Compile Include="UITypeEditors\GLSwithListEditor.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\IBufferable.cs" />
     <Compile Include="OpenGLObjects\ModernRendering\ModernRenderer.Property.cs" />
@@ -241,7 +242,9 @@
     <Compile Include="Utilities\UnmanagedArrayFastAccessHelper.cs" />
     <Compile Include="Utilities\UnmanagedArrayHelper.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="TypeConverters\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="OpenGLObjects\ModernRendering\ModernRenderer.cd" />
     <None Include="OpenGLObjects\ColorCodedPicking\ColorCodedPicking.cd" />
