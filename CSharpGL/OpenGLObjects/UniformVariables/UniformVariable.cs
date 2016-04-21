@@ -17,7 +17,7 @@ namespace CSharpGL
         /// <summary>
         /// 变量名。
         /// </summary>
-        public string VarName { get; private set; }
+        public string VarName { get; set; }
 
         /// <summary>
         /// 已更新（需要在render时提交到GPU）
