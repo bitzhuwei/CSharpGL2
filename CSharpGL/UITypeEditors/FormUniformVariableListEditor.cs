@@ -32,7 +32,7 @@ namespace CSharpGL
             if (frmSelectType.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 Type type = frmSelectType.SelectedType;
-                object obj = Activator.CreateInstance(type, "Empty");
+                object obj = Activator.CreateInstance(type, frmSelectType.VarNameInShader);
                 this.lstMember.Items.Add(obj);
                 this.propertyGrid.SelectedObject = obj;
             }
