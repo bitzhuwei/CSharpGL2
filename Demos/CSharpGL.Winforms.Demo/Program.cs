@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GLM;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,24 @@ namespace CSharpGL.Winforms.Demo
         [STAThread]
         static void Main()
         {
+            float max = 0;
+            vec3 maxCondition = new vec3();
+            for (float r = 0; r < 1; r += 0.01f)
+            {
+                for (float g = 0; g < 1; g += 0.01f)
+                {
+                    for (float b = 0; b < 1; b += 0.01f)
+                    {
+                        float variance = (r - g) * (r - g) + (g - b) * (g - b) + (b - r) * (b - r);
+                        if (max < variance)
+                        {
+                            max = variance;
+                            maxCondition = new vec3(r, g, b);
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(max);
             //MoveGLPrefix();
             //return;
             Application.EnableVisualStyles();

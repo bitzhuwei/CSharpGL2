@@ -195,7 +195,7 @@ namespace CSharpGL.Winforms.Demo
 
         private void btnFromShaderDesigner1594_Click(object sender, EventArgs e)
         {
-            (new FormShaderDesigner1594Demos.FormDemosPanel()).Show();
+            //(new FormShaderDesigner1594Demos.FormDemosPanel()).Show();
         }
 
         private void btnFormDoubleTexture_Click(object sender, EventArgs e)
