@@ -44,7 +44,6 @@
     <Compile Include="CharacterInfoDictHelper.cs" />
     <Compile Include="CharacterInfoHelper.cs" />
     <Compile Include="FontResource.cs" />
-    <Compile Include="FontResourceHelper.cs" />
     <Compile Include="FontTexture.cs" />
     <Compile Include="KeyValuePairHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

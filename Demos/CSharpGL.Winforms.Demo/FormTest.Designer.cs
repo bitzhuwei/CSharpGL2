@@ -44,7 +44,6 @@
             this.btnSimpleUICube = new System.Windows.Forms.Button();
             this.btnDebugging = new System.Windows.Forms.Button();
             this.btnSimplePointSprite = new System.Windows.Forms.Button();
-            this.btnFormPointSpriteStringElement = new System.Windows.Forms.Button();
             this.btnFormLegacyTexture3D = new System.Windows.Forms.Button();
             this.btnFormColorCodedPicking = new System.Windows.Forms.Button();
             this.btnFormScientificVisual3DControl = new System.Windows.Forms.Button();
@@ -232,17 +231,6 @@
             this.btnSimplePointSprite.Text = "SimplePointSprite";
             this.btnSimplePointSprite.UseVisualStyleBackColor = true;
             this.btnSimplePointSprite.Click += new System.EventHandler(this.btnSimplePointSprite_Click);
-            // 
-            // btnFormPointSpriteStringElement
-            // 
-            this.btnFormPointSpriteStringElement.Location = new System.Drawing.Point(13, 568);
-            this.btnFormPointSpriteStringElement.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFormPointSpriteStringElement.Name = "btnFormPointSpriteStringElement";
-            this.btnFormPointSpriteStringElement.Size = new System.Drawing.Size(353, 29);
-            this.btnFormPointSpriteStringElement.TabIndex = 4;
-            this.btnFormPointSpriteStringElement.Text = "FormPointSpriteStringElement";
-            this.btnFormPointSpriteStringElement.UseVisualStyleBackColor = true;
-            this.btnFormPointSpriteStringElement.Click += new System.EventHandler(this.btnFormPointSpriteStringElement_Click);
             // 
             // btnFormLegacyTexture3D
             // 
@@ -487,7 +475,6 @@
             this.Controls.Add(this.btnSatelliteRotation);
             this.Controls.Add(this.btnCamera);
             this.Controls.Add(this.btnSimpleUICube);
-            this.Controls.Add(this.btnFormPointSpriteStringElement);
             this.Controls.Add(this.btnFormMultipleHexahedrons2);
             this.Controls.Add(this.btnFormMultipleHexahedrons1);
             this.Controls.Add(this.btnFormMapBuffer);
@@ -543,7 +530,6 @@
         private System.Windows.Forms.Button btnSimpleUICube;
         private System.Windows.Forms.Button btnDebugging;
         private System.Windows.Forms.Button btnSimplePointSprite;
-        private System.Windows.Forms.Button btnFormPointSpriteStringElement;
         private System.Windows.Forms.Button btnFormLegacyTexture3D;
         private System.Windows.Forms.Button btnFormColorCodedPicking;
         private System.Windows.Forms.Button btnFormScientificVisual3DControl;

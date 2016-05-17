@@ -95,11 +95,6 @@ namespace CSharpGL.Winforms.Demo
             (new FormDebugging()).Show();
         }
 
-        private void btnFormPointSpriteStringElement_Click(object sender, EventArgs e)
-        {
-            (new FormPointSpriteStringElement()).Show();
-        }
-
         private void btnSimplePointSprite_Click(object sender, EventArgs e)
         {
             FormSimplePointSpriteSettings settings = new FormSimplePointSpriteSettings();

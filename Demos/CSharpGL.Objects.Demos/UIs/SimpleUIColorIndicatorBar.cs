@@ -25,7 +25,6 @@ namespace CSharpGL.Objects.Demos.UIs
         /// VAO
         /// </summary>
         private uint[] vao;
-        private PointSpriteStringElement[] numbers;
 
         /// <summary>
         /// 图元类型
@@ -74,7 +73,6 @@ namespace CSharpGL.Objects.Demos.UIs
             this.axisPrimitiveMode = DrawMode.QuadStrip;
             GLColor[] colors = this.ColorPalette.Colors;
             float[] coords = this.ColorPalette.Coords;
-            this.numbers = new PointSpriteStringElement[coords.Length];
             this.vertexCount = coords.Length * 2;
             this.vao = new uint[1];
 
@@ -130,28 +128,6 @@ namespace CSharpGL.Objects.Demos.UIs
                 GL.BindVertexArray(0);
             }
 
-            // prepare numbers
-            {
-                const float numberPosY = -0.6f;
-                this.numbers[0] = new PointSpriteStringElement(
-                    this.Min.ToShortString(), new vec3(-0.5f, numberPosY, 0));
-                this.numbers[0].Initialize();
-                for (int i = 1; i < coords.Length; i++)
-                {
-                    float x = (coords[i] - coords[0]) / coordLength - 0.5f;
-                    if (i + 1 == coords.Length)
-                    {
-                        this.numbers[i] = new PointSpriteStringElement(
-                            (this.Min + i * this.Step).ToShortString(), new vec3(x, numberPosY, 0));
-                    }
-                    else
-                    {
-                        this.numbers[i] = new PointSpriteStringElement(
-                            this.Max.ToShortString(), new vec3(x, numberPosY, 0));
-                    }
-                    this.numbers[i].Initialize();
-                }
-            }
         }
 
         protected ShaderProgram InitializeShader()

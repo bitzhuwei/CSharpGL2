@@ -49,13 +49,6 @@
     <Compile Include="IUILayoutHelper.cs" />
     <Compile Include="IUILayoutParam.cs" />
     <Compile Include="SimpleUIAxis.cs" />
-    <Compile Include="SimpleUIPointSpriteStringElement.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SimpleUIPointSpriteStringElement.frag" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="SimpleUIPointSpriteStringElement.vert" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\GLM\GLM.csproj">
