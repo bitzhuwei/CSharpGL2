@@ -1,0 +1,6 @@
+{
+  "name": "测试Markdown",
+  "tagline": "测试Markdown",
+  "body": "# h1 label\r\n## h2 label\r\n### h3 label\r\nthis is a link.\r\n[bitzhuwei](http://www.cnblogs.com/bitzhuwei/p/CSharpGL-25-raycast-volume-rendering-using-3d-texture.html)\r\n![GLCanvas](https://github.com/bitzhuwei/CSharpGL/raw/gh-pages/images/CSharpGL/GLCanvas.gif?raw=true)\r\n**bold text**\r\n_italic text_\r\n`string x = \"source code\"; `\r\n* unordered list\r\n* unordered list 2\r\n* unordered list 3\r\n1. Ordered List\r\n2. Ordered List\r\n3. Ordered List\r\n> block quote\r\n> block quote 2\r\n\r\n***\r\n\r\nhorizontal role\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
