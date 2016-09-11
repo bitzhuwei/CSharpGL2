@@ -35,18 +35,6 @@ namespace CSharpGL.Winforms.Demo
             (new FormDebugging()).Show();
         }
 
-        private void btnSimplePointSprite_Click(object sender, EventArgs e)
-        {
-            FormSimplePointSpriteSettings settings = new FormSimplePointSpriteSettings();
-            if (settings.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                float fontSize = settings.FontSize;
-                bool foreshortening = settings.Foreshortening;
-                var type = settings.FragmentShaderType;
-                (new FormSimplePointSprite(fontSize, foreshortening, type)).Show();
-            }
-        }
-
         private void btnFormLegacyTexture3D_Click(object sender, EventArgs e)
         {
             (new FormLegacyTexture3D()).Show();

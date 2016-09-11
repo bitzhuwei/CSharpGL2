@@ -184,18 +184,6 @@
     <Compile Include="FormScientificVisual3DControl.Designer.cs">
       <DependentUpon>FormScientificVisual3DControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSimplePointSprite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSimplePointSprite.Designer.cs">
-      <DependentUpon>FormSimplePointSprite.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSimplePointSpriteSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSimplePointSpriteSettings.Designer.cs">
-      <DependentUpon>FormSimplePointSpriteSettings.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,12 +286,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormScientificVisual3DControl.resx">
       <DependentUpon>FormScientificVisual3DControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSimplePointSprite.resx">
-      <DependentUpon>FormSimplePointSprite.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSimplePointSpriteSettings.resx">
-      <DependentUpon>FormSimplePointSpriteSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>

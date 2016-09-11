@@ -32,7 +32,6 @@
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIAxis = new System.Windows.Forms.Button();
             this.btnDebugging = new System.Windows.Forms.Button();
-            this.btnSimplePointSprite = new System.Windows.Forms.Button();
             this.btnFormLegacyTexture3D = new System.Windows.Forms.Button();
             this.btnFormColorCodedPicking = new System.Windows.Forms.Button();
             this.btnFormScientificVisual3DControl = new System.Windows.Forms.Button();
@@ -85,16 +84,6 @@
             this.btnDebugging.Text = "Debugging and profiling";
             this.btnDebugging.UseVisualStyleBackColor = true;
             this.btnDebugging.Click += new System.EventHandler(this.btnDebugging_Click);
-            // 
-            // btnSimplePointSprite
-            // 
-            this.btnSimplePointSprite.Location = new System.Drawing.Point(10, 484);
-            this.btnSimplePointSprite.Name = "btnSimplePointSprite";
-            this.btnSimplePointSprite.Size = new System.Drawing.Size(265, 23);
-            this.btnSimplePointSprite.TabIndex = 4;
-            this.btnSimplePointSprite.Text = "SimplePointSprite";
-            this.btnSimplePointSprite.UseVisualStyleBackColor = true;
-            this.btnSimplePointSprite.Click += new System.EventHandler(this.btnSimplePointSprite_Click);
             // 
             // btnFormLegacyTexture3D
             // 
@@ -333,7 +322,6 @@
             this.Controls.Add(this.btnFormVolumeRendering01);
             this.Controls.Add(this.btnFormLegacyTexture3D2);
             this.Controls.Add(this.btnFormLegacyTexture3D);
-            this.Controls.Add(this.btnSimplePointSprite);
             this.Controls.Add(this.btnDebugging);
             this.Controls.Add(this.btnSimpleUIAxis);
             this.Controls.Add(this.btnLegacySimpleUIRect);
@@ -349,7 +337,6 @@
         private System.Windows.Forms.Button btnLegacySimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIAxis;
         private System.Windows.Forms.Button btnDebugging;
-        private System.Windows.Forms.Button btnSimplePointSprite;
         private System.Windows.Forms.Button btnFormLegacyTexture3D;
         private System.Windows.Forms.Button btnFormColorCodedPicking;
         private System.Windows.Forms.Button btnFormScientificVisual3DControl;
