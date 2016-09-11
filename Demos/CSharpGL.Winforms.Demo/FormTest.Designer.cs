@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
-            this.btnFormFontElement = new System.Windows.Forms.Button();
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIAxis = new System.Windows.Forms.Button();
@@ -59,16 +58,6 @@
             this.btnFormSimpleRenderer = new System.Windows.Forms.Button();
             this.btnFormNewNormalLine = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnFormFontElement
-            // 
-            this.btnFormFontElement.Location = new System.Drawing.Point(10, 218);
-            this.btnFormFontElement.Name = "btnFormFontElement";
-            this.btnFormFontElement.Size = new System.Drawing.Size(265, 23);
-            this.btnFormFontElement.TabIndex = 4;
-            this.btnFormFontElement.Text = "FormFontElement";
-            this.btnFormFontElement.UseVisualStyleBackColor = true;
-            this.btnFormFontElement.Click += new System.EventHandler(this.btnFormFontElement_Click);
             // 
             // btnLegacySimpleUIRect
             // 
@@ -384,7 +373,6 @@
             this.Controls.Add(this.btnSimpleUIAxis);
             this.Controls.Add(this.btnSimpleUIRect);
             this.Controls.Add(this.btnLegacySimpleUIRect);
-            this.Controls.Add(this.btnFormFontElement);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTest";
             this.Text = "测试窗口";
@@ -394,7 +382,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnFormFontElement;
         private System.Windows.Forms.Button btnLegacySimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIAxis;
