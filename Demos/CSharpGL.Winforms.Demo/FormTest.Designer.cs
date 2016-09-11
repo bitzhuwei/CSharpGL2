@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
             this.btnFormFontElement = new System.Windows.Forms.Button();
-            this.btnFormWholeFontTextureElement = new System.Windows.Forms.Button();
             this.btnTranslateOnScreen = new System.Windows.Forms.Button();
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIRect = new System.Windows.Forms.Button();
@@ -71,16 +70,6 @@
             this.btnFormFontElement.Text = "FormFontElement";
             this.btnFormFontElement.UseVisualStyleBackColor = true;
             this.btnFormFontElement.Click += new System.EventHandler(this.btnFormFontElement_Click);
-            // 
-            // btnFormWholeFontTextureElement
-            // 
-            this.btnFormWholeFontTextureElement.Location = new System.Drawing.Point(10, 188);
-            this.btnFormWholeFontTextureElement.Name = "btnFormWholeFontTextureElement";
-            this.btnFormWholeFontTextureElement.Size = new System.Drawing.Size(265, 23);
-            this.btnFormWholeFontTextureElement.TabIndex = 0;
-            this.btnFormWholeFontTextureElement.Text = "FormWholeFontTextureElement";
-            this.btnFormWholeFontTextureElement.UseVisualStyleBackColor = true;
-            this.btnFormWholeFontTextureElement.Click += new System.EventHandler(this.btnFormWholeFontTextureElement_Click);
             // 
             // btnTranslateOnScreen
             // 
@@ -378,7 +367,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 576);
-            this.Controls.Add(this.btnFormWholeFontTextureElement);
             this.Controls.Add(this.btnTexImage2D);
             this.Controls.Add(this.btnSimpleUICube);
             this.Controls.Add(this.btnFormMultipleHexahedrons2);
@@ -419,7 +407,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnFormFontElement;
-        private System.Windows.Forms.Button btnFormWholeFontTextureElement;
         private System.Windows.Forms.Button btnTranslateOnScreen;
         private System.Windows.Forms.Button btnLegacySimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIRect;
