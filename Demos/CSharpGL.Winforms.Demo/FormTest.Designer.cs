@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIAxis = new System.Windows.Forms.Button();
-            this.btnSimpleUIColorPalette = new System.Windows.Forms.Button();
             this.btnDebugging = new System.Windows.Forms.Button();
             this.btnSimplePointSprite = new System.Windows.Forms.Button();
             this.btnFormLegacyTexture3D = new System.Windows.Forms.Button();
@@ -76,16 +75,6 @@
             this.btnSimpleUIAxis.Text = "SimpleUIAxis";
             this.btnSimpleUIAxis.UseVisualStyleBackColor = true;
             this.btnSimpleUIAxis.Click += new System.EventHandler(this.btnSimpleUIAxis_Click);
-            // 
-            // btnSimpleUIColorPalette
-            // 
-            this.btnSimpleUIColorPalette.Location = new System.Drawing.Point(10, 395);
-            this.btnSimpleUIColorPalette.Name = "btnSimpleUIColorPalette";
-            this.btnSimpleUIColorPalette.Size = new System.Drawing.Size(265, 23);
-            this.btnSimpleUIColorPalette.TabIndex = 4;
-            this.btnSimpleUIColorPalette.Text = "SimpleUIColorPalette";
-            this.btnSimpleUIColorPalette.UseVisualStyleBackColor = true;
-            this.btnSimpleUIColorPalette.Click += new System.EventHandler(this.btnSimpleUIColorPalette_Click);
             // 
             // btnDebugging
             // 
@@ -346,7 +335,6 @@
             this.Controls.Add(this.btnFormLegacyTexture3D);
             this.Controls.Add(this.btnSimplePointSprite);
             this.Controls.Add(this.btnDebugging);
-            this.Controls.Add(this.btnSimpleUIColorPalette);
             this.Controls.Add(this.btnSimpleUIAxis);
             this.Controls.Add(this.btnLegacySimpleUIRect);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -360,7 +348,6 @@
 
         private System.Windows.Forms.Button btnLegacySimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIAxis;
-        private System.Windows.Forms.Button btnSimpleUIColorPalette;
         private System.Windows.Forms.Button btnDebugging;
         private System.Windows.Forms.Button btnSimplePointSprite;
         private System.Windows.Forms.Button btnFormLegacyTexture3D;
