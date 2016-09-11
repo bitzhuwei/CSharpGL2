@@ -17,11 +17,6 @@ namespace CSharpGL.Winforms.Demo
             InitializeComponent();
         }
 
-        private void btnFormFontElement_Click(object sender, EventArgs e)
-        {
-            (new FormFontElement()).Show();
-        }
-
         private void btnLegacySimpleUIRect_Click(object sender, EventArgs e)
         {
             (new FormLegacySimpleUIRect()).Show();
@@ -29,20 +24,10 @@ namespace CSharpGL.Winforms.Demo
             //MessageBox.Show(message, "tip", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btnSimpleUIRect_Click(object sender, EventArgs e)
-        {
-            (new FormSimpleUIRect()).Show();
-        }
-
         private void btnSimpleUIAxis_Click(object sender, EventArgs e)
         {
             (new FormSimpleUIAxis()).Show();
             //(new FormSimpleUIAxis2()).Show();
-        }
-
-        private void btnSimpleUICube_Click(object sender, EventArgs e)
-        {
-            (new FormSimpleUICube()).Show();
         }
 
         private void btnSimpleUIColorPalette_Click(object sender, EventArgs e)

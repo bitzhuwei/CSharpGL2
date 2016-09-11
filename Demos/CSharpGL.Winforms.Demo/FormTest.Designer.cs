@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
-            this.btnSimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIAxis = new System.Windows.Forms.Button();
             this.btnSimpleUIColorPalette = new System.Windows.Forms.Button();
-            this.btnSimpleUICube = new System.Windows.Forms.Button();
             this.btnDebugging = new System.Windows.Forms.Button();
             this.btnSimplePointSprite = new System.Windows.Forms.Button();
             this.btnFormLegacyTexture3D = new System.Windows.Forms.Button();
@@ -69,16 +67,6 @@
             this.btnLegacySimpleUIRect.UseVisualStyleBackColor = true;
             this.btnLegacySimpleUIRect.Click += new System.EventHandler(this.btnLegacySimpleUIRect_Click);
             // 
-            // btnSimpleUIRect
-            // 
-            this.btnSimpleUIRect.Location = new System.Drawing.Point(10, 306);
-            this.btnSimpleUIRect.Name = "btnSimpleUIRect";
-            this.btnSimpleUIRect.Size = new System.Drawing.Size(265, 23);
-            this.btnSimpleUIRect.TabIndex = 4;
-            this.btnSimpleUIRect.Text = "SimpleUIRect";
-            this.btnSimpleUIRect.UseVisualStyleBackColor = true;
-            this.btnSimpleUIRect.Click += new System.EventHandler(this.btnSimpleUIRect_Click);
-            // 
             // btnSimpleUIAxis
             // 
             this.btnSimpleUIAxis.Location = new System.Drawing.Point(10, 336);
@@ -98,16 +86,6 @@
             this.btnSimpleUIColorPalette.Text = "SimpleUIColorPalette";
             this.btnSimpleUIColorPalette.UseVisualStyleBackColor = true;
             this.btnSimpleUIColorPalette.Click += new System.EventHandler(this.btnSimpleUIColorPalette_Click);
-            // 
-            // btnSimpleUICube
-            // 
-            this.btnSimpleUICube.Location = new System.Drawing.Point(10, 366);
-            this.btnSimpleUICube.Name = "btnSimpleUICube";
-            this.btnSimpleUICube.Size = new System.Drawing.Size(265, 23);
-            this.btnSimpleUICube.TabIndex = 4;
-            this.btnSimpleUICube.Text = "SimpleUICube";
-            this.btnSimpleUICube.UseVisualStyleBackColor = true;
-            this.btnSimpleUICube.Click += new System.EventHandler(this.btnSimpleUICube_Click);
             // 
             // btnDebugging
             // 
@@ -346,7 +324,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 576);
             this.Controls.Add(this.btnTexImage2D);
-            this.Controls.Add(this.btnSimpleUICube);
             this.Controls.Add(this.btnFormMultipleHexahedrons2);
             this.Controls.Add(this.btnFormMultipleHexahedrons1);
             this.Controls.Add(this.btnFormMapBuffer);
@@ -371,7 +348,6 @@
             this.Controls.Add(this.btnDebugging);
             this.Controls.Add(this.btnSimpleUIColorPalette);
             this.Controls.Add(this.btnSimpleUIAxis);
-            this.Controls.Add(this.btnSimpleUIRect);
             this.Controls.Add(this.btnLegacySimpleUIRect);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTest";
@@ -383,10 +359,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnLegacySimpleUIRect;
-        private System.Windows.Forms.Button btnSimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIAxis;
         private System.Windows.Forms.Button btnSimpleUIColorPalette;
-        private System.Windows.Forms.Button btnSimpleUICube;
         private System.Windows.Forms.Button btnDebugging;
         private System.Windows.Forms.Button btnSimplePointSprite;
         private System.Windows.Forms.Button btnFormLegacyTexture3D;
