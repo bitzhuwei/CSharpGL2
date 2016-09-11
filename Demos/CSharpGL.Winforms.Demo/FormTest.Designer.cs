@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
-            this.btnBasis = new System.Windows.Forms.Button();
             this.btnCylinderElement = new System.Windows.Forms.Button();
             this.btnFormFontElement = new System.Windows.Forms.Button();
             this.btnPyramidElement = new System.Windows.Forms.Button();
@@ -66,17 +65,6 @@
             this.btnFormSimpleRenderer = new System.Windows.Forms.Button();
             this.btnFormNewNormalLine = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnBasis
-            // 
-            this.btnBasis.Location = new System.Drawing.Point(13, 13);
-            this.btnBasis.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBasis.Name = "btnBasis";
-            this.btnBasis.Size = new System.Drawing.Size(353, 29);
-            this.btnBasis.TabIndex = 6;
-            this.btnBasis.Text = "all kinds of basic codes";
-            this.btnBasis.UseVisualStyleBackColor = true;
-            this.btnBasis.Click += new System.EventHandler(this.btnBasis_Click);
             // 
             // btnCylinderElement
             // 
@@ -504,7 +492,6 @@
             this.Controls.Add(this.btnTranslateOnScreen);
             this.Controls.Add(this.btnFormFontElement);
             this.Controls.Add(this.btnPyramidElement);
-            this.Controls.Add(this.btnBasis);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTest";
@@ -515,7 +502,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnBasis;
         private System.Windows.Forms.Button btnCylinderElement;
         private System.Windows.Forms.Button btnFormFontElement;
         private System.Windows.Forms.Button btnPyramidElement;
