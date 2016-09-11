@@ -100,12 +100,6 @@
     <Compile Include="FormMultipleHexahedrons1.Designer.cs">
       <DependentUpon>FormMultipleHexahedrons1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMapBuffer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMapBuffer.Designer.cs">
-      <DependentUpon>FormMapBuffer.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormColorCodedPicking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,12 +172,6 @@
     <Compile Include="FormTexImage2D.Designer.cs">
       <DependentUpon>FormTexImage2D.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormScientificVisual3DControl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormScientificVisual3DControl.Designer.cs">
-      <DependentUpon>FormScientificVisual3DControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,9 +228,6 @@
     <EmbeddedResource Include="FormMultipleHexahedrons1.resx">
       <DependentUpon>FormMultipleHexahedrons1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMapBuffer.resx">
-      <DependentUpon>FormMapBuffer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDoubleTexture.resx">
       <DependentUpon>FormDoubleTexture.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,9 +268,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLegacyTexture3D.resx">
       <DependentUpon>FormLegacyTexture3D.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormScientificVisual3DControl.resx">
-      <DependentUpon>FormScientificVisual3DControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTest.resx">
       <DependentUpon>FormTest.cs</DependentUpon>

@@ -45,11 +45,6 @@ namespace CSharpGL.Winforms.Demo
             (new FormColorCodedPicking()).Show();
         }
 
-        private void btnFormScientificVisual3DControl_Click(object sender, EventArgs e)
-        {
-            (new FormScientificVisual3DControl()).Show();
-        }
-
         private void btnFormTransformFeedback_Click(object sender, EventArgs e)
         {
             (new FormTransformFeedback()).Show();
@@ -58,11 +53,6 @@ namespace CSharpGL.Winforms.Demo
         private void btnFormInstancedRendering_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnFormMapBuffer_Click(object sender, EventArgs e)
-        {
-            (new FormMapBuffer()).Show();
         }
 
         private void btnTexImage2D_Click(object sender, EventArgs e)

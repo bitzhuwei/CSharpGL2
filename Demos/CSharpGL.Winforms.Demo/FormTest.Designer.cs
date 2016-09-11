@@ -34,10 +34,8 @@
             this.btnDebugging = new System.Windows.Forms.Button();
             this.btnFormLegacyTexture3D = new System.Windows.Forms.Button();
             this.btnFormColorCodedPicking = new System.Windows.Forms.Button();
-            this.btnFormScientificVisual3DControl = new System.Windows.Forms.Button();
             this.btnFormTransformFeedback = new System.Windows.Forms.Button();
             this.btnFormInstancedRendering = new System.Windows.Forms.Button();
-            this.btnFormMapBuffer = new System.Windows.Forms.Button();
             this.btnTexImage2D = new System.Windows.Forms.Button();
             this.btnFormMultipleHexahedrons1 = new System.Windows.Forms.Button();
             this.btnFormMultipleHexahedrons2 = new System.Windows.Forms.Button();
@@ -105,16 +103,6 @@
             this.btnFormColorCodedPicking.UseVisualStyleBackColor = true;
             this.btnFormColorCodedPicking.Click += new System.EventHandler(this.btnFormColorCodedPicking_Click);
             // 
-            // btnFormScientificVisual3DControl
-            // 
-            this.btnFormScientificVisual3DControl.Location = new System.Drawing.Point(280, 10);
-            this.btnFormScientificVisual3DControl.Name = "btnFormScientificVisual3DControl";
-            this.btnFormScientificVisual3DControl.Size = new System.Drawing.Size(260, 23);
-            this.btnFormScientificVisual3DControl.TabIndex = 4;
-            this.btnFormScientificVisual3DControl.Text = "FormScientificVisual3DControl";
-            this.btnFormScientificVisual3DControl.UseVisualStyleBackColor = true;
-            this.btnFormScientificVisual3DControl.Click += new System.EventHandler(this.btnFormScientificVisual3DControl_Click);
-            // 
             // btnFormTransformFeedback
             // 
             this.btnFormTransformFeedback.Location = new System.Drawing.Point(280, 40);
@@ -135,16 +123,6 @@
             this.btnFormInstancedRendering.Text = "FormInstancedRendering";
             this.btnFormInstancedRendering.UseVisualStyleBackColor = true;
             this.btnFormInstancedRendering.Click += new System.EventHandler(this.btnFormInstancedRendering_Click);
-            // 
-            // btnFormMapBuffer
-            // 
-            this.btnFormMapBuffer.Location = new System.Drawing.Point(280, 99);
-            this.btnFormMapBuffer.Name = "btnFormMapBuffer";
-            this.btnFormMapBuffer.Size = new System.Drawing.Size(260, 23);
-            this.btnFormMapBuffer.TabIndex = 4;
-            this.btnFormMapBuffer.Text = "FormMapBuffer";
-            this.btnFormMapBuffer.UseVisualStyleBackColor = true;
-            this.btnFormMapBuffer.Click += new System.EventHandler(this.btnFormMapBuffer_Click);
             // 
             // btnTexImage2D
             // 
@@ -304,10 +282,8 @@
             this.Controls.Add(this.btnTexImage2D);
             this.Controls.Add(this.btnFormMultipleHexahedrons2);
             this.Controls.Add(this.btnFormMultipleHexahedrons1);
-            this.Controls.Add(this.btnFormMapBuffer);
             this.Controls.Add(this.btnFormInstancedRendering);
             this.Controls.Add(this.btnFormTransformFeedback);
-            this.Controls.Add(this.btnFormScientificVisual3DControl);
             this.Controls.Add(this.btnFormColorCodedPicking);
             this.Controls.Add(this.btnFormSimpleRenderer);
             this.Controls.Add(this.btnFormNewNormalLine);
@@ -339,10 +315,8 @@
         private System.Windows.Forms.Button btnDebugging;
         private System.Windows.Forms.Button btnFormLegacyTexture3D;
         private System.Windows.Forms.Button btnFormColorCodedPicking;
-        private System.Windows.Forms.Button btnFormScientificVisual3DControl;
         private System.Windows.Forms.Button btnFormTransformFeedback;
         private System.Windows.Forms.Button btnFormInstancedRendering;
-        private System.Windows.Forms.Button btnFormMapBuffer;
         private System.Windows.Forms.Button btnTexImage2D;
         private System.Windows.Forms.Button btnFormMultipleHexahedrons1;
         private System.Windows.Forms.Button btnFormMultipleHexahedrons2;
