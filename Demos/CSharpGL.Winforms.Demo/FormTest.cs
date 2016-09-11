@@ -17,16 +17,6 @@ namespace CSharpGL.Winforms.Demo
             InitializeComponent();
         }
 
-        private void btnPyramidElement_Click(object sender, EventArgs e)
-        {
-            (new FormPyramidElement()).Show();
-        }
-
-        //private void btnCamera_Click(object sender, EventArgs e)
-        //{
-        //    (new FormCamera()).Show();
-        //}
-
         private void btnSatelliteRotation_Click(object sender, EventArgs e)
         {
             (new FormSatelliteRotation()).Show();

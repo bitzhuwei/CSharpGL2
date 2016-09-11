@@ -226,12 +226,6 @@
     <Compile Include="FormSimpleUIRect.Designer.cs">
       <DependentUpon>FormSimpleUIRect.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPyramidElement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPyramidElement.Designer.cs">
-      <DependentUpon>FormPyramidElement.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormSatelliteRotation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,9 +367,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSimpleUIRect.resx">
       <DependentUpon>FormSimpleUIRect.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPyramidElement.resx">
-      <DependentUpon>FormPyramidElement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSatelliteRotation.resx">
       <DependentUpon>FormSatelliteRotation.cs</DependentUpon>

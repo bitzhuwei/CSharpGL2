@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
             this.btnCylinderElement = new System.Windows.Forms.Button();
             this.btnFormFontElement = new System.Windows.Forms.Button();
-            this.btnPyramidElement = new System.Windows.Forms.Button();
             this.btnCamera = new System.Windows.Forms.Button();
             this.btnSatelliteRotation = new System.Windows.Forms.Button();
             this.btnFormWholeFontTextureElement = new System.Windows.Forms.Button();
@@ -87,17 +86,6 @@
             this.btnFormFontElement.Text = "FormFontElement";
             this.btnFormFontElement.UseVisualStyleBackColor = true;
             this.btnFormFontElement.Click += new System.EventHandler(this.btnFormFontElement_Click);
-            // 
-            // btnPyramidElement
-            // 
-            this.btnPyramidElement.Location = new System.Drawing.Point(13, 50);
-            this.btnPyramidElement.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPyramidElement.Name = "btnPyramidElement";
-            this.btnPyramidElement.Size = new System.Drawing.Size(353, 29);
-            this.btnPyramidElement.TabIndex = 5;
-            this.btnPyramidElement.Text = "PyramidElement";
-            this.btnPyramidElement.UseVisualStyleBackColor = true;
-            this.btnPyramidElement.Click += new System.EventHandler(this.btnPyramidElement_Click);
             // 
             // btnCamera
             // 
@@ -491,7 +479,6 @@
             this.Controls.Add(this.btnLegacySimpleUIRect);
             this.Controls.Add(this.btnTranslateOnScreen);
             this.Controls.Add(this.btnFormFontElement);
-            this.Controls.Add(this.btnPyramidElement);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTest";
@@ -504,7 +491,6 @@
 
         private System.Windows.Forms.Button btnCylinderElement;
         private System.Windows.Forms.Button btnFormFontElement;
-        private System.Windows.Forms.Button btnPyramidElement;
         private System.Windows.Forms.Button btnCamera;
         private System.Windows.Forms.Button btnSatelliteRotation;
         private System.Windows.Forms.Button btnFormWholeFontTextureElement;
