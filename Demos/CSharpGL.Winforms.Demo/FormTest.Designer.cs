@@ -32,7 +32,6 @@
             this.btnCylinderElement = new System.Windows.Forms.Button();
             this.btnFormFontElement = new System.Windows.Forms.Button();
             this.btnCamera = new System.Windows.Forms.Button();
-            this.btnSatelliteRotation = new System.Windows.Forms.Button();
             this.btnFormWholeFontTextureElement = new System.Windows.Forms.Button();
             this.btnTranslateOnScreen = new System.Windows.Forms.Button();
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
@@ -67,10 +66,9 @@
             // 
             // btnCylinderElement
             // 
-            this.btnCylinderElement.Location = new System.Drawing.Point(13, 161);
-            this.btnCylinderElement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCylinderElement.Location = new System.Drawing.Point(10, 129);
             this.btnCylinderElement.Name = "btnCylinderElement";
-            this.btnCylinderElement.Size = new System.Drawing.Size(353, 29);
+            this.btnCylinderElement.Size = new System.Drawing.Size(265, 23);
             this.btnCylinderElement.TabIndex = 1;
             this.btnCylinderElement.Text = "CylinderElement+SatelliteRotation";
             this.btnCylinderElement.UseVisualStyleBackColor = true;
@@ -78,10 +76,9 @@
             // 
             // btnFormFontElement
             // 
-            this.btnFormFontElement.Location = new System.Drawing.Point(13, 272);
-            this.btnFormFontElement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormFontElement.Location = new System.Drawing.Point(10, 218);
             this.btnFormFontElement.Name = "btnFormFontElement";
-            this.btnFormFontElement.Size = new System.Drawing.Size(353, 29);
+            this.btnFormFontElement.Size = new System.Drawing.Size(265, 23);
             this.btnFormFontElement.TabIndex = 4;
             this.btnFormFontElement.Text = "FormFontElement";
             this.btnFormFontElement.UseVisualStyleBackColor = true;
@@ -90,31 +87,19 @@
             // btnCamera
             // 
             this.btnCamera.Enabled = false;
-            this.btnCamera.Location = new System.Drawing.Point(13, 87);
-            this.btnCamera.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCamera.Location = new System.Drawing.Point(10, 70);
             this.btnCamera.Name = "btnCamera";
-            this.btnCamera.Size = new System.Drawing.Size(353, 29);
+            this.btnCamera.Size = new System.Drawing.Size(265, 23);
             this.btnCamera.TabIndex = 3;
             this.btnCamera.Text = "PyramidElement+Camera(MouseWheel)";
             this.btnCamera.UseVisualStyleBackColor = true;
-            // 
-            // btnSatelliteRotation
-            // 
-            this.btnSatelliteRotation.Location = new System.Drawing.Point(13, 124);
-            this.btnSatelliteRotation.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSatelliteRotation.Name = "btnSatelliteRotation";
-            this.btnSatelliteRotation.Size = new System.Drawing.Size(353, 29);
-            this.btnSatelliteRotation.TabIndex = 2;
-            this.btnSatelliteRotation.Text = "PyramidElement+SatelliteRotation";
-            this.btnSatelliteRotation.UseVisualStyleBackColor = true;
-            this.btnSatelliteRotation.Click += new System.EventHandler(this.btnSatelliteRotation_Click);
+            this.btnCamera.Click += new System.EventHandler(this.btnCamera_Click);
             // 
             // btnFormWholeFontTextureElement
             // 
-            this.btnFormWholeFontTextureElement.Location = new System.Drawing.Point(13, 235);
-            this.btnFormWholeFontTextureElement.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormWholeFontTextureElement.Location = new System.Drawing.Point(10, 188);
             this.btnFormWholeFontTextureElement.Name = "btnFormWholeFontTextureElement";
-            this.btnFormWholeFontTextureElement.Size = new System.Drawing.Size(353, 29);
+            this.btnFormWholeFontTextureElement.Size = new System.Drawing.Size(265, 23);
             this.btnFormWholeFontTextureElement.TabIndex = 0;
             this.btnFormWholeFontTextureElement.Text = "FormWholeFontTextureElement";
             this.btnFormWholeFontTextureElement.UseVisualStyleBackColor = true;
@@ -122,10 +107,9 @@
             // 
             // btnTranslateOnScreen
             // 
-            this.btnTranslateOnScreen.Location = new System.Drawing.Point(13, 309);
-            this.btnTranslateOnScreen.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTranslateOnScreen.Location = new System.Drawing.Point(10, 247);
             this.btnTranslateOnScreen.Name = "btnTranslateOnScreen";
-            this.btnTranslateOnScreen.Size = new System.Drawing.Size(353, 29);
+            this.btnTranslateOnScreen.Size = new System.Drawing.Size(265, 23);
             this.btnTranslateOnScreen.TabIndex = 4;
             this.btnTranslateOnScreen.Text = "TranslateOnScreen";
             this.btnTranslateOnScreen.UseVisualStyleBackColor = true;
@@ -133,10 +117,9 @@
             // 
             // btnLegacySimpleUIRect
             // 
-            this.btnLegacySimpleUIRect.Location = new System.Drawing.Point(13, 346);
-            this.btnLegacySimpleUIRect.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLegacySimpleUIRect.Location = new System.Drawing.Point(10, 277);
             this.btnLegacySimpleUIRect.Name = "btnLegacySimpleUIRect";
-            this.btnLegacySimpleUIRect.Size = new System.Drawing.Size(353, 29);
+            this.btnLegacySimpleUIRect.Size = new System.Drawing.Size(265, 23);
             this.btnLegacySimpleUIRect.TabIndex = 4;
             this.btnLegacySimpleUIRect.Text = "LegacySimpleUIRect";
             this.btnLegacySimpleUIRect.UseVisualStyleBackColor = true;
@@ -144,10 +127,9 @@
             // 
             // btnSimpleUIRect
             // 
-            this.btnSimpleUIRect.Location = new System.Drawing.Point(13, 383);
-            this.btnSimpleUIRect.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimpleUIRect.Location = new System.Drawing.Point(10, 306);
             this.btnSimpleUIRect.Name = "btnSimpleUIRect";
-            this.btnSimpleUIRect.Size = new System.Drawing.Size(353, 29);
+            this.btnSimpleUIRect.Size = new System.Drawing.Size(265, 23);
             this.btnSimpleUIRect.TabIndex = 4;
             this.btnSimpleUIRect.Text = "SimpleUIRect";
             this.btnSimpleUIRect.UseVisualStyleBackColor = true;
@@ -155,10 +137,9 @@
             // 
             // btnSimpleUIAxis
             // 
-            this.btnSimpleUIAxis.Location = new System.Drawing.Point(13, 420);
-            this.btnSimpleUIAxis.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimpleUIAxis.Location = new System.Drawing.Point(10, 336);
             this.btnSimpleUIAxis.Name = "btnSimpleUIAxis";
-            this.btnSimpleUIAxis.Size = new System.Drawing.Size(353, 29);
+            this.btnSimpleUIAxis.Size = new System.Drawing.Size(265, 23);
             this.btnSimpleUIAxis.TabIndex = 4;
             this.btnSimpleUIAxis.Text = "SimpleUIAxis";
             this.btnSimpleUIAxis.UseVisualStyleBackColor = true;
@@ -166,10 +147,9 @@
             // 
             // btnSimpleUIColorPalette
             // 
-            this.btnSimpleUIColorPalette.Location = new System.Drawing.Point(13, 494);
-            this.btnSimpleUIColorPalette.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimpleUIColorPalette.Location = new System.Drawing.Point(10, 395);
             this.btnSimpleUIColorPalette.Name = "btnSimpleUIColorPalette";
-            this.btnSimpleUIColorPalette.Size = new System.Drawing.Size(353, 29);
+            this.btnSimpleUIColorPalette.Size = new System.Drawing.Size(265, 23);
             this.btnSimpleUIColorPalette.TabIndex = 4;
             this.btnSimpleUIColorPalette.Text = "SimpleUIColorPalette";
             this.btnSimpleUIColorPalette.UseVisualStyleBackColor = true;
@@ -177,10 +157,9 @@
             // 
             // btnSimpleUICube
             // 
-            this.btnSimpleUICube.Location = new System.Drawing.Point(13, 457);
-            this.btnSimpleUICube.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimpleUICube.Location = new System.Drawing.Point(10, 366);
             this.btnSimpleUICube.Name = "btnSimpleUICube";
-            this.btnSimpleUICube.Size = new System.Drawing.Size(353, 29);
+            this.btnSimpleUICube.Size = new System.Drawing.Size(265, 23);
             this.btnSimpleUICube.TabIndex = 4;
             this.btnSimpleUICube.Text = "SimpleUICube";
             this.btnSimpleUICube.UseVisualStyleBackColor = true;
@@ -188,10 +167,9 @@
             // 
             // btnDebugging
             // 
-            this.btnDebugging.Location = new System.Drawing.Point(13, 531);
-            this.btnDebugging.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDebugging.Location = new System.Drawing.Point(10, 425);
             this.btnDebugging.Name = "btnDebugging";
-            this.btnDebugging.Size = new System.Drawing.Size(353, 29);
+            this.btnDebugging.Size = new System.Drawing.Size(265, 23);
             this.btnDebugging.TabIndex = 4;
             this.btnDebugging.Text = "Debugging and profiling";
             this.btnDebugging.UseVisualStyleBackColor = true;
@@ -199,10 +177,9 @@
             // 
             // btnSimplePointSprite
             // 
-            this.btnSimplePointSprite.Location = new System.Drawing.Point(13, 605);
-            this.btnSimplePointSprite.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSimplePointSprite.Location = new System.Drawing.Point(10, 484);
             this.btnSimplePointSprite.Name = "btnSimplePointSprite";
-            this.btnSimplePointSprite.Size = new System.Drawing.Size(353, 29);
+            this.btnSimplePointSprite.Size = new System.Drawing.Size(265, 23);
             this.btnSimplePointSprite.TabIndex = 4;
             this.btnSimplePointSprite.Text = "SimplePointSprite";
             this.btnSimplePointSprite.UseVisualStyleBackColor = true;
@@ -210,10 +187,9 @@
             // 
             // btnFormLegacyTexture3D
             // 
-            this.btnFormLegacyTexture3D.Location = new System.Drawing.Point(13, 642);
-            this.btnFormLegacyTexture3D.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormLegacyTexture3D.Location = new System.Drawing.Point(10, 514);
             this.btnFormLegacyTexture3D.Name = "btnFormLegacyTexture3D";
-            this.btnFormLegacyTexture3D.Size = new System.Drawing.Size(353, 29);
+            this.btnFormLegacyTexture3D.Size = new System.Drawing.Size(265, 23);
             this.btnFormLegacyTexture3D.TabIndex = 4;
             this.btnFormLegacyTexture3D.Text = "FormLegacyTexture3D";
             this.btnFormLegacyTexture3D.UseVisualStyleBackColor = true;
@@ -221,10 +197,9 @@
             // 
             // btnFormColorCodedPicking
             // 
-            this.btnFormColorCodedPicking.Location = new System.Drawing.Point(13, 679);
-            this.btnFormColorCodedPicking.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormColorCodedPicking.Location = new System.Drawing.Point(10, 543);
             this.btnFormColorCodedPicking.Name = "btnFormColorCodedPicking";
-            this.btnFormColorCodedPicking.Size = new System.Drawing.Size(353, 29);
+            this.btnFormColorCodedPicking.Size = new System.Drawing.Size(265, 23);
             this.btnFormColorCodedPicking.TabIndex = 4;
             this.btnFormColorCodedPicking.Text = "FormColorCodedPicking";
             this.btnFormColorCodedPicking.UseVisualStyleBackColor = true;
@@ -232,10 +207,9 @@
             // 
             // btnFormScientificVisual3DControl
             // 
-            this.btnFormScientificVisual3DControl.Location = new System.Drawing.Point(374, 13);
-            this.btnFormScientificVisual3DControl.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormScientificVisual3DControl.Location = new System.Drawing.Point(280, 10);
             this.btnFormScientificVisual3DControl.Name = "btnFormScientificVisual3DControl";
-            this.btnFormScientificVisual3DControl.Size = new System.Drawing.Size(346, 29);
+            this.btnFormScientificVisual3DControl.Size = new System.Drawing.Size(260, 23);
             this.btnFormScientificVisual3DControl.TabIndex = 4;
             this.btnFormScientificVisual3DControl.Text = "FormScientificVisual3DControl";
             this.btnFormScientificVisual3DControl.UseVisualStyleBackColor = true;
@@ -243,10 +217,9 @@
             // 
             // btnFormTransformFeedback
             // 
-            this.btnFormTransformFeedback.Location = new System.Drawing.Point(374, 50);
-            this.btnFormTransformFeedback.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormTransformFeedback.Location = new System.Drawing.Point(280, 40);
             this.btnFormTransformFeedback.Name = "btnFormTransformFeedback";
-            this.btnFormTransformFeedback.Size = new System.Drawing.Size(346, 29);
+            this.btnFormTransformFeedback.Size = new System.Drawing.Size(260, 23);
             this.btnFormTransformFeedback.TabIndex = 4;
             this.btnFormTransformFeedback.Text = "FormTransformFeedback";
             this.btnFormTransformFeedback.UseVisualStyleBackColor = true;
@@ -255,10 +228,9 @@
             // btnFormInstancedRendering
             // 
             this.btnFormInstancedRendering.Enabled = false;
-            this.btnFormInstancedRendering.Location = new System.Drawing.Point(374, 87);
-            this.btnFormInstancedRendering.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormInstancedRendering.Location = new System.Drawing.Point(280, 70);
             this.btnFormInstancedRendering.Name = "btnFormInstancedRendering";
-            this.btnFormInstancedRendering.Size = new System.Drawing.Size(346, 29);
+            this.btnFormInstancedRendering.Size = new System.Drawing.Size(260, 23);
             this.btnFormInstancedRendering.TabIndex = 4;
             this.btnFormInstancedRendering.Text = "FormInstancedRendering";
             this.btnFormInstancedRendering.UseVisualStyleBackColor = true;
@@ -266,10 +238,9 @@
             // 
             // btnFormMapBuffer
             // 
-            this.btnFormMapBuffer.Location = new System.Drawing.Point(374, 124);
-            this.btnFormMapBuffer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormMapBuffer.Location = new System.Drawing.Point(280, 99);
             this.btnFormMapBuffer.Name = "btnFormMapBuffer";
-            this.btnFormMapBuffer.Size = new System.Drawing.Size(346, 29);
+            this.btnFormMapBuffer.Size = new System.Drawing.Size(260, 23);
             this.btnFormMapBuffer.TabIndex = 4;
             this.btnFormMapBuffer.Text = "FormMapBuffer";
             this.btnFormMapBuffer.UseVisualStyleBackColor = true;
@@ -277,10 +248,9 @@
             // 
             // btnTexImage2D
             // 
-            this.btnTexImage2D.Location = new System.Drawing.Point(13, 198);
-            this.btnTexImage2D.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTexImage2D.Location = new System.Drawing.Point(10, 158);
             this.btnTexImage2D.Name = "btnTexImage2D";
-            this.btnTexImage2D.Size = new System.Drawing.Size(353, 29);
+            this.btnTexImage2D.Size = new System.Drawing.Size(265, 23);
             this.btnTexImage2D.TabIndex = 1;
             this.btnTexImage2D.Text = "TexImage2D";
             this.btnTexImage2D.UseVisualStyleBackColor = true;
@@ -288,10 +258,9 @@
             // 
             // btnFormMultipleHexahedrons1
             // 
-            this.btnFormMultipleHexahedrons1.Location = new System.Drawing.Point(374, 161);
-            this.btnFormMultipleHexahedrons1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormMultipleHexahedrons1.Location = new System.Drawing.Point(280, 129);
             this.btnFormMultipleHexahedrons1.Name = "btnFormMultipleHexahedrons1";
-            this.btnFormMultipleHexahedrons1.Size = new System.Drawing.Size(346, 29);
+            this.btnFormMultipleHexahedrons1.Size = new System.Drawing.Size(260, 23);
             this.btnFormMultipleHexahedrons1.TabIndex = 4;
             this.btnFormMultipleHexahedrons1.Text = "FormMultipleHexahedrons1-DrawElements";
             this.btnFormMultipleHexahedrons1.UseVisualStyleBackColor = true;
@@ -299,10 +268,9 @@
             // 
             // btnFormMultipleHexahedrons2
             // 
-            this.btnFormMultipleHexahedrons2.Location = new System.Drawing.Point(374, 198);
-            this.btnFormMultipleHexahedrons2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormMultipleHexahedrons2.Location = new System.Drawing.Point(280, 158);
             this.btnFormMultipleHexahedrons2.Name = "btnFormMultipleHexahedrons2";
-            this.btnFormMultipleHexahedrons2.Size = new System.Drawing.Size(346, 29);
+            this.btnFormMultipleHexahedrons2.Size = new System.Drawing.Size(260, 23);
             this.btnFormMultipleHexahedrons2.TabIndex = 4;
             this.btnFormMultipleHexahedrons2.Text = "FormMultipleHexahedrons2-MultiDrawArrays";
             this.btnFormMultipleHexahedrons2.UseVisualStyleBackColor = true;
@@ -310,10 +278,9 @@
             // 
             // btnFormLegacyTexture3D2
             // 
-            this.btnFormLegacyTexture3D2.Location = new System.Drawing.Point(374, 235);
-            this.btnFormLegacyTexture3D2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormLegacyTexture3D2.Location = new System.Drawing.Point(280, 188);
             this.btnFormLegacyTexture3D2.Name = "btnFormLegacyTexture3D2";
-            this.btnFormLegacyTexture3D2.Size = new System.Drawing.Size(346, 29);
+            this.btnFormLegacyTexture3D2.Size = new System.Drawing.Size(260, 23);
             this.btnFormLegacyTexture3D2.TabIndex = 4;
             this.btnFormLegacyTexture3D2.Text = "FormLegacyTexture3D-2";
             this.btnFormLegacyTexture3D2.UseVisualStyleBackColor = true;
@@ -321,10 +288,9 @@
             // 
             // btnFormVolumeRendering01
             // 
-            this.btnFormVolumeRendering01.Location = new System.Drawing.Point(374, 272);
-            this.btnFormVolumeRendering01.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormVolumeRendering01.Location = new System.Drawing.Point(280, 218);
             this.btnFormVolumeRendering01.Name = "btnFormVolumeRendering01";
-            this.btnFormVolumeRendering01.Size = new System.Drawing.Size(346, 29);
+            this.btnFormVolumeRendering01.Size = new System.Drawing.Size(260, 23);
             this.btnFormVolumeRendering01.TabIndex = 4;
             this.btnFormVolumeRendering01.Text = "FormVolumeRendering00-legacy opengl";
             this.btnFormVolumeRendering01.UseVisualStyleBackColor = true;
@@ -332,10 +298,9 @@
             // 
             // btnFormVolumeRendering_Hexahedron
             // 
-            this.btnFormVolumeRendering_Hexahedron.Location = new System.Drawing.Point(374, 383);
-            this.btnFormVolumeRendering_Hexahedron.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormVolumeRendering_Hexahedron.Location = new System.Drawing.Point(280, 306);
             this.btnFormVolumeRendering_Hexahedron.Name = "btnFormVolumeRendering_Hexahedron";
-            this.btnFormVolumeRendering_Hexahedron.Size = new System.Drawing.Size(346, 29);
+            this.btnFormVolumeRendering_Hexahedron.Size = new System.Drawing.Size(260, 23);
             this.btnFormVolumeRendering_Hexahedron.TabIndex = 4;
             this.btnFormVolumeRendering_Hexahedron.Text = "FormVolumeRendering03-hexahedron";
             this.btnFormVolumeRendering_Hexahedron.UseVisualStyleBackColor = true;
@@ -343,10 +308,9 @@
             // 
             // btnVR01_modernOpenGL_Quads
             // 
-            this.btnVR01_modernOpenGL_Quads.Location = new System.Drawing.Point(374, 309);
-            this.btnVR01_modernOpenGL_Quads.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVR01_modernOpenGL_Quads.Location = new System.Drawing.Point(280, 247);
             this.btnVR01_modernOpenGL_Quads.Name = "btnVR01_modernOpenGL_Quads";
-            this.btnVR01_modernOpenGL_Quads.Size = new System.Drawing.Size(346, 29);
+            this.btnVR01_modernOpenGL_Quads.Size = new System.Drawing.Size(260, 23);
             this.btnVR01_modernOpenGL_Quads.TabIndex = 4;
             this.btnVR01_modernOpenGL_Quads.Text = "FormVolumeRendering01-quads";
             this.btnVR01_modernOpenGL_Quads.UseVisualStyleBackColor = true;
@@ -354,10 +318,9 @@
             // 
             // btnVR02_modernOpenGL_Points
             // 
-            this.btnVR02_modernOpenGL_Points.Location = new System.Drawing.Point(374, 346);
-            this.btnVR02_modernOpenGL_Points.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVR02_modernOpenGL_Points.Location = new System.Drawing.Point(280, 277);
             this.btnVR02_modernOpenGL_Points.Name = "btnVR02_modernOpenGL_Points";
-            this.btnVR02_modernOpenGL_Points.Size = new System.Drawing.Size(346, 29);
+            this.btnVR02_modernOpenGL_Points.Size = new System.Drawing.Size(260, 23);
             this.btnVR02_modernOpenGL_Points.TabIndex = 4;
             this.btnVR02_modernOpenGL_Points.Text = "FormVolumeRendering02-points";
             this.btnVR02_modernOpenGL_Points.UseVisualStyleBackColor = true;
@@ -365,10 +328,9 @@
             // 
             // btnFormVolumeRendering04
             // 
-            this.btnFormVolumeRendering04.Location = new System.Drawing.Point(374, 420);
-            this.btnFormVolumeRendering04.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormVolumeRendering04.Location = new System.Drawing.Point(280, 336);
             this.btnFormVolumeRendering04.Name = "btnFormVolumeRendering04";
-            this.btnFormVolumeRendering04.Size = new System.Drawing.Size(346, 29);
+            this.btnFormVolumeRendering04.Size = new System.Drawing.Size(260, 23);
             this.btnFormVolumeRendering04.TabIndex = 4;
             this.btnFormVolumeRendering04.Text = "FormVolumeRendering04-doubleRender-quads";
             this.btnFormVolumeRendering04.UseVisualStyleBackColor = true;
@@ -376,10 +338,9 @@
             // 
             // btnFormVolumeRendering05
             // 
-            this.btnFormVolumeRendering05.Location = new System.Drawing.Point(374, 457);
-            this.btnFormVolumeRendering05.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormVolumeRendering05.Location = new System.Drawing.Point(280, 366);
             this.btnFormVolumeRendering05.Name = "btnFormVolumeRendering05";
-            this.btnFormVolumeRendering05.Size = new System.Drawing.Size(346, 29);
+            this.btnFormVolumeRendering05.Size = new System.Drawing.Size(260, 23);
             this.btnFormVolumeRendering05.TabIndex = 4;
             this.btnFormVolumeRendering05.Text = "FormVolumeRendering05-how-many-points";
             this.btnFormVolumeRendering05.UseVisualStyleBackColor = true;
@@ -387,10 +348,9 @@
             // 
             // btnFromShaderDesigner1594
             // 
-            this.btnFromShaderDesigner1594.Location = new System.Drawing.Point(374, 494);
-            this.btnFromShaderDesigner1594.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFromShaderDesigner1594.Location = new System.Drawing.Point(280, 395);
             this.btnFromShaderDesigner1594.Name = "btnFromShaderDesigner1594";
-            this.btnFromShaderDesigner1594.Size = new System.Drawing.Size(346, 29);
+            this.btnFromShaderDesigner1594.Size = new System.Drawing.Size(260, 23);
             this.btnFromShaderDesigner1594.TabIndex = 4;
             this.btnFromShaderDesigner1594.Text = "FromShaderDesigner1.5.9.4";
             this.btnFromShaderDesigner1594.UseVisualStyleBackColor = true;
@@ -398,10 +358,9 @@
             // 
             // btnFormDoubleTexture
             // 
-            this.btnFormDoubleTexture.Location = new System.Drawing.Point(374, 531);
-            this.btnFormDoubleTexture.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormDoubleTexture.Location = new System.Drawing.Point(280, 425);
             this.btnFormDoubleTexture.Name = "btnFormDoubleTexture";
-            this.btnFormDoubleTexture.Size = new System.Drawing.Size(346, 29);
+            this.btnFormDoubleTexture.Size = new System.Drawing.Size(260, 23);
             this.btnFormDoubleTexture.TabIndex = 4;
             this.btnFormDoubleTexture.Text = "FormDoubleTexture";
             this.btnFormDoubleTexture.UseVisualStyleBackColor = true;
@@ -409,10 +368,9 @@
             // 
             // btnFormNormalLine
             // 
-            this.btnFormNormalLine.Location = new System.Drawing.Point(374, 568);
-            this.btnFormNormalLine.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormNormalLine.Location = new System.Drawing.Point(280, 454);
             this.btnFormNormalLine.Name = "btnFormNormalLine";
-            this.btnFormNormalLine.Size = new System.Drawing.Size(346, 29);
+            this.btnFormNormalLine.Size = new System.Drawing.Size(260, 23);
             this.btnFormNormalLine.TabIndex = 4;
             this.btnFormNormalLine.Text = "FormNormalLine";
             this.btnFormNormalLine.UseVisualStyleBackColor = true;
@@ -420,10 +378,9 @@
             // 
             // btnFormSimpleRenderer
             // 
-            this.btnFormSimpleRenderer.Location = new System.Drawing.Point(374, 605);
-            this.btnFormSimpleRenderer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormSimpleRenderer.Location = new System.Drawing.Point(280, 484);
             this.btnFormSimpleRenderer.Name = "btnFormSimpleRenderer";
-            this.btnFormSimpleRenderer.Size = new System.Drawing.Size(346, 29);
+            this.btnFormSimpleRenderer.Size = new System.Drawing.Size(260, 23);
             this.btnFormSimpleRenderer.TabIndex = 4;
             this.btnFormSimpleRenderer.Text = "FormSimpleRenderer";
             this.btnFormSimpleRenderer.UseVisualStyleBackColor = true;
@@ -431,10 +388,9 @@
             // 
             // btnFormNewNormalLine
             // 
-            this.btnFormNewNormalLine.Location = new System.Drawing.Point(374, 642);
-            this.btnFormNewNormalLine.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormNewNormalLine.Location = new System.Drawing.Point(280, 514);
             this.btnFormNewNormalLine.Name = "btnFormNewNormalLine";
-            this.btnFormNewNormalLine.Size = new System.Drawing.Size(346, 29);
+            this.btnFormNewNormalLine.Size = new System.Drawing.Size(260, 23);
             this.btnFormNewNormalLine.TabIndex = 4;
             this.btnFormNewNormalLine.Text = "FormNewNormalLine";
             this.btnFormNewNormalLine.UseVisualStyleBackColor = true;
@@ -442,13 +398,12 @@
             // 
             // FormTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 720);
+            this.ClientSize = new System.Drawing.Size(560, 576);
             this.Controls.Add(this.btnFormWholeFontTextureElement);
             this.Controls.Add(this.btnTexImage2D);
             this.Controls.Add(this.btnCylinderElement);
-            this.Controls.Add(this.btnSatelliteRotation);
             this.Controls.Add(this.btnCamera);
             this.Controls.Add(this.btnSimpleUICube);
             this.Controls.Add(this.btnFormMultipleHexahedrons2);
@@ -480,7 +435,6 @@
             this.Controls.Add(this.btnTranslateOnScreen);
             this.Controls.Add(this.btnFormFontElement);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTest";
             this.Text = "测试窗口";
             this.ResumeLayout(false);
@@ -492,7 +446,6 @@
         private System.Windows.Forms.Button btnCylinderElement;
         private System.Windows.Forms.Button btnFormFontElement;
         private System.Windows.Forms.Button btnCamera;
-        private System.Windows.Forms.Button btnSatelliteRotation;
         private System.Windows.Forms.Button btnFormWholeFontTextureElement;
         private System.Windows.Forms.Button btnTranslateOnScreen;
         private System.Windows.Forms.Button btnLegacySimpleUIRect;

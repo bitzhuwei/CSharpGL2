@@ -17,11 +17,6 @@ namespace CSharpGL.Winforms.Demo
             InitializeComponent();
         }
 
-        private void btnSatelliteRotation_Click(object sender, EventArgs e)
-        {
-            (new FormSatelliteRotation()).Show();
-        }
-
         private void btnCylinderElement_Click(object sender, EventArgs e)
         {
             (new FormCylinderElement()).Show();
@@ -192,6 +187,11 @@ namespace CSharpGL.Winforms.Demo
         private void btnFormNewNormalLine_Click(object sender, EventArgs e)
         {
             (new FormNewNormalLine()).Show();
+        }
+
+        private void btnCamera_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
