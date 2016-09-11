@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
             this.btnFormFontElement = new System.Windows.Forms.Button();
-            this.btnTranslateOnScreen = new System.Windows.Forms.Button();
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIRect = new System.Windows.Forms.Button();
             this.btnSimpleUIAxis = new System.Windows.Forms.Button();
@@ -70,16 +69,6 @@
             this.btnFormFontElement.Text = "FormFontElement";
             this.btnFormFontElement.UseVisualStyleBackColor = true;
             this.btnFormFontElement.Click += new System.EventHandler(this.btnFormFontElement_Click);
-            // 
-            // btnTranslateOnScreen
-            // 
-            this.btnTranslateOnScreen.Location = new System.Drawing.Point(10, 247);
-            this.btnTranslateOnScreen.Name = "btnTranslateOnScreen";
-            this.btnTranslateOnScreen.Size = new System.Drawing.Size(265, 23);
-            this.btnTranslateOnScreen.TabIndex = 4;
-            this.btnTranslateOnScreen.Text = "TranslateOnScreen";
-            this.btnTranslateOnScreen.UseVisualStyleBackColor = true;
-            this.btnTranslateOnScreen.Click += new System.EventHandler(this.btnTranslateOnScreen_Click);
             // 
             // btnLegacySimpleUIRect
             // 
@@ -395,7 +384,6 @@
             this.Controls.Add(this.btnSimpleUIAxis);
             this.Controls.Add(this.btnSimpleUIRect);
             this.Controls.Add(this.btnLegacySimpleUIRect);
-            this.Controls.Add(this.btnTranslateOnScreen);
             this.Controls.Add(this.btnFormFontElement);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTest";
@@ -407,7 +395,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnFormFontElement;
-        private System.Windows.Forms.Button btnTranslateOnScreen;
         private System.Windows.Forms.Button btnLegacySimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIRect;
         private System.Windows.Forms.Button btnSimpleUIAxis;

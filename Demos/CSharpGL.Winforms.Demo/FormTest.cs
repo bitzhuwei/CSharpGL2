@@ -22,11 +22,6 @@ namespace CSharpGL.Winforms.Demo
             (new FormFontElement()).Show();
         }
 
-        private void btnTranslateOnScreen_Click(object sender, EventArgs e)
-        {
-            (new FormTranslateOnScreen()).Show();
-        }
-
         private void btnLegacySimpleUIRect_Click(object sender, EventArgs e)
         {
             (new FormLegacySimpleUIRect()).Show();

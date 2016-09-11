@@ -232,12 +232,6 @@
     <Compile Include="FormTransformFeedback.Designer.cs">
       <DependentUpon>FormTransformFeedback.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTranslateOnScreen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTranslateOnScreen.Designer.cs">
-      <DependentUpon>FormTranslateOnScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormSimpleUIAxis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,9 +346,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTransformFeedback.resx">
       <DependentUpon>FormTransformFeedback.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTranslateOnScreen.resx">
-      <DependentUpon>FormTranslateOnScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSimpleUIAxis.resx">
       <DependentUpon>FormSimpleUIAxis.cs</DependentUpon>
