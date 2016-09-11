@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
-            this.btnCylinderElement = new System.Windows.Forms.Button();
             this.btnFormFontElement = new System.Windows.Forms.Button();
             this.btnFormWholeFontTextureElement = new System.Windows.Forms.Button();
             this.btnTranslateOnScreen = new System.Windows.Forms.Button();
@@ -62,16 +61,6 @@
             this.btnFormSimpleRenderer = new System.Windows.Forms.Button();
             this.btnFormNewNormalLine = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnCylinderElement
-            // 
-            this.btnCylinderElement.Location = new System.Drawing.Point(10, 129);
-            this.btnCylinderElement.Name = "btnCylinderElement";
-            this.btnCylinderElement.Size = new System.Drawing.Size(265, 23);
-            this.btnCylinderElement.TabIndex = 1;
-            this.btnCylinderElement.Text = "CylinderElement+SatelliteRotation";
-            this.btnCylinderElement.UseVisualStyleBackColor = true;
-            this.btnCylinderElement.Click += new System.EventHandler(this.btnCylinderElement_Click);
             // 
             // btnFormFontElement
             // 
@@ -391,7 +380,6 @@
             this.ClientSize = new System.Drawing.Size(560, 576);
             this.Controls.Add(this.btnFormWholeFontTextureElement);
             this.Controls.Add(this.btnTexImage2D);
-            this.Controls.Add(this.btnCylinderElement);
             this.Controls.Add(this.btnSimpleUICube);
             this.Controls.Add(this.btnFormMultipleHexahedrons2);
             this.Controls.Add(this.btnFormMultipleHexahedrons1);
@@ -430,7 +418,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCylinderElement;
         private System.Windows.Forms.Button btnFormFontElement;
         private System.Windows.Forms.Button btnFormWholeFontTextureElement;
         private System.Windows.Forms.Button btnTranslateOnScreen;
