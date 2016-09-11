@@ -37,8 +37,6 @@
             this.btnFormTransformFeedback = new System.Windows.Forms.Button();
             this.btnFormInstancedRendering = new System.Windows.Forms.Button();
             this.btnTexImage2D = new System.Windows.Forms.Button();
-            this.btnFormMultipleHexahedrons1 = new System.Windows.Forms.Button();
-            this.btnFormMultipleHexahedrons2 = new System.Windows.Forms.Button();
             this.btnFormLegacyTexture3D2 = new System.Windows.Forms.Button();
             this.btnFormVolumeRendering01 = new System.Windows.Forms.Button();
             this.btnFormVolumeRendering_Hexahedron = new System.Windows.Forms.Button();
@@ -133,26 +131,6 @@
             this.btnTexImage2D.Text = "TexImage2D";
             this.btnTexImage2D.UseVisualStyleBackColor = true;
             this.btnTexImage2D.Click += new System.EventHandler(this.btnTexImage2D_Click);
-            // 
-            // btnFormMultipleHexahedrons1
-            // 
-            this.btnFormMultipleHexahedrons1.Location = new System.Drawing.Point(280, 129);
-            this.btnFormMultipleHexahedrons1.Name = "btnFormMultipleHexahedrons1";
-            this.btnFormMultipleHexahedrons1.Size = new System.Drawing.Size(260, 23);
-            this.btnFormMultipleHexahedrons1.TabIndex = 4;
-            this.btnFormMultipleHexahedrons1.Text = "FormMultipleHexahedrons1-DrawElements";
-            this.btnFormMultipleHexahedrons1.UseVisualStyleBackColor = true;
-            this.btnFormMultipleHexahedrons1.Click += new System.EventHandler(this.btnFormMultipleHexahedrons1_Click);
-            // 
-            // btnFormMultipleHexahedrons2
-            // 
-            this.btnFormMultipleHexahedrons2.Location = new System.Drawing.Point(280, 158);
-            this.btnFormMultipleHexahedrons2.Name = "btnFormMultipleHexahedrons2";
-            this.btnFormMultipleHexahedrons2.Size = new System.Drawing.Size(260, 23);
-            this.btnFormMultipleHexahedrons2.TabIndex = 4;
-            this.btnFormMultipleHexahedrons2.Text = "FormMultipleHexahedrons2-MultiDrawArrays";
-            this.btnFormMultipleHexahedrons2.UseVisualStyleBackColor = true;
-            this.btnFormMultipleHexahedrons2.Click += new System.EventHandler(this.btnFormMultipleHexahedrons2_Click);
             // 
             // btnFormLegacyTexture3D2
             // 
@@ -280,8 +258,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 576);
             this.Controls.Add(this.btnTexImage2D);
-            this.Controls.Add(this.btnFormMultipleHexahedrons2);
-            this.Controls.Add(this.btnFormMultipleHexahedrons1);
             this.Controls.Add(this.btnFormInstancedRendering);
             this.Controls.Add(this.btnFormTransformFeedback);
             this.Controls.Add(this.btnFormColorCodedPicking);
@@ -318,8 +294,6 @@
         private System.Windows.Forms.Button btnFormTransformFeedback;
         private System.Windows.Forms.Button btnFormInstancedRendering;
         private System.Windows.Forms.Button btnTexImage2D;
-        private System.Windows.Forms.Button btnFormMultipleHexahedrons1;
-        private System.Windows.Forms.Button btnFormMultipleHexahedrons2;
         private System.Windows.Forms.Button btnFormLegacyTexture3D2;
         private System.Windows.Forms.Button btnFormVolumeRendering01;
         private System.Windows.Forms.Button btnFormVolumeRendering_Hexahedron;
