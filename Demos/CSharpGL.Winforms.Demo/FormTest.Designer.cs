@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTest));
             this.btnCylinderElement = new System.Windows.Forms.Button();
             this.btnFormFontElement = new System.Windows.Forms.Button();
-            this.btnCamera = new System.Windows.Forms.Button();
             this.btnFormWholeFontTextureElement = new System.Windows.Forms.Button();
             this.btnTranslateOnScreen = new System.Windows.Forms.Button();
             this.btnLegacySimpleUIRect = new System.Windows.Forms.Button();
@@ -83,17 +82,6 @@
             this.btnFormFontElement.Text = "FormFontElement";
             this.btnFormFontElement.UseVisualStyleBackColor = true;
             this.btnFormFontElement.Click += new System.EventHandler(this.btnFormFontElement_Click);
-            // 
-            // btnCamera
-            // 
-            this.btnCamera.Enabled = false;
-            this.btnCamera.Location = new System.Drawing.Point(10, 70);
-            this.btnCamera.Name = "btnCamera";
-            this.btnCamera.Size = new System.Drawing.Size(265, 23);
-            this.btnCamera.TabIndex = 3;
-            this.btnCamera.Text = "PyramidElement+Camera(MouseWheel)";
-            this.btnCamera.UseVisualStyleBackColor = true;
-            this.btnCamera.Click += new System.EventHandler(this.btnCamera_Click);
             // 
             // btnFormWholeFontTextureElement
             // 
@@ -404,7 +392,6 @@
             this.Controls.Add(this.btnFormWholeFontTextureElement);
             this.Controls.Add(this.btnTexImage2D);
             this.Controls.Add(this.btnCylinderElement);
-            this.Controls.Add(this.btnCamera);
             this.Controls.Add(this.btnSimpleUICube);
             this.Controls.Add(this.btnFormMultipleHexahedrons2);
             this.Controls.Add(this.btnFormMultipleHexahedrons1);
@@ -445,7 +432,6 @@
 
         private System.Windows.Forms.Button btnCylinderElement;
         private System.Windows.Forms.Button btnFormFontElement;
-        private System.Windows.Forms.Button btnCamera;
         private System.Windows.Forms.Button btnFormWholeFontTextureElement;
         private System.Windows.Forms.Button btnTranslateOnScreen;
         private System.Windows.Forms.Button btnLegacySimpleUIRect;
