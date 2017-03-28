@@ -26,7 +26,6 @@ build/
 *_p.c
 *.ilk
 *.meta
-*.obj
 *.pch
 *.pdb
 *.pgc
@@ -154,6 +153,7 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
 redbook/RedBook.Winforms.Demo/media/sponza/textures/background.tga
 redbook/RedBook.Winforms.Demo/media/sponza/textures/background_ddn.tga
 redbook/RedBook.Winforms.Demo/media/sponza/textures/chain_texture.tga
