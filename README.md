@@ -1,5 +1,9 @@
 此项目为支持CSharpGL而存在。
 此项目下存放一些不常用的文档、资料、代码等。
+hi
+<video src="https://github.com/bitzhuwei/CSharpGL2/blob/master/OpenGLviaC%23_Compress.MP4.mp4" width="320" height="180"
+controls="controls"></video>
+bye
 <div id="fangpachong">+BIT祝威+悄悄在此留下版了个权的信说：</div>
 <p style="text-align: center;"><span style="font-size: 16pt;"><strong>CSharpGL(0)一个易学易用的C#版OpenGL</strong></span></p>
 <p style="text-align: center;">&nbsp;</p>
