@@ -2,17 +2,17 @@
 
 ## 1.1. :mushroom:会计
 
-[会计总论](CPA6in1/1会计/会计总论.md) :large_blue_circle: [公允价值计量] :large_blue_circle: [会计政策和估计](CPA6in1/1会计/会计政策和估计.md) :large_blue_circle: [外币折算]
+[会计总论](CPA6in1/1会计/会计总论.md) :black_circle: [公允价值计量] :black_circle: [会计政策和估计](CPA6in1/1会计/会计政策和估计.md) :black_circle: [外币折算]
 
-[存货](CPA6in1/1会计/资产.存货.md) :large_blue_circle: [固定资产](CPA6in1/1会计/资产.固定资产.md) :large_blue_circle: [无形资产](CPA6in1/1会计/资产.无形资产.md) :large_blue_circle: [投资性房地产](CPA6in1/1会计/资产.投资性房地产.md) :large_blue_circle: [金融工具](CPA6in1/1会计/资产.金融工具.md) :large_blue_circle: [长期股权投资](CPA6in1/1会计/资产.长期股权投资.md) :large_blue_circle: [企业合并] :large_blue_circle: [资产减值](CPA6in1/1会计/资产.资产减值.md) :large_blue_circle: [政府补助](CPA6in1/1会计/政府补助.md)
+[存货](CPA6in1/1会计/资产.存货.md) :black_circle: [固定资产](CPA6in1/1会计/资产.固定资产.md) :black_circle: [无形资产](CPA6in1/1会计/资产.无形资产.md) :black_circle: [投资性房地产](CPA6in1/1会计/资产.投资性房地产.md) :black_circle: [金融工具](CPA6in1/1会计/资产.金融工具.md) :black_circle: [长期股权投资](CPA6in1/1会计/资产.长期股权投资.md) :black_circle: [企业合并] :black_circle: [资产减值](CPA6in1/1会计/资产.资产减值.md) :black_circle: [政府补助](CPA6in1/1会计/政府补助.md)
 
-[流动负债+非流动负债](CPA6in1/1会计/负债.流动负债+非流动负债.md) :large_blue_circle: [职工薪酬](CPA6in1/1会计/负债.职工薪酬.md) :large_blue_circle: [借款费用](CPA6in1/1会计/负债.借款费用.md) :large_blue_circle: [股份支付](CPA6in1/1会计/负债.股份支付.md) :large_blue_circle: [或有事项](CPA6in1/1会计/负债.或有事项.md) :large_blue_circle: [所得税]
+[流动负债+非流动负债](CPA6in1/1会计/负债.流动负债+非流动负债.md) :black_circle: [职工薪酬](CPA6in1/1会计/负债.职工薪酬.md) :black_circle: [借款费用](CPA6in1/1会计/负债.借款费用.md) :black_circle: [股份支付](CPA6in1/1会计/负债.股份支付.md) :black_circle: [或有事项](CPA6in1/1会计/负债.或有事项.md) :black_circle: [所得税]
 
-[所有者权益](CPA6in1/1会计/所有者权益.md) :large_blue_circle: [收入](CPA6in1/1会计/收入.md) :large_blue_circle: [费用+利润](CPA6in1/1会计/费用+利润.md) :large_blue_circle: [每股收益]
+[所有者权益](CPA6in1/1会计/所有者权益.md) :black_circle: [收入](CPA6in1/1会计/收入.md) :black_circle: [费用+利润](CPA6in1/1会计/费用+利润.md) :black_circle: [每股收益]
 
-[非货币性资产交换](CPA6in1/1会计/特殊.非货币性资产交换.md) :large_blue_circle: [债务重组](CPA6in1/1会计/特殊.债务重组.md):no_entry: :large_blue_circle: [租赁] :large_blue_circle: [持有待售的非流动资产、处置组和终止经营]
+[非货币性资产交换](CPA6in1/1会计/特殊.非货币性资产交换.md) :black_circle: [债务重组](CPA6in1/1会计/特殊.债务重组.md):no_entry: :black_circle: [租赁] :black_circle: [持有待售的非流动资产、处置组和终止经营]
 
-[财务报告] :large_blue_circle: [资产负债表日后事项] :large_blue_circle: [合并财务报表]
+[财务报告] :black_circle: [资产负债表日后事项] :black_circle: [合并财务报表]
 
 [政府及民间非营利组织会计]
 
@@ -20,65 +20,65 @@
 
 [税法总论]
 
-[增值税] :large_blue_circle: [企业所得税] :large_blue_circle: [个人所得税]
+[增值税] :black_circle: [企业所得税] :black_circle: [个人所得税]
 
-[关税] :large_blue_circle: [消费税] :large_blue_circle: [资源税] :large_blue_circle: [城市维护建设税]
+[关税] :black_circle: [消费税] :black_circle: [资源税] :black_circle: [城市维护建设税]
 
-[烟叶税] :large_blue_circle: [环境保护税]
+[烟叶税] :black_circle: [环境保护税]
 
-[城镇土地使用税] :large_blue_circle: [耕地占用税] :large_blue_circle: [土地增值税] :large_blue_circle: [房产税] :large_blue_circle: [契税] :large_blue_circle: [印花税]
+[城镇土地使用税] :black_circle: [耕地占用税] :black_circle: [土地增值税] :black_circle: [房产税] :black_circle: [契税] :black_circle: [印花税]
 
-[车辆购置税] :large_blue_circle: [车船税] :large_blue_circle: [船舶吨税]
+[车辆购置税] :black_circle: [车船税] :black_circle: [船舶吨税]
 
-[国际税收税务管理实务] :large_blue_circle: [税收征收管理法] :large_blue_circle: [税务行政法制]
+[国际税收税务管理实务] :black_circle: [税收征收管理法] :black_circle: [税务行政法制]
 
 ## 1.3. :mushroom:经济法
 
-[法律基本原理] :large_blue_circle: [基本民事法律制度]
+[法律基本原理] :black_circle: [基本民事法律制度]
 
-[物权法律制度] :large_blue_circle: [合同法律制度]
+[物权法律制度] :black_circle: [合同法律制度]
 
 [合伙企业法律制度]
 
-[公司法律制度] :large_blue_circle: [证券法律制度] :large_blue_circle: [票据与结算法律制度] :large_blue_circle: [企业破产法律制度]
+[公司法律制度] :black_circle: [证券法律制度] :black_circle: [票据与结算法律制度] :black_circle: [企业破产法律制度]
 
-[企业国有资产法律制度] :large_blue_circle: [反垄断法律制度] :large_blue_circle: [涉外经济法律制度]
+[企业国有资产法律制度] :black_circle: [反垄断法律制度] :black_circle: [涉外经济法律制度]
 
 ## 1.4. :mushroom:审计
 
-[审计概述] :large_blue_circle: [审计证据] :large_blue_circle: [审计抽样方法] :large_blue_circle: [信息技术对审计的影响] :large_blue_circle: [审计工作底稿]
+[审计概述] :black_circle: [审计证据] :black_circle: [审计抽样方法] :black_circle: [信息技术对审计的影响] :black_circle: [审计工作底稿]
 
-[审计计划] :large_blue_circle: [风险评估] :large_blue_circle: [风险应对] :large_blue_circle: [完成审计工作] :large_blue_circle: [审计报告]
+[审计计划] :black_circle: [风险评估] :black_circle: [风险应对] :black_circle: [完成审计工作] :black_circle: [审计报告]
 
-[销售与收款循环的审计] :large_blue_circle: [采购与付款循环的审计] :large_blue_circle: [生产与存货循环的审计] :large_blue_circle: [货币资金的审计]
+[销售与收款循环的审计] :black_circle: [采购与付款循环的审计] :black_circle: [生产与存货循环的审计] :black_circle: [货币资金的审计]
 
-[对舞弊和法律法规的考虑] :large_blue_circle: [审计沟通] :large_blue_circle: [注册会计师利用他人的工作] :large_blue_circle: [对集团财务报表审计的特殊考虑] :large_blue_circle: [其他特殊项目的审计]
+[对舞弊和法律法规的考虑] :black_circle: [审计沟通] :black_circle: [注册会计师利用他人的工作] :black_circle: [对集团财务报表审计的特殊考虑] :black_circle: [其他特殊项目的审计]
 
 [企业内部控制审计]
 
-[会计师事务所业务质量控制] :large_blue_circle: [职业道德基本原则和概念框架] :large_blue_circle: [审计业务对独立性的要求]
+[会计师事务所业务质量控制] :black_circle: [职业道德基本原则和概念框架] :black_circle: [审计业务对独立性的要求]
 
 ## 1.5. :mushroom:财务成本管理
 
-[财务管理基本原理] :large_blue_circle: [财务报表分析和财务预测]
+[财务管理基本原理] :black_circle: [财务报表分析和财务预测]
 
-[价值评估基础] :large_blue_circle: [资本成本] :large_blue_circle: [投资项目资本预算]
+[价值评估基础] :black_circle: [资本成本] :black_circle: [投资项目资本预算]
 
-[债券、股票价值评估] :large_blue_circle: [期权价值评估] :large_blue_circle: [企业价值评估]
+[债券、股票价值评估] :black_circle: [期权价值评估] :black_circle: [企业价值评估]
 
-[资本结构] :large_blue_circle: [长期筹资]
+[资本结构] :black_circle: [长期筹资]
 
-[股利分配、股票分割与股票回购] :large_blue_circle: [营运资本管理]
+[股利分配、股票分割与股票回购] :black_circle: [营运资本管理]
 
-[产品成本计算] :large_blue_circle: [标准成本法] :large_blue_circle: [作业成本法] :large_blue_circle: [本量利分析] :large_blue_circle: [短期经营决策]
+[产品成本计算] :black_circle: [标准成本法] :black_circle: [作业成本法] :black_circle: [本量利分析] :black_circle: [短期经营决策]
 
-[全面预算] :large_blue_circle: [责任会计] :large_blue_circle: [业绩评价] :large_blue_circle: [管理会计报告]
+[全面预算] :black_circle: [责任会计] :black_circle: [业绩评价] :black_circle: [管理会计报告]
 
 ## 1.6. :mushroom:公司战略与风险管理
 
-[战略与战略管理](CPA6in1/6战略/战略与战略管理.md) :large_blue_circle: [战略分析](CPA6in1/6战略/战略分析.md) :large_blue_circle: [战略选择](CPA6in1/6战略/战略选择.md) :large_blue_circle: [战略实施](CPA6in1/6战略/战略实施.md)
+[战略与战略管理](CPA6in1/6战略/战略与战略管理.md) :black_circle: [战略分析](CPA6in1/6战略/战略分析.md) :black_circle: [战略选择](CPA6in1/6战略/战略选择.md) :black_circle: [战略实施](CPA6in1/6战略/战略实施.md)
 
-[公司治理] :large_blue_circle: [风险与风险管理]
+[公司治理] :black_circle: [风险与风险管理]
 
 ## 1.7. :mushroom:综合.会计税法审计
 
