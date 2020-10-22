@@ -2,17 +2,17 @@
 
 ## 1.1. :mushroom:会计
 
-[会计总论](CPA6in1/1会计/会计总论.md) :seedling: [公允价值计量] :seedling: [会计政策和估计](CPA6in1/1会计/会计政策和估计.md) :seedling: [外币折算]
+[会计总论](CPA6in1/1会计/会计总论.md) :balloon: [公允价值计量] :balloon: [会计政策和估计](CPA6in1/1会计/会计政策和估计.md) :balloon: [外币折算]
 
-[存货](CPA6in1/1会计/资产.存货.md) :seedling: [固定资产](CPA6in1/1会计/资产.固定资产.md) :seedling: [无形资产](CPA6in1/1会计/资产.无形资产.md) :seedling: [投资性房地产](CPA6in1/1会计/资产.投资性房地产.md) :seedling: [金融工具](CPA6in1/1会计/资产.金融工具.md) :seedling: [长期股权投资](CPA6in1/1会计/资产.长期股权投资.md) :seedling: [企业合并] :seedling: [资产减值](CPA6in1/1会计/资产.资产减值.md) :seedling: [政府补助](CPA6in1/1会计/政府补助.md)
+[存货](CPA6in1/1会计/资产.存货.md) :balloon: [固定资产](CPA6in1/1会计/资产.固定资产.md) :balloon: [无形资产](CPA6in1/1会计/资产.无形资产.md) :balloon: [投资性房地产](CPA6in1/1会计/资产.投资性房地产.md) :balloon: [金融工具](CPA6in1/1会计/资产.金融工具.md) :balloon: [长期股权投资](CPA6in1/1会计/资产.长期股权投资.md) :balloon: [企业合并] :balloon: [资产减值](CPA6in1/1会计/资产.资产减值.md) :balloon: [政府补助](CPA6in1/1会计/政府补助.md)
 
-[流动负债+非流动负债](CPA6in1/1会计/负债.流动负债+非流动负债.md) :seedling: [职工薪酬](CPA6in1/1会计/负债.职工薪酬.md) :seedling: [借款费用](CPA6in1/1会计/负债.借款费用.md) :seedling: [股份支付](CPA6in1/1会计/负债.股份支付.md) :seedling: [或有事项](CPA6in1/1会计/负债.或有事项.md) :seedling: [所得税]
+[流动负债+非流动负债](CPA6in1/1会计/负债.流动负债+非流动负债.md) :balloon: [职工薪酬](CPA6in1/1会计/负债.职工薪酬.md) :balloon: [借款费用](CPA6in1/1会计/负债.借款费用.md) :balloon: [股份支付](CPA6in1/1会计/负债.股份支付.md) :balloon: [或有事项](CPA6in1/1会计/负债.或有事项.md) :balloon: [所得税]
 
-[所有者权益](CPA6in1/1会计/所有者权益.md) :seedling: [收入](CPA6in1/1会计/收入.md) :seedling: [费用+利润](CPA6in1/1会计/费用+利润.md) :seedling: [每股收益]
+[所有者权益](CPA6in1/1会计/所有者权益.md) :balloon: [收入](CPA6in1/1会计/收入.md) :balloon: [费用+利润](CPA6in1/1会计/费用+利润.md) :balloon: [每股收益]
 
-[非货币性资产交换](CPA6in1/1会计/特殊.非货币性资产交换.md) :seedling: [债务重组](CPA6in1/1会计/特殊.债务重组.md):no_entry: :seedling: [租赁] :seedling: [持有待售的非流动资产、处置组和终止经营]
+[非货币性资产交换](CPA6in1/1会计/特殊.非货币性资产交换.md) :balloon: [债务重组](CPA6in1/1会计/特殊.债务重组.md):no_entry: :balloon: [租赁] :balloon: [持有待售的非流动资产、处置组和终止经营]
 
-[财务报告] :seedling: [资产负债表日后事项] :seedling: [合并财务报表]
+[财务报告] :balloon: [资产负债表日后事项] :balloon: [合并财务报表]
 
 [政府及民间非营利组织会计]
 
@@ -20,65 +20,65 @@
 
 [税法总论]
 
-[增值税] :seedling: [企业所得税] :seedling: [个人所得税]
+[增值税] :balloon: [企业所得税] :balloon: [个人所得税]
 
-[关税] :seedling: [消费税] :seedling: [资源税] :seedling: [城市维护建设税]
+[关税] :balloon: [消费税] :balloon: [资源税] :balloon: [城市维护建设税]
 
-[烟叶税] :seedling: [环境保护税]
+[烟叶税] :balloon: [环境保护税]
 
-[城镇土地使用税] :seedling: [耕地占用税] :seedling: [土地增值税] :seedling: [房产税] :seedling: [契税] :seedling: [印花税]
+[城镇土地使用税] :balloon: [耕地占用税] :balloon: [土地增值税] :balloon: [房产税] :balloon: [契税] :balloon: [印花税]
 
-[车辆购置税] :seedling: [车船税] :seedling: [船舶吨税]
+[车辆购置税] :balloon: [车船税] :balloon: [船舶吨税]
 
-[国际税收税务管理实务] :seedling: [税收征收管理法] :seedling: [税务行政法制]
+[国际税收税务管理实务] :balloon: [税收征收管理法] :balloon: [税务行政法制]
 
 ## 1.3. :mushroom:经济法
 
-[法律基本原理] :seedling: [基本民事法律制度]
+[法律基本原理] :balloon: [基本民事法律制度]
 
-[物权法律制度] :seedling: [合同法律制度]
+[物权法律制度] :balloon: [合同法律制度]
 
 [合伙企业法律制度]
 
-[公司法律制度] :seedling: [证券法律制度] :seedling: [票据与结算法律制度] :seedling: [企业破产法律制度]
+[公司法律制度] :balloon: [证券法律制度] :balloon: [票据与结算法律制度] :balloon: [企业破产法律制度]
 
-[企业国有资产法律制度] :seedling: [反垄断法律制度] :seedling: [涉外经济法律制度]
+[企业国有资产法律制度] :balloon: [反垄断法律制度] :balloon: [涉外经济法律制度]
 
 ## 1.4. :mushroom:审计
 
-[审计概述] :seedling: [审计证据] :seedling: [审计抽样方法] :seedling: [信息技术对审计的影响] :seedling: [审计工作底稿]
+[审计概述] :balloon: [审计证据] :balloon: [审计抽样方法] :balloon: [信息技术对审计的影响] :balloon: [审计工作底稿]
 
-[审计计划] :seedling: [风险评估] :seedling: [风险应对] :seedling: [完成审计工作] :seedling: [审计报告]
+[审计计划] :balloon: [风险评估] :balloon: [风险应对] :balloon: [完成审计工作] :balloon: [审计报告]
 
-[销售与收款循环的审计] :seedling: [采购与付款循环的审计] :seedling: [生产与存货循环的审计] :seedling: [货币资金的审计]
+[销售与收款循环的审计] :balloon: [采购与付款循环的审计] :balloon: [生产与存货循环的审计] :balloon: [货币资金的审计]
 
-[对舞弊和法律法规的考虑] :seedling: [审计沟通] :seedling: [注册会计师利用他人的工作] :seedling: [对集团财务报表审计的特殊考虑] :seedling: [其他特殊项目的审计]
+[对舞弊和法律法规的考虑] :balloon: [审计沟通] :balloon: [注册会计师利用他人的工作] :balloon: [对集团财务报表审计的特殊考虑] :balloon: [其他特殊项目的审计]
 
 [企业内部控制审计]
 
-[会计师事务所业务质量控制] :seedling: [职业道德基本原则和概念框架] :seedling: [审计业务对独立性的要求]
+[会计师事务所业务质量控制] :balloon: [职业道德基本原则和概念框架] :balloon: [审计业务对独立性的要求]
 
 ## 1.5. :mushroom:财务成本管理
 
-[财务管理基本原理] :seedling: [财务报表分析和财务预测]
+[财务管理基本原理] :balloon: [财务报表分析和财务预测]
 
-[价值评估基础] :seedling: [资本成本] :seedling: [投资项目资本预算]
+[价值评估基础] :balloon: [资本成本] :balloon: [投资项目资本预算]
 
-[债券、股票价值评估] :seedling: [期权价值评估] :seedling: [企业价值评估]
+[债券、股票价值评估] :balloon: [期权价值评估] :balloon: [企业价值评估]
 
-[资本结构] :seedling: [长期筹资]
+[资本结构] :balloon: [长期筹资]
 
-[股利分配、股票分割与股票回购] :seedling: [营运资本管理]
+[股利分配、股票分割与股票回购] :balloon: [营运资本管理]
 
-[产品成本计算] :seedling: [标准成本法] :seedling: [作业成本法] :seedling: [本量利分析] :seedling: [短期经营决策]
+[产品成本计算] :balloon: [标准成本法] :balloon: [作业成本法] :balloon: [本量利分析] :balloon: [短期经营决策]
 
-[全面预算] :seedling: [责任会计] :seedling: [业绩评价] :seedling: [管理会计报告]
+[全面预算] :balloon: [责任会计] :balloon: [业绩评价] :balloon: [管理会计报告]
 
 ## 1.6. :mushroom:公司战略与风险管理
 
-[战略与战略管理](CPA6in1/6战略/战略与战略管理.md) :seedling: [战略分析](CPA6in1/6战略/战略分析.md) :seedling: [战略选择](CPA6in1/6战略/战略选择.md) :seedling: [战略实施](CPA6in1/6战略/战略实施.md)
+[战略与战略管理](CPA6in1/6战略/战略与战略管理.md) :balloon: [战略分析](CPA6in1/6战略/战略分析.md) :balloon: [战略选择](CPA6in1/6战略/战略选择.md) :balloon: [战略实施](CPA6in1/6战略/战略实施.md)
 
-[公司治理] :seedling: [风险与风险管理]
+[公司治理] :balloon: [风险与风险管理]
 
 ## 1.7. :mushroom:综合.会计税法审计
 
