@@ -18,7 +18,7 @@
 
 :corn: [政府及民间非营利组织会计] :honey_pot:
 
-## 1.2. :office:税法
+## 1.2. :cn:税法
 
 :corn: [税法总论] :honey_pot:
 
