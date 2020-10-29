@@ -1,6 +1,6 @@
 # 1. CPA6in1
 
-## 1.1. :factory:会计
+## 1.1. :whale:会计
 
 :barber: [会计总论](CPA6in1/1会计/会计总论.md) :barber: [公允价值计量](CPA6in1/1会计/公允价值计量.md) :barber: [会计政策和估计](CPA6in1/1会计/会计政策和估计.md) :barber: [外币折算](CPA6in1/1会计/外币折算.md) :zzz: 
 
