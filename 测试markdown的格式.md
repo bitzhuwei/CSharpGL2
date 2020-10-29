@@ -36,7 +36,7 @@
 
 :corn: [国际税收税务管理实务] :corn: [税收征收管理法] :corn: [税务行政法制] :honey_pot:
 
-## 1.3. :straight_ruler: :triangular_ruler:经济法
+## 1.3. :triangular_ruler: 经济法
 
 :corn: [法律基本原理] :corn: [基本民事法律制度] :honey_pot:
 
@@ -48,7 +48,7 @@
 
 :corn: [企业国有资产法律制度] :corn: [反垄断法律制度] :corn: [涉外经济法律制度] :honey_pot:
 
-## 1.4. :mag: :mag_right: 审计
+## 1.4. :mag_right: 审计
 
 :corn: [审计概述] :corn: [审计证据] :corn: [审计抽样方法] :corn: [信息技术对审计的影响] :corn: [审计工作底稿] :honey_pot:
 
@@ -64,7 +64,7 @@
 
 :corn: [会计师事务所业务质量控制] :corn: [职业道德基本原则和概念框架] :corn: [审计业务对独立性的要求] :honey_pot:
 
-## 1.5. :flags: :notebook_with_decorative_cover: :anchor: :ticket: :round_pushpin: 财务成本管理
+## 1.5. :telescope: 财务成本管理
 
 :corn: [财务管理基本原理] :corn: [财务报表分析和财务预测] :honey_pot:
 
@@ -80,15 +80,15 @@
 
 :corn: [全面预算] :corn: [责任会计] :corn: [业绩评价] :corn: [管理会计报告] :honey_pot:
 
-## 1.6. :hankey: :poop: :shit: :squirrel: :seat: :gem: :running_shirt_with_sash: :fishing_pole_and_fish: 公司战略与风险管理
+## 1.6. :seat: 公司战略与风险管理
 
 :corn: [战略与战略管理](CPA6in1/6战略/战略与战略管理.md) :corn: [战略分析](CPA6in1/6战略/战略分析.md) :corn: [战略选择](CPA6in1/6战略/战略选择.md) :corn: [战略实施](CPA6in1/6战略/战略实施.md) :honey_pot:
 
 :corn: [公司治理](CPA6in1/6战略/公司治理.md) :corn: [风险与风险管理](CPA6in1/6战略/风险与风险管理.md) :honey_pot:
 
-## 1.7. :mushroom:综合.会计税法审计
+## 1.7. :gem:综合.会计税法审计
 
-## 1.8. :mushroom:综合.财管战略经济法
+## 1.8. :crystal_ball:综合.财管战略经济法
 
 # 2. 工作流程
 
